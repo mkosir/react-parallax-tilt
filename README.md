@@ -177,9 +177,9 @@ Please read the guidelines [PR](.github/PULL_REQUEST_TEMPLATE.md) | [Issues](.gi
 [npm-url]: https://www.npmjs.com/package/react-parallax-tilt
 [npm-badge]: https://img.shields.io/npm/v/react-parallax-tilt.svg
 [size-badge]: https://img.shields.io/bundlephobia/gzip/react-parallax-tilt.svg
-[build-badge]: https://travis-ci.org/mkosir/react-parallax-tilt.svg?branch=master
-[build-url]: https://travis-ci.org/mkosir/react-parallax-tilt
-[coverage-badge]: https://coveralls.io/repos/github/mkosir/react-parallax-tilt/badge.svg?branch=master
-[coverage-url]: https://coveralls.io/github/mkosir/react-parallax-tilt?branch=master
+[build-badge]: https://travis-ci.com/mkosir/react-parallax-tilt.svg
+[build-url]: https://travis-ci.com/mkosir/react-parallax-tilt
+[coverage-badge]: https://coveralls.io/repos/github/mkosir/react-parallax-tilt/badge.svg
+[coverage-url]: https://coveralls.io/github/mkosir/react-parallax-tilt
 [typescript-badge]: https://badges.frapsoft.com/typescript/code/typescript.svg?v=101
 [typescript-url]: https://github.com/microsoft/TypeScript

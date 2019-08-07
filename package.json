@@ -19,7 +19,7 @@
     "test": "jest --verbose --watch",
     "test:coverage": "jest --coverage --verbose",
     "test:coverage:watch": "jest --coverage --verbose --watch",
-    "coveralls": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf ./coverage",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
     "storybook": "start-storybook -p 9009 -s public --quiet",
     "storybook:build": "build-storybook -c .storybook -o build_storybook --quiet",
     "validate": "npm run lint && npm run lint-prettier && npm run test:coverage && npm run build"
