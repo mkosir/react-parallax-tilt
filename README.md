@@ -1,7 +1,7 @@
 # react-parallax-tilt
 
 [![npm version][npm-badge]][npm-url]
-[![size][size-badge]][npm-url]
+[![npm bundle size][size-badge]][npm-url]
 [![Build Status][build-badge]][build-url]
 [![Coverage Status][coverage-badge]][coverage-url]
 [![TypeScript][typescript-badge]][typescript-url]
@@ -21,7 +21,7 @@ _Easily apply tilt hover effect on React components 👀 - inspired by [vanilla-
 
 ## Features
 
-- Lightweight 📦 (<4kb)
+- Lightweight 📦 (<3kb)
 - Supports mouse and touch events
 - Support for device tilting (gyroscope)
 - Glare effect 🌟 with custom props (color, position,...)
@@ -176,7 +176,7 @@ Please read the guidelines [PR](.github/PULL_REQUEST_TEMPLATE.md) | [Issues](.gi
 
 [npm-url]: https://www.npmjs.com/package/react-parallax-tilt
 [npm-badge]: https://img.shields.io/npm/v/react-parallax-tilt.svg
-[size-badge]: https://img.shields.io/bundlephobia/gzip/react-parallax-tilt.svg
+[size-badge]: https://img.shields.io/bundlephobia/minzip/react-parallax-tilt.svg
 [build-badge]: https://travis-ci.com/mkosir/react-parallax-tilt.svg
 [build-url]: https://travis-ci.com/mkosir/react-parallax-tilt
 [coverage-badge]: https://coveralls.io/repos/github/mkosir/react-parallax-tilt/badge.svg
