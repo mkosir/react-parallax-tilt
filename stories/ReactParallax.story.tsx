@@ -11,6 +11,7 @@ import FlipVH from './FlipVH/FlipVH';
 import ParallaxEffect from './ParallaxEffect/ParallaxEffect';
 import ParallaxEffectGlareScale from './ParallaxEffectGlareScale/ParallaxEffectGlareScale';
 import ParallaxEffectImg from './ParallaxEffectImg/ParallaxEffectImg';
+import TiltImg from './TiltImg/TiltImg';
 import TiltMax from './TiltMax/TiltMax';
 import TiltManualInput from './TiltManualInput/TiltManualInput';
 import Gyroscope from './Gyroscope/Gyroscope';
@@ -33,6 +34,7 @@ stories
   .add('Parallax effect', () => <ParallaxEffect />)
   .add('Parallax effect - glare&scale', () => <ParallaxEffectGlareScale />)
   .add('Parallax effect image', () => <ParallaxEffectImg />)
+  .add('Tilt image', () => <TiltImg />)
   .add('Set max tilt', () => <TiltMax />)
   .add('Glare effect', () => <GlareEffect />)
   .add('Glare effect - no tilt', () => <GlareEffectNoTilt />)

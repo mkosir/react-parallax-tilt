@@ -93,6 +93,7 @@ class Events extends PureComponent {
           glareEnable={true}
           glareMaxOpacity={1.0}
           glareColor="white"
+          gyroscope={true}
         >
           <div className="react-parallax-tilt">
             <div className="header">Axis x</div>

@@ -1,0 +1,12 @@
+.tilt-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 200px;
+
+  .inner-element {
+    width: 80%;
+  }
+}
