@@ -1,0 +1,11 @@
+node_modules
+coverage
+dist
+build_storybook
+compiled
+
+.rpt2_cache
+
+*.log
+.vscode
+.idea

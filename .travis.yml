@@ -1,0 +1,42 @@
+language: node_js
+node_js:
+  - '8.9.1'
+
+script:
+  - echo "Installing packages..."
+  - npm install
+
+cache:
+  directories:
+    - 'node_modules'
+
+jobs:
+  include:
+    - stage: validate
+      script:
+        - npm run validate
+
+    - stage: deploy github pages & coveralls
+      if: branch == master && !fork
+      script:
+        - npm run storybook:build
+        - npm run coveralls
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        local_dir: build_storybook
+        github_token: $GITHUB_TOKEN
+        keep_history: true
+        on:
+          branch: master
+
+    - stage: npm release
+      if: tag IS present
+      script: npm run build
+      deploy:
+        provider: npm
+        email: $NPM_EMAIL
+        api_key: $NPM_TOKEN
+        skip_cleanup: true
+        on:
+          tags: true
