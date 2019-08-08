@@ -1,4 +1,4 @@
-import { TiltProps } from '../../react-parallax-tilt/ReactParallaxTilt';
+import { TiltProps } from './types';
 import { constrainToRange } from '../../common/utils';
 import { ClientPosition } from '../../common/types';
 import { IStyle } from '../../common/IStyle';

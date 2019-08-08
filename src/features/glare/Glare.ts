@@ -1,14 +1,7 @@
-import { GlareProps } from '../../react-parallax-tilt/ReactParallaxTilt';
+import { GlareProps, GlareSize } from './types';
 import { constrainToRange } from '../../common/utils';
 import { ElementSizePosition, ClientPosition } from '../../common/types';
 import { IStyle } from '../../common/IStyle';
-
-export type GlarePosition = 'top' | 'right' | 'bottom' | 'left' | 'all';
-
-type GlareSize = {
-  width: number;
-  height: number;
-};
 
 const GLARE_EL_SIZE_FACTOR = 2;
 
