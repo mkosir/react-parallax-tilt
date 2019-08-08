@@ -1,9 +1,9 @@
 import React, { PureComponent, MouseEvent, TouchEvent } from 'react';
 
-import { Tilt } from './features/Tilt';
-import { Glare, GlarePosition } from './features/Glare';
-import { setTransition, constrainToRange } from './common/utils';
-import { ElementSizePosition, ClientPosition } from './common/types';
+import { Tilt } from '../features/tilt/Tilt';
+import { Glare, GlarePosition } from '../features/glare/Glare';
+import { setTransition, constrainToRange } from '../common/utils';
+import { ElementSizePosition, ClientPosition } from '../common/types';
 
 type WrapperElement<T extends HTMLElement> = {
   node: T | null;

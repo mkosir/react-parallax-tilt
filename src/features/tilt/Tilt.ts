@@ -1,7 +1,7 @@
-import { TiltProps } from '../ReactParallaxTilt';
-import { constrainToRange } from '../common/utils';
-import { ClientPosition } from '../common/types';
-import { IStyle } from '../common/IStyle';
+import { TiltProps } from '../../react-parallax-tilt/ReactParallaxTilt';
+import { constrainToRange } from '../../common/utils';
+import { ClientPosition } from '../../common/types';
+import { IStyle } from '../../common/IStyle';
 
 const TILT_ANGLE_CONSTRAINT = 90;
 

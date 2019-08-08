@@ -1,4 +1,4 @@
-import { Props } from '../ReactParallaxTilt';
+import { Props } from '../react-parallax-tilt/ReactParallaxTilt';
 import { ClientPosition } from './types';
 
 export interface IStyle {

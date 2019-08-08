@@ -1,7 +1,7 @@
-import { GlareProps } from '../ReactParallaxTilt';
-import { constrainToRange } from '../common/utils';
-import { ElementSizePosition, ClientPosition } from '../common/types';
-import { IStyle } from '../common/IStyle';
+import { GlareProps } from '../../react-parallax-tilt/ReactParallaxTilt';
+import { constrainToRange } from '../../common/utils';
+import { ElementSizePosition, ClientPosition } from '../../common/types';
+import { IStyle } from '../../common/IStyle';
 
 export type GlarePosition = 'top' | 'right' | 'bottom' | 'left' | 'all';
 
