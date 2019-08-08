@@ -8,14 +8,17 @@ import { ElementSizePosition } from '../src/common/types';
 
 configure({ adapter: new Adapter() });
 
-const mockWrapperElSizePosition: ElementSizePosition = {
-  width: 100,
-  height: 100,
-  top: 0,
-  left: 0,
-};
-
 describe("Tilt - (manual input) - Callback 'onMove' should return correct calculated values for defined manual input angles", () => {
+  let mockWrapperElSizePosition: ElementSizePosition;
+  beforeEach(() => {
+    mockWrapperElSizePosition = {
+      width: 100,
+      height: 100,
+      top: 0,
+      left: 0,
+    };
+  });
+
   it('Tilt', () => {
     const wrapperSpy = spy();
     const wrapper = mount<Tilt>(
