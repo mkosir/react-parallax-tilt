@@ -1,53 +1,15 @@
 import React, { PureComponent, MouseEvent, TouchEvent } from 'react';
 
-import { Props, WrapperElement, SupportedEvent, EventType, CustomEventType } from './types';
+import { Props, SupportedEvent, EventType, CustomEventType } from './types';
+import { defaultProps } from './defaultProps';
+import { defaultWrapperElement } from './defaultWrapperElement';
 import { Tilt } from '../features/tilt/Tilt';
 import { Glare } from '../features/glare/Glare';
 import { setTransition, constrainToRange } from '../common/utils';
 
 class ReactParallaxTilt extends PureComponent<Props> {
-  public static defaultProps: Props = {
-    tiltEnable: true,
-    tiltReverse: false,
-    tiltMaxAngleX: 20,
-    tiltMaxAngleY: 20,
-    tiltAxis: null,
-    tiltAngleXManual: null,
-    tiltAngleYManual: null,
-    glareEnable: false,
-    glareMaxOpacity: 0.7,
-    glareColor: '#ffffff',
-    glarePosition: 'bottom',
-    glareReverse: false,
-    scale: 1,
-    perspective: 1000,
-    flipVertically: false,
-    flipHorizontally: false,
-    reset: true,
-    transitionEasing: 'cubic-bezier(.03,.98,.52,.99)',
-    transitionSpeed: 400,
-    gyroscope: false,
-  };
-
-  private wrapperEl: WrapperElement<HTMLDivElement> = {
-    node: null,
-    size: {
-      width: null,
-      height: null,
-      left: null,
-      top: null,
-    },
-    clientPosition: {
-      x: null,
-      y: null,
-      xPercentage: 0,
-      yPercentage: 0,
-    },
-    transitionTimeoutId: undefined,
-    updateAnimationId: null,
-    scale: 1,
-  };
-
+  public static defaultProps = defaultProps;
+  private wrapperEl = defaultWrapperElement;
   private tilt: Tilt<HTMLDivElement> | null = null;
   private glare: Glare | null = null;
 
