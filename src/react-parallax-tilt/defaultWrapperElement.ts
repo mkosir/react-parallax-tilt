@@ -3,10 +3,10 @@ import { WrapperElement } from './types';
 export const defaultWrapperElement: WrapperElement<HTMLDivElement> = {
   node: null,
   size: {
-    width: null,
-    height: null,
-    left: null,
-    top: null,
+    width: 0,
+    height: 0,
+    left: 0,
+    top: 0,
   },
   clientPosition: {
     x: null,
