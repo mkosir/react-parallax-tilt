@@ -38,7 +38,7 @@ import Tilt from 'react-parallax-tilt';
 const App = () => {
   return (
     <Tilt>
-      <div style={{ height: '300px', 'background-color': 'darkgreen' }}>
+      <div style={{ height: '300px', backgroundColor: 'darkgreen' }}>
         <h1>React Parallax Tilt 👀</h1>
       </div>
     </Tilt>
