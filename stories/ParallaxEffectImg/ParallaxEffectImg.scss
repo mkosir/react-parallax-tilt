@@ -1,17 +1,13 @@
 .parallax-effect-img {
   transform-style: preserve-3d;
   transform: perspective(1000px);
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
   background-image: url('./img/background.jpg');
   background-size: contain;
   background-repeat: no-repeat;
-  width: 800px;
 
   .inner-element {
     transform: translateZ(40px) scale(0.8);
     width: 70%;
-    margin-left: 20%;
+    margin-left: 25%;
   }
 }
