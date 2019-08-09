@@ -15,9 +15,8 @@ class ReactParallaxTilt extends PureComponent<Props> {
 
   public componentDidMount() {
     this.tilt = new Tilt<HTMLDivElement>();
-    this.addEventListeners();
-    this.setWrapperElSize();
     this.initGlare();
+    this.addEventListeners();
     const autoreset = new CustomEvent<CustomEventType>('autoreset' as CustomEventType);
     this.mainLoop(autoreset);
   }
@@ -43,7 +42,8 @@ class ReactParallaxTilt extends PureComponent<Props> {
   private addEventListeners() {
     const { gyroscope } = this.props;
 
-    window.addEventListener('resize', this.onWindowResize);
+    window.addEventListener('resize', this.setSize);
+    window.addEventListener('load', this.setSize);
 
     if (gyroscope) {
       /* istanbul ignore next */
@@ -59,7 +59,8 @@ class ReactParallaxTilt extends PureComponent<Props> {
   private removeEventListeners() {
     const { gyroscope } = this.props;
 
-    window.removeEventListener('resize', this.onWindowResize);
+    window.removeEventListener('resize', this.setSize);
+    window.removeEventListener('load', this.setSize);
     // jest - instance of DeviceOrientationEvent not possible
     /* istanbul ignore next */
     if (gyroscope && (window as any).DeviceOrientationEvent) {
@@ -87,7 +88,7 @@ class ReactParallaxTilt extends PureComponent<Props> {
     this.wrapperEl.updateAnimationId = requestAnimationFrame(this.renderFrame);
   };
 
-  public onWindowResize = () => {
+  public setSize = () => {
     this.setWrapperElSize();
     if (this.glare) {
       this.glare.setSize(this.wrapperEl.size);

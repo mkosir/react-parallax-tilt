@@ -9,11 +9,11 @@ configure({ adapter: new Adapter() });
 describe('Event listeners', () => {
   it('resize', () => {
     const wrapper = mount<Tilt>(<Tilt tiltMaxAngleX={60} tiltMaxAngleY={60} />);
-    const spy = jest.spyOn(wrapper.instance(), 'onWindowResize');
+    const spy = jest.spyOn(wrapper.instance(), 'setSize');
     // @ts-ignore
     window.addEventListener('resize', spy);
     window.dispatchEvent(new Event('resize'));
-    expect(wrapper.instance().onWindowResize).toHaveBeenCalled();
+    expect(wrapper.instance().setSize).toHaveBeenCalled();
     wrapper.instance().componentWillUnmount();
   });
 
@@ -21,11 +21,11 @@ describe('Event listeners', () => {
     const wrapper = mount<Tilt>(
       <Tilt tiltMaxAngleX={60} tiltMaxAngleY={60} glareEnable={true} gyroscope={true} />,
     );
-    const spy = jest.spyOn(wrapper.instance(), 'onWindowResize');
+    const spy = jest.spyOn(wrapper.instance(), 'setSize');
     // @ts-ignore
     window.addEventListener('resize', spy);
     window.dispatchEvent(new Event('resize'));
-    expect(wrapper.instance().onWindowResize).toHaveBeenCalled();
+    expect(wrapper.instance().setSize).toHaveBeenCalled();
     wrapper.instance()['wrapperEl']['updateAnimationId'] = null;
     wrapper.instance().componentWillUnmount();
   });
