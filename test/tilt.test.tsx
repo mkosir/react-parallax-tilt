@@ -99,7 +99,6 @@ describe("Tilt - (manual input) - Callback 'onMove' should return correct calcul
   });
 
   it("Tilt events - Don't reset", () => {
-    jest.useFakeTimers();
     const wrapperSpyOnEnter = spy();
     const wrapperSpyOnMove = spy();
     const wrapperSpyOnLeave = spy();
@@ -115,7 +114,6 @@ describe("Tilt - (manual input) - Callback 'onMove' should return correct calcul
 
     wrapper.instance()['wrapperEl'].size = mockWrapperElSizePosition;
     wrapper.simulate('mouseenter');
-    jest.runAllTimers();
     wrapper.simulate('mousemove', { clientX: 100, clientY: 50 });
     wrapper.simulate('mouseleave');
     expect(wrapperSpyOnEnter.calledWith('mouseenter')).toEqual(true);
@@ -124,12 +122,10 @@ describe("Tilt - (manual input) - Callback 'onMove' should return correct calcul
   });
 
   it("Tilt events - Don't reset", () => {
-    jest.useFakeTimers();
     const wrapperSpyOnMove = spy();
     const wrapper = mount<Tilt>(<Tilt onEnter={null} onMove={wrapperSpyOnMove} onLeave={null} />);
     wrapper.instance()['wrapperEl'].size = mockWrapperElSizePosition;
     wrapper.simulate('mouseenter');
-    jest.runAllTimers();
     wrapper.simulate('mousemove', { clientX: 100, clientY: 50 });
     wrapper.simulate('mouseleave');
     expect(wrapperSpyOnMove.calledWith(0, -20, 0, -100, 0, 0, 'mousemove')).toEqual(true);
