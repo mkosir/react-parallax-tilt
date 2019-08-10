@@ -17,6 +17,7 @@ class ReactParallaxTilt extends PureComponent<Props> {
     this.loadWrapperAndChildElements();
     this.tilt = new Tilt<HTMLDivElement>();
     this.initGlare();
+    this.addEventListeners();
     const autoreset = new CustomEvent<CustomEventType>('autoreset' as CustomEventType);
     this.mainLoop(autoreset);
   }
@@ -42,7 +43,6 @@ class ReactParallaxTilt extends PureComponent<Props> {
   private addEventListeners() {
     const { gyroscope } = this.props;
 
-    window.addEventListener('load', this.setSize);
     window.addEventListener('resize', this.setSize);
 
     if (gyroscope) {
@@ -59,7 +59,6 @@ class ReactParallaxTilt extends PureComponent<Props> {
   private removeEventListeners() {
     const { gyroscope } = this.props;
 
-    window.removeEventListener('load', this.setSize);
     window.removeEventListener('resize', this.setSize);
     // jest - instance of DeviceOrientationEvent not possible
     /* istanbul ignore next */
@@ -69,14 +68,17 @@ class ReactParallaxTilt extends PureComponent<Props> {
   }
 
   public loadWrapperAndChildElements = () => {
-    // initially load the component
-    this.setSize();
-    // if page is loaded for the first time 'load' event will be called, and load the component
-    this.addEventListeners();
-    // if page is not initially loaded, seTimeout will load the component as fallback
-    setTimeout(() => {
+    const img = this.wrapperEl.node!.querySelector('img');
+    if (!img) {
       this.setSize();
-    }, 100);
+      return;
+    }
+
+    if (img.complete) {
+      this.setSize();
+    } else {
+      img.addEventListener('load', this.setSize);
+    }
   };
 
   public setSize = () => {
