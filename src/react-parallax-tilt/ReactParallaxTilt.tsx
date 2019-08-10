@@ -76,6 +76,8 @@ class ReactParallaxTilt extends PureComponent<Props> {
     }
 
     imgs.forEach(img => {
+      // images are not preloaded in jest
+      /* istanbul ignore next */
       if (img.complete) {
         this.allImagesLoaded();
       } else {
@@ -84,7 +86,7 @@ class ReactParallaxTilt extends PureComponent<Props> {
     });
   };
 
-  private allImagesLoaded = () => {
+  public allImagesLoaded = () => {
     this.wrapperEl.childrenImgsCounter++;
     if (this.wrapperEl.childrenImgsCounter === this.wrapperEl.childrenImgsLength) {
       this.setSize();
