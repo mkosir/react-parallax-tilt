@@ -76,7 +76,7 @@ class ReactParallaxTilt extends PureComponent<Props> {
     }
 
     imgs.forEach(img => {
-      // images are not preloaded in jest
+      // jest - images are not preloaded
       /* istanbul ignore next */
       if (img.complete) {
         this.allImagesLoaded();
