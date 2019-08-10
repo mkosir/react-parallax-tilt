@@ -14,10 +14,9 @@ class ReactParallaxTilt extends PureComponent<Props> {
   private glare: Glare | null = null;
 
   public componentDidMount() {
+    this.loadWrapperAndChildElements();
     this.tilt = new Tilt<HTMLDivElement>();
-    this.setSize();
     this.initGlare();
-    this.addEventListeners();
     const autoreset = new CustomEvent<CustomEventType>('autoreset' as CustomEventType);
     this.mainLoop(autoreset);
   }
@@ -43,8 +42,8 @@ class ReactParallaxTilt extends PureComponent<Props> {
   private addEventListeners() {
     const { gyroscope } = this.props;
 
-    window.addEventListener('resize', this.setSize);
     window.addEventListener('load', this.setSize);
+    window.addEventListener('resize', this.setSize);
 
     if (gyroscope) {
       /* istanbul ignore next */
@@ -60,13 +59,39 @@ class ReactParallaxTilt extends PureComponent<Props> {
   private removeEventListeners() {
     const { gyroscope } = this.props;
 
-    window.removeEventListener('resize', this.setSize);
     window.removeEventListener('load', this.setSize);
+    window.removeEventListener('resize', this.setSize);
     // jest - instance of DeviceOrientationEvent not possible
     /* istanbul ignore next */
     if (gyroscope && (window as any).DeviceOrientationEvent) {
       window.removeEventListener('deviceorientation', this.onMove);
     }
+  }
+
+  public loadWrapperAndChildElements = () => {
+    // initially load the component
+    this.setSize();
+    // if page is loaded for the first time 'load' event will be called, and load the component
+    this.addEventListeners();
+    // if page is not initially loaded, seTimeout will load the component as fallback
+    setTimeout(() => {
+      this.setSize();
+    }, 100);
+  };
+
+  public setSize = () => {
+    this.setWrapperElSize();
+    if (this.glare) {
+      this.glare.setSize(this.wrapperEl.size);
+    }
+  };
+
+  private setWrapperElSize() {
+    const rect = this.wrapperEl.node!.getBoundingClientRect();
+    this.wrapperEl.size.width = this.wrapperEl.node!.offsetWidth;
+    this.wrapperEl.size.height = this.wrapperEl.node!.offsetHeight;
+    this.wrapperEl.size.left = rect.left;
+    this.wrapperEl.size.top = rect.top;
   }
 
   private initGlare() {
@@ -88,21 +113,6 @@ class ReactParallaxTilt extends PureComponent<Props> {
     this.update(event.type);
     this.wrapperEl.updateAnimationId = requestAnimationFrame(this.renderFrame);
   };
-
-  public setSize = () => {
-    this.setWrapperElSize();
-    if (this.glare) {
-      this.glare.setSize(this.wrapperEl.size);
-    }
-  };
-
-  private setWrapperElSize() {
-    const rect = this.wrapperEl.node!.getBoundingClientRect();
-    this.wrapperEl.size.width = this.wrapperEl.node!.offsetWidth;
-    this.wrapperEl.size.height = this.wrapperEl.node!.offsetHeight;
-    this.wrapperEl.size.left = rect.left;
-    this.wrapperEl.size.top = rect.top;
-  }
 
   private onEnter = (event: SupportedEvent) => {
     const { onEnter } = this.props;
