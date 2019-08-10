@@ -16,5 +16,7 @@ export const defaultWrapperElement: WrapperElement<HTMLDivElement> = {
   },
   transitionTimeoutId: undefined,
   updateAnimationId: null,
+  childrenImgsCounter: 0,
+  childrenImgsLength: 0,
   scale: 1,
 };

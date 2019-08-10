@@ -67,17 +67,27 @@ class ReactParallaxTilt extends PureComponent<Props> {
     }
   }
 
-  public loadWrapperAndChildElements = () => {
-    const img = this.wrapperEl.node!.querySelector('img');
-    if (!img) {
+  private loadWrapperAndChildElements = () => {
+    const imgs = Array.from(this.wrapperEl.node!.getElementsByTagName('img'));
+    this.wrapperEl.childrenImgsLength = imgs.length;
+    if (this.wrapperEl.childrenImgsLength === 0) {
       this.setSize();
       return;
     }
 
-    if (img.complete) {
+    imgs.forEach(img => {
+      if (img.complete) {
+        this.allImagesLoaded();
+      } else {
+        img.addEventListener('load', this.allImagesLoaded);
+      }
+    });
+  };
+
+  private allImagesLoaded = () => {
+    this.wrapperEl.childrenImgsCounter++;
+    if (this.wrapperEl.childrenImgsCounter === this.wrapperEl.childrenImgsLength) {
       this.setSize();
-    } else {
-      img.addEventListener('load', this.setSize);
     }
   };
 
