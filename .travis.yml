@@ -16,11 +16,11 @@ jobs:
       script:
         - npm run validate
 
-    - stage: deploy github pages & coveralls
+    - stage: deploy github pages & codecov
       if: branch == master && !fork
       script:
         - npm run storybook:build
-        - npm run coveralls
+        - codecov --token=$CODECOV_TOKEN
       deploy:
         provider: pages
         skip_cleanup: true

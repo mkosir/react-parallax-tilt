@@ -3,7 +3,7 @@
 [![npm version][npm-badge]][npm-url]
 [![npm bundle size][size-badge]][npm-url]
 [![Build Status][build-badge]][build-url]
-[![Coverage Status][coverage-badge]][coverage-url]
+[![Codecov Coverage][coverage-badge]][coverage-url]
 [![TypeScript][typescript-badge]][typescript-url]
 
 _Easily apply tilt hover effect on React components 👀 - inspired by [vanilla-tilt.js](https://github.com/micku7zu/vanilla-tilt.js/)._
@@ -179,7 +179,7 @@ Please read the guidelines [PR](.github/PULL_REQUEST_TEMPLATE.md) | [Issues](.gi
 [size-badge]: https://img.shields.io/bundlephobia/minzip/react-parallax-tilt.svg
 [build-badge]: https://travis-ci.com/mkosir/react-parallax-tilt.svg
 [build-url]: https://travis-ci.com/mkosir/react-parallax-tilt
-[coverage-badge]: https://coveralls.io/repos/github/mkosir/react-parallax-tilt/badge.svg
-[coverage-url]: https://coveralls.io/github/mkosir/react-parallax-tilt
+[coverage-badge]: https://img.shields.io/codecov/c/github/mkosir/react-parallax-tilt.svg
+[coverage-url]: https://codecov.io/gh/mkosir/react-parallax-tilt
 [typescript-badge]: https://badges.frapsoft.com/typescript/code/typescript.svg?v=101
 [typescript-url]: https://github.com/microsoft/TypeScript
