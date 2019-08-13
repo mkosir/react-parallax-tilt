@@ -20,6 +20,7 @@ jobs:
       if: branch == master && !fork
       script:
         - npm run storybook:build
+        - ls
         - codecov --token=$CODECOV_TOKEN
       deploy:
         provider: pages
