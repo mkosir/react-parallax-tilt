@@ -21,7 +21,6 @@ jobs:
       script:
         - npm run storybook:build
         - npm run test:coverage
-        - ls
         - codecov --token=$CODECOV_TOKEN
       deploy:
         provider: pages

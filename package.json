@@ -1,6 +1,6 @@
 {
   "name": "react-parallax-tilt",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "React parallax tilt effect",
   "main": "./dist/react-parallax-tilt.umd.js",
   "module": "./dist/react-parallax-tilt.es5.js",
