@@ -24,14 +24,15 @@ _Easily apply tilt hover effect on React components 👀 - inspired by [vanilla-
 - Lightweight 📦 (<4kb)
 - Supports mouse and touch events
 - Support for device tilting (gyroscope)
-- Glare effect 🌟 with custom props (color, position,...)
-- Events to keep track of component values (tilt, glare, mousemove,...) 📐
+- Glare effect 🌟 with custom props (color, position,...) [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--parallax-effect-glare-scale)
+- Events to keep track of component values 📐 (tilt, glare, mousemove,...) [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--events)
 - Many effects and functionalities that can be easily applied:
-  - scale on hover
-  - disable x/y axis
-  - flip component vertically/horizontally
-  - tilt hover effect over component or the whole window
-  - tilt component with custom manual input (joystick, slider etc.)
+  - scale on hover [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--scale)
+  - disable x/y axis [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--disable-x-y-axis)
+  - flip component vertically/horizontally [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--flip-vertically-horizontally)
+  - tilt hover effect over component or the whole window [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--track-on-window)
+  - tilt component with custom manual input (joystick, slider etc.) [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--tilt-manual-input)
+  - parallax effect on overlaid images [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--parallax-effect-image)
 
 ## Example
 
