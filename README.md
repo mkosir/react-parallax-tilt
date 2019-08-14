@@ -26,7 +26,12 @@ _Easily apply tilt hover effect on React components 👀 - inspired by [vanilla-
 - Support for device tilting (gyroscope)
 - Glare effect 🌟 with custom props (color, position,...)
 - Events to keep track of component values (tilt, glare, mousemove,...) 📐
-- Many effects that can be easily applied (scale on hover, disable axis, flip vertically/horizontally...)
+- Many effects and functionalities that can be easily applied:
+  - scale on hover
+  - disable x/y axis
+  - flip component vertically/horizontally
+  - tilt hover effect over component or the whole window
+  - tilt component with custom manual input (joystick, slider etc.)
 
 ## Example
 
