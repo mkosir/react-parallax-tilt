@@ -34,7 +34,7 @@ describe("Tilt - (manual input) - Callback 'onMove' should return correct calcul
     expect(wrapperSpy.calledWith(60, 45, 100, 75, 0, 0, 'mousemove')).toEqual(true);
   });
 
-  it('Tilt reverse', () => {
+  it('Tilt - reverse', () => {
     const wrapperSpy = spy();
     const wrapper = mount<Tilt>(
       <Tilt
@@ -48,6 +48,23 @@ describe("Tilt - (manual input) - Callback 'onMove' should return correct calcul
     );
     wrapper.simulate('mousemove');
     expect(wrapperSpy.calledWith(-60, -45, -100, -75, 0, 0, 'mousemove')).toEqual(true);
+  });
+
+  it('Tilt - track on window', () => {
+    const wrapperSpy = spy();
+    const wrapper = mount<Tilt>(
+      <Tilt
+        trackOnWindow={true}
+        tiltMaxAngleX={60}
+        tiltMaxAngleY={60}
+        tiltAngleXManual={60}
+        tiltAngleYManual={45}
+        onMove={wrapperSpy}
+      />,
+    );
+    wrapper.simulate('mousemove');
+    expect(wrapperSpy.calledWith(60, 45, 100, 75, 0, 0, 'mousemove')).toEqual(true);
+    wrapper.instance().componentWillUnmount();
   });
 
   it('Tilt&Glare', () => {

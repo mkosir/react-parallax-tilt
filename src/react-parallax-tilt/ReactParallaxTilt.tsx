@@ -41,9 +41,18 @@ class ReactParallaxTilt extends PureComponent<Props> {
   }
 
   private addEventListeners() {
-    const { gyroscope } = this.props;
+    const { trackOnWindow, gyroscope } = this.props;
 
     window.addEventListener('resize', this.setSize);
+
+    if (trackOnWindow) {
+      window.addEventListener('mouseenter', this.onEnter);
+      window.addEventListener('mousemove', this.onMove);
+      window.addEventListener('mouseout', this.onLeave);
+      window.addEventListener('touchstart', this.onEnter);
+      window.addEventListener('touchmove', this.onMove);
+      window.addEventListener('touchend', this.onLeave);
+    }
 
     if (gyroscope) {
       /* istanbul ignore next */
@@ -57,9 +66,19 @@ class ReactParallaxTilt extends PureComponent<Props> {
   }
 
   private removeEventListeners() {
-    const { gyroscope } = this.props;
+    const { trackOnWindow, gyroscope } = this.props;
 
     window.removeEventListener('resize', this.setSize);
+
+    if (trackOnWindow) {
+      window.removeEventListener('mouseenter', this.onEnter);
+      window.removeEventListener('mousemove', this.onMove);
+      window.removeEventListener('mouseout', this.onLeave);
+      window.removeEventListener('touchstart', this.onEnter);
+      window.removeEventListener('touchmove', this.onMove);
+      window.removeEventListener('touchend', this.onLeave);
+    }
+
     // jest - instance of DeviceOrientationEvent not possible
     /* istanbul ignore next */
     if (gyroscope && (window as any).DeviceOrientationEvent) {
@@ -258,14 +277,24 @@ class ReactParallaxTilt extends PureComponent<Props> {
       return;
     }
 
-    const {
-      size: { width, height, left, top },
-      clientPosition: { x, y },
-    } = this.wrapperEl;
+    const { trackOnWindow } = this.props;
 
-    // calculate client x/y position in range [-100,100]
-    const xTemp: number = ((y! - top!) / height!) * 200 - 100;
-    const yTemp: number = ((x! - left!) / width!) * 200 - 100;
+    let xTemp;
+    let yTemp;
+    if (trackOnWindow) {
+      const { x, y } = this.wrapperEl.clientPosition;
+
+      xTemp = (y! / window.innerHeight) * 200 - 100;
+      yTemp = (x! / window.innerWidth) * 200 - 100;
+    } else {
+      const {
+        size: { width, height, left, top },
+        clientPosition: { x, y },
+      } = this.wrapperEl;
+
+      xTemp = ((y! - top!) / height!) * 200 - 100;
+      yTemp = ((x! - left!) / width!) * 200 - 100;
+    }
 
     this.wrapperEl.clientPosition.xPercentage = constrainToRange(xTemp, -100, 100);
     this.wrapperEl.clientPosition.yPercentage = constrainToRange(yTemp, -100, 100);
@@ -340,8 +369,8 @@ class ReactParallaxTilt extends PureComponent<Props> {
         onMouseEnter={this.onEnter}
         onMouseMove={this.onMove}
         onMouseLeave={this.onLeave}
-        onTouchMove={this.onMove}
         onTouchStart={this.onEnter}
+        onTouchMove={this.onMove}
         onTouchEnd={this.onLeave}
         className={className}
         style={style}

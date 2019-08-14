@@ -34,6 +34,10 @@ export interface Props extends TiltProps, GlareProps, React.HTMLAttributes<HTMLD
    */
   transitionSpeed?: number;
   /**
+   * Track mouse and touch events on the whole window.
+   */
+  trackOnWindow?: boolean;
+  /**
    * Boolean to enable/disable device orientation detection.
    */
   gyroscope?: boolean;
@@ -71,6 +75,7 @@ export type WrapperElement<T extends HTMLElement> = {
 };
 
 type DOMSupportedEvent =
+  | Event
   | MouseEvent<HTMLDivElement>
   | TouchEvent<HTMLDivElement>
   | DeviceOrientationEvent;

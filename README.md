@@ -118,6 +118,9 @@ Easing of the transition when manipulating the component.
 **transitionSpeed**: _number_ ▶︎ `400`  
 Speed of the transition when manipulating the component.
 
+**trackOnWindow**: _boolean_ ▶︎ `false`  
+Track mouse and touch events on the whole window.
+
 **gyroscope**: _boolean_ ▶︎ `false`  
 Boolean to enable/disable device orientation detection.
 

@@ -13,11 +13,12 @@ import ParallaxEffectGlareScale from './ParallaxEffectGlareScale/ParallaxEffectG
 import ParallaxEffectImg from './ParallaxEffectImg/ParallaxEffectImg';
 import TiltImg from './TiltImg/TiltImg';
 import TiltMax from './TiltMax/TiltMax';
-import TiltManualInput from './TiltManualInput/TiltManualInput';
-import Gyroscope from './Gyroscope/Gyroscope';
 import GlareEffect from './GlareEffect/GlareEffect';
 import GlareEffectNoTilt from './GlareEffectNoTilt/GlareEffectNoTilt';
 import GlareEffect360 from './GlareEffect360/GlareEffect360';
+import TrackOnWindow from './TrackOnWindow/TrackOnWindow';
+import TiltManualInput from './TiltManualInput/TiltManualInput';
+import Gyroscope from './Gyroscope/Gyroscope';
 import Events from './Events/Events';
 import './ReactParallax.story.scss';
 
@@ -39,6 +40,7 @@ stories
   .add('Glare effect', () => <GlareEffect />)
   .add('Glare effect - no tilt', () => <GlareEffectNoTilt />)
   .add('Glare effect - 360', () => <GlareEffect360 />)
+  .add('Track on window', () => <TrackOnWindow />)
   .add('Tilt manual input', () => <TiltManualInput />)
   .add('Gyroscope tilt', () => <Gyroscope />)
   .add('Events', () => <Events />);

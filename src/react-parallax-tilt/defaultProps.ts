@@ -10,6 +10,7 @@ export const defaultProps: Props = {
   reset: true,
   transitionEasing: 'cubic-bezier(.03,.98,.52,.99)',
   transitionSpeed: 400,
+  trackOnWindow: false,
   gyroscope: false,
   ...defaultTiltProps,
   ...defaultGlareProps,
