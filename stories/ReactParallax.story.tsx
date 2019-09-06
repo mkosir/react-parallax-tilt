@@ -21,7 +21,7 @@ import TiltManualInput from './TiltManualInput/TiltManualInput';
 import Gyroscope from './Gyroscope/Gyroscope';
 import MultipleTilt from './MultipleTilt/MultipleTilt';
 import Events from './Events/Events';
-import './ReactParallax.story.scss';
+import './ReactParallax.scss';
 
 const stories = storiesOf('React Parallax Tilt', module);
 
