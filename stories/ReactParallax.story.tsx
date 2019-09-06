@@ -19,6 +19,7 @@ import GlareEffect360 from './GlareEffect360/GlareEffect360';
 import TrackOnWindow from './TrackOnWindow/TrackOnWindow';
 import TiltManualInput from './TiltManualInput/TiltManualInput';
 import Gyroscope from './Gyroscope/Gyroscope';
+import MultipleTilt from './MultipleTilt/MultipleTilt';
 import Events from './Events/Events';
 import './ReactParallax.story.scss';
 
@@ -43,4 +44,5 @@ stories
   .add('Track on window', () => <TrackOnWindow />)
   .add('Tilt manual input', () => <TiltManualInput />)
   .add('Gyroscope tilt', () => <Gyroscope />)
+  .add('Multiple tilt', () => <MultipleTilt />)
   .add('Events', () => <Events />);
