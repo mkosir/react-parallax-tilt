@@ -181,7 +181,8 @@ npm start
 
 ## Contributing
 
-Please read the guidelines [PR](.github/PULL_REQUEST_TEMPLATE.md) | [Issues](.github/ISSUE_TEMPLATE.md)
+All contributions are welcome!  
+Please take a moment to review guidelines [PR](.github/PULL_REQUEST_TEMPLATE.md) | [Issues](.github/ISSUE_TEMPLATE.md)
 
 [npm-url]: https://www.npmjs.com/package/react-parallax-tilt
 [npm-badge]: https://img.shields.io/npm/v/react-parallax-tilt.svg
