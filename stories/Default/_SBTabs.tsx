@@ -3,7 +3,7 @@ import React from 'react';
 import SBTabComponent from '../_SBTabComponent/SBTabComponent';
 import Demo from './Default';
 
-const code = `import React from 'react';
+const jsx = `import React from 'react';
 
 import Tilt from '../../src';
 import DefaultComponent from '../_DefaultComponent/DefaultComponent';
@@ -17,7 +17,7 @@ const Default = () => (
 export default Default;`;
 
 const SBTabs = () => (
-  <SBTabComponent code={code}>
+  <SBTabComponent jsx={jsx}>
     <Demo />
   </SBTabComponent>
 );

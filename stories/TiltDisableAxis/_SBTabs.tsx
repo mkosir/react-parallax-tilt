@@ -1,9 +1,9 @@
 import React from 'react';
 
-import TabComponent from '../_SBTabComponent/SBTabComponent';
+import SBTabComponent from '../_SBTabComponent/SBTabComponent';
 import Demo from './TiltDisableAxis';
 
-const code = `import React, { useState } from 'react';
+const jsx = `import React, { useState } from 'react';
 
 import Tilt from '../../src';
 import './TiltDisableAxis.scss';
@@ -46,9 +46,9 @@ const TiltDisableAxis = () => {
 export default TiltDisableAxis;`;
 
 const SBTabs = () => (
-  <TabComponent code={code}>
+  <SBTabComponent jsx={jsx}>
     <Demo />
-  </TabComponent>
+  </SBTabComponent>
 );
 
 export default SBTabs;

@@ -2,16 +2,23 @@ import React, { FC, useState, useEffect } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { prism as aaa } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { prism } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
+import imgJSX from './img/jsx.png';
+import imgSass from './img/sass.png';
 
 type Props = {
   /**
-   * Demo code.
+   * JSX code.
    */
-  code: string;
+  jsx: string;
+  /**
+   * SCSS code.
+   */
+  scss?: string;
 };
 
-const TabComponent: FC<Props> = ({ code, children }) => {
+const TabComponent: FC<Props> = ({ jsx, scss, children }) => {
   const [tabIndex, setTabIndex] = useLocalStorage('storybook-rpt', 0);
   return (
     <Tabs defaultIndex={tabIndex} onSelect={index => setTabIndex(index)}>
@@ -21,9 +28,30 @@ const TabComponent: FC<Props> = ({ code, children }) => {
       </TabList>
       <TabPanel className="demo">{children}</TabPanel>
       <TabPanel>
-        <SyntaxHighlighter language="jsx" style={aaa}>
-          {code}
-        </SyntaxHighlighter>
+        <Tabs>
+          <TabList>
+            <Tab>
+              <img src={imgJSX} height="42" width="42" />
+              .jsx
+            </Tab>
+            {scss && (
+              <Tab>
+                <img src={imgSass} height="42" width="42" />
+                .scss
+              </Tab>
+            )}
+          </TabList>
+          <TabPanel>
+            <SyntaxHighlighter language="jsx" style={prism}>
+              {jsx}
+            </SyntaxHighlighter>
+          </TabPanel>
+          <TabPanel>
+            <SyntaxHighlighter language="scss" style={prism}>
+              {scss}
+            </SyntaxHighlighter>
+          </TabPanel>
+        </Tabs>
       </TabPanel>
     </Tabs>
   );

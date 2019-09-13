@@ -1,9 +1,9 @@
 import React from 'react';
 
-import TabComponent from '../_SBTabComponent/SBTabComponent';
+import SBTabComponent from '../_SBTabComponent/SBTabComponent';
 import Demo from './MultipleTilt';
 
-const code = `import React from 'react';
+const jsx = `import React from 'react';
 
 import Tilt from '../../src';
 import './MultipleTilt.scss';
@@ -33,9 +33,9 @@ const MultipleTilt = () => (
 export default MultipleTilt;`;
 
 const SBTabs = () => (
-  <TabComponent code={code}>
+  <SBTabComponent jsx={jsx}>
     <Demo />
-  </TabComponent>
+  </SBTabComponent>
 );
 
 export default SBTabs;

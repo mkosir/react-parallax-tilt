@@ -1,9 +1,9 @@
 import React from 'react';
 
-import TabComponent from '../_SBTabComponent/SBTabComponent';
+import SBTabComponent from '../_SBTabComponent/SBTabComponent';
 import Demo from './Events';
 
-const code = `import React, { PureComponent } from 'react';
+const jsx = `import React, { PureComponent } from 'react';
 
 import Tilt from '../../src';
 import './Events.scss';
@@ -153,10 +153,50 @@ class Events extends PureComponent {
 
 export default Events;`;
 
+const scss = `.parallax-events {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .react-parallax-tilt {
+    @include background;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 350px;
+    font-size: 28px;
+    font-style: italic;
+    background-color: darkgreen;
+    color: white;
+    border: 5px solid black;
+    border-radius: 20px;
+
+    .header {
+      margin-top: 12px;
+      font-size: 35px;
+      border-top: 2px solid white;
+      min-width: 200px;
+      text-align: center;
+    }
+  }
+
+  .event-type {
+    margin-top: 20px;
+    font-size: 20px;
+
+    div {
+      margin-top: 10px;
+    }
+  }
+}`;
+
 const SBTabs = () => (
-  <TabComponent code={code}>
+  <SBTabComponent jsx={jsx} scss={scss}>
     <Demo />
-  </TabComponent>
+  </SBTabComponent>
 );
 
 export default SBTabs;

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import TabComponent from '../_SBTabComponent/SBTabComponent';
+import SBTabComponent from '../_SBTabComponent/SBTabComponent';
 import Demo from './ParallaxEffectImg';
 
-const code = `import React from 'react';
+const jsx = `import React from 'react';
 
 import Tilt from '../../src';
 import './ParallaxEffectImg.scss';
@@ -26,9 +26,9 @@ const ParallaxEffectImg = () => (
 export default ParallaxEffectImg;`;
 
 const SBTabs = () => (
-  <TabComponent code={code}>
+  <SBTabComponent jsx={jsx}>
     <Demo />
-  </TabComponent>
+  </SBTabComponent>
 );
 
 export default SBTabs;
