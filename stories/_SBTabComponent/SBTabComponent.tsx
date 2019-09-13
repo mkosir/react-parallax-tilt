@@ -31,13 +31,11 @@ const TabComponent: FC<Props> = ({ jsx, scss, children }) => {
         <Tabs>
           <TabList>
             <Tab>
-              <img src={imgJSX} height="42" width="42" />
-              .jsx
+              <img src={imgJSX} height="30" />
             </Tab>
             {scss && (
               <Tab>
-                <img src={imgSass} height="42" width="42" />
-                .scss
+                <img src={imgSass} height="30" />
               </Tab>
             )}
           </TabList>
@@ -46,11 +44,13 @@ const TabComponent: FC<Props> = ({ jsx, scss, children }) => {
               {jsx}
             </SyntaxHighlighter>
           </TabPanel>
-          <TabPanel>
-            <SyntaxHighlighter language="scss" style={prism}>
-              {scss}
-            </SyntaxHighlighter>
-          </TabPanel>
+          {scss && (
+            <TabPanel>
+              <SyntaxHighlighter language="scss" style={prism}>
+                {scss}
+              </SyntaxHighlighter>
+            </TabPanel>
+          )}
         </Tabs>
       </TabPanel>
     </Tabs>
