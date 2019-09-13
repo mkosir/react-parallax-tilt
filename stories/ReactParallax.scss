@@ -1,8 +1,14 @@
 #root {
-  display: flex;
-  justify-content: center;
-  margin-top: 10vh;
   font-family: Arial, sans-serif;
+  .react-tabs {
+    .demo.react-tabs__tab-panel--selected {
+      margin-top: 10vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
 
 $default-stripe-bg-color: #077407;
