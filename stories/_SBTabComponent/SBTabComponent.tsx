@@ -19,16 +19,36 @@ type Props = {
 };
 
 const TabComponent: FC<Props> = ({ jsx, scss, children }) => {
-  const [tabIndex, setTabIndex] = useLocalStorage('storybook-rpt', 0);
+  const [tabIndex, setTabIndex] = useLocalStorage<LocalStorage>('storybook-rpt', {
+    mainTabIndex: 0,
+    codeTabIndex: 0,
+  });
+
   return (
-    <Tabs defaultIndex={tabIndex} onSelect={index => setTabIndex(index)}>
+    <Tabs
+      defaultIndex={tabIndex.mainTabIndex}
+      onSelect={index =>
+        setTabIndex(prevTabIndex => ({
+          ...prevTabIndex,
+          mainTabIndex: index,
+        }))
+      }
+    >
       <TabList>
         <Tab>Demo</Tab>
         <Tab>Code</Tab>
       </TabList>
       <TabPanel className="demo">{children}</TabPanel>
       <TabPanel>
-        <Tabs>
+        <Tabs
+          defaultIndex={tabIndex.codeTabIndex}
+          onSelect={index =>
+            setTabIndex(prevTabIndex => ({
+              ...prevTabIndex,
+              codeTabIndex: index,
+            }))
+          }
+        >
           <TabList>
             <Tab>
               <img src={imgJSX} height="30" />
@@ -59,10 +79,18 @@ const TabComponent: FC<Props> = ({ jsx, scss, children }) => {
 
 export default TabComponent;
 
-const useLocalStorage = (key: string, initialValue: number = null) => {
-  const [value, setValue] = useState(JSON.parse(localStorage.getItem(key)) || initialValue);
+type LocalStorage = {
+  mainTabIndex: number;
+  codeTabIndex: number;
+};
+
+function useLocalStorage<T>(
+  key: string,
+  initialValue: T = null,
+): [T, React.Dispatch<React.SetStateAction<T>>] {
+  const [value, setValue] = useState<T>(JSON.parse(localStorage.getItem(key)) || initialValue);
   useEffect(() => {
     localStorage.setItem(key, JSON.stringify(value));
   });
   return [value, setValue];
-};
+}
