@@ -32,8 +32,17 @@ const MultipleTilt = () => (
 
 export default MultipleTilt;`;
 
+const scss = `.multiple-tilt-col {
+  $spacing: 20px;
+  margin-right: $spacing;
+
+  :first-child {
+    margin-bottom: $spacing;
+  }
+}`;
+
 const SBTabs = () => (
-  <SBTabComponent jsx={jsx}>
+  <SBTabComponent jsx={jsx} scss={scss}>
     <Demo />
   </SBTabComponent>
 );

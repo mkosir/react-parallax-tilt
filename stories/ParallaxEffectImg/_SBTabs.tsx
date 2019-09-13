@@ -25,8 +25,22 @@ const ParallaxEffectImg = () => (
 
 export default ParallaxEffectImg;`;
 
+const scss = `.parallax-effect-img {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  background-image: url('./img/background.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  .inner-element {
+    transform: translateZ(40px) scale(0.8);
+    width: 70%;
+    margin-left: 25%;
+  }
+}`;
+
 const SBTabs = () => (
-  <SBTabComponent jsx={jsx}>
+  <SBTabComponent jsx={jsx} scss={scss}>
     <Demo />
   </SBTabComponent>
 );

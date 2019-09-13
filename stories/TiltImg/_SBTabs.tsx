@@ -25,8 +25,14 @@ const TiltImg = () => (
 
 export default TiltImg;`;
 
+const scss = `.tilt-img {
+  .inner-element {
+    width: 70vw;
+  }
+}`;
+
 const SBTabs = () => (
-  <SBTabComponent jsx={jsx}>
+  <SBTabComponent jsx={jsx} scss={scss}>
     <Demo />
   </SBTabComponent>
 );
