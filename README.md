@@ -36,7 +36,7 @@ _Easily apply tilt hover effect on React components 👀 - inspired by [vanilla-
 
 ## Example
 
-```javascript
+```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Tilt from 'react-parallax-tilt';
