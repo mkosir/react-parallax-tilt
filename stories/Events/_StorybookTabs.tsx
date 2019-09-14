@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SBTabComponent from '../_SBTabComponent/SBTabComponent';
+import StorybookTabComponent from '../_StorybookTabComponent/StorybookTabComponent';
 import Demo from './Events';
 
 const jsx = `import React, { PureComponent } from 'react';
@@ -193,10 +193,10 @@ const scss = `.parallax-events {
   }
 }`;
 
-const SBTabs = () => (
-  <SBTabComponent jsx={jsx} scss={scss}>
+const StorybookTabs = () => (
+  <StorybookTabComponent jsx={jsx} scss={scss}>
     <Demo />
-  </SBTabComponent>
+  </StorybookTabComponent>
 );
 
-export default SBTabs;
+export default StorybookTabs;

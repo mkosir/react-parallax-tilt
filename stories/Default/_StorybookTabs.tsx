@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SBTabComponent from '../_SBTabComponent/SBTabComponent';
+import StorybookTabComponent from '../_StorybookTabComponent/StorybookTabComponent';
 import Demo from './Default';
 
 const jsx = `import React from 'react';
@@ -16,10 +16,10 @@ const Default = () => (
 
 export default Default;`;
 
-const SBTabs = () => (
-  <SBTabComponent jsx={jsx}>
+const StorybookTabs = () => (
+  <StorybookTabComponent jsx={jsx}>
     <Demo />
-  </SBTabComponent>
+  </StorybookTabComponent>
 );
 
-export default SBTabs;
+export default StorybookTabs;

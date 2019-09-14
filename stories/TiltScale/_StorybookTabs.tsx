@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SBTabComponent from '../_SBTabComponent/SBTabComponent';
+import StorybookTabComponent from '../_StorybookTabComponent/StorybookTabComponent';
 import Demo from './TiltScale';
 
 const jsx = `import React, { useState } from 'react';
@@ -67,10 +67,10 @@ const scss = `.tilt-scale {
   }
 }`;
 
-const SBTabs = () => (
-  <SBTabComponent jsx={jsx} scss={scss}>
+const StorybookTabs = () => (
+  <StorybookTabComponent jsx={jsx} scss={scss}>
     <Demo />
-  </SBTabComponent>
+  </StorybookTabComponent>
 );
 
-export default SBTabs;
+export default StorybookTabs;

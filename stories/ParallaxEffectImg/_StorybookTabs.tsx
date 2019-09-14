@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SBTabComponent from '../_SBTabComponent/SBTabComponent';
+import StorybookTabComponent from '../_StorybookTabComponent/StorybookTabComponent';
 import Demo from './ParallaxEffectImg';
 
 const jsx = `import React from 'react';
@@ -39,10 +39,10 @@ const scss = `.parallax-effect-img {
   }
 }`;
 
-const SBTabs = () => (
-  <SBTabComponent jsx={jsx} scss={scss}>
+const StorybookTabs = () => (
+  <StorybookTabComponent jsx={jsx} scss={scss}>
     <Demo />
-  </SBTabComponent>
+  </StorybookTabComponent>
 );
 
-export default SBTabs;
+export default StorybookTabs;

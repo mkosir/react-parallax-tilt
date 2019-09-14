@@ -1,15 +1,23 @@
 import React from 'react';
 
-import SBTabComponent from '../_SBTabComponent/SBTabComponent';
-import Demo from './ParallaxEffect';
+import StorybookTabComponent from '../_StorybookTabComponent/StorybookTabComponent';
+import Demo from './TrackOnWindow';
 
 const jsx = `import React from 'react';
 
 import Tilt from '../../src';
-import './ParallaxEffect.scss';
+import './TrackOnWindow.scss';
 
-const ParallaxEffect = () => (
-  <Tilt className="parallax-effect" perspective={500}>
+const TrackOnWindow = () => (
+  <Tilt
+    className="track-on-window"
+    perspective={500}
+    glareEnable={true}
+    glareMaxOpacity={0.75}
+    glarePosition="all"
+    scale={1.02}
+    trackOnWindow={true}
+  >
     <div className="inner-element">
       <div>React</div>
       <div>Parallax Tilt</div>
@@ -18,9 +26,9 @@ const ParallaxEffect = () => (
   </Tilt>
 );
 
-export default ParallaxEffect;`;
+export default TrackOnWindow;`;
 
-const scss = `.parallax-effect {
+const scss = `.track-on-window {
   @include background;
   display: flex;
   flex-direction: column;
@@ -47,10 +55,10 @@ const scss = `.parallax-effect {
   }
 }`;
 
-const SBTabs = () => (
-  <SBTabComponent jsx={jsx} scss={scss}>
+const StorybookTabs = () => (
+  <StorybookTabComponent jsx={jsx} scss={scss}>
     <Demo />
-  </SBTabComponent>
+  </StorybookTabComponent>
 );
 
-export default SBTabs;
+export default StorybookTabs;

@@ -18,7 +18,7 @@ type Props = {
   scss?: string;
 };
 
-const TabComponent: FC<Props> = ({ jsx, scss, children }) => {
+const StorybookTabComponent: FC<Props> = ({ jsx, scss, children }) => {
   const [tabIndex, setTabIndex] = useLocalStorage<LocalStorage>('storybook-rpt', {
     mainTabIndex: 0,
     codeTabIndex: 0,
@@ -77,7 +77,7 @@ const TabComponent: FC<Props> = ({ jsx, scss, children }) => {
   );
 };
 
-export default TabComponent;
+export default StorybookTabComponent;
 
 type LocalStorage = {
   mainTabIndex: number;
