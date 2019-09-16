@@ -22,6 +22,7 @@ _Easily apply tilt hover effect on React components 👀 - inspired by [vanilla-
 ## Features
 
 - Lightweight 📦 (<4kb)
+- Zero dependencies
 - Supports mouse and touch events
 - Support for device tilting (gyroscope)
 - Glare effect 🌟 with custom props (color, position,...) [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--parallax-effect-glare-scale)
