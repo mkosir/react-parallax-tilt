@@ -1,14 +1,14 @@
 import React from 'react';
 
 import StorybookTabComponent from '../_StorybookTabComponent/StorybookTabComponent';
-import Demo from './Events';
+import Demo from './EventsAll';
 
 const jsx = `import React, { PureComponent } from 'react';
 
 import Tilt from '../../src';
-import './Events.scss';
+import './EventsAll.scss';
 
-class Events extends PureComponent {
+class EventsAll extends PureComponent {
   state = {
     tiltAngleX: 0,
     tiltAngleY: 0,
@@ -90,7 +90,7 @@ class Events extends PureComponent {
     } = this.state;
 
     return (
-      <div className="parallax-events">
+      <div className="parallax-events-all">
         <Tilt
           onMove={this.onMove}
           onEnter={this.onEnter}
@@ -151,9 +151,9 @@ class Events extends PureComponent {
   }
 }
 
-export default Events;`;
+export default EventsAll;`;
 
-const scss = `.parallax-events {
+const scss = `.parallax-events-all {
   display: flex;
   flex-direction: column;
   justify-content: center;

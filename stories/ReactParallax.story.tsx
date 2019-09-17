@@ -20,7 +20,8 @@ import TrackOnWindow from './TrackOnWindow/_StorybookTabs';
 import TiltManualInput from './TiltManualInput/_StorybookTabs';
 import Gyroscope from './Gyroscope/_StorybookTabs';
 import MultipleTilt from './MultipleTilt/_StorybookTabs';
-import Events from './Events/_StorybookTabs';
+import EventTiltAngle from './EventTiltAngle/_StorybookTabs';
+import EventsAll from './EventsAll/_StorybookTabs';
 import './ReactParallax.scss';
 
 const stories = storiesOf('React Parallax Tilt', module);
@@ -45,4 +46,5 @@ stories
   .add('Tilt manual input', () => <TiltManualInput />)
   .add('Gyroscope tilt', () => <Gyroscope />)
   .add('Multiple tilt', () => <MultipleTilt />)
-  .add('Events', () => <Events />);
+  .add('Event - tilt angle', () => <EventTiltAngle />)
+  .add('Events - all', () => <EventsAll />);

@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
 
 import Tilt from '../../src';
-import './Events.scss';
+import './EventsAll.scss';
 
-class Events extends PureComponent {
+class EventsAll extends PureComponent {
   state = {
     tiltAngleX: 0,
     tiltAngleY: 0,
@@ -85,7 +85,7 @@ class Events extends PureComponent {
     } = this.state;
 
     return (
-      <div className="parallax-events">
+      <div className="parallax-events-all">
         <Tilt
           onMove={this.onMove}
           onEnter={this.onEnter}
@@ -146,4 +146,4 @@ class Events extends PureComponent {
   }
 }
 
-export default Events;
+export default EventsAll;

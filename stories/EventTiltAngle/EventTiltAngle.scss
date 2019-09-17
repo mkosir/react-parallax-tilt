@@ -1,0 +1,26 @@
+@import '../ReactParallax.scss';
+
+.event-tilt-angle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .component-tilt {
+    font-style: italic;
+    margin-top: 30px;
+    font-size: 24px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 10px;
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+  }
+}
