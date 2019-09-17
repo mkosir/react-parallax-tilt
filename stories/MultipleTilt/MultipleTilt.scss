@@ -1,8 +1,13 @@
-.multiple-tilt-col {
-  $spacing: 20px;
-  margin-right: $spacing;
+.multiple-tilt {
+  display: flex;
+  flex-direction: row;
 
-  :first-child {
-    margin-bottom: $spacing;
+  .col {
+    $spacing: 20px;
+    margin-right: $spacing;
+
+    :first-child {
+      margin-bottom: $spacing;
+    }
   }
 }
