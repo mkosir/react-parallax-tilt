@@ -74,7 +74,7 @@ class ReactParallaxTilt extends PureComponent<Props> {
 
     if (gyroscope) {
       /* istanbul ignore next */
-      if (!(window as any).DeviceOrientationEvent) {
+      if (!window.DeviceOrientationEvent) {
         console.error("Browser doesn't support Device Orientation.");
         return;
       }
@@ -99,7 +99,7 @@ class ReactParallaxTilt extends PureComponent<Props> {
 
     // jest - instance of DeviceOrientationEvent not possible
     /* istanbul ignore next */
-    if (gyroscope && (window as any).DeviceOrientationEvent) {
+    if (gyroscope && window.DeviceOrientationEvent) {
       window.removeEventListener('deviceorientation', this.onMove);
     }
   }
