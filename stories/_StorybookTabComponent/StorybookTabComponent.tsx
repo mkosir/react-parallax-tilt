@@ -7,6 +7,22 @@ import { prism } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import imgJSX from './img/jsx.png';
 import imgSass from './img/sass.png';
 
+type LocalStorage = {
+  mainTabIndex: number;
+  codeTabIndex: number;
+};
+
+function useLocalStorage<T>(
+  key: string,
+  initialValue: T = null,
+): [T, React.Dispatch<React.SetStateAction<T>>] {
+  const [value, setValue] = useState<T>(JSON.parse(localStorage.getItem(key)) || initialValue);
+  useEffect(() => {
+    localStorage.setItem(key, JSON.stringify(value));
+  });
+  return [value, setValue];
+}
+
 type Props = {
   /**
    * JSX code.
@@ -78,19 +94,3 @@ const StorybookTabComponent: FC<Props> = ({ jsx, scss, children }) => {
 };
 
 export default StorybookTabComponent;
-
-type LocalStorage = {
-  mainTabIndex: number;
-  codeTabIndex: number;
-};
-
-function useLocalStorage<T>(
-  key: string,
-  initialValue: T = null,
-): [T, React.Dispatch<React.SetStateAction<T>>] {
-  const [value, setValue] = useState<T>(JSON.parse(localStorage.getItem(key)) || initialValue);
-  useEffect(() => {
-    localStorage.setItem(key, JSON.stringify(value));
-  });
-  return [value, setValue];
-}
