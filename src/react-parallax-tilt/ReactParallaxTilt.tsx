@@ -4,7 +4,7 @@ import { Props, SupportedEvent, EventType, CustomEventType, WrapperElement } fro
 import { defaultProps } from './defaultProps';
 import { Tilt } from '../features/tilt/Tilt';
 import { Glare } from '../features/glare/Glare';
-import { setTransition, constrainToRange } from '../common/utils';
+import { setTransition, constrainToRange, intersectPointRect } from '../common/utils';
 
 class ReactParallaxTilt extends PureComponent<Props> {
   public static defaultProps = defaultProps;
@@ -309,6 +309,20 @@ class ReactParallaxTilt extends PureComponent<Props> {
         size: { width, height, left, top },
         clientPosition: { x, y },
       } = this.wrapperEl;
+
+      // check if client is intersecting with element and not currently tilting
+      if (
+        !intersectPointRect(
+          { x: x!, y: y! },
+          { left: left!, top: top!, right: width! + left!, bottom: height! + top! },
+        ) &&
+        (this.tilt!.tiltAngleX === 0 || this.tilt!.tiltAngleX === 180) &&
+        (this.tilt!.tiltAngleY === 0 || this.tilt!.tiltAngleY === 180)
+      ) {
+        this.wrapperEl.clientPosition.xPercentage = 0;
+        this.wrapperEl.clientPosition.yPercentage = 0;
+        return;
+      }
 
       xTemp = ((y! - top!) / height!) * 200 - 100;
       yTemp = ((x! - left!) / width!) * 200 - 100;
