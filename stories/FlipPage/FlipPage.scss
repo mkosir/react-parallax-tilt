@@ -1,0 +1,31 @@
+body {
+  overflow: hidden;
+}
+
+.flip-page {
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+    .title {
+      font-size: 22px;
+    }
+    .form {
+      display: flex;
+      align-items: flex-start;
+      input {
+        transform: scale(1.2);
+        height: 13px;
+        margin-right: 7px;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .page {
+    width: 80vw;
+  }
+}

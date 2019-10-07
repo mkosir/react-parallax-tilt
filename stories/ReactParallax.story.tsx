@@ -8,6 +8,7 @@ import TiltScale from './TiltScale/_StorybookTabs';
 import ScaleNoTilt from './ScaleNoTilt/_StorybookTabs';
 import TiltDisableAxis from './TiltDisableAxis/_StorybookTabs';
 import FlipVH from './FlipVH/_StorybookTabs';
+import FlipPage from './FlipPage/_StorybookTabs';
 import ParallaxEffect from './ParallaxEffect/_StorybookTabs';
 import ParallaxEffectGlareScale from './ParallaxEffectGlareScale/_StorybookTabs';
 import ParallaxEffectImg from './ParallaxEffectImg/_StorybookTabs';
@@ -34,6 +35,7 @@ stories
   .add('Scale - no tilt', () => <ScaleNoTilt />)
   .add('Disable x/y axis', () => <TiltDisableAxis />)
   .add('Flip vertically/horizontally', () => <FlipVH />)
+  .add('Flip page', () => <FlipPage />)
   .add('Parallax effect', () => <ParallaxEffect />)
   .add('Parallax effect - glare&scale', () => <ParallaxEffectGlareScale />)
   .add('Parallax effect image', () => <ParallaxEffectImg />)
