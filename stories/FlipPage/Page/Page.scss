@@ -35,6 +35,32 @@
     margin: 15px;
     text-align: justify;
 
+    .controls {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+      border: 2px solid black;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 30px;
+
+      .title {
+        font-size: 22px;
+      }
+      .form {
+        display: flex;
+        align-items: flex-start;
+        input {
+          transform: scale(1.2);
+          height: 13px;
+          margin-right: 7px;
+          margin-left: 20px;
+        }
+      }
+    }
+
     img {
       width: 400px;
       margin: 10px;

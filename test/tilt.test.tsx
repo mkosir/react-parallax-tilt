@@ -111,7 +111,7 @@ describe("Tilt - (manual input) - Callback 'onMove' should return correct calcul
     wrapper.simulate('mousemove');
     wrapper.simulate('mouseleave');
     expect(wrapperSpyOnEnter.calledWith('mouseenter')).toEqual(true);
-    expect(wrapperSpyOnMove.calledWith(0, -0, 0, -0, 0, 0, 'mousemove')).toEqual(true);
+    expect(wrapperSpyOnMove.calledWith(NaN, NaN, NaN, NaN, 0, NaN, 'mousemove')).toEqual(true);
     expect(wrapperSpyOnLeave.calledWith('mouseleave')).toEqual(true);
   });
 

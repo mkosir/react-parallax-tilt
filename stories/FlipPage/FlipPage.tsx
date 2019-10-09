@@ -9,34 +9,14 @@ const FlipPage = () => {
 
   return (
     <div className="flip-page">
-      <div className="header">
-        <div className="title">
-          <div>Flip Page 👆</div>
-        </div>
-        <div className="form">
-          <label>
-            <input
-              onChange={ev => toggleFlip([ev.target.checked, flipHorizontally])}
-              checked={flipVertically}
-              type="checkbox"
-            />
-            Vertically
-          </label>
-          <label>
-            <input
-              onChange={ev => toggleFlip([flipVertically, ev.target.checked])}
-              checked={flipHorizontally}
-              type="checkbox"
-            />
-            Horizontally
-          </label>
-        </div>
-      </div>
-      <div className="page">
-        <Tilt flipVertically={flipVertically} flipHorizontally={flipHorizontally}>
-          <Page />
-        </Tilt>
-      </div>
+      <Tilt flipVertically={flipVertically} flipHorizontally={flipHorizontally}>
+        <Page
+          flipVertically={flipVertically}
+          flipHorizontally={flipHorizontally}
+          toggleFlipVertically={checked => toggleFlip([checked, flipHorizontally])}
+          toggleFlipHorizontally={checked => toggleFlip([flipVertically, checked])}
+        />
+      </Tilt>
     </div>
   );
 };

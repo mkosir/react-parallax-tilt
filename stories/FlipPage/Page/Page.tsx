@@ -3,7 +3,12 @@ import React from 'react';
 import './Page.scss';
 import sampleImg from './lorem-picsum.png';
 
-const Page = () => (
+const Page = ({
+  flipVertically,
+  flipHorizontally,
+  toggleFlipVertically,
+  toggleFlipHorizontally,
+}) => (
   <div className="page">
     <ul>
       <li>Home</li>
@@ -12,6 +17,29 @@ const Page = () => (
       <li>About</li>
     </ul>
     <div className="content">
+      <div className="controls">
+        <div className="title">
+          <div>Flip Page 👆</div>
+        </div>
+        <div className="form">
+          <label>
+            <input
+              onChange={ev => toggleFlipVertically(ev.target.checked)}
+              checked={flipVertically}
+              type="checkbox"
+            />
+            Vertically
+          </label>
+          <label>
+            <input
+              onChange={ev => toggleFlipHorizontally(ev.target.checked)}
+              checked={flipHorizontally}
+              type="checkbox"
+            />
+            Horizontally
+          </label>
+        </div>
+      </div>
       <div>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
