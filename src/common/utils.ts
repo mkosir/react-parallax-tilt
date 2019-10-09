@@ -24,7 +24,7 @@ export function intersectPointRect(
 ): boolean {
   const { x, y } = point;
   const { left, top, right, bottom } = rectangle;
-  const horizontalIntersection = left! <= x! && x! <= right! + left!;
-  const verticalIntersection = top! <= y! && y! <= bottom! + top!;
+  const horizontalIntersection = left <= x && x <= right;
+  const verticalIntersection = top <= y && y <= bottom;
   return horizontalIntersection && verticalIntersection;
 }

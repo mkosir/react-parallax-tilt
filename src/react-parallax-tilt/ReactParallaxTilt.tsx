@@ -316,10 +316,13 @@ class ReactParallaxTilt extends PureComponent<Props> {
           { x: x!, y: y! },
           { left: left!, top: top!, right: width! + left!, bottom: height! + top! },
         ) &&
-        (this.tilt!.tiltAngleX === 0 || this.tilt!.tiltAngleX === 180) &&
-        (this.tilt!.tiltAngleY === 0 || this.tilt!.tiltAngleY === 180)
+        (this.props.flipVertically || this.props.flipVertically)
       ) {
         this.wrapperEl.clientPosition.xPercentage = 0;
+        console.log(
+          'Log: ReactParallaxTilt ->  this.wrapperEl.clientPosition.xPercentage ',
+          this.wrapperEl.clientPosition.xPercentage,
+        );
         this.wrapperEl.clientPosition.yPercentage = 0;
         return;
       }
