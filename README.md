@@ -1,4 +1,4 @@
-# react-parallax-tilt
+# React Tilt
 
 [![npm version][npm-badge]][npm-url]
 [![npm bundle size][size-badge]][npm-url]
