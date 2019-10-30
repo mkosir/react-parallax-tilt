@@ -6,6 +6,7 @@ import { prism } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 import imgJSX from './img/jsx.png';
 import imgSass from './img/sass.png';
+import './StorybookTabComponent.scss';
 
 type LocalStorage = {
   mainTabIndex: number;
@@ -55,7 +56,7 @@ const StorybookTabComponent: FC<Props> = ({ jsx, scss, children }) => {
         <Tab>Code</Tab>
       </TabList>
       <TabPanel className="demo">{children}</TabPanel>
-      <TabPanel>
+      <TabPanel className="code">
         <Tabs
           defaultIndex={tabIndex.codeTabIndex}
           onSelect={index =>
