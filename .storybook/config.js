@@ -4,6 +4,11 @@ import { withKnobs } from '@storybook/addon-knobs';
 addParameters({
   options: {
     /**
+     * name to display in the top left corner
+     * @type {String}
+     */
+    name: 'React Parallax Tilt 👀',
+    /**
      * display panel that shows addon configurations
      * @type {Boolean}
      */
