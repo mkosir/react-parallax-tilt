@@ -68,8 +68,8 @@
     "rollup-plugin-typescript2": "^0.25.3",
     "sass-loader": "^8.0.0",
     "sinon": "^7.5.0",
-    "story-tab": "^1.0.14",
-    "story-tab-template-react": "^1.0.8",
+    "story-tab": "^1.0.15",
+    "story-tab-react": "^1.0.9",
     "ts-jest": "^24.2.0",
     "typescript": "^3.7.3"
   },
@@ -111,7 +111,7 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx,js,jsx}": [
+    "{src,stories,test}/**/*": [
       "prettier --config .prettierrc --write",
       "git add"
     ]
