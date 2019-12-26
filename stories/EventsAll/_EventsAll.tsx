@@ -1,6 +1,6 @@
 import React from 'react';
 
-import StoryTabTemplate from 'story-tab-template-react';
+import StoryTabTemplate from 'story-tab-react';
 import Demo from './EventsAll.storytab';
 
 const code = `import React, { PureComponent } from 'react';
