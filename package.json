@@ -15,7 +15,7 @@
     "build:watch": "rollup -c -w",
     "lint": "eslint --max-warnings 0 --ext .js,jsx,ts,tsx src/ test/",
     "lint-prettier": "prettier --config .prettierrc -l  src/**/*.ts{,x}",
-    "prettier": "prettier --config .prettierrc --write {src,stories}/**/*.ts{,x}",
+    "prettier": "prettier --config .prettierrc --write {src,stories,test}/**/*.ts{,x}",
     "test": "jest --verbose --watch",
     "test:coverage": "jest --coverage --verbose",
     "test:coverage:watch": "jest --coverage --verbose --watch",
