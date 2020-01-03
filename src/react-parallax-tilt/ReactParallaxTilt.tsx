@@ -141,8 +141,8 @@ class ReactParallaxTilt extends PureComponent<Props> {
     const rect = this.wrapperEl.node!.getBoundingClientRect();
     this.wrapperEl.size.width = this.wrapperEl.node!.offsetWidth;
     this.wrapperEl.size.height = this.wrapperEl.node!.offsetHeight;
-    this.wrapperEl.size.left = rect.left;
-    this.wrapperEl.size.top = rect.top;
+    this.wrapperEl.size.left = rect.left + window.scrollX;
+    this.wrapperEl.size.top = rect.top + window.scrollY;
   }
 
   private initGlare() {
@@ -219,8 +219,8 @@ class ReactParallaxTilt extends PureComponent<Props> {
 
     switch (event.type as EventType) {
       case 'mousemove':
-        this.wrapperEl.clientPosition.x = (event as MouseEvent).clientX;
-        this.wrapperEl.clientPosition.y = (event as MouseEvent).clientY;
+        this.wrapperEl.clientPosition.x = (event as MouseEvent).pageX;
+        this.wrapperEl.clientPosition.y = (event as MouseEvent).pageY;
         this.wrapperEl.scale = scale!;
         break;
       case 'touchmove':

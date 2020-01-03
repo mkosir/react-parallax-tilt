@@ -131,7 +131,7 @@ describe("Tilt - (manual input) - Callback 'onMove' should return correct calcul
 
     wrapper.instance()['wrapperEl'].size = mockWrapperElSizePosition;
     wrapper.simulate('mouseenter');
-    wrapper.simulate('mousemove', { clientX: 100, clientY: 50 });
+    wrapper.simulate('mousemove', { pageX: 100, pageY: 50 });
     wrapper.simulate('mouseleave');
     expect(wrapperSpyOnEnter.calledWith('mouseenter')).toEqual(true);
     expect(wrapperSpyOnMove.calledWith(0, -20, 0, -100, 0, 0, 'mousemove')).toEqual(true);
@@ -143,7 +143,7 @@ describe("Tilt - (manual input) - Callback 'onMove' should return correct calcul
     const wrapper = mount<Tilt>(<Tilt onEnter={null} onMove={wrapperSpyOnMove} onLeave={null} />);
     wrapper.instance()['wrapperEl'].size = mockWrapperElSizePosition;
     wrapper.simulate('mouseenter');
-    wrapper.simulate('mousemove', { clientX: 100, clientY: 50 });
+    wrapper.simulate('mousemove', { pageX: 100, pageY: 50 });
     wrapper.simulate('mouseleave');
     expect(wrapperSpyOnMove.calledWith(0, -20, 0, -100, 0, 0, 'mousemove')).toEqual(true);
   });
