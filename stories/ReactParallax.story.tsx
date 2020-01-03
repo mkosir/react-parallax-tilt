@@ -21,6 +21,7 @@ import TrackOnWindow from './TrackOnWindow/_TrackOnWindow';
 import TiltManualInput from './TiltManualInput/_TiltManualInput';
 import Gyroscope from './Gyroscope/_Gyroscope';
 import MultipleTilt from './MultipleTilt/_MultipleTilt';
+import MultipleTiltScroll from './MultipleTiltScroll/_MultipleTiltScroll';
 import EventTiltAngle from './EventTiltAngle/_EventTiltAngle';
 import EventsAll from './EventsAll/_EventsAll';
 
@@ -33,21 +34,22 @@ stories
   .add('Keep floating', () => <KeepFloating />)
   .add('Reverse tilt', () => <ReverseTilt />)
   .add('Scale', () => <TiltScale />)
-  .add('Scale - no tilt', () => <ScaleNoTilt />)
+  .add('Scale - No tilt', () => <ScaleNoTilt />)
   .add('Disable x/y axis', () => <TiltDisableAxis />)
   .add('Flip vertically/horizontally', () => <FlipVH />)
   .add('Flip page', () => <FlipPage />)
   .add('Parallax effect', () => <ParallaxEffect />)
-  .add('Parallax effect - glare&scale', () => <ParallaxEffectGlareScale />)
+  .add('Parallax effect - Glare & Scale', () => <ParallaxEffectGlareScale />)
   .add('Parallax effect image', () => <ParallaxEffectImg />)
   .add('Tilt image', () => <TiltImg />)
   .add('Set max tilt', () => <TiltMax />)
   .add('Glare effect', () => <GlareEffect />)
-  .add('Glare effect - no tilt', () => <GlareEffectNoTilt />)
+  .add('Glare effect - No tilt', () => <GlareEffectNoTilt />)
   .add('Glare effect - 360', () => <GlareEffect360 />)
   .add('Track on window', () => <TrackOnWindow />)
   .add('Tilt manual input', () => <TiltManualInput />)
   .add('Gyroscope tilt', () => <Gyroscope />)
   .add('Multiple tilt', () => <MultipleTilt />)
-  .add('Event - tilt angle', () => <EventTiltAngle />)
-  .add('Events - all', () => <EventsAll />);
+  .add('Multiple tilt - Scroll', () => <MultipleTiltScroll />)
+  .add('Event - Tilt angle', () => <EventTiltAngle />)
+  .add('Events - All', () => <EventsAll />);
