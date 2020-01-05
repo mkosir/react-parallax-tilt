@@ -191,7 +191,7 @@ Please take a moment to review guidelines [PR](.github/PULL_REQUEST_TEMPLATE.md)
 [downloads-badge]: https://img.shields.io/npm/dm/react-parallax-tilt.svg?color=blue
 [build-badge]: https://travis-ci.com/mkosir/react-parallax-tilt.svg
 [build-url]: https://travis-ci.com/mkosir/react-parallax-tilt
-[coverage-badge]: https://img.shields.io/codecov/c/github/mkosir/react-parallax-tilt.svg
+[coverage-badge]: https://badgen.net/codecov/c/github/mkosir/react-parallax-tilt?icon=codecov
 [coverage-url]: https://codecov.io/gh/mkosir/react-parallax-tilt
 [typescript-badge]: https://badges.frapsoft.com/typescript/code/typescript.svg?v=101
 [typescript-url]: https://github.com/microsoft/TypeScript
