@@ -21,7 +21,7 @@
     "test:coverage:watch": "jest --coverage --verbose --watch",
     "storybook": "start-storybook -p 9009 -s public --quiet",
     "storybook:build": "build-storybook -c .storybook -o build_storybook --quiet",
-    "storytab": "storytab generate react --prefix=_ && npm run prettier",
+    "doctab": "doctab generate --prefix=_ && npm run prettier",
     "validate": "npm run lint && npm run lint-prettier && npm run test:coverage && npm run build"
   },
   "devDependencies": {
@@ -55,6 +55,8 @@
     "node-sass": "^4.13.0",
     "prettier": "^1.19.1",
     "react": "^16.8.6",
+    "react-doc-tab": "^1.0.22",
+    "react-doc-tab-template": "^1.0.12",
     "react-dom": "^16.8.6",
     "react-joystick-component": "^1.4.0",
     "rimraf": "^3.0.0",
@@ -68,8 +70,6 @@
     "rollup-plugin-typescript2": "^0.25.3",
     "sass-loader": "^8.0.0",
     "sinon": "^7.5.0",
-    "story-tab": "^1.0.15",
-    "story-tab-react": "^1.0.9",
     "ts-jest": "^24.2.0",
     "typescript": "^3.7.3"
   },
