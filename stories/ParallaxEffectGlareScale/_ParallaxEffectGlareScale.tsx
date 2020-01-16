@@ -1,7 +1,7 @@
 import React from 'react';
 
-import StoryTabTemplate from 'story-tab-react';
-import Demo from './ParallaxEffectGlareScale.storytab';
+import DocTabTemplate from 'react-doc-tab-template';
+import Demo from './ParallaxEffectGlareScale.doctab';
 
 const code = `import React from 'react';
 
@@ -58,9 +58,9 @@ const style = `@import '../ReactParallax.scss';
 `;
 
 const _ParallaxEffectGlareScale = () => (
-  <StoryTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DocTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
-  </StoryTabTemplate>
+  </DocTabTemplate>
 );
 
 export default _ParallaxEffectGlareScale;

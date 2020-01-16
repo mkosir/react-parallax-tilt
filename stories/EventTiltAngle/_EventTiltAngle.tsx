@@ -1,7 +1,7 @@
 import React from 'react';
 
-import StoryTabTemplate from 'story-tab-react';
-import Demo from './EventTiltAngle.storytab';
+import DocTabTemplate from 'react-doc-tab-template';
+import Demo from './EventTiltAngle.doctab';
 
 const code = `import React, { PureComponent } from 'react';
 
@@ -78,9 +78,9 @@ const style = `@import '../ReactParallax.scss';
 `;
 
 const _EventTiltAngle = () => (
-  <StoryTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DocTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
-  </StoryTabTemplate>
+  </DocTabTemplate>
 );
 
 export default _EventTiltAngle;

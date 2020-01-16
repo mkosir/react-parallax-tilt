@@ -1,7 +1,7 @@
 import React from 'react';
 
-import StoryTabTemplate from 'story-tab-react';
-import Demo from './MultipleTiltScroll.storytab';
+import DocTabTemplate from 'react-doc-tab-template';
+import Demo from './MultipleTiltScroll.doctab';
 
 const code = `import React from 'react';
 
@@ -35,9 +35,9 @@ const style = `.multiple-tilt-scroll > * {
 `;
 
 const _MultipleTiltScroll = () => (
-  <StoryTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DocTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
-  </StoryTabTemplate>
+  </DocTabTemplate>
 );
 
 export default _MultipleTiltScroll;

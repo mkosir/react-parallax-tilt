@@ -1,7 +1,7 @@
 import React from 'react';
 
-import StoryTabTemplate from 'story-tab-react';
-import Demo from './TiltDisableAxis.storytab';
+import DocTabTemplate from 'react-doc-tab-template';
+import Demo from './TiltDisableAxis.doctab';
 
 const code = `import React, { useState } from 'react';
 
@@ -79,9 +79,9 @@ const style = `@import '../ReactParallax.scss';
 `;
 
 const _TiltDisableAxis = () => (
-  <StoryTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DocTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
-  </StoryTabTemplate>
+  </DocTabTemplate>
 );
 
 export default _TiltDisableAxis;

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import StoryTabTemplate from 'story-tab-react';
-import Demo from './TiltMax.storytab';
+import DocTabTemplate from 'react-doc-tab-template';
+import Demo from './TiltMax.doctab';
 
 const code = `import React from 'react';
 import { number } from '@storybook/addon-knobs';
@@ -23,9 +23,9 @@ export default TiltMax;
 `;
 
 const _TiltMax = () => (
-  <StoryTabTemplate code={code} codeExt="tsx">
+  <DocTabTemplate code={code} codeExt="tsx">
     <Demo />
-  </StoryTabTemplate>
+  </DocTabTemplate>
 );
 
 export default _TiltMax;

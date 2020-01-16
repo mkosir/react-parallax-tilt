@@ -1,7 +1,7 @@
 import React from 'react';
 
-import StoryTabTemplate from 'story-tab-react';
-import Demo from './GlareEffectNoTilt.storytab';
+import DocTabTemplate from 'react-doc-tab-template';
+import Demo from './GlareEffectNoTilt.doctab';
 
 const code = `import React from 'react';
 
@@ -24,9 +24,9 @@ export default GlareEffectNoTilt;
 `;
 
 const _GlareEffectNoTilt = () => (
-  <StoryTabTemplate code={code} codeExt="tsx">
+  <DocTabTemplate code={code} codeExt="tsx">
     <Demo />
-  </StoryTabTemplate>
+  </DocTabTemplate>
 );
 
 export default _GlareEffectNoTilt;

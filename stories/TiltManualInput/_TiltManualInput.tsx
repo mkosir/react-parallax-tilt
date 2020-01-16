@@ -1,7 +1,7 @@
 import React from 'react';
 
-import StoryTabTemplate from 'story-tab-react';
-import Demo from './TiltManualInput.storytab';
+import DocTabTemplate from 'react-doc-tab-template';
+import Demo from './TiltManualInput.doctab';
 
 const code = `import React, { useState } from 'react';
 import { Joystick } from 'react-joystick-component';
@@ -76,9 +76,9 @@ const style = `@import '../ReactParallax.scss';
 `;
 
 const _TiltManualInput = () => (
-  <StoryTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DocTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
-  </StoryTabTemplate>
+  </DocTabTemplate>
 );
 
 export default _TiltManualInput;

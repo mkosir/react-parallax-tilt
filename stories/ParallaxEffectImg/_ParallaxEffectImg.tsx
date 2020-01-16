@@ -1,7 +1,7 @@
 import React from 'react';
 
-import StoryTabTemplate from 'story-tab-react';
-import Demo from './ParallaxEffectImg.storytab';
+import DocTabTemplate from 'react-doc-tab-template';
+import Demo from './ParallaxEffectImg.doctab';
 
 const code = `import React from 'react';
 
@@ -42,9 +42,9 @@ const style = `.parallax-effect-img {
 `;
 
 const _ParallaxEffectImg = () => (
-  <StoryTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DocTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
-  </StoryTabTemplate>
+  </DocTabTemplate>
 );
 
 export default _ParallaxEffectImg;

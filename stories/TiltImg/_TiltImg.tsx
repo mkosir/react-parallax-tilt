@@ -1,7 +1,7 @@
 import React from 'react';
 
-import StoryTabTemplate from 'story-tab-react';
-import Demo from './TiltImg.storytab';
+import DocTabTemplate from 'react-doc-tab-template';
+import Demo from './TiltImg.doctab';
 
 const code = `import React from 'react';
 
@@ -34,9 +34,9 @@ const style = `.tilt-img {
 `;
 
 const _TiltImg = () => (
-  <StoryTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DocTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
-  </StoryTabTemplate>
+  </DocTabTemplate>
 );
 
 export default _TiltImg;

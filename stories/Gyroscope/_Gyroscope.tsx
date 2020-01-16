@@ -1,7 +1,7 @@
 import React from 'react';
 
-import StoryTabTemplate from 'story-tab-react';
-import Demo from './Gyroscope.storytab';
+import DocTabTemplate from 'react-doc-tab-template';
+import Demo from './Gyroscope.doctab';
 
 const code = `import React from 'react';
 
@@ -18,9 +18,9 @@ export default Gyroscope;
 `;
 
 const _Gyroscope = () => (
-  <StoryTabTemplate code={code} codeExt="tsx">
+  <DocTabTemplate code={code} codeExt="tsx">
     <Demo />
-  </StoryTabTemplate>
+  </DocTabTemplate>
 );
 
 export default _Gyroscope;

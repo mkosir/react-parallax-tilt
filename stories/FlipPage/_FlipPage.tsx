@@ -1,7 +1,7 @@
 import React from 'react';
 
-import StoryTabTemplate from 'story-tab-react';
-import Demo from './FlipPage.storytab';
+import DocTabTemplate from 'react-doc-tab-template';
+import Demo from './FlipPage.doctab';
 
 const code = `import React, { useState } from 'react';
 
@@ -44,9 +44,9 @@ const style = `body {
 `;
 
 const _FlipPage = () => (
-  <StoryTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DocTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
-  </StoryTabTemplate>
+  </DocTabTemplate>
 );
 
 export default _FlipPage;
