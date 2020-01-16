@@ -6,7 +6,7 @@ import Demo from './TiltScale.doctab';
 const code = `import React, { useState } from 'react';
 
 import Tilt from '../../src';
-import './TiltScale.storytab.scss';
+import './TiltScale.doctab.scss';
 
 const TiltScale = () => {
   const [scale, setScale] = useState(1.15);

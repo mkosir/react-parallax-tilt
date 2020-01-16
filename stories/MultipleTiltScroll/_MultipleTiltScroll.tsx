@@ -6,7 +6,7 @@ import Demo from './MultipleTiltScroll.doctab';
 const code = `import React from 'react';
 
 import Tilt from '../../src';
-import './MultipleTiltScroll.storytab.scss';
+import './MultipleTiltScroll.doctab.scss';
 import DefaultComponent from '../_DefaultComponent/DefaultComponent';
 
 const MultipleTiltScroll = () => (

@@ -6,7 +6,7 @@ import Demo from './ParallaxEffect.doctab';
 const code = `import React from 'react';
 
 import Tilt from '../../src';
-import './ParallaxEffect.storytab.scss';
+import './ParallaxEffect.doctab.scss';
 
 const ParallaxEffect = () => (
   <Tilt className="parallax-effect" perspective={500}>

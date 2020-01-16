@@ -6,7 +6,7 @@ import Demo from './FlipPage.doctab';
 const code = `import React, { useState } from 'react';
 
 import Tilt from '../../src';
-import './FlipPage.storytab.scss';
+import './FlipPage.doctab.scss';
 import Page from './Page/Page';
 
 const FlipPage = () => {

@@ -6,7 +6,7 @@ import Demo from './TiltImg.doctab';
 const code = `import React from 'react';
 
 import Tilt from '../../src';
-import './TiltImg.storytab.scss';
+import './TiltImg.doctab.scss';
 import imgNyc from './img/nyc.jpg';
 
 const TiltImg = () => (

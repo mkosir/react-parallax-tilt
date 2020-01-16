@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Tilt from '../../src';
-import './MultipleTilt.storytab.scss';
+import './MultipleTilt.doctab.scss';
 import DefaultComponent from '../_DefaultComponent/DefaultComponent';
 
 const MultipleTilt = () => (

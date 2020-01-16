@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Tilt from '../../src';
-import './ParallaxEffectGlareScale.storytab.scss';
+import './ParallaxEffectGlareScale.doctab.scss';
 
 const ParallaxEffectGlareScale = () => (
   <Tilt

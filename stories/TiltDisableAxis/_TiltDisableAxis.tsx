@@ -6,7 +6,7 @@ import Demo from './TiltDisableAxis.doctab';
 const code = `import React, { useState } from 'react';
 
 import Tilt from '../../src';
-import './TiltDisableAxis.storytab.scss';
+import './TiltDisableAxis.doctab.scss';
 
 const TiltDisableAxis = () => {
   const [axisEnabled, toggleAxis] = useState('x');

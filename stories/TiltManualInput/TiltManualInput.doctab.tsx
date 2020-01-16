@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Joystick } from 'react-joystick-component';
 
 import Tilt from '../../src';
-import './TiltManualInput.storytab.scss';
+import './TiltManualInput.doctab.scss';
 
 const TiltManualInput = () => {
   const [[manualTiltAngleX, manualTiltAngleY], setManualTiltAngle] = useState([0, 0]);
