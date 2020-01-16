@@ -11,8 +11,13 @@ Steps to reproduce the behavior:
 3. Scroll down to '....'
 4. See error
 
-**Expected behavior**
+**Expected behavior**  
 A clear and concise description of what you expected to happen.
+
+**Link to demo (highly encouraged)**  
+Please provide demo in online code editor [CodeSandbox](https://codesandbox.io/) or similar.
+
+Issues without a reproduction link are likely to stall.
 
 **Code snippets**  
 If applicable, add code samples to help explain your problem.
