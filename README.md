@@ -7,7 +7,7 @@
 [![Codecov Coverage][coverage-badge]][coverage-url]
 [![TypeScript][typescript-badge]][typescript-url]
 
-_Easily apply tilt hover effect on React components 👀 - inspired by [vanilla-tilt.js](https://github.com/micku7zu/vanilla-tilt.js/)._
+_Easily apply tilt hover effect on React components 👀_
 
 ![](demo.gif)
 
