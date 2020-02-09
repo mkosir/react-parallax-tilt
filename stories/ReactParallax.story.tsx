@@ -7,6 +7,7 @@ import ReverseTilt from './ReverseTilt/_ReverseTilt';
 import TiltScale from './TiltScale/_TiltScale';
 import ScaleNoTilt from './ScaleNoTilt/_ScaleNoTilt';
 import TiltDisableAxis from './TiltDisableAxis/_TiltDisableAxis';
+import InitialTilt from './InitialTilt/_InitialTilt';
 import FlipVH from './FlipVH/_FlipVH';
 import FlipPage from './FlipPage/_FlipPage';
 import ParallaxEffect from './ParallaxEffect/_ParallaxEffect';
@@ -36,6 +37,7 @@ stories
   .add('Scale', () => <TiltScale />)
   .add('Scale - No tilt', () => <ScaleNoTilt />)
   .add('Disable x/y axis', () => <TiltDisableAxis />)
+  .add('Initial tilt', () => <InitialTilt />)
   .add('Flip vertically/horizontally', () => <FlipVH />)
   .add('Flip page', () => <FlipPage />)
   .add('Parallax effect', () => <ParallaxEffect />)

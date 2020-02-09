@@ -19,6 +19,7 @@ jobs:
     - stage: deploy github pages & codecov
       if: branch == master && !fork
       script:
+        - npm run doctab
         - npm run storybook:build
         - npm run test:coverage
         - codecov --token=$CODECOV_TOKEN

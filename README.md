@@ -68,6 +68,12 @@ Boolean to enable/disable tilt effect.
 **tiltReverse**: _boolean_ ▶︎ `false`  
 Reverse the tilt direction.
 
+**tiltAngleXInitial**: _number_ ▶︎ `0`  
+Initial tilt value (degrees) on x axis.
+
+**tiltAngleYInitial**: _number_ ▶︎ `0`  
+Initial tilt value (degrees) on y axis.
+
 **tiltMaxAngleX**: _number_ ▶︎ `20`  
 Range: `0 - 90`  
 Max tilt rotation (degrees) on x axis.
