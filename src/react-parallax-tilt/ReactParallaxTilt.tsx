@@ -38,6 +38,8 @@ class ReactParallaxTilt extends PureComponent<Props> {
     this.addEventListeners();
     const autoreset = new CustomEvent<CustomEventType>('autoreset' as CustomEventType);
     this.mainLoop(autoreset);
+    const initialEvent = new CustomEvent<CustomEventType>('initial' as CustomEventType);
+    this.emitOnMove(initialEvent);
   }
 
   public componentWillUnmount() {
@@ -179,26 +181,31 @@ class ReactParallaxTilt extends PureComponent<Props> {
 
   private onMove = (event: SupportedEvent): void => {
     this.mainLoop(event);
-    const { onMove } = this.props;
+    this.emitOnMove(event);
+  };
 
+  private emitOnMove(event: SupportedEvent) {
+    const { onMove } = this.props;
+    if (!onMove) {
+      return;
+    }
     let glareAngle = 0;
     let glareOpacity = 0;
     if (this.glare) {
       glareAngle = this.glare.glareAngle;
       glareOpacity = this.glare.glareOpacity;
     }
-    if (onMove) {
-      onMove(
-        this.tilt!.tiltAngleX!,
-        this.tilt!.tiltAngleY!,
-        this.tilt!.tiltAngleXPercentage!,
-        this.tilt!.tiltAngleYPercentage!,
-        glareAngle,
-        glareOpacity,
-        event.type,
-      );
-    }
-  };
+
+    onMove(
+      this.tilt!.tiltAngleX!,
+      this.tilt!.tiltAngleY!,
+      this.tilt!.tiltAngleXPercentage!,
+      this.tilt!.tiltAngleYPercentage!,
+      glareAngle,
+      glareOpacity,
+      event.type,
+    );
+  }
 
   private onLeave = (event: SupportedEvent) => {
     const { onLeave } = this.props;
@@ -235,8 +242,11 @@ class ReactParallaxTilt extends PureComponent<Props> {
         this.wrapperEl.scale = scale!;
         break;
       case 'autoreset':
-        this.wrapperEl.clientPosition.xPercentage = 0;
-        this.wrapperEl.clientPosition.yPercentage = 0;
+        const { tiltAngleXInitial, tiltAngleYInitial, tiltMaxAngleX, tiltMaxAngleY } = this.props;
+        const xPercentage = (tiltAngleXInitial! / tiltMaxAngleX!) * 100;
+        const yPercentage = (tiltAngleYInitial! / tiltMaxAngleY!) * 100;
+        this.wrapperEl.clientPosition.xPercentage = constrainToRange(xPercentage, -100, 100);
+        this.wrapperEl.clientPosition.yPercentage = constrainToRange(yPercentage, -100, 100);
         this.wrapperEl.scale = 1;
         break;
     }
