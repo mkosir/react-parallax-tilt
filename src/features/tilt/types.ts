@@ -8,11 +8,11 @@ export type TiltProps = {
    */
   tiltReverse?: boolean;
   /**
-   * Initial tilt value on x axis.
+   * Initial tilt value (degrees) on x axis.
    */
   tiltAngleXInitial?: number;
   /**
-   * Initial tilt value on y axis.
+   * Initial tilt value (degrees) on y axis.
    */
   tiltAngleYInitial?: number;
   /**
