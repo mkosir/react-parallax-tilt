@@ -8,6 +8,14 @@ export type TiltProps = {
    */
   tiltReverse?: boolean;
   /**
+   * Initial tilt value on x axis.
+   */
+  tiltAngleXInitial?: number;
+  /**
+   * Initial tilt value on y axis.
+   */
+  tiltAngleYInitial?: number;
+  /**
    * Max tilt rotation (degrees) on x axis. Range: 0 - 90
    */
   tiltMaxAngleX?: number;
