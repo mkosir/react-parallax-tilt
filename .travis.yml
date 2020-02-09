@@ -15,6 +15,7 @@ jobs:
     - stage: validate
       script:
         - npm run validate
+        - npm run doctab
 
     - stage: deploy github pages & codecov
       if: branch == master && !fork
