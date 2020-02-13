@@ -1,12 +1,12 @@
 import React from 'react';
 
-import DocTabTemplate from 'react-doc-tab-template';
-import Demo from './TrackOnWindow.doctab';
+import DemoTab from 'react-demo-tab';
+import Demo from './TrackOnWindow.demotab';
 
 const code = `import React from 'react';
 
 import Tilt from '../../src';
-import './TrackOnWindow.doctab.scss';
+import './TrackOnWindow.demotab.scss';
 
 const TrackOnWindow = () => (
   <Tilt
@@ -60,9 +60,9 @@ const style = `@import '../ReactParallax.scss';
 `;
 
 const _TrackOnWindow = () => (
-  <DocTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
-  </DocTabTemplate>
+  </DemoTab>
 );
 
 export default _TrackOnWindow;

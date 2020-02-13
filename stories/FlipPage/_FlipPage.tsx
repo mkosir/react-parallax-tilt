@@ -1,12 +1,12 @@
 import React from 'react';
 
-import DocTabTemplate from 'react-doc-tab-template';
-import Demo from './FlipPage.doctab';
+import DemoTab from 'react-demo-tab';
+import Demo from './FlipPage.demotab';
 
 const code = `import React, { useState } from 'react';
 
 import Tilt from '../../src';
-import './FlipPage.doctab.scss';
+import './FlipPage.demotab.scss';
 import Page from './Page/Page';
 
 const FlipPage = () => {
@@ -44,9 +44,9 @@ const style = `body {
 `;
 
 const _FlipPage = () => (
-  <DocTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
-  </DocTabTemplate>
+  </DemoTab>
 );
 
 export default _FlipPage;

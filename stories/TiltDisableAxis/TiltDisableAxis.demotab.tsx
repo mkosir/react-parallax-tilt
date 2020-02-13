@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import Tilt from '../../src';
-import './TiltDisableAxis.doctab.scss';
+import './TiltDisableAxis.demotab.scss';
 
 const TiltDisableAxis = () => {
   const [axisEnabled, toggleAxis] = useState('x');

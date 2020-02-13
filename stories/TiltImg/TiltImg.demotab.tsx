@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Tilt from '../../src';
-import './TiltImg.doctab.scss';
+import './TiltImg.demotab.scss';
 import imgNyc from './img/nyc.jpg';
 
 const TiltImg = () => (

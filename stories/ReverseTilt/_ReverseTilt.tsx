@@ -1,7 +1,7 @@
 import React from 'react';
 
-import DocTabTemplate from 'react-doc-tab-template';
-import Demo from './ReverseTilt.doctab';
+import DemoTab from 'react-demo-tab';
+import Demo from './ReverseTilt.demotab';
 
 const code = `import React from 'react';
 
@@ -18,9 +18,9 @@ export default ReverseTilt;
 `;
 
 const _ReverseTilt = () => (
-  <DocTabTemplate code={code} codeExt="tsx">
+  <DemoTab code={code} codeExt="tsx">
     <Demo />
-  </DocTabTemplate>
+  </DemoTab>
 );
 
 export default _ReverseTilt;

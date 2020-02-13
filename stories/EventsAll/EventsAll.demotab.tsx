@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 
 import Tilt from '../../src';
-import './EventsAll.doctab.scss';
+import './EventsAll.demotab.scss';
 
 class EventsAll extends PureComponent {
   state = {

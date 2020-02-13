@@ -1,13 +1,13 @@
 import React from 'react';
 
-import DocTabTemplate from 'react-doc-tab-template';
-import Demo from './EventTiltAngle.doctab';
+import DemoTab from 'react-demo-tab';
+import Demo from './EventTiltAngle.demotab';
 
 const code = `import React, { PureComponent } from 'react';
 
 import Tilt from '../../src';
 import DefaultComponent from '../_DefaultComponent/DefaultComponent';
-import './EventTiltAngle.doctab.scss';
+import './EventTiltAngle.demotab.scss';
 
 class EventTiltAngle extends PureComponent {
   state = {
@@ -78,9 +78,9 @@ const style = `@import '../ReactParallax.scss';
 `;
 
 const _EventTiltAngle = () => (
-  <DocTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
-  </DocTabTemplate>
+  </DemoTab>
 );
 
 export default _EventTiltAngle;

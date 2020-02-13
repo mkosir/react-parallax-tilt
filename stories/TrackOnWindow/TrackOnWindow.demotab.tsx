@@ -1,15 +1,17 @@
 import React from 'react';
 
 import Tilt from '../../src';
-import './ParallaxEffectGlareScale.doctab.scss';
+import './TrackOnWindow.demotab.scss';
 
-const ParallaxEffectGlareScale = () => (
+const TrackOnWindow = () => (
   <Tilt
-    className="parallax-effect-glare-scale"
+    className="track-on-window"
     perspective={500}
     glareEnable={true}
-    glareMaxOpacity={0.45}
+    glareMaxOpacity={0.75}
+    glarePosition="all"
     scale={1.02}
+    trackOnWindow={true}
   >
     <div className="inner-element">
       <div>React</div>
@@ -19,4 +21,4 @@ const ParallaxEffectGlareScale = () => (
   </Tilt>
 );
 
-export default ParallaxEffectGlareScale;
+export default TrackOnWindow;

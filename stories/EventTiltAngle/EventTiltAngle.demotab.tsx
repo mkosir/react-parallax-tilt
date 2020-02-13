@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 
 import Tilt from '../../src';
 import DefaultComponent from '../_DefaultComponent/DefaultComponent';
-import './EventTiltAngle.doctab.scss';
+import './EventTiltAngle.demotab.scss';
 
 class EventTiltAngle extends PureComponent {
   state = {

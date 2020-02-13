@@ -1,12 +1,12 @@
 import React from 'react';
 
-import DocTabTemplate from 'react-doc-tab-template';
-import Demo from './ParallaxEffect.doctab';
+import DemoTab from 'react-demo-tab';
+import Demo from './ParallaxEffect.demotab';
 
 const code = `import React from 'react';
 
 import Tilt from '../../src';
-import './ParallaxEffect.doctab.scss';
+import './ParallaxEffect.demotab.scss';
 
 const ParallaxEffect = () => (
   <Tilt className="parallax-effect" perspective={500}>
@@ -52,9 +52,9 @@ const style = `@import '../ReactParallax.scss';
 `;
 
 const _ParallaxEffect = () => (
-  <DocTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
-  </DocTabTemplate>
+  </DemoTab>
 );
 
 export default _ParallaxEffect;

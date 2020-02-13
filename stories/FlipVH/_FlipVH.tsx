@@ -1,12 +1,12 @@
 import React from 'react';
 
-import DocTabTemplate from 'react-doc-tab-template';
-import Demo from './FlipVH.doctab';
+import DemoTab from 'react-demo-tab';
+import Demo from './FlipVH.demotab';
 
 const code = `import React, { useState } from 'react';
 
 import Tilt from '../../src';
-import './FlipVH.doctab.scss';
+import './FlipVH.demotab.scss';
 
 const FlipVH = () => {
   const [[flipVertically, flipHorizontally], toggleFlip] = useState([false, false]);
@@ -77,9 +77,9 @@ const style = `@import '../ReactParallax.scss';
 `;
 
 const _FlipVH = () => (
-  <DocTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
-  </DocTabTemplate>
+  </DemoTab>
 );
 
 export default _FlipVH;

@@ -1,12 +1,12 @@
 import React from 'react';
 
-import DocTabTemplate from 'react-doc-tab-template';
-import Demo from './EventsAll.doctab';
+import DemoTab from 'react-demo-tab';
+import Demo from './EventsAll.demotab';
 
 const code = `import React, { PureComponent } from 'react';
 
 import Tilt from '../../src';
-import './EventsAll.doctab.scss';
+import './EventsAll.demotab.scss';
 
 class EventsAll extends PureComponent {
   state = {
@@ -198,9 +198,9 @@ const style = `@import '../ReactParallax.scss';
 `;
 
 const _EventsAll = () => (
-  <DocTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
-  </DocTabTemplate>
+  </DemoTab>
 );
 
 export default _EventsAll;

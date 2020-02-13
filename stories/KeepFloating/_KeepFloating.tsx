@@ -1,7 +1,7 @@
 import React from 'react';
 
-import DocTabTemplate from 'react-doc-tab-template';
-import Demo from './KeepFloating.doctab';
+import DemoTab from 'react-demo-tab';
+import Demo from './KeepFloating.demotab';
 
 const code = `import React from 'react';
 
@@ -18,9 +18,9 @@ export default KeepFloating;
 `;
 
 const _KeepFloating = () => (
-  <DocTabTemplate code={code} codeExt="tsx">
+  <DemoTab code={code} codeExt="tsx">
     <Demo />
-  </DocTabTemplate>
+  </DemoTab>
 );
 
 export default _KeepFloating;

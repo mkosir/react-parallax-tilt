@@ -1,7 +1,7 @@
 import React from 'react';
 
-import DocTabTemplate from 'react-doc-tab-template';
-import Demo from './GlareEffect360.doctab';
+import DemoTab from 'react-demo-tab';
+import Demo from './GlareEffect360.demotab';
 
 const code = `import React from 'react';
 
@@ -18,9 +18,9 @@ export default GlareEffect360;
 `;
 
 const _GlareEffect360 = () => (
-  <DocTabTemplate code={code} codeExt="tsx">
+  <DemoTab code={code} codeExt="tsx">
     <Demo />
-  </DocTabTemplate>
+  </DemoTab>
 );
 
 export default _GlareEffect360;

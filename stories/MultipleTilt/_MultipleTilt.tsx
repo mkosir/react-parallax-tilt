@@ -1,12 +1,12 @@
 import React from 'react';
 
-import DocTabTemplate from 'react-doc-tab-template';
-import Demo from './MultipleTilt.doctab';
+import DemoTab from 'react-demo-tab';
+import Demo from './MultipleTilt.demotab';
 
 const code = `import React from 'react';
 
 import Tilt from '../../src';
-import './MultipleTilt.doctab.scss';
+import './MultipleTilt.demotab.scss';
 import DefaultComponent from '../_DefaultComponent/DefaultComponent';
 
 const MultipleTilt = () => (
@@ -49,9 +49,9 @@ const style = `.multiple-tilt {
 `;
 
 const _MultipleTilt = () => (
-  <DocTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
-  </DocTabTemplate>
+  </DemoTab>
 );
 
 export default _MultipleTilt;

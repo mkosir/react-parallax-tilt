@@ -1,13 +1,13 @@
 import React from 'react';
 
-import DocTabTemplate from 'react-doc-tab-template';
-import Demo from './TiltManualInput.doctab';
+import DemoTab from 'react-demo-tab';
+import Demo from './TiltManualInput.demotab';
 
 const code = `import React, { useState } from 'react';
 import { Joystick } from 'react-joystick-component';
 
 import Tilt from '../../src';
-import './TiltManualInput.doctab.scss';
+import './TiltManualInput.demotab.scss';
 
 const TiltManualInput = () => {
   const [[manualTiltAngleX, manualTiltAngleY], setManualTiltAngle] = useState([0, 0]);
@@ -76,9 +76,9 @@ const style = `@import '../ReactParallax.scss';
 `;
 
 const _TiltManualInput = () => (
-  <DocTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
-  </DocTabTemplate>
+  </DemoTab>
 );
 
 export default _TiltManualInput;

@@ -1,12 +1,12 @@
 import React from 'react';
 
-import DocTabTemplate from 'react-doc-tab-template';
-import Demo from './TiltScale.doctab';
+import DemoTab from 'react-demo-tab';
+import Demo from './TiltScale.demotab';
 
 const code = `import React, { useState } from 'react';
 
 import Tilt from '../../src';
-import './TiltScale.doctab.scss';
+import './TiltScale.demotab.scss';
 
 const TiltScale = () => {
   const [scale, setScale] = useState(1.15);
@@ -72,9 +72,9 @@ const style = `@import '../ReactParallax.scss';
 `;
 
 const _TiltScale = () => (
-  <DocTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
-  </DocTabTemplate>
+  </DemoTab>
 );
 
 export default _TiltScale;

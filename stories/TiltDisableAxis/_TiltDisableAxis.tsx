@@ -1,12 +1,12 @@
 import React from 'react';
 
-import DocTabTemplate from 'react-doc-tab-template';
-import Demo from './TiltDisableAxis.doctab';
+import DemoTab from 'react-demo-tab';
+import Demo from './TiltDisableAxis.demotab';
 
 const code = `import React, { useState } from 'react';
 
 import Tilt from '../../src';
-import './TiltDisableAxis.doctab.scss';
+import './TiltDisableAxis.demotab.scss';
 
 const TiltDisableAxis = () => {
   const [axisEnabled, toggleAxis] = useState('x');
@@ -79,9 +79,9 @@ const style = `@import '../ReactParallax.scss';
 `;
 
 const _TiltDisableAxis = () => (
-  <DocTabTemplate code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
-  </DocTabTemplate>
+  </DemoTab>
 );
 
 export default _TiltDisableAxis;

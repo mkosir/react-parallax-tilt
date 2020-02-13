@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import Tilt from '../../src';
-import './FlipVH.doctab.scss';
+import './FlipVH.demotab.scss';
 
 const FlipVH = () => {
   const [[flipVertically, flipHorizontally], toggleFlip] = useState([false, false]);
