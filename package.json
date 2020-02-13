@@ -1,6 +1,6 @@
 {
   "name": "react-parallax-tilt",
-  "version": "1.3.39",
+  "version": "1.3.40",
   "description": "React parallax tilt effect",
   "main": "./dist/react-parallax-tilt.umd.js",
   "module": "./dist/react-parallax-tilt.es5.js",
@@ -21,7 +21,7 @@
     "test:coverage:watch": "jest --coverage --verbose --watch",
     "storybook": "start-storybook -p 9009 -s public --quiet",
     "storybook:build": "build-storybook -c .storybook -o build_storybook --quiet",
-    "doctab": "doctab generate --prefix=_ && npm run prettier",
+    "demotab": "demotab generate --prefix=_ && npm run prettier",
     "validate": "npm run lint && npm run lint-prettier && npm run test:coverage && npm run build"
   },
   "devDependencies": {
@@ -56,8 +56,8 @@
     "node-sass": "^4.13.1",
     "prettier": "^1.19.1",
     "react": "^16.8.6",
-    "react-doc-tab": "^1.0.22",
-    "react-doc-tab-template": "^1.0.12",
+    "react-demo-tab": "^1.2.1",
+    "react-demo-tab-cli": "^1.2.1",
     "react-dom": "^16.8.6",
     "react-joystick-component": "^1.4.0",
     "rimraf": "^3.0.0",
