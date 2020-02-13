@@ -154,7 +154,7 @@ class EventsAll extends PureComponent {
 export default EventsAll;
 `;
 
-const style = `@import '../ReactParallax.scss';
+const style = `@import '../ReactParallaxTilt.scss';
 
 .parallax-events-all {
   display: flex;

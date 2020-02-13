@@ -42,7 +42,7 @@ const TiltManualInput = () => {
 export default TiltManualInput;
 `;
 
-const style = `@import '../ReactParallax.scss';
+const style = `@import '../ReactParallaxTilt.scss';
 
 .tilt-manual-input {
   display: flex;

@@ -46,7 +46,7 @@ const TiltDisableAxis = () => {
 export default TiltDisableAxis;
 `;
 
-const style = `@import '../ReactParallax.scss';
+const style = `@import '../ReactParallaxTilt.scss';
 
 .tilt-disable-axis {
   @include background;

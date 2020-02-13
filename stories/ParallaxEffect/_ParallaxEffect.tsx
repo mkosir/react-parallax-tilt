@@ -21,7 +21,7 @@ const ParallaxEffect = () => (
 export default ParallaxEffect;
 `;
 
-const style = `@import '../ReactParallax.scss';
+const style = `@import '../ReactParallaxTilt.scss';
 
 .parallax-effect {
   @include background;

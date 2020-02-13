@@ -27,7 +27,7 @@ const ParallaxEffectGlareScale = () => (
 export default ParallaxEffectGlareScale;
 `;
 
-const style = `@import '../ReactParallax.scss';
+const style = `@import '../ReactParallaxTilt.scss';
 
 .parallax-effect-glare-scale {
   @include background;

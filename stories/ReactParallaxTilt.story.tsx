@@ -26,7 +26,7 @@ import MultipleTiltScroll from './MultipleTiltScroll/_MultipleTiltScroll';
 import EventTiltAngle from './EventTiltAngle/_EventTiltAngle';
 import EventsAll from './EventsAll/_EventsAll';
 
-import './ReactParallax.scss';
+import './ReactParallaxTilt.scss';
 
 const stories = storiesOf('React Parallax Tilt', module);
 

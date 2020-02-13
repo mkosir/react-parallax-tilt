@@ -44,7 +44,7 @@ const FlipVH = () => {
 export default FlipVH;
 `;
 
-const style = `@import '../ReactParallax.scss';
+const style = `@import '../ReactParallaxTilt.scss';
 
 .flip-vh {
   @include background;

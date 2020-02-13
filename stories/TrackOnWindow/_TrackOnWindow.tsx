@@ -29,7 +29,7 @@ const TrackOnWindow = () => (
 export default TrackOnWindow;
 `;
 
-const style = `@import '../ReactParallax.scss';
+const style = `@import '../ReactParallaxTilt.scss';
 
 .track-on-window {
   @include background;

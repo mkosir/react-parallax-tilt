@@ -49,7 +49,7 @@ class EventTiltAngle extends PureComponent {
 export default EventTiltAngle;
 `;
 
-const style = `@import '../ReactParallax.scss';
+const style = `@import '../ReactParallaxTilt.scss';
 
 .event-tilt-angle {
   display: flex;

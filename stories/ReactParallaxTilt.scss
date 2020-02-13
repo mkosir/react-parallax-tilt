@@ -1,13 +1,12 @@
 #root {
   font-family: Arial, sans-serif;
-  .react-tabs {
-    .react-doc-tab-demo.react-tabs__tab-panel--selected {
-      margin-top: 10vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+
+  .tab-demo.react-tabs__tab-panel--selected {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 

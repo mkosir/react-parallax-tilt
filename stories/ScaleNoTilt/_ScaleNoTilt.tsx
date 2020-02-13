@@ -36,7 +36,7 @@ const ScaleNoTilt = () => {
 export default ScaleNoTilt;
 `;
 
-const style = `@import '../ReactParallax.scss';
+const style = `@import '../ReactParallaxTilt.scss';
 
 .scale-no-tilt {
   @include background;

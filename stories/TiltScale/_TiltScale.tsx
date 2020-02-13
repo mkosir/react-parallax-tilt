@@ -36,7 +36,7 @@ const TiltScale = () => {
 export default TiltScale;
 `;
 
-const style = `@import '../ReactParallax.scss';
+const style = `@import '../ReactParallaxTilt.scss';
 
 .tilt-scale {
   @include background;
