@@ -17,7 +17,9 @@ _Easily apply tilt hover effect on React components 👀_
 
 ## Install
 
-`npm install react-parallax-tilt`
+```bash
+npm install react-parallax-tilt
+```
 
 ## Features
 
