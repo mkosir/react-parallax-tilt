@@ -5,6 +5,7 @@
 [![npm bundle size][size-badge]][npm-url]
 [![Build Status][build-badge]][build-url]
 [![Codecov Coverage][coverage-badge]][coverage-url]
+[![prettier][prettier-badge]][prettier-url]
 [![TypeScript][typescript-badge]][typescript-url]
 
 _Easily apply tilt hover effect on React components 👀_
@@ -202,3 +203,5 @@ Please take a moment to review guidelines [PR](.github/PULL_REQUEST_TEMPLATE.md)
 [coverage-url]: https://codecov.io/gh/mkosir/react-parallax-tilt
 [typescript-badge]: https://badges.frapsoft.com/typescript/code/typescript.svg?v=101
 [typescript-url]: https://github.com/microsoft/TypeScript
+[prettier-badge]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
+[prettier-url]: https://github.com/prettier/prettier
