@@ -8,7 +8,7 @@
 [![prettier][prettier-badge]][prettier-url]
 [![TypeScript][typescript-badge]][typescript-url]
 
-_Easily apply tilt hover effect on React components 👀_
+_👀 Easily apply tilt hover effect on React components_
 
 ![](demo.gif)
 
