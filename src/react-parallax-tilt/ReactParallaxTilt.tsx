@@ -50,16 +50,6 @@ class ReactParallaxTilt extends PureComponent<Props> {
     this.removeEventListeners();
   }
 
-  public componentDidUpdate() {
-    const { onMove, onEnter, onLeave } = this.props;
-    // Don't request frame if callback prop changed
-    if (onMove || onEnter || onLeave) {
-      return;
-    }
-    const propChange = new CustomEvent<CustomEventType>('propchange' as CustomEventType);
-    this.mainLoop(propChange);
-  }
-
   private addEventListeners() {
     const { trackOnWindow, gyroscope } = this.props;
 
