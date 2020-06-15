@@ -33,10 +33,7 @@ export class Tilt<T extends HTMLElement> implements IStyle {
     this.tiltAngleY = ((yPercentage! * tiltMaxAngleY!) / 100) * tiltTowardMouse;
   };
 
-  private updateTiltManualInput = (
-    wrapperElClientPosition: ClientPosition,
-    props: TiltProps,
-  ): void => {
+  private updateTiltManualInput = (wrapperElClientPosition: ClientPosition, props: TiltProps): void => {
     const { tiltAngleXManual, tiltAngleYManual, tiltMaxAngleX, tiltMaxAngleY } = props;
     // if manual input prop is passed, ignore other inputs
     if (tiltAngleXManual !== null || tiltAngleYManual !== null) {
@@ -57,16 +54,8 @@ export class Tilt<T extends HTMLElement> implements IStyle {
     const { tiltAxis } = props;
 
     // constrain tilt angles
-    this.tiltAngleX = constrainToRange(
-      this.tiltAngleX,
-      -TILT_ANGLE_CONSTRAINT,
-      TILT_ANGLE_CONSTRAINT,
-    );
-    this.tiltAngleY = constrainToRange(
-      this.tiltAngleY,
-      -TILT_ANGLE_CONSTRAINT,
-      TILT_ANGLE_CONSTRAINT,
-    );
+    this.tiltAngleX = constrainToRange(this.tiltAngleX, -TILT_ANGLE_CONSTRAINT, TILT_ANGLE_CONSTRAINT);
+    this.tiltAngleY = constrainToRange(this.tiltAngleY, -TILT_ANGLE_CONSTRAINT, TILT_ANGLE_CONSTRAINT);
 
     // disable x/y axis for tilting
     if (tiltAxis) {

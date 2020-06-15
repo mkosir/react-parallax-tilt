@@ -16,7 +16,7 @@ const FlipVH = () => {
         <div className="form">
           <label>
             <input
-              onChange={ev => toggleFlip([ev.target.checked, flipHorizontally])}
+              onChange={(ev) => toggleFlip([ev.target.checked, flipHorizontally])}
               checked={flipVertically}
               type="checkbox"
             />
@@ -24,7 +24,7 @@ const FlipVH = () => {
           </label>
           <label>
             <input
-              onChange={ev => toggleFlip([flipVertically, ev.target.checked])}
+              onChange={(ev) => toggleFlip([flipVertically, ev.target.checked])}
               checked={flipHorizontally}
               type="checkbox"
             />

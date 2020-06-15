@@ -104,7 +104,7 @@ class ReactParallaxTilt extends PureComponent<Props> {
       return;
     }
 
-    imgs.forEach(img => {
+    imgs.forEach((img) => {
       // jest - images are not preloaded
       /* istanbul ignore next */
       if (img.complete) {
@@ -279,12 +279,7 @@ class ReactParallaxTilt extends PureComponent<Props> {
     this.updateFlip();
     this.tilt!.updateTiltAnglesPercentage(this.props);
     if (this.glare) {
-      this.glare.update(
-        this.wrapperEl.clientPosition,
-        this.props,
-        flipVertically!,
-        flipHorizontally!,
-      );
+      this.glare.update(this.wrapperEl.clientPosition, this.props, flipVertically!, flipHorizontally!);
     }
   };
 
@@ -383,7 +378,7 @@ class ReactParallaxTilt extends PureComponent<Props> {
     const { children, className, style } = this.props;
     return (
       <div
-        ref={el => (this.wrapperEl.node = el)}
+        ref={(el) => (this.wrapperEl.node = el)}
         onMouseEnter={this.onEnter}
         onMouseMove={this.onMove}
         onMouseLeave={this.onLeave}

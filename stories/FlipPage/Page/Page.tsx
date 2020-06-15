@@ -3,12 +3,7 @@ import React from 'react';
 import './Page.scss';
 import sampleImg from './lorem-picsum.png';
 
-const Page = ({
-  flipVertically,
-  flipHorizontally,
-  toggleFlipVertically,
-  toggleFlipHorizontally,
-}) => (
+const Page = ({ flipVertically, flipHorizontally, toggleFlipVertically, toggleFlipHorizontally }) => (
   <div className="page">
     <ul>
       <li>Home</li>
@@ -24,7 +19,7 @@ const Page = ({
         <div className="form">
           <label>
             <input
-              onChange={ev => toggleFlipVertically(ev.target.checked)}
+              onChange={(ev) => toggleFlipVertically(ev.target.checked)}
               checked={flipVertically}
               type="checkbox"
             />
@@ -32,7 +27,7 @@ const Page = ({
           </label>
           <label>
             <input
-              onChange={ev => toggleFlipHorizontally(ev.target.checked)}
+              onChange={(ev) => toggleFlipHorizontally(ev.target.checked)}
               checked={flipHorizontally}
               type="checkbox"
             />
@@ -41,24 +36,24 @@ const Page = ({
         </div>
       </div>
       <div>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo const cupidatat non proident, sunt in culpa qui
-        officia deserunt mollit anim id est laborum.Ut enim ad minim veniam, quis nostrud
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo const cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+        est laborum.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur.
       </div>
       <img src={sampleImg} alt="pic" />
       <div>
         culpa qui officia deserunt mollit anim id est laborum.Ut enim ad minim veniam, quis nostrud
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
       </div>
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-      id est laborum.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-      aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-      esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-      sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+      laborum.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+      id est laborum.
     </div>
 
     <div className="contact-form">

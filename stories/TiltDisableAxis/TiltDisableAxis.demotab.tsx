@@ -16,7 +16,7 @@ const TiltDisableAxis = () => {
         <div className="form">
           <label>
             <input
-              onChange={ev => toggleAxis(ev.target.value)}
+              onChange={(ev) => toggleAxis(ev.target.value)}
               value={'x'}
               checked={axisEnabled === 'x'}
               type="radio"
@@ -25,7 +25,7 @@ const TiltDisableAxis = () => {
           </label>
           <label>
             <input
-              onChange={ev => toggleAxis(ev.target.value)}
+              onChange={(ev) => toggleAxis(ev.target.value)}
               value={'y'}
               checked={axisEnabled === 'y'}
               type="radio"

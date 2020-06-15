@@ -44,7 +44,7 @@ class EventsAll extends PureComponent {
     });
   };
 
-  onEnter = eventType => {
+  onEnter = (eventType) => {
     if (!this.state.trackOnEnter) {
       return;
     }
@@ -53,7 +53,7 @@ class EventsAll extends PureComponent {
     });
   };
 
-  onLeave = eventType => {
+  onLeave = (eventType) => {
     if (!this.state.trackOnLeave) {
       return;
     }
@@ -62,7 +62,7 @@ class EventsAll extends PureComponent {
     });
   };
 
-  toggleCheck = e => {
+  toggleCheck = (e) => {
     const { name, checked } = e.target;
     this.setState({
       eventType: null,
@@ -113,30 +113,15 @@ class EventsAll extends PureComponent {
         <div className="event-type">
           Track events:
           <label>
-            <input
-              onChange={this.toggleCheck}
-              checked={trackOnMove}
-              name={'trackOnMove'}
-              type="checkbox"
-            />
+            <input onChange={this.toggleCheck} checked={trackOnMove} name={'trackOnMove'} type="checkbox" />
             onMove
           </label>
           <label>
-            <input
-              onChange={this.toggleCheck}
-              checked={trackOnEnter}
-              name={'trackOnEnter'}
-              type="checkbox"
-            />
+            <input onChange={this.toggleCheck} checked={trackOnEnter} name={'trackOnEnter'} type="checkbox" />
             onEnter
           </label>
           <label>
-            <input
-              onChange={this.toggleCheck}
-              checked={trackOnLeave}
-              name={'trackOnLeave'}
-              type="checkbox"
-            />
+            <input onChange={this.toggleCheck} checked={trackOnLeave} name={'trackOnLeave'} type="checkbox" />
             onLeave
           </label>
           {eventType && <div>Event {eventType} event type.</div>}
