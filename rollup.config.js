@@ -15,7 +15,6 @@ export default {
       file: pkg.main,
       name: 'react-parallax-tilt',
       format: 'umd',
-      sourcemap: true,
       globals: {
         react: 'React',
         'react-dom': 'ReactDOM',
@@ -24,7 +23,6 @@ export default {
     {
       file: pkg.module,
       format: 'es',
-      sourcemap: true,
     },
   ],
   // this will ensure that the dependencies are not bundled with our library, but are instead
