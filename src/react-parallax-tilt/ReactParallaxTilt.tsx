@@ -65,15 +65,34 @@ class ReactParallaxTilt extends PureComponent<Props> {
     }
 
     if (gyroscope) {
-      /* istanbul ignore next */
-      if (!window.DeviceOrientationEvent) {
-        console.error("Browser doesn't support Device Orientation.");
-        return;
-      }
-      /* istanbul ignore next */
-      window.addEventListener('deviceorientation', this.onMove);
+      this.addDeviceOrientationEventListener();
     }
   }
+
+  private addDeviceOrientationEventListener = async () => {
+    /* istanbul ignore next */
+    if (!window.DeviceOrientationEvent) {
+      console.error("Browser doesn't support Device Orientation.");
+      return;
+    }
+
+    const iOS13OrHigherDevice = typeof DeviceMotionEvent.requestPermission === 'function';
+    if (iOS13OrHigherDevice) {
+      try {
+        const response = await DeviceOrientationEvent.requestPermission();
+        if (response === 'granted') {
+          window.addEventListener('deviceorientation', this.onMove);
+        }
+        return;
+      } catch (err) {
+        console.error(err);
+        return;
+      }
+    }
+
+    /* istanbul ignore next */
+    window.addEventListener('deviceorientation', this.onMove);
+  };
 
   private removeEventListeners() {
     const { trackOnWindow, gyroscope } = this.props;
