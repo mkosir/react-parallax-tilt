@@ -158,6 +158,25 @@ A few takeaways when using device orientation event:
 - it doesn't work in all browsers when using it in cross-origin `<iframe>` element
 - Chrome, Firefox, Safari do not handle the angles the same way (on some axes the directions are reversed)
 
+<details>
+<summary>Using device orientation on iOS 13+</summary>
+
+Apple decided turning device motion and orientation off by default since iOS 12.2.  
+With iOS 13+ permission API can be used to gain access to device orientation event.
+
+When using gyroscope feature:
+
+```jsx
+  <Tilt gyroscope={true}}>
+    <h1>React Parallax Tilt 👀</h1>
+  </Tilt>
+```
+
+it will present a permission dialog prompting the user to allow motion and orientation access at domain level:
+![](device_orientation.png)
+
+</details>
+
 ## Development
 
 _Easily set up a local development environment!_
