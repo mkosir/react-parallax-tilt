@@ -69,8 +69,8 @@ class ReactParallaxTilt extends PureComponent<Props> {
     }
   }
 
+  /* istanbul ignore next */
   private addDeviceOrientationEventListener = async () => {
-    /* istanbul ignore next */
     if (!window.DeviceOrientationEvent) {
       console.error("Browser doesn't support Device Orientation.");
       return;
@@ -90,7 +90,6 @@ class ReactParallaxTilt extends PureComponent<Props> {
       }
     }
 
-    /* istanbul ignore next */
     window.addEventListener('deviceorientation', this.onMove);
   };
 
