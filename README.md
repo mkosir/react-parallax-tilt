@@ -173,7 +173,7 @@ When using gyroscope feature:
 ```
 
 it will present a permission dialog prompting the user to allow motion and orientation access at domain level:
-![](device_orientation.png)
+![](device_orientation.jpg)
 
 </details>
 
