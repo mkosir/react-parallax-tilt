@@ -181,7 +181,7 @@ it will present a permission dialog prompting the user to allow motion and orien
 
 _Easily set up a local development environment!_
 
-Build all the examples and starts storybook server on [localhost:9009](http://localhost:9009):
+Build all the examples and start storybook server on [localhost:9009](http://localhost:9009):
 
 - clone
 - `npm install`
