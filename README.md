@@ -187,24 +187,6 @@ Build all the examples and starts storybook server on [localhost:9009](http://lo
 - `npm install`
 - `npm start`
 
-OR
-
-Clone this repo on your machine, navigate to its location in the terminal and run:
-
-```bash
-npm install
-npm link # link your local repo to your global packages
-npm run build:watch # build the files and watch for changes
-```
-
-Clone project repo that you wish to test with react-parallax-tilt library and run:
-
-```bash
-npm install
-npm link react-parallax-tilt # link your local copy into this project's node_modules
-npm start
-```
-
 **Start coding!** 🎉
 
 ## Contributing
