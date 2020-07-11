@@ -156,7 +156,6 @@ A few takeaways when using device orientation event:
 
 - always use secure origins (such as `https`)
 - it doesn't work in all browsers when using it in cross-origin `<iframe>` element
-- Chrome, Firefox, Safari do not handle the angles the same way (on some axes the directions are reversed)
 
 <details>
 <summary>Using device orientation on iOS 13+</summary>
