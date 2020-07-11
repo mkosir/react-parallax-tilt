@@ -31,11 +31,11 @@ class ReactParallaxTilt extends PureComponent<Props> {
   private tilt: Tilt<HTMLDivElement> | null = null;
   private glare: Glare | null = null;
 
-  public async componentDidMount() {
+  public componentDidMount() {
     this.loadWrapperAndChildElements();
     this.tilt = new Tilt<HTMLDivElement>();
     this.initGlare();
-    await this.addEventListeners();
+    this.addEventListeners();
     const autoreset = new CustomEvent<CustomEventType>('autoreset' as CustomEventType);
     this.mainLoop(autoreset);
     const initialEvent = new CustomEvent<CustomEventType>('initial' as CustomEventType);
@@ -50,7 +50,7 @@ class ReactParallaxTilt extends PureComponent<Props> {
     this.removeEventListeners();
   }
 
-  private async addEventListeners() {
+  private addEventListeners() {
     const { trackOnWindow, gyroscope } = this.props;
 
     window.addEventListener('resize', this.setSize);
@@ -65,7 +65,7 @@ class ReactParallaxTilt extends PureComponent<Props> {
     }
 
     if (gyroscope) {
-      await this.addDeviceOrientationEventListener();
+      this.addDeviceOrientationEventListener();
     }
   }
 
