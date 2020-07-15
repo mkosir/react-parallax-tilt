@@ -25,7 +25,7 @@
     "validate": "npm run lint && npm run lint-prettier && npm run test:coverage && npm run build"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.4",
+    "@babel/core": "^7.10.5",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-knobs": "^5.3.19",
     "@storybook/addon-links": "^5.3.19",
