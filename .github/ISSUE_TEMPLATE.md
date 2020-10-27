@@ -14,7 +14,7 @@ Steps to reproduce the behavior:
 **Expected behavior**  
 A clear and concise description of what you expected to happen.
 
-**Link to demo (highly encouraged)**  
+**Link to demo (required)**  
 Please provide demo in online code editor [CodeSandbox](https://codesandbox.io/) or similar.
 
 Issues without a reproduction link are likely to stall.
