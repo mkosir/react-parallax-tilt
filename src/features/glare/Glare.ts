@@ -3,8 +3,6 @@ import { constrainToRange } from '../../common/utils';
 import { ElementSizePosition, ClientPosition } from '../../common/types';
 import { IStyle } from '../../common/IStyle';
 
-const GLARE_EL_SIZE_FACTOR = 2;
-
 export class Glare implements IStyle {
   public glareWrapperEl: HTMLDivElement;
   public glareEl: HTMLDivElement;
@@ -46,9 +44,11 @@ export class Glare implements IStyle {
   }
 
   private calculateGlareSize = (wrapperElSize: ElementSizePosition): GlareSize => {
+    const { width: w, height: h } = wrapperElSize;
+    const wrapperElDiagonal = Math.sqrt(w! ** 2 + h! ** 2);
     return {
-      width: wrapperElSize.width! * GLARE_EL_SIZE_FACTOR,
-      height: wrapperElSize.height! * GLARE_EL_SIZE_FACTOR,
+      width: wrapperElDiagonal,
+      height: wrapperElDiagonal,
     };
   };
 
