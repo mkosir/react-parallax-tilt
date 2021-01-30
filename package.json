@@ -22,7 +22,7 @@
     "storybook": "start-storybook -p 9009 -s public --quiet",
     "storybook:build": "build-storybook -c .storybook -o build_storybook --quiet",
     "demotab": "demotab generate --prefix=_ && npm run prettier",
-    "validate": "npm run lint && npm run lint-prettier && npm run test:coverage && npm run build"
+    "validate": "npm run lint && npm run test:coverage && npm run build"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -46,6 +46,7 @@
     "enzyme-adapter-react-16": "^1.15.6",
     "eslint": "^7.18.0",
     "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
     "husky": "^4.3.8",
