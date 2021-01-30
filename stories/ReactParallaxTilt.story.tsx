@@ -14,7 +14,6 @@ import ParallaxEffect from './ParallaxEffect/_ParallaxEffect';
 import ParallaxEffectGlareScale from './ParallaxEffectGlareScale/_ParallaxEffectGlareScale';
 import ParallaxEffectImg from './ParallaxEffectImg/_ParallaxEffectImg';
 import TiltImg from './TiltImg/_TiltImg';
-import TiltMax from './TiltMax/_TiltMax';
 import GlareEffect from './GlareEffect/_GlareEffect';
 import GlareEffectNoTilt from './GlareEffectNoTilt/_GlareEffectNoTilt';
 import GlareEffect360 from './GlareEffect360/_GlareEffect360';
@@ -44,7 +43,6 @@ stories
   .add('Parallax effect - Glare & Scale', () => <ParallaxEffectGlareScale />)
   .add('Parallax effect image', () => <ParallaxEffectImg />)
   .add('Tilt image', () => <TiltImg />)
-  .add('Set max tilt', () => <TiltMax />)
   .add('Glare effect', () => <GlareEffect />)
   .add('Glare effect - No tilt', () => <GlareEffectNoTilt />)
   .add('Glare effect - 360', () => <GlareEffect360 />)

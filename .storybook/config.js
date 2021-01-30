@@ -1,5 +1,4 @@
-import { addParameters, addDecorator, configure } from '@storybook/react';
-import { withKnobs } from '@storybook/addon-knobs';
+import { addParameters, configure } from '@storybook/react';
 import theme from './config-theme';
 
 addParameters({
@@ -18,11 +17,9 @@ addParameters({
   },
 });
 
-addDecorator(withKnobs);
-
 const req = require.context('../stories', true, /.story.(tsx?|ts?)$/);
 function loadStories() {
-  req.keys().forEach(filename => req(filename));
+  req.keys().forEach((filename) => req(filename));
 }
 
 configure(loadStories, module);
