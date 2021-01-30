@@ -1,6 +1,7 @@
-import { Props } from './types';
-import { defaultTiltProps } from '../features/tilt/defaultProps';
 import { defaultGlareProps } from '../features/glare/defaultProps';
+import { defaultTiltProps } from '../features/tilt/defaultProps';
+
+import { Props } from './types';
 
 export const defaultProps: Props = {
   scale: 1,

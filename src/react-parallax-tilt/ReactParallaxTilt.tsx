@@ -1,10 +1,11 @@
 import React, { PureComponent, MouseEvent, TouchEvent } from 'react';
 
-import { Props, SupportedEvent, EventType, CustomEventType, WrapperElement } from './types';
-import { defaultProps } from './defaultProps';
-import { Tilt } from '../features/tilt/Tilt';
-import { Glare } from '../features/glare/Glare';
 import { setTransition, constrainToRange } from '../common/utils';
+import { Glare } from '../features/glare/Glare';
+import { Tilt } from '../features/tilt/Tilt';
+
+import { defaultProps } from './defaultProps';
+import { Props, SupportedEvent, EventType, CustomEventType, WrapperElement } from './types';
 
 class ReactParallaxTilt extends PureComponent<Props> {
   public static defaultProps = defaultProps;

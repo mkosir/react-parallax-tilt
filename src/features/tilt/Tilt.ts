@@ -1,7 +1,8 @@
-import { TiltProps } from './types';
-import { constrainToRange } from '../../common/utils';
-import { ClientPosition } from '../../common/types';
 import { IStyle } from '../../common/IStyle';
+import { ClientPosition } from '../../common/types';
+import { constrainToRange } from '../../common/utils';
+
+import { TiltProps } from './types';
 
 const TILT_ANGLE_CONSTRAINT = 90;
 

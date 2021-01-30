@@ -1,7 +1,8 @@
-import { GlareProps, GlareSize } from './types';
-import { constrainToRange } from '../../common/utils';
-import { ElementSizePosition, ClientPosition } from '../../common/types';
 import { IStyle } from '../../common/IStyle';
+import { ElementSizePosition, ClientPosition } from '../../common/types';
+import { constrainToRange } from '../../common/utils';
+
+import { GlareProps, GlareSize } from './types';
 
 export class Glare implements IStyle {
   public glareWrapperEl: HTMLDivElement;

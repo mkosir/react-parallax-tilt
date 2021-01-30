@@ -1,8 +1,8 @@
 import { MouseEvent, TouchEvent } from 'react';
 
-import { TiltProps } from '../features/tilt/types';
-import { GlareProps } from '../features/glare/types';
 import { ElementSizePosition, ClientPosition } from '../common/types';
+import { GlareProps } from '../features/glare/types';
+import { TiltProps } from '../features/tilt/types';
 
 export interface Props extends TiltProps, GlareProps, React.HTMLAttributes<HTMLDivElement> {
   /**
