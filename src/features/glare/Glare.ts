@@ -8,8 +8,8 @@ export class Glare implements IStyle {
   public glareWrapperEl: HTMLDivElement;
   public glareEl: HTMLDivElement;
 
-  public glareAngle: number = 0;
-  public glareOpacity: number = 0;
+  public glareAngle = 0;
+  public glareOpacity = 0;
 
   public transitionTimeoutId: number | undefined;
 
@@ -91,30 +91,29 @@ export class Glare implements IStyle {
 
     const flipVerticallyFactor = flipVertically ? -1 : 1;
     const flipHorizontallyFactor = flipHorizontally ? -1 : 1;
+    const glareReverseFactor = glareReverse ? -1 : 1;
 
     let glareOpacityFactor: number;
     switch (glarePosition) {
       case 'top':
-        glareOpacityFactor = -xPercentage! * flipVerticallyFactor;
+        glareOpacityFactor = -xPercentage! * flipVerticallyFactor * glareReverseFactor;
         break;
       case 'right':
-        glareOpacityFactor = yPercentage! * flipHorizontallyFactor;
+        glareOpacityFactor = yPercentage! * flipHorizontallyFactor * glareReverseFactor;
         break;
       case 'bottom':
-        glareOpacityFactor = xPercentage! * flipVerticallyFactor;
+        glareOpacityFactor = xPercentage! * flipVerticallyFactor * glareReverseFactor;
         break;
       case 'left':
-        glareOpacityFactor = -yPercentage! * flipHorizontallyFactor;
+        glareOpacityFactor = -yPercentage! * flipHorizontallyFactor * glareReverseFactor;
         break;
       case 'all':
         glareOpacityFactor = Math.hypot(xPercentage, yPercentage);
         break;
       default:
-        glareOpacityFactor = xPercentage! * flipVerticallyFactor;
+        glareOpacityFactor = xPercentage! * flipVerticallyFactor * glareReverseFactor;
     }
-    console.log('🔎 11Log ~ Glare ~ glareOpacityFactor', glareOpacityFactor);
-    glareOpacityFactor = glareReverse ? -glareOpacityFactor : glareOpacityFactor;
-    console.log('🔎 22Log ~ Glare ~ glareOpacityFactor', glareOpacityFactor);
+
     const glareOpacityFactorRemoveNegative = constrainToRange(glareOpacityFactor, 0, 100);
     this.glareOpacity = (glareOpacityFactorRemoveNegative * glareMaxOpacity!) / 100;
   };
@@ -124,7 +123,7 @@ export class Glare implements IStyle {
     this.glareEl.style.transform = `rotate(${this.glareAngle}deg) translate(-50%, -50%)`;
     this.glareEl.style.opacity = this.glareOpacity.toString();
 
-    const linearGradient: string = `linear-gradient(0deg, rgba(255,255,255,0) 0%, ${glareColor} 100%)`;
+    const linearGradient = `linear-gradient(0deg, rgba(255,255,255,0) 0%, ${glareColor} 100%)`;
     this.glareEl.style.background = linearGradient;
   };
 }
