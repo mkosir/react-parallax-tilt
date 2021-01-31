@@ -54,8 +54,8 @@ class ReactParallaxTilt extends PureComponent<Props> {
   public componentDidUpdate() {
     const { onMove, onEnter, onLeave } = this.props;
 
-    const noFrameRequestIfCallbackPropChanged = onMove || onEnter || onLeave;
-    if (noFrameRequestIfCallbackPropChanged) {
+    const isCallbackPropChangedDontRequestFrame = onMove || onEnter || onLeave;
+    if (isCallbackPropChangedDontRequestFrame) {
       return;
     }
 
