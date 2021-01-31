@@ -166,7 +166,7 @@ With iOS 13+ permission API can be used to gain access to device orientation eve
 When using gyroscope feature:
 
 ```jsx
-  <Tilt gyroscope={true}}>
+  <Tilt gyroscope={true}>
     <h1>React Parallax Tilt 👀</h1>
   </Tilt>
 ```
