@@ -64,6 +64,7 @@ describe("Tilt - (manual input) - Callback 'onMove' should return correct calcul
     );
     wrapper.simulate('mousemove');
     expect(wrapperSpy.calledWith(60, 45, 100, 75, 0, 0, 'mousemove')).toEqual(true);
+    wrapper.instance().componentDidUpdate();
     wrapper.instance().componentWillUnmount();
   });
 
