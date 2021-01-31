@@ -44,4 +44,20 @@ describe('Event listeners', () => {
     wrapper.instance()['wrapperEl']['updateAnimationId'] = null;
     wrapper.instance().componentWillUnmount();
   });
+
+  it('propchange', () => {
+    const wrapper = mount<Tilt>(<Tilt tiltMaxAngleX={60} tiltMaxAngleY={60} />);
+    const spy = jest.spyOn(wrapper.instance(), 'mainLoop');
+    expect(wrapper.instance().mainLoop).not.toHaveBeenCalled();
+    wrapper.instance().componentDidUpdate();
+    expect(wrapper.instance().mainLoop).toHaveBeenCalled();
+  });
+
+  it('propchange - callback prop', () => {
+    const wrapper = mount<Tilt>(<Tilt tiltMaxAngleX={60} tiltMaxAngleY={60} onMove={jest.fn()} />);
+    const spy = jest.spyOn(wrapper.instance(), 'mainLoop');
+    expect(wrapper.instance().mainLoop).not.toHaveBeenCalled();
+    wrapper.instance().componentDidUpdate();
+    expect(wrapper.instance().mainLoop).not.toHaveBeenCalled();
+  });
 });
