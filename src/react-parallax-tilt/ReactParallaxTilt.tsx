@@ -51,6 +51,18 @@ class ReactParallaxTilt extends PureComponent<Props> {
     this.removeEventListeners();
   }
 
+  public componentDidUpdate() {
+    const { onMove, onEnter, onLeave } = this.props;
+
+    const noFrameRequestIfCallbackPropChanged = onMove || onEnter || onLeave;
+    if (noFrameRequestIfCallbackPropChanged) {
+      return;
+    }
+
+    const propChange = new CustomEvent<CustomEventType>('propchange' as CustomEventType);
+    this.mainLoop(propChange);
+  }
+
   private addEventListeners() {
     const { trackOnWindow, gyroscope } = this.props;
 
@@ -259,6 +271,8 @@ class ReactParallaxTilt extends PureComponent<Props> {
         this.wrapperEl.clientPosition.xPercentage = constrainToRange(xPercentage, -100, 100);
         this.wrapperEl.clientPosition.yPercentage = constrainToRange(yPercentage, -100, 100);
         this.wrapperEl.scale = 1;
+        break;
+      case 'propchange':
         break;
     }
   };
