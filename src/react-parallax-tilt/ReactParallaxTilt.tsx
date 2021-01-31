@@ -307,24 +307,27 @@ class ReactParallaxTilt extends PureComponent<Props> {
   private update = (eventType: EventType | string): void => {
     const { tiltEnable, flipVertically, flipHorizontally } = this.props;
 
-    this.updateClientInput(eventType);
+    const isAngleSetToDefaultAlready = eventType !== 'autoreset';
+    const isAngleRetrievedFromGyroscope = eventType !== 'deviceorientation';
+    const isUpdateCalculationNeeded = isAngleSetToDefaultAlready && isAngleRetrievedFromGyroscope;
+    if (isUpdateCalculationNeeded) {
+      this.updateClientInput();
+    }
+
     if (tiltEnable) {
       this.tilt!.update(this.wrapperEl.clientPosition, this.props);
     }
+
     this.updateFlip();
+
     this.tilt!.updateTiltAnglesPercentage(this.props);
+
     if (this.glare) {
       this.glare.update(this.wrapperEl.clientPosition, this.props, flipVertically!, flipHorizontally!);
     }
   };
 
-  private updateClientInput = (eventType: EventType | string): void => {
-    // on 'autoreset' event - nothing to update, everything set to default already
-    // on 'deviceorientation' event - don't calculate tilt angle, retrieved from gyroscope
-    if (eventType === 'autoreset' || eventType === 'deviceorientation') {
-      return;
-    }
-
+  private updateClientInput = (): void => {
     const { trackOnWindow } = this.props;
 
     let xTemp;
