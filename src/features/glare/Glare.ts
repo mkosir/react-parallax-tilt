@@ -114,7 +114,7 @@ export class Glare implements IStyle {
     }
 
     glareOpacityFactor = glareReverse ? -glareOpacityFactor : glareOpacityFactor;
-    const glareOpacityFactorRemoveNegative: number = constrainToRange(glareOpacityFactor, 0, 100);
+    const glareOpacityFactorRemoveNegative = constrainToRange(glareOpacityFactor, 0, 100);
     this.glareOpacity = (glareOpacityFactorRemoveNegative * glareMaxOpacity!) / 100;
   };
 
