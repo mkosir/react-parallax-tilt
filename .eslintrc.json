@@ -5,7 +5,8 @@
     "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint",
     "plugin:prettier/recommended",
-    "plugin:jsx-a11y/recommended"
+    "plugin:jsx-a11y/recommended",
+    "plugin:react/recommended"
   ],
 
   "plugins": ["@typescript-eslint", "import"],
@@ -32,5 +33,11 @@
         }
       }
     ]
+  },
+
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
