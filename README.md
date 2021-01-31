@@ -166,9 +166,9 @@ With iOS 13+ permission API can be used to gain access to device orientation eve
 When using gyroscope feature:
 
 ```jsx
-  <Tilt gyroscope={true}>
-    <h1>React Parallax Tilt 👀</h1>
-  </Tilt>
+<Tilt gyroscope={true}>
+  <h1>React Parallax Tilt 👀</h1>
+</Tilt>
 ```
 
 it will present a permission dialog prompting the user to allow motion and orientation access at domain level:
