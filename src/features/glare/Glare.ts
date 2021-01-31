@@ -74,9 +74,9 @@ export class Glare implements IStyle {
 
     const rad2Deg = 180 / Math.PI;
     // top 0°, right +90°, bottom -+180°, left -90°
-    const glareAngle: number = xPercentage ? Math.atan2(yPercentage, -xPercentage) * rad2Deg : 0;
+    const glareAngle = xPercentage ? Math.atan2(yPercentage, -xPercentage) * rad2Deg : 0;
 
-    const addGlareAngle: number = glareReverse ? 180 : 0;
+    const addGlareAngle = glareReverse ? 180 : 0;
     this.glareAngle = glareAngle - addGlareAngle;
   };
 
@@ -112,8 +112,9 @@ export class Glare implements IStyle {
       default:
         glareOpacityFactor = xPercentage! * flipVerticallyFactor;
     }
-
+    console.log('🔎 11Log ~ Glare ~ glareOpacityFactor', glareOpacityFactor);
     glareOpacityFactor = glareReverse ? -glareOpacityFactor : glareOpacityFactor;
+    console.log('🔎 22Log ~ Glare ~ glareOpacityFactor', glareOpacityFactor);
     const glareOpacityFactorRemoveNegative = constrainToRange(glareOpacityFactor, 0, 100);
     this.glareOpacity = (glareOpacityFactorRemoveNegative * glareMaxOpacity!) / 100;
   };
