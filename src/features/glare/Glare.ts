@@ -11,8 +11,6 @@ export class Glare implements IStyle {
   public glareAngle = 0;
   public glareOpacity = 0;
 
-  public transitionTimeoutId: number | undefined;
-
   constructor(wrapperElSize: ElementSizePosition) {
     this.glareWrapperEl = document.createElement('div');
     this.glareEl = document.createElement('div');

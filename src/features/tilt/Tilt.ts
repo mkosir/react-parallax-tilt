@@ -7,15 +7,13 @@ import { TiltProps } from './types';
 const TILT_ANGLE_CONSTRAINT = 90;
 
 export class Tilt<T extends HTMLElement> implements IStyle {
-  public glareAngle: number = 0;
-  public glareOpacity: number = 0;
+  public glareAngle = 0;
+  public glareOpacity = 0;
 
-  public transitionTimeoutId: number | undefined;
-
-  public tiltAngleX: number = 0;
-  public tiltAngleY: number = 0;
-  public tiltAngleXPercentage: number = 0;
-  public tiltAngleYPercentage: number = 0;
+  public tiltAngleX = 0;
+  public tiltAngleY = 0;
+  public tiltAngleXPercentage = 0;
+  public tiltAngleYPercentage = 0;
 
   public update = (wrapperElClientPosition: ClientPosition, props: TiltProps): void => {
     this.updateTilt(wrapperElClientPosition, props);

@@ -23,7 +23,6 @@ class ReactParallaxTilt extends PureComponent<Props> {
       xPercentage: 0,
       yPercentage: 0,
     },
-    transitionTimeoutId: undefined,
     updateAnimationId: null,
     childrenImgsCounter: 0,
     childrenImgsLength: 0,
@@ -44,7 +43,6 @@ class ReactParallaxTilt extends PureComponent<Props> {
   }
 
   public componentWillUnmount() {
-    clearTimeout(this.wrapperEl.transitionTimeoutId);
     if (this.wrapperEl.updateAnimationId !== null) {
       cancelAnimationFrame(this.wrapperEl.updateAnimationId);
     }
@@ -195,7 +193,7 @@ class ReactParallaxTilt extends PureComponent<Props> {
 
     // increase performance by notifying browser 'transform' property is just about to get changed
     this.wrapperEl.node!.style.willChange = 'transform';
-    this.setTransition();
+    this.setTransitions();
 
     if (onEnter) {
       onEnter(event.type);
@@ -232,7 +230,7 @@ class ReactParallaxTilt extends PureComponent<Props> {
 
   private onLeave = (event: SupportedEvent) => {
     const { onLeave } = this.props;
-    this.setTransition();
+    this.setTransitions();
 
     if (onLeave) {
       onLeave(event.type);
@@ -390,25 +388,12 @@ class ReactParallaxTilt extends PureComponent<Props> {
     this.wrapperEl.node!.style.transform += `scale3d(${scale},${scale},${scale})`;
   }
 
-  private setTransition() {
+  private setTransitions() {
     const { transitionSpeed, transitionEasing } = this.props;
-
-    this.wrapperEl.transitionTimeoutId = setTransition<HTMLDivElement>(
-      this.wrapperEl.node!,
-      'all',
-      transitionSpeed!,
-      transitionEasing!,
-      this.wrapperEl.transitionTimeoutId,
-    );
+    setTransition<HTMLDivElement>(this.wrapperEl.node!, 'all', transitionSpeed!, transitionEasing!);
 
     if (this.glare) {
-      this.glare.transitionTimeoutId = setTransition<HTMLDivElement>(
-        this.glare.glareEl,
-        'opacity',
-        transitionSpeed!,
-        transitionEasing!,
-        this.glare.transitionTimeoutId,
-      );
+      setTransition<HTMLDivElement>(this.glare.glareEl, 'opacity', transitionSpeed!, transitionEasing!);
     }
   }
 

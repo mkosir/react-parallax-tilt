@@ -67,7 +67,6 @@ export type WrapperElement<T extends HTMLElement> = {
   node: T | null;
   size: ElementSizePosition;
   clientPosition: ClientPosition;
-  transitionTimeoutId: number | undefined;
   updateAnimationId: number | null;
   childrenImgsCounter: number;
   childrenImgsLength: number;
