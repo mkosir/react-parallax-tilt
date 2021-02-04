@@ -191,6 +191,9 @@ class ReactParallaxTilt extends PureComponent<Props> {
   private onEnter = (event: SupportedEvent) => {
     const { onEnter } = this.props;
 
+    // In case wrapped tilt component is being manipulated (position, size, etc.) in consumed application, update params on each enter
+    this.setSize();
+
     // increase performance by notifying browser 'transform' property is just about to get changed
     this.wrapperEl.node!.style.willChange = 'transform';
     this.setTransitions();
