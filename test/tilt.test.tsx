@@ -135,7 +135,7 @@ describe("Tilt - (manual input) - Callback 'onMove' should return correct calcul
     wrapper.simulate('mousemove', { pageX: 100, pageY: 50 });
     wrapper.simulate('mouseleave');
     expect(wrapperSpyOnEnter.calledWith('mouseenter')).toEqual(true);
-    expect(wrapperSpyOnMove.calledWith(0, -20, 0, -100, 0, 0, 'mousemove')).toEqual(true);
+    expect(wrapperSpyOnMove.calledWith(0, -0, 0, -0, 0, 0, 'initial')).toEqual(true);
     expect(wrapperSpyOnLeave.calledWith('mouseleave')).toEqual(true);
   });
 
@@ -146,7 +146,7 @@ describe("Tilt - (manual input) - Callback 'onMove' should return correct calcul
     wrapper.simulate('mouseenter');
     wrapper.simulate('mousemove', { pageX: 100, pageY: 50 });
     wrapper.simulate('mouseleave');
-    expect(wrapperSpyOnMove.calledWith(0, -20, 0, -100, 0, 0, 'mousemove')).toEqual(true);
+    expect(wrapperSpyOnMove.calledWith(0, -0, 0, -0, 0, 0, 'initial')).toEqual(true);
   });
 
   it('Tilt events', () => {
