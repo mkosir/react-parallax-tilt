@@ -50,15 +50,11 @@ class ReactParallaxTilt extends PureComponent<Props> {
   }
 
   public componentDidUpdate() {
-    const { onMove, onEnter, onLeave } = this.props;
+    // Update wrapped tilt component params in case it's being manipulated (position, size, etc.) in consumed application
+    this.setSize();
 
-    const isCallbackPropChangedDontRequestFrame = onMove || onEnter || onLeave;
-    if (isCallbackPropChangedDontRequestFrame) {
-      return;
-    }
-
-    const propChange = new CustomEvent<CustomEventType>('propchange' as CustomEventType);
-    this.mainLoop(propChange);
+    const eventType = new CustomEvent<CustomEventType>('propChanged' as CustomEventType);
+    this.mainLoop(eventType);
   }
 
   private addEventListeners() {
@@ -191,9 +187,6 @@ class ReactParallaxTilt extends PureComponent<Props> {
   private onEnter = (event: SupportedEvent) => {
     const { onEnter } = this.props;
 
-    // In case wrapped tilt component is being manipulated (position, size, etc.) in consumed application, update params on each enter
-    this.setSize();
-
     // increase performance by notifying browser 'transform' property is just about to get changed
     this.wrapperEl.node!.style.willChange = 'transform';
     this.setTransitions();
@@ -273,8 +266,6 @@ class ReactParallaxTilt extends PureComponent<Props> {
         this.wrapperEl.clientPosition.yPercentage = constrainToRange(yPercentage, -100, 100);
         this.wrapperEl.scale = 1;
         break;
-      case 'propchange':
-        break;
     }
   };
 
@@ -310,7 +301,9 @@ class ReactParallaxTilt extends PureComponent<Props> {
 
     const isAngleSetToDefaultAlready = eventType !== 'autoreset';
     const isAngleRetrievedFromGyroscope = eventType !== 'deviceorientation';
-    const isUpdateCalculationNeeded = isAngleSetToDefaultAlready && isAngleRetrievedFromGyroscope;
+    const isPropChanged = eventType !== 'propChanged';
+    const isUpdateCalculationNeeded =
+      isAngleSetToDefaultAlready && isAngleRetrievedFromGyroscope && isPropChanged;
     if (isUpdateCalculationNeeded) {
       this.updateClientInput();
     }

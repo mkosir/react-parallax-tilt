@@ -81,5 +81,5 @@ type DOMSupportedEvent =
 export type SupportedEvent = DOMSupportedEvent | CustomEvent<CustomEventType>;
 
 type DOMEventType = 'touchmove' | 'mousemove' | 'deviceorientation';
-export type CustomEventType = 'autoreset' | 'initial' | 'propchange';
+export type CustomEventType = 'autoreset' | 'initial' | 'propChanged';
 export type EventType = DOMEventType | CustomEventType;
