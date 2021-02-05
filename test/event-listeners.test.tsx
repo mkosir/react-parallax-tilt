@@ -58,6 +58,6 @@ describe('Event listeners', () => {
     const spy = jest.spyOn(wrapper.instance(), 'mainLoop');
     expect(wrapper.instance().mainLoop).not.toHaveBeenCalled();
     wrapper.instance().componentDidUpdate();
-    expect(wrapper.instance().mainLoop).not.toHaveBeenCalled();
+    expect(wrapper.instance().mainLoop).toHaveBeenCalled();
   });
 });
