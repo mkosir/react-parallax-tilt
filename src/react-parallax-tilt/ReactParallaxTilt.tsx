@@ -24,12 +24,13 @@ class ReactParallaxTilt extends PureComponent<Props> {
       yPercentage: 0,
     },
     updateAnimationId: null,
-    childrenImgsCounter: 0,
-    childrenImgsLength: 0,
     scale: 1,
   };
   private tilt: Tilt<HTMLDivElement> | null = null;
   private glare: Glare | null = null;
+
+  private childrenImgsCounter = 0;
+  private childrenImgsLength = 0;
 
   public componentDidMount() {
     this.loadWrapperAndChildElements();
@@ -120,8 +121,8 @@ class ReactParallaxTilt extends PureComponent<Props> {
 
   private loadWrapperAndChildElements = () => {
     const imgs = Array.from(this.wrapperEl.node!.getElementsByTagName('img'));
-    this.wrapperEl.childrenImgsLength = imgs.length;
-    if (this.wrapperEl.childrenImgsLength === 0) {
+    this.childrenImgsLength = imgs.length;
+    if (this.childrenImgsLength === 0) {
       this.setSize();
       return;
     }
@@ -138,8 +139,8 @@ class ReactParallaxTilt extends PureComponent<Props> {
   };
 
   public allImagesLoaded = () => {
-    this.wrapperEl.childrenImgsCounter++;
-    if (this.wrapperEl.childrenImgsCounter === this.wrapperEl.childrenImgsLength) {
+    this.childrenImgsCounter++;
+    if (this.childrenImgsCounter === this.childrenImgsLength) {
       this.setSize();
     }
   };
