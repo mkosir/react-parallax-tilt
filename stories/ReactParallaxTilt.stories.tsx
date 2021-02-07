@@ -1,55 +1,101 @@
-import { storiesOf } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 import React from 'react';
 
-import Default from './Default/_Default';
-import EventsAll from './EventsAll/_EventsAll';
-import EventTiltAngle from './EventTiltAngle/_EventTiltAngle';
-import FlipPage from './FlipPage/_FlipPage';
-import FlipVH from './FlipVH/_FlipVH';
-import GlareEffect from './GlareEffect/_GlareEffect';
-import GlareEffect360 from './GlareEffect360/_GlareEffect360';
-import GlareEffectNoTilt from './GlareEffectNoTilt/_GlareEffectNoTilt';
-import Gyroscope from './Gyroscope/_Gyroscope';
-import InitialTilt from './InitialTilt/_InitialTilt';
-import KeepFloating from './KeepFloating/_KeepFloating';
-import MultipleTilt from './MultipleTilt/_MultipleTilt';
-import MultipleTiltScroll from './MultipleTiltScroll/_MultipleTiltScroll';
-import ParallaxEffect from './ParallaxEffect/_ParallaxEffect';
-import ParallaxEffectGlareScale from './ParallaxEffectGlareScale/_ParallaxEffectGlareScale';
-import ParallaxEffectImg from './ParallaxEffectImg/_ParallaxEffectImg';
-import ReverseTilt from './ReverseTilt/_ReverseTilt';
-import ScaleNoTilt from './ScaleNoTilt/_ScaleNoTilt';
-import TiltDisableAxis from './TiltDisableAxis/_TiltDisableAxis';
-import TiltImg from './TiltImg/_TiltImg';
-import TiltManualInput from './TiltManualInput/_TiltManualInput';
-import TiltScale from './TiltScale/_TiltScale';
-import TrackOnWindow from './TrackOnWindow/_TrackOnWindow';
+import DefaultC from './Default/_Default';
+import EventsAllC from './EventsAll/_EventsAll';
+import EventTiltAngleC from './EventTiltAngle/_EventTiltAngle';
+import FlipPageC from './FlipPage/_FlipPage';
+import FlipVHC from './FlipVH/_FlipVH';
+import GlareEffectC from './GlareEffect/_GlareEffect';
+import GlareEffect360C from './GlareEffect360/_GlareEffect360';
+import GlareEffectNoTiltC from './GlareEffectNoTilt/_GlareEffectNoTilt';
+import GyroscopeC from './Gyroscope/_Gyroscope';
+import InitialTiltC from './InitialTilt/_InitialTilt';
+import KeepFloatingC from './KeepFloating/_KeepFloating';
+import MultipleTiltC from './MultipleTilt/_MultipleTilt';
+import MultipleTiltScrollC from './MultipleTiltScroll/_MultipleTiltScroll';
+import ParallaxEffectC from './ParallaxEffect/_ParallaxEffect';
+import ParallaxEffectGlareScaleC from './ParallaxEffectGlareScale/_ParallaxEffectGlareScale';
+import ParallaxEffectImgC from './ParallaxEffectImg/_ParallaxEffectImg';
+import ReverseTiltC from './ReverseTilt/_ReverseTilt';
+import ScaleNoTiltC from './ScaleNoTilt/_ScaleNoTilt';
+import TiltDisableAxisC from './TiltDisableAxis/_TiltDisableAxis';
+import TiltImgC from './TiltImg/_TiltImg';
+import TiltManualInputC from './TiltManualInput/_TiltManualInput';
+import TiltScaleC from './TiltScale/_TiltScale';
+import TrackOnWindowC from './TrackOnWindow/_TrackOnWindow';
 
 import './ReactParallaxTilt.scss';
 
-const stories = storiesOf('React Parallax Tilt', module);
+const meta: Meta = {
+  title: 'React Parallax Tilt',
+};
 
-stories
-  .add('Default', () => <Default />)
-  .add('Keep floating', () => <KeepFloating />)
-  .add('Reverse tilt', () => <ReverseTilt />)
-  .add('Scale', () => <TiltScale />)
-  .add('Scale - No tilt', () => <ScaleNoTilt />)
-  .add('Disable x/y axis', () => <TiltDisableAxis />)
-  .add('Initial tilt', () => <InitialTilt />)
-  .add('Flip vertically/horizontally', () => <FlipVH />)
-  .add('Flip page', () => <FlipPage />)
-  .add('Parallax effect', () => <ParallaxEffect />)
-  .add('Parallax effect - Glare & Scale', () => <ParallaxEffectGlareScale />)
-  .add('Parallax effect image', () => <ParallaxEffectImg />)
-  .add('Tilt image', () => <TiltImg />)
-  .add('Glare effect', () => <GlareEffect />)
-  .add('Glare effect - No tilt', () => <GlareEffectNoTilt />)
-  .add('Glare effect - 360', () => <GlareEffect360 />)
-  .add('Track on window', () => <TrackOnWindow />)
-  .add('Tilt manual input', () => <TiltManualInput />)
-  .add('Gyroscope tilt', () => <Gyroscope />)
-  .add('Multiple tilt', () => <MultipleTilt />)
-  .add('Multiple tilt - Scroll', () => <MultipleTiltScroll />)
-  .add('Event - Tilt angle', () => <EventTiltAngle />)
-  .add('Events - All', () => <EventsAll />);
+export default meta;
+
+export const Default = () => <DefaultC />;
+
+export const KeepFloating = () => <KeepFloatingC />;
+KeepFloating.storyName = 'Keep floating';
+
+export const ReverseTilt = () => <ReverseTiltC />;
+ReverseTilt.storyName = 'Reverse tilt';
+
+export const Scale = () => <TiltScaleC />;
+
+export const ScaleNoTilt = () => <ScaleNoTiltC />;
+ScaleNoTilt.storyName = 'Scale - No tilt';
+
+export const TiltDisableAxis = () => <TiltDisableAxisC />;
+TiltDisableAxis.storyName = 'Disable x/y axis';
+
+export const InitialTilt = () => <InitialTiltC />;
+InitialTilt.storyName = 'Initial tilt';
+
+export const FlipVH = () => <FlipVHC />;
+FlipVH.storyName = 'Flip vertically/horizontally';
+
+export const FlipPage = () => <FlipPageC />;
+FlipPage.storyName = 'Flip page';
+
+export const ParallaxEffect = () => <ParallaxEffectC />;
+ParallaxEffect.storyName = 'Parallax effect';
+
+export const ParallaxEffectGlareScale = () => <ParallaxEffectGlareScaleC />;
+ParallaxEffectGlareScale.storyName = 'Parallax effect - Glare & Scale';
+
+export const ParallaxEffectImg = () => <ParallaxEffectImgC />;
+ParallaxEffectImg.storyName = 'Parallax effect image';
+
+export const TiltImg = () => <TiltImgC />;
+TiltImg.storyName = 'Tilt image';
+
+export const GlareEffect = () => <GlareEffectC />;
+GlareEffect.storyName = 'Glare effect';
+
+export const GlareEffectNoTilt = () => <GlareEffectNoTiltC />;
+GlareEffectNoTilt.storyName = 'Glare effect - No tilt';
+
+export const GlareEffect360 = () => <GlareEffect360C />;
+GlareEffect360.storyName = 'Glare effect - 360';
+
+export const TrackOnWindow = () => <TrackOnWindowC />;
+TrackOnWindow.storyName = 'Track on window';
+
+export const TiltManualInput = () => <TiltManualInputC />;
+TiltManualInput.storyName = 'Tilt manual input';
+
+export const Gyroscope = () => <GyroscopeC />;
+Gyroscope.storyName = 'Gyroscope tilt';
+
+export const MultipleTilt = () => <MultipleTiltC />;
+MultipleTilt.storyName = 'Multiple tilt';
+
+export const MultipleTiltScroll = () => <MultipleTiltScrollC />;
+MultipleTiltScroll.storyName = 'Multiple tilt - Scroll';
+
+export const EventTiltAngle = () => <EventTiltAngleC />;
+EventTiltAngle.storyName = 'Event - Tilt angle';
+
+export const EventsAll = () => <EventsAllC />;
+EventsAll.storyName = 'Event - All';

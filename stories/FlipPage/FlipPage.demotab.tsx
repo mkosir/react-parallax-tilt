@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import Tilt from '../../src';
+
 import './FlipPage.demotab.scss';
 import Page from './Page/Page';
 
