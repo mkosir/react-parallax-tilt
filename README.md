@@ -18,6 +18,7 @@ _👀 Easily apply tilt hover effect on React components_
 
 ## Install
 
+[![copy](https://cdn.jsdelivr.net/gh/lalit2005/copii@master/assets/copy.svg)](https://copii.vercel.app/?ct=npm%20install%20react-parallax-tilt&tm=blk&lg=https://raw.githubusercontent.com/mkosir/react-parallax-tilt/master/demo.gif)
 ```bash
 npm install react-parallax-tilt
 ```
@@ -39,6 +40,7 @@ npm install react-parallax-tilt
 
 ## Example
 
+[![copy](https://cdn.jsdelivr.net/gh/lalit2005/copii@master/assets/copy-below-code.svg)](https://copii.vercel.app/?ct=import%20React%20from%20'react';¬ß≈import%20ReactDOM%20from%20'react-dom';¬ß≈import%20Tilt%20from%20'react-parallax-tilt';¬ß≈¬ß≈const%20App%20¬Ωœ%20()%20¬Ωœ>%20{¬ß≈%20%20return%20(¬ß≈%20%20%20%20<Tilt>¬ß≈%20%20%20%20%20%20<div%20style¬Ωœ{{%20height:%20'300px',%20backgroundColor:%20'darkgreen'%20}}>¬ß≈%20%20%20%20%20%20%20%20<h1>React%20Parallax%20Tilt%20👀</h1>¬ß≈%20%20%20%20%20%20</div>¬ß≈%20%20%20%20</Tilt>¬ß≈%20%20);¬ß≈};¬ß≈¬ß≈ReactDOM.render(<App%20/>,%20document.getElementById('root'));¬ß≈&tm=blk&lg=https://raw.githubusercontent.com/mkosir/react-parallax-tilt/master/demo.gif)
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -197,6 +199,7 @@ npm install
 npm link # link your local repo to your global packages
 npm run build:watch # build the files and watch for changes
 ```
+[![copy](https://cdn.jsdelivr.net/gh/lalit2005/copii@master/assets/copy.svg)](https://copii.vercel.app/?ct=npm%20install%20¬Ω≈¬Ω≈%20npm%20link%20¬Ω≈¬Ω≈%20npm%20run%20build:watch&tm=blk&lg=https://raw.githubusercontent.com/mkosir/react-parallax-tilt/master/demo.gif)
 
 Clone project repo that you wish to test with react-parallax-tilt library and run:
 
@@ -205,6 +208,7 @@ npm install
 npm link react-parallax-tilt # link your local copy into this project's node_modules
 npm start
 ```
+[![copy](https://cdn.jsdelivr.net/gh/lalit2005/copii@master/assets/copy.svg)](https://copii.vercel.app/?ct=npm%20install%20¬Ω≈¬Ω≈%20npm%20link%20react-parallax-tilt%20¬Ω≈¬Ω≈%20npm%20start&tm=blk&lg=https://raw.githubusercontent.com/mkosir/react-parallax-tilt/master/demo.gif)
 
 </details>
 
