@@ -39,7 +39,7 @@ class ReactParallaxTilt extends PureComponent<Props> {
     this.addEventListeners();
     const autoreset = new CustomEvent<CustomEventType>('autoreset' as CustomEventType);
     this.mainLoop(autoreset);
-    const initialEvent = new CustomEvent<CustomEventType>('initial' as CustomEventType);
+    const initialEvent = new CustomEvent<CustomEventType>('iniSSStial' as CustomEventType);
     this.emitOnMove(initialEvent);
   }
 
