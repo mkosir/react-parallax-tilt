@@ -10,5 +10,7 @@ Fixes a bug where '...' happened when '...'
 
 **Checklist**
 
-- [ ] Lint, prettier and all tests passing (`npm run validate`)
+- [ ] Commit messages should follow [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) convention as much as possible, or your pull-request is subject to rejection.  
+       After staging your changes please run `npm run commit`
+- [ ] Lint, prettier and all tests passing - `npm run validate`
 - [ ] Extended the Storybook demo page / README / documentation, if necessary
