@@ -17,6 +17,7 @@
     "lint-prettier": "prettier --config .prettierrc -l  './**/*.{ts,tsx,js,jsx,css,scss,json,md}'",
     "prettier": "prettier --config .prettierrc --write './**/*.{ts,tsx,js,jsx,css,scss,json,md}'",
     "test": "jest --verbose --watch",
+    "commit": "git-cz",
     "test:coverage": "jest --coverage --verbose",
     "test:coverage:watch": "jest --coverage --verbose --watch",
     "storybook": "start-storybook -p 9009 -s public --quiet",
@@ -26,6 +27,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.13",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^11.1.1",
@@ -44,6 +47,7 @@
     "babel-loader": "^8.2.2",
     "babel-preset-react-app": "^10.0.0",
     "codecov": "^3.8.1",
+    "commitizen": "^4.2.3",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "eslint": "^7.19.0",
@@ -118,8 +122,19 @@
       "git add"
     ]
   },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
   "husky": {
     "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged",
       "pre-push": "npm run test:coverage"
     }
