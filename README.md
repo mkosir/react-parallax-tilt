@@ -190,10 +190,6 @@ Build all the examples and start storybook server on [localhost:9009](http://loc
 
 **Start coding!** 🎉
 
-### Start coding! 🎉
-
-### **Start coding!** 🎉
-
 <details>
 <summary>Or setup with npm link</summary>
 Clone this repo on your machine, navigate to its location in the terminal and run:
