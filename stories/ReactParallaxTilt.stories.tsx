@@ -42,6 +42,7 @@ export const ReverseTilt = () => <ReverseTiltC />;
 ReverseTilt.storyName = 'Reverse tilt';
 
 export const Scale = () => <TiltScaleC />;
+Scale.storyName = 'Scale';
 
 export const ScaleNoTilt = () => <ScaleNoTiltC />;
 ScaleNoTilt.storyName = 'Scale - No tilt';
