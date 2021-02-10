@@ -31,11 +31,11 @@ npm install react-parallax-tilt
 - Events to keep track of component values 📐 (tilt, glare, mousemove,...) [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--events-all)
 - Many effects and functionalities that can be easily applied:
   - **scale** on hover [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--scale)
-  - **disable** x/y axis [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--disable-x-y-axis)
-  - **flip** component vertically/horizontally [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--flip-vertically-horizontally)
+  - **disable** x/y axis [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--tilt-disable-axis)
+  - **flip** component vertically/horizontally [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--flip-vh)
   - tilt hover effect on the **whole window** [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--track-on-window)
   - tilt component with custom **manual input** 🕹 (joystick, slider etc.) [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--tilt-manual-input)
-  - **parallax** effect on overlaid images [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--parallax-effect-image)
+  - **parallax** effect on overlaid images [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--parallax-effect-img)
 
 ## Example
 
@@ -188,8 +188,14 @@ Build all the examples and start storybook server on [localhost:9009](http://loc
 - `npm install`
 - `npm start`
 
+**Start coding!** 🎉
+
+### Start coding! 🎉
+
+### **Start coding!** 🎉
+
 <details>
-<summary>or with npm link</summary>
+<summary>Or setup with npm link</summary>
 Clone this repo on your machine, navigate to its location in the terminal and run:
 
 ```bash
@@ -207,8 +213,6 @@ npm start
 ```
 
 </details>
-
-**Start coding!** 🎉
 
 ## Contributing
 
