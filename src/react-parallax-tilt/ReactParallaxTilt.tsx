@@ -29,11 +29,7 @@ class ReactParallaxTilt extends PureComponent<Props> {
   private tilt: Tilt<HTMLDivElement> | null = null;
   private glare: Glare | null = null;
 
-  private childrenImgsCounter = 0;
-  private childrenImgsLength = 0;
-
   public componentDidMount() {
-    this.loadWrapperAndChildElements();
     this.tilt = new Tilt<HTMLDivElement>();
     this.initGlare();
     this.addEventListeners();
@@ -119,32 +115,6 @@ class ReactParallaxTilt extends PureComponent<Props> {
     }
   }
 
-  private loadWrapperAndChildElements = () => {
-    const imgs = Array.from(this.wrapperEl.node!.getElementsByTagName('img'));
-    this.childrenImgsLength = imgs.length;
-    if (this.childrenImgsLength === 0) {
-      this.setSize();
-      return;
-    }
-
-    imgs.forEach((img) => {
-      // jest - images are not preloaded
-      /* istanbul ignore next */
-      if (img.complete) {
-        this.allImagesLoaded();
-      } else {
-        img.addEventListener('load', this.allImagesLoaded);
-      }
-    });
-  };
-
-  public allImagesLoaded = () => {
-    this.childrenImgsCounter++;
-    if (this.childrenImgsCounter === this.childrenImgsLength) {
-      this.setSize();
-    }
-  };
-
   public setSize = () => {
     this.setWrapperElSize();
     if (this.glare) {
@@ -183,7 +153,9 @@ class ReactParallaxTilt extends PureComponent<Props> {
   private onEnter = (event: SupportedEvent) => {
     const { onEnter } = this.props;
 
-    // Update wrapped tilt component params in case it's being manipulated (position, size, etc.) in consumed application
+    // Update wrapped tilt component params in case
+    // - it's being manipulated (position, size, etc.) in consumed application
+    // - initial (delayed) images/children load
     this.setSize();
 
     // increase performance by notifying browser 'transform' property is just about to get changed
