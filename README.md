@@ -1,7 +1,7 @@
 # React Tilt
 
 [![npm version][npm-badge]][npm-url]
-[![npm bundle size][downloads-badge]][npm-url]
+[![npm downloads][downloads-badge]][npm-url]
 [![npm bundle size][size-badge]][npm-url]
 [![Build Status][build-badge]][build-url]
 [![Codecov Coverage][coverage-badge]][coverage-url]
@@ -217,7 +217,7 @@ Please take a moment to review guidelines [PR](.github/PULL_REQUEST_TEMPLATE.md)
 
 [npm-url]: https://www.npmjs.com/package/react-parallax-tilt
 [npm-badge]: https://img.shields.io/npm/v/react-parallax-tilt.svg
-[size-badge]: https://img.shields.io/bundlephobia/minzip/react-parallax-tilt.svg
+[size-badge]: https://badgen.net/bundlephobia/minzip/react-parallax-tilt
 [downloads-badge]: https://img.shields.io/npm/dm/react-parallax-tilt.svg?color=blue
 [build-badge]: https://travis-ci.com/mkosir/react-parallax-tilt.svg
 [build-url]: https://travis-ci.com/mkosir/react-parallax-tilt
