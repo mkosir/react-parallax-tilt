@@ -27,7 +27,7 @@ export default {
       sourcemap: true,
     },
   ],
-  // this will ensure that the dependencies are not bundled with our library, but are instead
+  // this will ensure that the dependenci es are not bundled with our library, but are instead
   // installed (automatically) within the parent app
   external: [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})],
   plugins: [
