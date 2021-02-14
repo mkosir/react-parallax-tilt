@@ -9,7 +9,7 @@
     "plugin:react/recommended"
   ],
 
-  "plugins": ["@typescript-eslint", "import"],
+  "plugins": ["@typescript-eslint", "jest", "import"],
 
   "rules": {
     "@typescript-eslint/interface-name-prefix": 0,
