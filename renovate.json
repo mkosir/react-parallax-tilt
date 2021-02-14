@@ -11,6 +11,37 @@
   "packageRules": [
     {
       "automerge": true,
+      "labels": ["linting"],
+      "groupName": "group:eslint",
+      "packageNames": [
+        "@typescript-eslint/eslint-plugin",
+        "@typescript-eslint/parser",
+        "eslint",
+        "eslint-config-prettier",
+        "eslint-config-import",
+        "eslint-plugin-jest",
+        "eslint-plugin-jsx-a11y",
+        "eslint-plugin-prettier",
+        "eslint-plugin-react"
+      ]
+    },
+    {
+      "automerge": true,
+      "labels": ["rollup"],
+      "groupName": "group:rollup",
+      "packageNames": [
+        "@rollup/plugin-commonjs",
+        "@rollup/plugin-json",
+        "@rollup/plugin-node-resolve",
+        "rollup",
+        "rollup-plugin-postcss",
+        "rollup-plugin-sourcemaps",
+        "rollup-plugin-terser",
+        "rollup-plugin-typescript2"
+      ]
+    },
+    {
+      "automerge": true,
       "labels": ["dependencies"],
       "groupName": "group:dependencies",
       "matchDepTypes": ["dependencies"]
@@ -22,7 +53,6 @@
       "matchDepTypes": ["devDependencies"]
     },
     {
-      "matchDepTypes": ["dependencies", "devDependencies"],
       "updateTypes": ["minor", "major"],
       "enabled": false
     }
