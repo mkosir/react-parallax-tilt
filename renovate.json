@@ -2,7 +2,6 @@
   "extends": ["config:base", "group:all"],
   "schedule": ["every 3 months on the first day of the month"],
   "timezone": "Europe/Ljubljana",
-  "labels": ["dependencies", "automerge"],
   "separateMinorPatch": false,
   "assignees": ["mkosir"],
   "assignAutomerge": true,
@@ -10,51 +9,20 @@
   "rangeStrategy": "bump",
   "packageRules": [
     {
-      "automerge": true,
-      "labels": ["linting"],
-      "groupName": "group:eslint",
-      "packageNames": [
-        "@typescript-eslint/eslint-plugin",
-        "@typescript-eslint/parser",
-        "eslint",
-        "eslint-config-prettier",
-        "eslint-config-import",
-        "eslint-plugin-jest",
-        "eslint-plugin-jsx-a11y",
-        "eslint-plugin-prettier",
-        "eslint-plugin-react"
-      ]
+      "matchUpdateTypes": ["minor", "major"],
+      "enabled": false
     },
     {
       "automerge": true,
-      "labels": ["rollup"],
-      "groupName": "group:rollup",
-      "packageNames": [
-        "@rollup/plugin-commonjs",
-        "@rollup/plugin-json",
-        "@rollup/plugin-node-resolve",
-        "rollup",
-        "rollup-plugin-postcss",
-        "rollup-plugin-sourcemaps",
-        "rollup-plugin-terser",
-        "rollup-plugin-typescript2"
-      ]
-    },
-    {
-      "automerge": true,
-      "labels": ["dependencies"],
+      "labels": ["dependencies", "automerge"],
       "groupName": "group:dependencies",
       "matchDepTypes": ["dependencies"]
     },
     {
       "automerge": true,
-      "labels": ["devDependencies"],
+      "labels": ["devDependencies", "automerge"],
       "groupName": "group:devDependencies",
       "matchDepTypes": ["devDependencies"]
-    },
-    {
-      "updateTypes": ["minor", "major"],
-      "enabled": false
     }
   ]
 }
