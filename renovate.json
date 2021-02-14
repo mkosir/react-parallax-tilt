@@ -1,10 +1,13 @@
 {
   "extends": ["config:base", "group:all"],
   "schedule": ["every 3 months on the first day of the month"],
+  "timezone": "Europe/Ljubljana",
   "labels": ["dependencies", "automerge"],
   "separateMinorPatch": true,
   "assignees": ["mkosir"],
   "assignAutomerge": true,
+  "requiredStatusChecks": null,
+  "rangeStrategy": "update-lockfile",
   "packageRules": [
     {
       "updateTypes": ["minor", "patch"],
@@ -38,6 +41,16 @@
         "rollup-plugin-terser",
         "rollup-plugin-typescript2"
       ]
+    },
+    {
+      "labels": ["dependencies"],
+      "groupName": "group:dependencies",
+      "matchDepTypes": ["dependencies"]
+    },
+    {
+      "labels": ["devDependencies"],
+      "groupName": "group:devDependencies",
+      "matchDepTypes": ["devDependencies"]
     }
   ]
 }
