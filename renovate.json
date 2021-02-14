@@ -3,17 +3,15 @@
   "schedule": ["every 3 months on the first day of the month"],
   "timezone": "Europe/Ljubljana",
   "labels": ["dependencies", "automerge"],
-  "separateMinorPatch": true,
+  "separateMinorPatch": false,
   "assignees": ["mkosir"],
   "assignAutomerge": true,
   "requiredStatusChecks": null,
-  "rangeStrategy": "update-lockfile",
+  "rangeStrategy": "bump",
   "packageRules": [
     {
-      "updateTypes": ["minor", "patch"],
-      "automerge": true
-    },
-    {
+      "updateTypes": ["patch"],
+      "automerge": true,
       "labels": ["linting"],
       "groupName": "group:eslint",
       "packageNames": [
@@ -29,6 +27,8 @@
       ]
     },
     {
+      "updateTypes": ["patch"],
+      "automerge": true,
       "labels": ["rollup"],
       "groupName": "group:rollup",
       "packageNames": [
@@ -43,11 +43,15 @@
       ]
     },
     {
+      "updateTypes": ["patch"],
+      "automerge": true,
       "labels": ["dependencies"],
       "groupName": "group:dependencies",
       "matchDepTypes": ["dependencies"]
     },
     {
+      "updateTypes": ["patch"],
+      "automerge": true,
       "labels": ["devDependencies"],
       "groupName": "group:devDependencies",
       "matchDepTypes": ["devDependencies"]
