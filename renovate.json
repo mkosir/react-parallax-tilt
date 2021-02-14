@@ -5,11 +5,10 @@
   "separateMinorPatch": true,
   "assignees": ["mkosir"],
   "assignAutomerge": true,
-  "automerge": true,
   "packageRules": [
     {
-      "updateTypes": ["major"],
-      "enabled": false
+      "updateTypes": ["minor", "patch"],
+      "automerge": true
     },
     {
       "labels": ["linting"],
