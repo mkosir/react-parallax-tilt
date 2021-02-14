@@ -3,7 +3,7 @@
   "schedule": ["every 3 months on the first day of the month"],
   "labels": ["dependencies", "automerge"],
   "separateMinorPatch": true,
-  "assignees": "mkosir",
+  "assignees": ["mkosir"],
   "assignAutomerge": true,
   "automerge": true,
   "packageRules": [
