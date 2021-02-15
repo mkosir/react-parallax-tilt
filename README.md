@@ -24,7 +24,7 @@ npm install react-parallax-tilt
 
 ## Features
 
-- Lightweight (<4kb), zero dependencies 📦
+- Lightweight (3.8kb), zero dependencies 📦
 - Supports **mouse** and **touch** events
 - Support for device tilting (**gyroscope**)
 - **Glare** effect 🌟 with custom props (color, position,...) [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--parallax-effect-glare-scale)
