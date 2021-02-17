@@ -1,6 +1,6 @@
 {
   "extends": ["config:base", "group:all"],
-  "schedule": ["every 3 months on the first day of the month"],
+  "schedule": ["every 6 months on the first day of the month"],
   "timezone": "Europe/Ljubljana",
   "separateMinorPatch": false,
   "assignees": ["mkosir"],
