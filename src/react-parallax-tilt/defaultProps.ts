@@ -1,7 +1,27 @@
-import { defaultGlareProps } from '../features/glare/defaultProps';
-import { defaultTiltProps } from '../features/tilt/defaultProps';
+import { GlareProps } from '../features/glare/types';
+import { TiltProps } from '../features/tilt/types';
 
 import { Props } from './types';
+
+const defaultGlareProps: GlareProps = {
+  glareEnable: false,
+  glareMaxOpacity: 0.7,
+  glareColor: '#ffffff',
+  glarePosition: 'bottom',
+  glareReverse: false,
+};
+
+const defaultTiltProps: TiltProps = {
+  tiltEnable: true,
+  tiltReverse: false,
+  tiltAngleXInitial: 0,
+  tiltAngleYInitial: 0,
+  tiltMaxAngleX: 20,
+  tiltMaxAngleY: 20,
+  tiltAxis: null,
+  tiltAngleXManual: null,
+  tiltAngleYManual: null,
+};
 
 export const defaultProps: Props = {
   scale: 1,
