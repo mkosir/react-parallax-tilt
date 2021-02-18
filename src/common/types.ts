@@ -11,3 +11,12 @@ export type ClientPosition = {
   xPercentage: number;
   yPercentage: number;
 };
+
+export interface IStyle {
+  update: (
+    wrapperElClientPosition: ClientPosition,
+    props: any,
+    flipVertically: boolean,
+    flipHorizontally: boolean,
+  ) => void;
+}

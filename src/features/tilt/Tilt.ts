@@ -1,5 +1,4 @@
-import { IStyle } from '../../common/IStyle';
-import { ClientPosition } from '../../common/types';
+import { ClientPosition, IStyle } from '../../common/types';
 import { constrainToRange } from '../../common/utils';
 
 import { TiltProps } from './types';

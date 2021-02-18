@@ -1,5 +1,4 @@
-import { IStyle } from '../../common/IStyle';
-import { ElementSizePosition, ClientPosition } from '../../common/types';
+import { ElementSizePosition, ClientPosition, IStyle } from '../../common/types';
 import { constrainToRange } from '../../common/utils';
 
 import { GlareProps, GlareSize } from './types';
