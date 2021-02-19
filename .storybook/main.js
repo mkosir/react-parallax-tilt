@@ -12,7 +12,9 @@ module.exports = {
       include: path.resolve(__dirname, '../'),
     });
 
-    config.resolve.extensions.push('.ts', '.tsx');
+    // Required for absolute imports in Storybook
+    config.resolve.modules.push(path.resolve(process.cwd(), 'src'));
+
     return config;
   },
 };
