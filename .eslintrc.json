@@ -20,6 +20,7 @@
     "@typescript-eslint/no-unused-vars": 0,
     "@typescript-eslint/explicit-module-boundary-types": 0,
     "@typescript-eslint/ban-ts-comment": 0,
+    "react/prop-types": 0,
 
     // Import
     "import/order": [
