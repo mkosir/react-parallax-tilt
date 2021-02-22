@@ -2,7 +2,6 @@ const path = require('path');
 
 module.exports = {
   stories: ['../stories/**/*.stories.tsx'],
-  addons: ['@storybook/addon-controls'],
   typescript: { reactDocgen: 'react-docgen' },
 
   webpackFinal: async (config, { configType }) => {
