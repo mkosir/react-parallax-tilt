@@ -18,9 +18,7 @@ describe('Event listeners', () => {
   });
 
   it('deviceorientation', () => {
-    const wrapper = mount<Tilt>(
-      <Tilt tiltMaxAngleX={60} tiltMaxAngleY={60} glareEnable={true} gyroscope={true} />,
-    );
+    const wrapper = mount<Tilt>(<Tilt tiltMaxAngleX={60} tiltMaxAngleY={60} glareEnable={true} gyroscope={true} />);
     const spy = jest.spyOn(wrapper.instance(), 'setSize');
     // @ts-ignore
     window.addEventListener('resize', spy);

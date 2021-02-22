@@ -21,9 +21,7 @@ describe('Render', () => {
     wrapper.simulate('mousemove');
     wrapper.instance().renderFrame();
     const glareStyle = wrapper.instance()['wrapperEl'].node.style;
-    expect(glareStyle.transform).toEqual(
-      'perspective(1200px) rotateX(60deg) rotateY(45deg) scale3d(1.1,1.1,1.1)',
-    );
+    expect(glareStyle.transform).toEqual('perspective(1200px) rotateX(60deg) rotateY(45deg) scale3d(1.1,1.1,1.1)');
   });
 
   it('Glare - Should render correct style of glare element', () => {

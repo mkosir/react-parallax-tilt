@@ -22,13 +22,7 @@ describe("Tilt - (manual input) - Callback 'onMove' should return correct calcul
   it('Tilt', () => {
     const wrapperSpy = spy();
     const wrapper = mount<Tilt>(
-      <Tilt
-        tiltMaxAngleX={60}
-        tiltMaxAngleY={60}
-        tiltAngleXManual={60}
-        tiltAngleYManual={45}
-        onMove={wrapperSpy}
-      />,
+      <Tilt tiltMaxAngleX={60} tiltMaxAngleY={60} tiltAngleXManual={60} tiltAngleYManual={45} onMove={wrapperSpy} />,
     );
     wrapper.simulate('mousemove');
     expect(wrapperSpy.calledWith(60, 45, 100, 75, 0, 0, 'mousemove')).toEqual(true);
@@ -100,12 +94,7 @@ describe("Tilt - (manual input) - Callback 'onMove' should return correct calcul
     const wrapperSpyOnMove = spy();
     const wrapperSpyOnLeave = spy();
     const wrapper = mount<Tilt>(
-      <Tilt
-        onEnter={wrapperSpyOnEnter}
-        onMove={wrapperSpyOnMove}
-        onLeave={wrapperSpyOnLeave}
-        glareEnable={true}
-      />,
+      <Tilt onEnter={wrapperSpyOnEnter} onMove={wrapperSpyOnMove} onLeave={wrapperSpyOnLeave} glareEnable={true} />,
     );
     wrapper.simulate('mouseenter');
     jest.runAllTimers();
@@ -168,9 +157,7 @@ describe("Tilt - (manual input) - Callback 'onMove' should return correct calcul
 
   it('Tilt disabled', () => {
     const wrapperSpy = spy();
-    const wrapper = mount<Tilt>(
-      <Tilt tiltEnable={false} tiltMaxAngleX={60} tiltMaxAngleY={60} onMove={wrapperSpy} />,
-    );
+    const wrapper = mount<Tilt>(<Tilt tiltEnable={false} tiltMaxAngleX={60} tiltMaxAngleY={60} onMove={wrapperSpy} />);
     wrapper.instance()['wrapperEl'].size = mockWrapperElSizePosition;
     wrapper.simulate('touchmove', { touches: [{ pageX: 100, pageY: 50 }] });
     expect(wrapperSpy.calledWith(0, 0, 0, 0, 0, 0, 'touchmove')).toEqual(true);
