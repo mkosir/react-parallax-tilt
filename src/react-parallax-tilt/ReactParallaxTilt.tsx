@@ -255,16 +255,8 @@ class ReactParallaxTilt extends PureComponent<Props> {
     this.wrapperEl.clientPosition.xPercentage = (angleX! / tiltMaxAngleX!) * 100;
     this.wrapperEl.clientPosition.yPercentage = (angleY! / tiltMaxAngleY!) * 100;
 
-    this.wrapperEl.clientPosition.xPercentage = constrainToRange(
-      this.wrapperEl.clientPosition.xPercentage,
-      -100,
-      100,
-    );
-    this.wrapperEl.clientPosition.yPercentage = constrainToRange(
-      this.wrapperEl.clientPosition.yPercentage,
-      -100,
-      100,
-    );
+    this.wrapperEl.clientPosition.xPercentage = constrainToRange(this.wrapperEl.clientPosition.xPercentage, -100, 100);
+    this.wrapperEl.clientPosition.yPercentage = constrainToRange(this.wrapperEl.clientPosition.yPercentage, -100, 100);
   };
 
   private update = (eventType: EventType | string): void => {
@@ -273,8 +265,7 @@ class ReactParallaxTilt extends PureComponent<Props> {
     const isAngleSetToDefaultAlready = eventType !== 'autoreset';
     const isAngleRetrievedFromGyroscope = eventType !== 'deviceorientation';
     const isPropChanged = eventType !== 'propChanged';
-    const isUpdateCalculationNeeded =
-      isAngleSetToDefaultAlready && isAngleRetrievedFromGyroscope && isPropChanged;
+    const isUpdateCalculationNeeded = isAngleSetToDefaultAlready && isAngleRetrievedFromGyroscope && isPropChanged;
     if (isUpdateCalculationNeeded) {
       this.updateClientInput();
     }

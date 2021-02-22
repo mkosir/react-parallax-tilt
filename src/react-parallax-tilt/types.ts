@@ -71,11 +71,7 @@ export type WrapperElement<T extends HTMLElement> = {
   scale: number;
 };
 
-type DOMSupportedEvent =
-  | Event
-  | MouseEvent<HTMLDivElement>
-  | TouchEvent<HTMLDivElement>
-  | DeviceOrientationEvent;
+type DOMSupportedEvent = Event | MouseEvent<HTMLDivElement> | TouchEvent<HTMLDivElement> | DeviceOrientationEvent;
 export type SupportedEvent = DOMSupportedEvent | CustomEvent<CustomEventType>;
 
 type DOMEventType = 'touchmove' | 'mousemove' | 'deviceorientation';
