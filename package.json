@@ -32,9 +32,9 @@
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^11.2.0",
-    "@storybook/addons": "^6.1.19",
-    "@storybook/react": "^6.1.19",
-    "@storybook/theming": "^6.1.19",
+    "@storybook/addons": "^6.1.20",
+    "@storybook/react": "^6.1.20",
+    "@storybook/theming": "^6.1.20",
     "@types/enzyme": "^3.10.8",
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^26.0.20",
@@ -75,8 +75,8 @@
     "sass": "^1.32.8",
     "sass-loader": "^10.1.1",
     "sinon": "^9.2.4",
-    "ts-jest": "^26.5.1",
-    "typescript": "^4.1.5"
+    "ts-jest": "^26.5.2",
+    "typescript": "^4.2.2"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0 || ^17.0.0",
