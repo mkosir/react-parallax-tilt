@@ -40,6 +40,9 @@ class ReactParallaxTilt extends PureComponent<Props> {
   }
 
   public componentWillUnmount() {
+    if (this.wrapperEl.updateAnimationId !== null) {
+      cancelAnimationFrame(this.wrapperEl.updateAnimationId);
+    }
     this.removeEventListeners();
   }
 
