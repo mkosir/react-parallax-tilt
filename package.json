@@ -1,6 +1,6 @@
 {
   "name": "react-parallax-tilt",
-  "version": "1.4.90",
+  "version": "1.4.91",
   "description": "Easily apply tilt hover effect on React components - lightweight/zero dependencies",
   "main": "./dist/react-parallax-tilt.umd.js",
   "module": "./dist/react-parallax-tilt.es5.js",
@@ -75,8 +75,8 @@
     "sass": "^1.32.8",
     "sass-loader": "^10.1.1",
     "sinon": "^9.2.4",
-    "ts-jest": "^26.5.2",
-    "typescript": "^4.2.2"
+    "ts-jest": "^26.5.3",
+    "typescript": "^4.2.3"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0 || ^17.0.0",
