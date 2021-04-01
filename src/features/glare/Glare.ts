@@ -24,6 +24,7 @@ export class Glare implements IStyle {
       width: '100%',
       height: '100%',
       overflow: 'hidden',
+      '-webkit-mask-image': '-webkit-radial-gradient(white, black)',
     };
 
     const glareSize = this.calculateGlareSize(wrapperElSize);
@@ -40,6 +41,11 @@ export class Glare implements IStyle {
     Object.assign(this.glareWrapperEl.style, styleGlareWrapper);
     Object.assign(this.glareEl.style, styleGlare);
   }
+
+  private getBorderRadius = (props: GlareProps): GlareProps['glareBorderRadius'] => {
+    const { glareBorderRadius } = props;
+    return glareBorderRadius;
+  };
 
   private calculateGlareSize = (wrapperElSize: ElementSizePosition): GlareSize => {
     const { width: w, height: h } = wrapperElSize;
@@ -117,6 +123,7 @@ export class Glare implements IStyle {
 
   public render = (props: GlareProps): void => {
     const { glareColor } = props;
+    this.glareWrapperEl.style.borderRadius = this.getBorderRadius(props);
     this.glareEl.style.transform = `rotate(${this.glareAngle}deg) translate(-50%, -50%)`;
     this.glareEl.style.opacity = this.glareOpacity.toString();
 
