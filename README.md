@@ -104,6 +104,10 @@ The maximum glare opacity (0.5 = 50%, 1 = 100%, etc.).
 **glareColor**: _string_ ▶︎ `#ffffff`  
 Set color of glare effect.
 
+**glareBorderRadius**: _string_ ▶︎ `0`  
+Accepts any standard CSS border radius.
+Useful if the glare color is different to the page color.
+
 **glarePosition**: _GlarePosition_ ▶︎ `bottom`  
 _GlarePosition = 'top' | 'right' | 'bottom' | 'left' | 'all'_  
 Set position of glare effect.

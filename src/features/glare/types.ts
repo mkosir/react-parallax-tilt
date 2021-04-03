@@ -19,6 +19,10 @@ export type GlareProps = {
    * Reverse the glare direction.
    */
   glareReverse?: boolean;
+  /**
+   * Set the border radius of the glare.
+   */
+  glareBorderRadius: string;
 };
 
 export type GlarePosition = 'top' | 'right' | 'bottom' | 'left' | 'all';

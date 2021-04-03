@@ -9,6 +9,7 @@ const defaultGlareProps: GlareProps = {
   glareColor: '#ffffff',
   glarePosition: 'bottom',
   glareReverse: false,
+  glareBorderRadius: '0',
 };
 
 const defaultTiltProps: TiltProps = {
