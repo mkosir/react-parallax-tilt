@@ -36,9 +36,8 @@ export class Glare implements IStyle {
       position: 'absolute',
       top: '50%',
       left: '50%',
-      //@ts-ignore
-      'transform-origin': '0% 0%',
-      'pointer-events': 'none',
+      transformOrigin: '0% 0%',
+      pointerEvents: 'none',
       width: `${glareSize.width}px`,
       height: `${glareSize.height}px`,
     };
@@ -125,8 +124,6 @@ export class Glare implements IStyle {
     const { glareColor } = props;
     this.glareEl.style.transform = `rotate(${this.glareAngle}deg) translate(-50%, -50%)`;
     this.glareEl.style.opacity = this.glareOpacity.toString();
-
-    const linearGradient = `linear-gradient(0deg, rgba(255,255,255,0) 0%, ${glareColor} 100%)`;
-    this.glareEl.style.background = linearGradient;
+    this.glareEl.style.background = `linear-gradient(0deg, rgba(255,255,255,0) 0%, ${glareColor} 100%)`;
   };
 }
