@@ -131,13 +131,13 @@ class ReactParallaxTilt extends PureComponent<Props> {
   }
 
   private initGlare() {
-    const { glareEnable } = this.props;
+    const { glareEnable, glareBorderRadius } = this.props;
 
     if (!glareEnable) {
       return;
     }
 
-    this.glare = new Glare(this.wrapperEl.size);
+    this.glare = new Glare(this.wrapperEl.size, glareBorderRadius);
     this.wrapperEl.node!.appendChild(this.glare.glareWrapperEl);
   }
 

@@ -1,3 +1,5 @@
+import { CSSProperties } from 'react';
+
 import { ElementSizePosition, ClientPosition, IStyle } from '../../common/types';
 import { constrainToRange } from '../../common/utils';
 
@@ -10,28 +12,31 @@ export class Glare implements IStyle {
   public glareAngle = 0;
   public glareOpacity = 0;
 
-  constructor(wrapperElSize: ElementSizePosition) {
+  constructor(wrapperElSize: ElementSizePosition, glareBorderRadius: string) {
     this.glareWrapperEl = document.createElement('div');
     this.glareEl = document.createElement('div');
     this.glareWrapperEl.appendChild(this.glareEl);
     this.glareWrapperEl.className = 'glare-wrapper';
     this.glareEl.className = 'glare';
 
-    const styleGlareWrapper = {
+    const styleGlareWrapper: CSSProperties = {
       position: 'absolute',
       top: '0',
       left: '0',
       width: '100%',
       height: '100%',
       overflow: 'hidden',
-      '-webkit-mask-image': '-webkit-radial-gradient(white, black)',
+      borderRadius: glareBorderRadius,
+      // Safari border-radius https://github.com/mkosir/react-parallax-tilt/issues/27#issuecomment-809884059
+      WebkitMaskImage: '-webkit-radial-gradient(white, black)',
     };
 
     const glareSize = this.calculateGlareSize(wrapperElSize);
-    const styleGlare = {
+    const styleGlare: CSSProperties = {
       position: 'absolute',
       top: '50%',
       left: '50%',
+      //@ts-ignore
       'transform-origin': '0% 0%',
       'pointer-events': 'none',
       width: `${glareSize.width}px`,
@@ -41,11 +46,6 @@ export class Glare implements IStyle {
     Object.assign(this.glareWrapperEl.style, styleGlareWrapper);
     Object.assign(this.glareEl.style, styleGlare);
   }
-
-  private getBorderRadius = (props: GlareProps): GlareProps['glareBorderRadius'] => {
-    const { glareBorderRadius } = props;
-    return glareBorderRadius;
-  };
 
   private calculateGlareSize = (wrapperElSize: ElementSizePosition): GlareSize => {
     const { width: w, height: h } = wrapperElSize;
@@ -123,7 +123,6 @@ export class Glare implements IStyle {
 
   public render = (props: GlareProps): void => {
     const { glareColor } = props;
-    this.glareWrapperEl.style.borderRadius = this.getBorderRadius(props);
     this.glareEl.style.transform = `rotate(${this.glareAngle}deg) translate(-50%, -50%)`;
     this.glareEl.style.opacity = this.glareOpacity.toString();
 
