@@ -72,7 +72,7 @@
     "rollup-plugin-sourcemaps": "^0.6.3",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
-    "sass": "^1.32.10",
+    "sass": "^1.32.11",
     "sass-loader": "^10.1.1",
     "sinon": "^10.0.0",
     "ts-jest": "^26.5.5",
