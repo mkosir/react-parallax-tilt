@@ -60,7 +60,7 @@
     "jest": "^26.6.3",
     "jest-config": "^26.6.3",
     "jest-transform-css": "^2.1.0",
-    "prettier": "^2.2.1",
+    "prettier": "^2.3.0",
     "pretty-quick": "^3.1.0",
     "react": "^16.8.6",
     "react-demo-tab": "^1.2.18",
