@@ -1,6 +1,6 @@
 {
   "name": "react-parallax-tilt",
-  "version": "1.5.10",
+  "version": "1.5.11",
   "description": "Easily apply tilt hover effect on React components - lightweight/zero dependencies",
   "main": "./dist/react-parallax-tilt.umd.js",
   "module": "./dist/react-parallax-tilt.es5.js",
@@ -26,9 +26,9 @@
     "validate": "npm run lint && npm run test:coverage && npm run build"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.0",
-    "@commitlint/cli": "^12.1.1",
-    "@commitlint/config-conventional": "^12.1.1",
+    "@babel/core": "^7.14.2",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@rollup/plugin-commonjs": "^19.0.0",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
@@ -72,7 +72,7 @@
     "rollup-plugin-sourcemaps": "^0.6.3",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
-    "sass": "^1.32.12",
+    "sass": "^1.32.13",
     "sass-loader": "^10.1.1",
     "sinon": "^10.0.0",
     "ts-jest": "^26.5.6",
