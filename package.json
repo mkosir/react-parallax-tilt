@@ -26,7 +26,7 @@
     "validate": "npm run lint && npm run test:coverage && npm run build"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.2",
+    "@babel/core": "^7.14.3",
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
     "@rollup/plugin-commonjs": "^19.0.0",
@@ -41,8 +41,8 @@
     "@types/react": "^17.0.5",
     "@types/react-dom": "^17.0.5",
     "@types/sinon": "^10.0.0",
-    "@typescript-eslint/eslint-plugin": "^4.23.0",
-    "@typescript-eslint/parser": "^4.23.0",
+    "@typescript-eslint/eslint-plugin": "^4.24.0",
+    "@typescript-eslint/parser": "^4.24.0",
     "babel-loader": "^8.2.2",
     "babel-preset-react-app": "^10.0.0",
     "codecov": "^3.8.2",
