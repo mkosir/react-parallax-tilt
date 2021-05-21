@@ -90,7 +90,7 @@
       "pretty-quick --staged"
     ],
     "{src,test}/**/*.{js,jsx,ts,tsx}": [
-      "eslint --max-warnings 0 $@"
+      "eslint --max-warnings 0"
     ]
   },
   "commitlint": {
