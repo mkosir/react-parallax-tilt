@@ -10,10 +10,12 @@
   ],
   "scripts": {
     "start": "npm run storybook",
+    "prepare": "husky install",
     "prebuild": "rimraf dist",
     "build": "rollup -c",
     "build:watch": "rollup -c -w",
     "lint": "eslint --max-warnings 0 --ext .js,jsx,ts,tsx src/ test/",
+    "lint-staged-husky": "lint-staged",
     "lint-prettier": "prettier --config .prettierrc -l  './**/*.{ts,tsx,js,jsx,css,scss,json,md}'",
     "prettier": "prettier --config .prettierrc --write './**/*.{ts,tsx,js,jsx,css,scss,json,md}'",
     "test": "jest --verbose --watch",
@@ -56,10 +58,11 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.23.2",
-    "husky": "^4.3.8",
+    "husky": "^6.0.0",
     "jest": "^26.6.3",
     "jest-config": "^26.6.3",
     "jest-transform-css": "^2.1.0",
+    "lint-staged": "^11.0.0",
     "prettier": "^2.3.0",
     "pretty-quick": "^3.1.0",
     "react": "^16.8.6",
@@ -81,6 +84,24 @@
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0 || ^17.0.0",
     "react-dom": "^15.0.0 || ^16.0.0 || ^17.0.0"
+  },
+  "lint-staged": {
+    "*": [
+      "pretty-quick --staged"
+    ],
+    "{src,test}/**/*.{js,jsx,ts,tsx}": [
+      "eslint --max-warnings 0 $@"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   },
   "jest": {
     "transform": {
@@ -113,23 +134,6 @@
       "ts-jest": {
         "diagnostics": false
       }
-    }
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "pretty-quick --staged",
-      "pre-push": "npm run test:coverage"
     }
   },
   "repository": {
