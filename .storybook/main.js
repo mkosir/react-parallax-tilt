@@ -4,6 +4,10 @@ module.exports = {
   stories: ['../stories/**/*.stories.tsx'],
   typescript: { reactDocgen: 'react-docgen' },
 
+  core: {
+    builder: 'webpack5',
+  },
+
   webpackFinal: async (config, { configType }) => {
     config.module.rules.push({
       test: /\.scss$/,
