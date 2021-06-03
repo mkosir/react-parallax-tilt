@@ -1,0 +1,33 @@
+name: CI
+
+on: push
+
+jobs:
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🛎️
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+      
+      - name: Install 🔧
+        run: npm install
+
+      - name: Lint ✅
+        run: npm run lint
+
+      - name: Build 🏗️
+        run: npm run build
+
+      - name: Test 🚨
+        run: npm run test:coverage
+        
+      - name: Upload coverage to Codecov
+        if: always()
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
