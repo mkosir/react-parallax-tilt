@@ -3,7 +3,7 @@
 [![npm version][npm-badge]][npm-url]
 [![npm downloads][downloads-badge]][npm-url]
 [![npm bundle size][size-badge]][npm-url]
-[![Build Status][build-badge]][build-url]
+[![CI][build-badge]][build-url]
 [![Codecov Coverage][coverage-badge]][coverage-url]
 [![prettier][prettier-badge]][prettier-url]
 [![TypeScript][typescript-badge]][typescript-url]
@@ -223,8 +223,8 @@ Please take a moment to review guidelines [PR](.github/PULL_REQUEST_TEMPLATE.md)
 [npm-badge]: https://img.shields.io/npm/v/react-parallax-tilt.svg
 [size-badge]: https://badgen.net/bundlephobia/minzip/react-parallax-tilt
 [downloads-badge]: https://img.shields.io/npm/dm/react-parallax-tilt.svg?color=blue
-[build-badge]: https://travis-ci.com/mkosir/react-parallax-tilt.svg
-[build-url]: https://travis-ci.com/mkosir/react-parallax-tilt
+[build-badge]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/main.yml/badge.svg
+[build-url]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/main.yml
 [coverage-badge]: https://codecov.io/gh/mkosir/react-parallax-tilt/branch/master/graph/badge.svg
 [coverage-url]: https://codecov.io/gh/mkosir/react-parallax-tilt
 [typescript-badge]: https://badges.frapsoft.com/typescript/code/typescript.svg?v=101
