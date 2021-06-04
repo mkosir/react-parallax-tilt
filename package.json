@@ -25,7 +25,7 @@
     "storybook": "start-storybook -p 9009",
     "storybook:build": "build-storybook",
     "demotab": "demotab generate --prefix=_ && npm run prettier",
-    "validate": "npm run lint && npm run test:coverage && npm run build"
+    "validate": "npm run lint && npm run build && npm run test:coverage"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
