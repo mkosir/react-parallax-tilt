@@ -22,8 +22,7 @@
     "commit": "git-cz",
     "test:coverage": "jest --coverage --verbose",
     "test:coverage:watch": "jest --coverage --verbose --watch",
-    "storybook": "start-storybook -p 9009 -s public --quiet",
-    "storybook:build": "build-storybook -c .storybook -o build_storybook --quiet",
+    "storybook": "start-storybook -p 9009",
     "demotab": "demotab generate --prefix=_ && npm run prettier",
     "validate": "npm run lint && npm run test:coverage && npm run build"
   },
