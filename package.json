@@ -23,6 +23,7 @@
     "test:coverage": "jest --coverage --verbose",
     "test:coverage:watch": "jest --coverage --verbose --watch",
     "storybook": "start-storybook -p 9009",
+    "storybook:build": "build-storybook",
     "demotab": "demotab generate --prefix=_ && npm run prettier",
     "validate": "npm run lint && npm run test:coverage && npm run build"
   },
