@@ -46,7 +46,7 @@ jobs:
         run: |
           npm install
           npm run demotab
-          build-storybook
+          npm run storybook:build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.3
