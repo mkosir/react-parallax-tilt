@@ -1,7 +1,7 @@
 node_modules
 coverage
 dist
-build_storybook
+storybook-static
 compiled
 
 .rpt2_cache
