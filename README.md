@@ -5,6 +5,7 @@
 [![npm bundle size][size-badge]][npm-url]
 [![CI][build-badge]][build-url]
 [![Codecov Coverage][coverage-badge]][coverage-url]
+[![semantic-release][semantic-badge]][semantic-url]
 [![prettier][prettier-badge]][prettier-url]
 [![TypeScript][typescript-badge]][typescript-url]
 
@@ -227,6 +228,8 @@ Please take a moment to review guidelines [PR](.github/PULL_REQUEST_TEMPLATE.md)
 [build-url]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/main.yml
 [coverage-badge]: https://codecov.io/gh/mkosir/react-parallax-tilt/branch/master/graph/badge.svg
 [coverage-url]: https://codecov.io/gh/mkosir/react-parallax-tilt
+[semantic-badge]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
+[semantic-url]: https://github.com/semantic-release/semantic-release
 [typescript-badge]: https://badges.frapsoft.com/typescript/code/typescript.svg?v=101
 [typescript-url]: https://github.com/microsoft/TypeScript
 [prettier-badge]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
