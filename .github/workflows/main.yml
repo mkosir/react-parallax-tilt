@@ -13,8 +13,16 @@ jobs:
         with:
           node-version: '14.x'
 
-      - name: Install 🔧
-        run: npm install
+      - name: Cache dependencies ⚡
+        id: cache-node-modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+
+      - name: Install dependencies 🔧
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm ci
 
       - name: Lint ✅
         run: npm run lint
@@ -43,9 +51,19 @@ jobs:
         with:
           node-version: '14.x'
 
-      - name: Install and Build 🔧
+      - name: Cache dependencies ⚡
+        id: cache-node-modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+
+      - name: Install dependencies 🔧
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm ci
+
+      - name: Build 🏗️
         run: |
-          npm install
           npm run demotab
           npm run storybook:build
 
@@ -68,11 +86,22 @@ jobs:
         with:
           node-version: '14.x'
 
+      - name: Cache dependencies ⚡
+        id: cache-node-modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+
+      - name: Install dependencies 🔧
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm ci
+
+      - name: Build 🏗️
+        run: npm run build
+
       - name: Release 🚀
-        run: |
-          npm install
-          npm run build
-          npm run semantic-release
+        run: npm run semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
