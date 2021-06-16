@@ -78,15 +78,12 @@ Initial tilt value (degrees) on x axis.
 Initial tilt value (degrees) on y axis.
 
 **tiltMaxAngleX**: _number_ ▶︎ `20`  
-Range: `0 - 90`  
-Max tilt rotation (degrees) on x axis.
+Max tilt rotation (degrees) on x axis (range: `0°-90°`).
 
 **tiltMaxAngleY**: _number_ ▶︎ `20`  
-Range: `0 - 90`  
-Max tilt rotation (degrees) on y axis.
+Max tilt rotation (degrees) on y axis (range: `0°-90°`).
 
-**tiltAxis**: _Axis | null_ ▶︎ `null`  
-_Axis = 'x' | 'y'_  
+**tiltAxis**: _'x' | 'y' | null_ ▶︎ `null`  
 Which axis should be enabled. If null both are enabled.
 
 **tiltAngleXManual**: _number_ | null} ▶︎ `null`  
@@ -99,18 +96,15 @@ Manual tilt rotation (degrees) on y axis.
 Boolean to enable/disable glare effect.
 
 **glareMaxOpacity**: _number_ ▶︎ `0.7`  
-Range: `0 - 1`  
-The maximum glare opacity (0.5 = 50%, 1 = 100%, etc.).
+The maximum glare opacity (range: `0-1`).
 
 **glareColor**: _string_ ▶︎ `#ffffff`  
 Set color of glare effect.
 
 **glareBorderRadius**: _string_ ▶︎ `0`  
-Accepts any standard CSS border radius.
-Useful if the glare color is different to the page color.
+Accepts any standard CSS border radius. Useful if the glare color is different to the page color.
 
-**glarePosition**: _GlarePosition_ ▶︎ `bottom`  
-_GlarePosition = 'top' | 'right' | 'bottom' | 'left' | 'all'_  
+**glarePosition**: _'top' | 'right' | 'bottom' | 'left' | 'all'_ ▶︎ `bottom`  
 Set position of glare effect.
 
 **glareReverse**: _boolean_ ▶︎ `false`  
@@ -120,8 +114,7 @@ Reverse the glare direction.
 Scale of the component (1.5 = 150%, 2 = 200%, etc.).
 
 **perspective**: _number_ ▶︎ `1000`  
-The perspective property defines how far the object (wrapped/child component) is away from the user.  
-The lower the more extreme the tilt gets.
+The perspective property defines how far the object (wrapped/child component) is away from the user. The lower the more extreme the tilt gets.
 
 **flipVertically**: _boolean_ ▶︎ `false`  
 Boolean to enable/disable vertical flip of component.
