@@ -27,8 +27,7 @@ export default defineConfig({
       sourcemap: true,
     },
   ],
-  // this will ensure that the dependencies are not bundled with our library, but are instead
-  // installed (automatically) within the parent app
+  // ensure that the dependencies are not bundled with the library (installed automatically within the parent app)
   external: [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})],
   plugins: [
     // Allow json resolution
@@ -47,10 +46,8 @@ export default defineConfig({
       compress: {
         pure_getters: true,
       },
-      warnings: true,
       ecma: 5,
       // Compress and/or mangle variables in top level scope.
-      // @see https://github.com/terser-js/terser
       toplevel: true,
     }),
   ],
