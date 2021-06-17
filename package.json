@@ -67,7 +67,7 @@
     "jest-transform-css": "^2.1.0",
     "lint-staged": "^11.0.0",
     "prettier": "^2.3.1",
-    "pretty-quick": "^3.1.0",
+    "pretty-quick": "^3.1.1",
     "react": "^16.8.6",
     "react-demo-tab": "^1.2.18",
     "react-demo-tab-cli": "^1.2.50",
