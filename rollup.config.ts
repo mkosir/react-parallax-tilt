@@ -3,7 +3,7 @@ import json from '@rollup/plugin-json';
 import { defineConfig } from 'rollup';
 import sourceMaps from 'rollup-plugin-sourcemaps';
 import { terser } from 'rollup-plugin-terser';
-import typescript from 'rollup-plugin-typescript2';
+import typescript from '@rollup/plugin-typescript';
 
 const pkg = require('./package.json');
 
@@ -31,8 +31,11 @@ export default defineConfig({
   plugins: [
     // Allow json resolution
     json(),
-    // Compile TypeScript files
-    typescript({ useTsconfigDeclarationDir: true }),
+    typescript({
+      tsconfig: './tsconfig.json',
+      declaration: true,
+      declarationDir: 'dist',
+    }),
     // Allow bundling cjs modules (unlike webpack, rollup doesn't understand cjs)
     commonjs(),
     // Resolve source maps to the original source
