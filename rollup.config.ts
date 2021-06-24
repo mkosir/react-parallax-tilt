@@ -1,46 +1,25 @@
 import commonjs from '@rollup/plugin-commonjs';
-import json from '@rollup/plugin-json';
 import typescript from '@rollup/plugin-typescript';
 import { defineConfig } from 'rollup';
-import sourceMaps from 'rollup-plugin-sourcemaps';
 import { terser } from 'rollup-plugin-terser';
 import visualizer from 'rollup-plugin-visualizer';
 
 const pkg = require('./package.json');
 
 export default defineConfig({
-  input: `src/index.ts`,
-  output: [
-    {
-      file: pkg.main,
-      name: 'react-parallax-tilt',
-      format: 'umd',
-      sourcemap: true,
-      globals: {
-        react: 'React',
-        'react-dom': 'ReactDOM',
-      },
-    },
-    {
-      file: pkg.module,
-      format: 'es',
-      sourcemap: true,
-    },
-  ],
-  // ensure that the dependencies are not bundled with the library (installed automatically within the parent app)
-  external: [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})],
+  input: 'src/index.ts',
+  output: {
+    file: pkg.main,
+    format: 'esm',
+    sourcemap: true,
+  },
   plugins: [
-    // Allow json resolution
-    json(),
+    commonjs(),
     typescript({
       tsconfig: './tsconfig.json',
       declaration: true,
       declarationDir: 'dist',
     }),
-    // Allow bundling cjs modules (unlike webpack, rollup doesn't understand cjs)
-    commonjs(),
-    // Resolve source maps to the original source
-    sourceMaps(),
     terser({
       output: { comments: false },
       compress: {
@@ -52,7 +31,10 @@ export default defineConfig({
     }),
     visualizer({
       filename: 'bundle-analysis.html',
+      title: `${pkg.name} - Rollup Visualizer`,
       open: true,
     }),
   ],
+  // ensure that the dependencies are not bundled with the library (installed automatically within the parent app)
+  external: [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})],
 });
