@@ -1,9 +1,10 @@
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
+import typescript from '@rollup/plugin-typescript';
 import { defineConfig } from 'rollup';
 import sourceMaps from 'rollup-plugin-sourcemaps';
 import { terser } from 'rollup-plugin-terser';
-import typescript from '@rollup/plugin-typescript';
+import visualizer from 'rollup-plugin-visualizer';
 
 const pkg = require('./package.json');
 
@@ -48,6 +49,10 @@ export default defineConfig({
       ecma: 5,
       // Compress and/or mangle variables in top level scope.
       toplevel: true,
+    }),
+    visualizer({
+      filename: 'bundle-analysis.html',
+      open: true,
     }),
   ],
 });
