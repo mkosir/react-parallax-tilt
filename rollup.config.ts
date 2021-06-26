@@ -18,7 +18,7 @@ export default defineConfig({
     typescript({
       tsconfig: './tsconfig.json',
       declaration: true,
-      declarationDir: 'dist',
+      declarationDir: 'types',
     }),
     terser({
       output: { comments: false },
