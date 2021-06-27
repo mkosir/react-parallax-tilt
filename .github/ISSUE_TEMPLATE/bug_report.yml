@@ -45,9 +45,9 @@ body:
       description: |
         If applicable, add code samples to help explain your problem.
       value: |
-        ```
+        ```jsx
         <Tilt reset={false}>
-          <DefaultComponent />
+          <MyComponent />
         </Tilt>
         ```
   # - type: 'input'
