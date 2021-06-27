@@ -38,18 +38,18 @@ body:
       description: 'A clear and concise description of what you expected to happen.'
     validations:
       required: true
-  # - type: 'textarea'
-  #   id: 'code+snippets'
-  #   attributes:
-  #     label: 'Code snippets'
-  #     description: |
-  #       If applicable, add code samples to help explain your problem.
-  #     value: |
-  #       ```
-  #       <Tilt reset={false}>
-  #         <DefaultComponent />
-  #       </Tilt>
-  #       ```
+  - type: 'textarea'
+    id: 'code+snippets'
+    attributes:
+      label: 'Code snippets'
+      description: |
+        If applicable, add code samples to help explain your problem.
+      value: |
+        ```
+        <Tilt reset={false}>
+          <DefaultComponent />
+        </Tilt>
+        ```
   # - type: 'input'
   #   id: 'lib-version'
   #   attributes:
