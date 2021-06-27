@@ -39,7 +39,7 @@ body:
     validations:
       required: true
   - type: 'textarea'
-    id: 'code+snippets'
+    id: 'code_snippets'
     attributes:
       label: 'Code snippets'
       description: |
