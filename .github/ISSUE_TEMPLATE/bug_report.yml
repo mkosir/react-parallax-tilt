@@ -1,0 +1,81 @@
+name: 'Bug Report'
+description: 'File a bug report'
+body:
+  - type: 'input'
+    id: 'description'
+    attributes:
+      label: 'Description'
+      description: 'A clear and concise description of what the bug is.'
+      placeholder: |
+        Bug description
+    validations:
+      required: true
+  - type: 'input'
+    id: 'reproduction_link'
+    attributes:
+      label: 'Link to Reproduction'
+      description: |
+        Please provide demo in online code editor [CodeSandbox](https://codesandbox.io/) or similar.
+        Issues without a reproduction link are likely to stall.
+      placeholder: 'https://codesandbox.io/'
+    validations:
+      required: true
+  - type: 'textarea'
+    id: 'reproduction_steps'
+    attributes:
+      label: 'Steps to reproduce'
+      description: |
+        Steps to reproduce the behavior:
+      value: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+  - type: 'input'
+    id: 'expected_behavior'
+    attributes:
+      label: 'Expected behavior'
+      description: 'A clear and concise description of what you expected to happen.'
+    validations:
+      required: true
+  - type: 'textarea'
+    id: 'code+snippets'
+    attributes:
+      label: 'Code snippets'
+      description: |
+        If applicable, add code samples to help explain your problem.
+      value: |
+        ```
+        <Tilt reset={false}>
+          <DefaultComponent />
+        </Tilt>
+        ```
+  - type: 'input'
+    id: 'lib-version'
+    attributes:
+      label: 'React Parallax Tilt Version'
+      description: 'The version of library you use.'
+      placeholder: '1.5.36'
+    validations:
+      required: true
+  - type: 'input'
+    id: 'browser'
+    attributes:
+      label: 'Browser'
+      description: 'The browser this issue occurred with.'
+      placeholder: 'Google Chrome 93'
+  - type: 'checkboxes'
+    id: 'operating-system'
+    attributes:
+      label: 'Operating System'
+      description: 'The operating system(s) this issue occurred with.'
+      options:
+        - label: 'macOS'
+        - label: 'Windows'
+        - label: 'Linux'
+  - type: 'textarea'
+    id: 'additional-information'
+    attributes:
+      label: 'Additional Information'
+      description: |
+        Add any other context about the problem here.
