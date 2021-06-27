@@ -10,16 +10,16 @@ body:
         Bug description
     validations:
       required: true
-  # - type: 'input'
-  #   id: 'reproduction_link'
-  #   attributes:
-  #     label: 'Link to Reproduction'
-  #     description: |
-  #       Please provide demo in online code editor [CodeSandbox](https://codesandbox.io/) or similar.
-  #       Issues without a reproduction link are likely to stall.
-  #     placeholder: 'https://codesandbox.io/'
-  #   validations:
-  #     required: true
+  - type: 'input'
+    id: 'reproduction_link'
+    attributes:
+      label: 'Link to Reproduction'
+      description: |
+        Please provide demo in online code editor [CodeSandbox](https://codesandbox.io/) or similar.
+        Issues without a reproduction link are likely to stall.
+      placeholder: 'https://codesandbox.io/'
+    validations:
+      required: true
   # - type: 'textarea'
   #   id: 'reproduction_steps'
   #   attributes:
