@@ -8,11 +8,19 @@ const pkg = require('./package.json');
 
 export default defineConfig({
   input: 'src/index.ts',
-  output: {
-    file: pkg.main,
-    format: 'esm',
-    sourcemap: true,
-  },
+  output: [
+    {
+      file: pkg.main,
+      format: 'esm',
+      sourcemap: true,
+    },
+    {
+      file: pkg.module,
+      name: pkg.name,
+      format: 'umd',
+      sourcemap: true,
+    },
+  ],
   plugins: [
     commonjs(),
     typescript({
