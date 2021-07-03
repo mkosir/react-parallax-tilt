@@ -10,12 +10,12 @@ export default defineConfig({
   input: 'src/index.ts',
   output: [
     {
-      file: pkg.main,
+      file: pkg.module,
       format: 'esm',
       sourcemap: true,
     },
     {
-      file: pkg.module,
+      file: pkg.main,
       name: pkg.name,
       format: 'umd',
       sourcemap: true,
