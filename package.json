@@ -47,8 +47,6 @@
     "@types/sinon": "^10.0.2",
     "@typescript-eslint/eslint-plugin": "^4.28.4",
     "@typescript-eslint/parser": "^4.28.4",
-    "babel-loader": "^8.2.2",
-    "babel-preset-react-app": "^10.0.0",
     "codecov": "^3.8.3",
     "commitizen": "^4.2.4",
     "enzyme": "^3.11.0",
