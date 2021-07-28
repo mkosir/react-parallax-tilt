@@ -71,7 +71,7 @@
     "react-dom": "^16.8.6",
     "react-joystick-component": "^1.4.0",
     "rimraf": "^3.0.2",
-    "rollup": "^2.54.0",
+    "rollup": "^2.55.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-visualizer": "^5.5.2",
     "sass": "^1.36.0",
