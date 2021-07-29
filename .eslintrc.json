@@ -6,7 +6,8 @@
     "prettier",
     "plugin:prettier/recommended",
     "plugin:jsx-a11y/recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:no-array-reduce/recommended"
   ],
 
   "plugins": ["@typescript-eslint", "jest", "import"],
