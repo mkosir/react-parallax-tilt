@@ -41,7 +41,7 @@
     "@storybook/theming": "^6.3.7",
     "@types/enzyme": "^3.10.9",
     "@types/enzyme-adapter-react-16": "^1.0.6",
-    "@types/jest": "^26.0.24",
+    "@types/jest": "^27.0.0",
     "@types/react": "^17.0.16",
     "@types/react-dom": "^17.0.9",
     "@types/sinon": "^10.0.2",
