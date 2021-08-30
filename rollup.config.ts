@@ -19,6 +19,10 @@ export default defineConfig({
       name: pkg.name,
       format: 'umd',
       sourcemap: true,
+      globals: {
+        react: 'React',
+        'react-dom': 'ReactDOM',
+      },
     },
   ],
   plugins: [
