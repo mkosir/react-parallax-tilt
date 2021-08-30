@@ -77,10 +77,10 @@ class ReactParallaxTilt extends PureComponent<Props> {
       return;
     }
 
-    const iOS13OrHigherDevice = typeof DeviceMotionEvent.requestPermission === 'function';
+    const iOS13OrHigherDevice = typeof (DeviceOrientationEvent as any).requestPermission === 'function';
     if (iOS13OrHigherDevice) {
       try {
-        const response = await DeviceOrientationEvent.requestPermission();
+        const response = await (DeviceOrientationEvent as any).requestPermission();
         if (response === 'granted') {
           window.addEventListener('deviceorientation', this.onMove);
         }
