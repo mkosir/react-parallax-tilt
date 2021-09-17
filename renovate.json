@@ -1,5 +1,5 @@
 {
-  "extends": ["config:base", "group:all"],
+  "extends": ["config:base", "group:all", ":disableDependencyDashboard"],
   "schedule": ["every 6 months on the first day of the month"],
   "timezone": "Europe/Ljubljana",
   "separateMinorPatch": false,
