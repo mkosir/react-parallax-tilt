@@ -20,8 +20,8 @@ describe('Render', () => {
     );
     wrapper.simulate('mousemove');
     wrapper.instance().renderFrame();
-    const glareStyle = wrapper.instance()['wrapperEl'].node.style;
-    expect(glareStyle.transform).toEqual('perspective(1200px) rotateX(60deg) rotateY(45deg) scale3d(1.1,1.1,1.1)');
+    const glareStyle = wrapper?.instance()['wrapperEl']?.node?.style;
+    expect(glareStyle?.transform).toEqual('perspective(1200px) rotateX(60deg) rotateY(45deg) scale3d(1.1,1.1,1.1)');
   });
 
   it('Glare - Should render correct style of glare element', () => {
@@ -39,8 +39,8 @@ describe('Render', () => {
     );
     wrapper.simulate('mousemove');
     wrapper.instance().renderFrame();
-    const glareStyle = wrapper.instance()['glare'].glareEl.style;
-    expect(glareStyle.transform).toEqual('rotate(135deg) translate(-50%, -50%)');
-    expect(glareStyle.opacity).toEqual('0.85');
+    const glareStyle = wrapper?.instance()['glare']?.glareEl?.style;
+    expect(glareStyle?.transform).toEqual('rotate(135deg) translate(-50%, -50%)');
+    expect(glareStyle?.opacity).toEqual('0.85');
   });
 });
