@@ -68,7 +68,7 @@ jobs:
           npm run storybook:build
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.6
+        uses: JamesIves/github-pages-deploy-action@4.1.8
         with:
           branch: gh-pages
           folder: storybook-static
