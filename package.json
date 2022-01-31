@@ -57,7 +57,7 @@
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jest": "^26.0.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-no-array-reduce": "^1.0.42",
+    "eslint-plugin-no-array-reduce": "^1.0.43",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "husky": "^7.0.4",
