@@ -7,7 +7,6 @@
   "typings": "./dist/types/index.d.ts",
   "files": [
     "dist",
-    "src",
     "README.md"
   ],
   "scripts": {
@@ -45,9 +44,9 @@
     "@types/jest": "^27.4.0",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
-    "@types/sinon": "^10.0.10",
-    "@typescript-eslint/eslint-plugin": "^5.10.2",
-    "@typescript-eslint/parser": "^5.10.2",
+    "@types/sinon": "^10.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
     "codecov": "^3.8.3",
     "commitizen": "^4.2.4",
     "enzyme": "^3.11.0",
@@ -61,8 +60,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "husky": "^7.0.4",
-    "jest": "^27.5.0",
-    "jest-config": "^27.5.0",
+    "jest": "^27.5.1",
+    "jest-config": "^27.5.1",
     "jest-transform-css": "^3.0.0",
     "lint-staged": "^12.3.3",
     "prettier": "^2.5.1",
