@@ -6,7 +6,7 @@
     "esModuleInterop": true,
     "importHelpers": true,
     "jsx": "react",
-    "lib": ["es2015", "dom"],
+    "lib": ["ESNext", "dom"],
     "module": "esnext",
     "moduleResolution": "node",
     "noImplicitAny": true,
@@ -20,7 +20,7 @@
     "strictNullChecks": true,
     "stripInternal": true,
     "forceConsistentCasingInFileNames": true,
-    "target": "es5"
+    "target": "ES6"
   },
   "include": ["src", "@types"],
   "exclude": ["node_modules", "dist"]
