@@ -7,6 +7,7 @@
   "assignAutomerge": true,
   "requiredStatusChecks": null,
   "rangeStrategy": "bump",
+  "enabled": false,
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "major"],
