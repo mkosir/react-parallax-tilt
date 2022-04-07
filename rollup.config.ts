@@ -7,6 +7,7 @@ import visualizer from 'rollup-plugin-visualizer';
 // eslint-disable-next-line
 const pkg = require('./package.json');
 
+// eslint-disable-next-line
 export default defineConfig({
   input: 'src/index.ts',
   output: [
