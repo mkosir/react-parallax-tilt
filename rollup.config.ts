@@ -4,6 +4,7 @@ import { defineConfig } from 'rollup';
 import { terser } from 'rollup-plugin-terser';
 import visualizer from 'rollup-plugin-visualizer';
 
+// eslint-disable-next-line
 const pkg = require('./package.json');
 
 export default defineConfig({
