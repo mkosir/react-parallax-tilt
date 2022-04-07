@@ -13,13 +13,13 @@
   "plugins": ["@typescript-eslint", "jest", "import"],
 
   "rules": {
-    "react/prop-types": 0,
-    "@typescript-eslint/no-non-null-assertion": 0,
-    "@typescript-eslint/no-explicit-any": 0,
+    "react/prop-types": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/ban-ts-comment": ["error", { "ts-ignore": "allow-with-description" }],
 
     // Import
-    // "import/no-default-export": 2,
+    "import/no-default-export": "error",
     "import/order": [
       "error",
       {
@@ -32,6 +32,15 @@
       }
     ]
   },
+
+  "overrides": [
+    {
+      "files": ["stories/**/*"],
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    }
+  ],
 
   "settings": {
     "react": {
