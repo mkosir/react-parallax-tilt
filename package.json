@@ -17,8 +17,8 @@
     "build:watch": "rollup -c -w",
     "lint": "eslint --max-warnings 0 --ext .js,jsx,ts,tsx src/ test/",
     "lint-staged-husky": "lint-staged",
-    "lint-prettier": "prettier --config .prettierrc -l  './**/*.{ts,tsx,js,jsx,css,scss,json,md}'",
-    "prettier": "prettier --config .prettierrc --write './**/*.{ts,tsx,js,jsx,css,scss,json,md}'",
+    "lint-prettier": "prettier --config .prettierrc -l --ignore-unknown './**/*'",
+    "prettier": "prettier --config .prettierrc --write --ignore-unknown './**/*'",
     "test": "jest --verbose --watch",
     "commit": "git-cz",
     "test:coverage": "jest --coverage --verbose",
@@ -81,14 +81,6 @@
     "sinon": "^13.0.1",
     "ts-jest": "^27.1.4",
     "typescript": "^4.6.3"
-  },
-  "lint-staged": {
-    "*": [
-      "pretty-quick --staged"
-    ],
-    "{src,test}/**/*.{js,jsx,ts,tsx}": [
-      "eslint --max-warnings 0"
-    ]
   },
   "commitlint": {
     "extends": [
