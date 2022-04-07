@@ -24,6 +24,7 @@
     "react/prop-types": 0,
 
     // Import
+    "import/no-default-export": 2,
     "import/order": [
       "error",
       {
