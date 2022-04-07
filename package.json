@@ -15,7 +15,7 @@
     "prebuild": "rimraf dist",
     "build": "rollup -c",
     "build:watch": "rollup -c -w",
-    "lint": "eslint --max-warnings 0 --ext .js,jsx,ts,tsx src/ test/",
+    "lint": "eslint --max-warnings 0 .",
     "lint-staged-husky": "lint-staged",
     "lint-prettier": "prettier --config .prettierrc -l --ignore-unknown './**/*'",
     "prettier": "prettier --config .prettierrc --write --ignore-unknown './**/*'",
