@@ -110,8 +110,6 @@ describe("Glare - angle/opacity - Callback 'onMove' should return correct calcul
         tiltAngleYManual={60}
         glareEnable={true}
         glareMaxOpacity={1}
-        // @ts-ignore
-        glarePosition="no-position"
         onMove={jestFn}
       />,
     );
@@ -131,7 +129,6 @@ describe("Glare - angle/opacity - Callback 'onMove' should return correct calcul
       />,
     );
     const wrapperElSize: ElementSizePosition = { width: 150, height: 100, left: 0, top: 0 };
-    //@ts-ignore
     wrapper.instance()['glare'].setSize(wrapperElSize);
     const glareStyle = wrapper?.instance()['glare']?.glareEl?.style;
     const { width: w, height: h } = wrapperElSize;
