@@ -1,6 +1,6 @@
 import React from 'react';
-
 import DemoTab from 'react-demo-tab';
+
 import Demo from './ParallaxEffect.demotab';
 
 const code = `import React from 'react';

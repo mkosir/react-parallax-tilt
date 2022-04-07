@@ -1,6 +1,6 @@
 import React from 'react';
-
 import DemoTab from 'react-demo-tab';
+
 import Demo from './EventTiltAngle.demotab';
 
 const code = `import React, { PureComponent } from 'react';
