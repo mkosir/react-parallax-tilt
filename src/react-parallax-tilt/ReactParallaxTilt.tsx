@@ -7,7 +7,7 @@ import { Tilt } from '../features/tilt/Tilt';
 import { defaultProps } from './defaultProps';
 import { Props, SupportedEvent, EventType, CustomEventType, WrapperElement } from './types';
 
-class ReactParallaxTilt extends PureComponent<Props> {
+export class ReactParallaxTilt extends PureComponent<Props> {
   public static defaultProps = defaultProps;
   private wrapperEl: WrapperElement<HTMLDivElement> = {
     node: null,
@@ -374,5 +374,3 @@ class ReactParallaxTilt extends PureComponent<Props> {
     );
   }
 }
-
-export default ReactParallaxTilt;
