@@ -62,7 +62,6 @@
     "husky": "^7.0.4",
     "jest": "^27.5.1",
     "jest-config": "^27.5.1",
-    "jest-transform-css": "^4.0.0",
     "lint-staged": "^12.3.7",
     "prettier": "^2.6.2",
     "pretty-quick": "^3.1.3",
