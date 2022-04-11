@@ -4,7 +4,6 @@ import type { StorybookConfig } from '@storybook/core-common';
 const path = require('path');
 
 const storybookConfig: StorybookConfig = {
-  // const storybookConfig = {
   stories: ['../stories/**/*.stories.tsx'],
   typescript: { reactDocgen: 'react-docgen' },
   core: {
