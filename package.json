@@ -17,8 +17,8 @@
     "build:watch": "rollup -c -w",
     "lint": "eslint --max-warnings 0 .",
     "lint-staged-husky": "lint-staged",
-    "lint-prettier": "prettier --config .prettierrc -l --ignore-unknown './**/*'",
-    "prettier": "prettier --config .prettierrc --write --ignore-unknown './**/*'",
+    "lint-format": "prettier --config .prettierrc -l --ignore-unknown './**/*'",
+    "format": "prettier --config .prettierrc --write --ignore-unknown './**/*'",
     "test": "jest --verbose --watch",
     "commit": "git-cz",
     "test:coverage": "jest --coverage --verbose",
@@ -26,7 +26,7 @@
     "storybook": "start-storybook -p 9009",
     "storybook:build": "build-storybook",
     "semantic-release": "semantic-release",
-    "demotab": "demotab generate --prefix=_ && npm run prettier",
+    "demotab": "demotab generate --prefix=_ && npm run format",
     "validate": "npm run lint && npm run build && npm run test:coverage"
   },
   "devDependencies": {
