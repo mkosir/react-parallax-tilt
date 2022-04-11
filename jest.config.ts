@@ -1,4 +1,6 @@
-module.exports = {
+import type { Config } from '@jest/types';
+
+const jestConfig: Config.InitialOptions = {
   testEnvironment: 'jsdom',
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.{ts,tsx}'],
@@ -12,3 +14,5 @@ module.exports = {
   },
   preset: 'ts-jest',
 };
+
+module.exports = jestConfig;

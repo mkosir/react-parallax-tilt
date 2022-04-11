@@ -8,14 +8,14 @@ module.exports = {
     builder: 'webpack5',
   },
 
-  webpackFinal: async (config, { configType }) => {
+  webpackFinal: async (config: any) => {
     config.module.rules.push({
       test: /\.scss$/,
       use: ['style-loader', 'css-loader', 'sass-loader'],
       include: path.resolve(__dirname, '../'),
     });
 
-    // Required for absolute imports in Storybook
+    // Resolve absolute imports
     config.resolve.modules.push(path.resolve(process.cwd(), 'src'));
 
     return config;
