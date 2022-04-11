@@ -1,6 +1,6 @@
 import { create } from '@storybook/theming';
 
-export default create({
+export const theme = create({
   base: 'light',
   brandTitle: 'React Parallax Tilt 👀',
   brandUrl: 'https://github.com/mkosir/react-parallax-tilt',
