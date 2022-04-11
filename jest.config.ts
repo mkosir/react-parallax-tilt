@@ -16,8 +16,6 @@ module.exports = {
     '.+\\.(css|sass|scss)$': 'jest-transform-css',
   },
 
-  moduleFileExtensions: ['ts', 'tsx', 'js'],
-
   globals: {
     'ts-jest': {
       diagnostics: false,
