@@ -10,11 +10,7 @@ module.exports = {
       statements: 90,
     },
   },
-
-  transform: {
-    '\\.(ts|tsx)$': 'ts-jest',
-    '.+\\.(css|sass|scss)$': 'jest-transform-css',
-  },
+  preset: 'ts-jest',
 
   globals: {
     'ts-jest': {
