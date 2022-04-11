@@ -1,4 +1,5 @@
 module.exports = {
+  testEnvironment: 'jsdom',
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.{ts,tsx}'],
   coverageThreshold: {
@@ -16,8 +17,6 @@ module.exports = {
     '\\.(ts|tsx)$': 'ts-jest',
     '.+\\.(css|sass|scss)$': 'jest-transform-css',
   },
-
-  testEnvironment: 'jsdom',
 
   testRegex: '(/test/.*|\\.)\\.(test|spec)\\.(ts|tsx|js)$',
 
