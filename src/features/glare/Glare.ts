@@ -29,6 +29,7 @@ export class Glare implements IStyle {
       borderRadius: glareBorderRadius,
       // Safari border-radius https://github.com/mkosir/react-parallax-tilt/issues/27#issuecomment-809884059
       WebkitMaskImage: '-webkit-radial-gradient(white, black)',
+      pointerEvents: 'none',
     };
 
     const glareSize = this.calculateGlareSize(wrapperElSize);
