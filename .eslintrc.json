@@ -42,7 +42,9 @@
     }
   ],
 
-  "ignorePatterns": ["dist"],
+  // ESlint default behaviour ignoring file/folders starting with "." - https://github.com/eslint/eslint/issues/10341
+  // Don't ignore/lint ".storybook" folder
+  "ignorePatterns": ["!.*", "dist", "node_modules"],
 
   "settings": {
     "react": {
