@@ -42,6 +42,8 @@
     }
   ],
 
+  "ignorePatterns": ["dist"],
+
   "settings": {
     "react": {
       "version": "detect"
