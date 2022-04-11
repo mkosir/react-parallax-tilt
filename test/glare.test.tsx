@@ -129,7 +129,7 @@ describe("Glare - angle/opacity - Callback 'onMove' should return correct calcul
       />,
     );
     const wrapperElSize: ElementSizePosition = { width: 150, height: 100, left: 0, top: 0 };
-    wrapper.instance()['glare'].setSize(wrapperElSize);
+    wrapper.instance()['glare']!.setSize(wrapperElSize);
     const glareStyle = wrapper?.instance()['glare']?.glareEl?.style;
     const { width: w, height: h } = wrapperElSize;
     const wrapperElDiagonal = Math.sqrt(w! ** 2 + h! ** 2);

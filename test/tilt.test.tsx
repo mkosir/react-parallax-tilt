@@ -130,7 +130,7 @@ describe("Tilt - (manual input) - Callback 'onMove' should return correct calcul
 
   it("Tilt events - Don't reset", () => {
     const wrapperSpyOnMove = spy();
-    const wrapper = mount<Tilt>(<Tilt onEnter={null} onMove={wrapperSpyOnMove} onLeave={null} />);
+    const wrapper = mount<Tilt>(<Tilt onMove={wrapperSpyOnMove} />);
     wrapper.instance()['wrapperEl'].size = mockWrapperElSizePosition;
     wrapper.simulate('mouseenter');
     wrapper.simulate('mousemove', { pageX: 100, pageY: 50 });
