@@ -11,14 +11,10 @@ module.exports = {
     },
   },
 
-  coveragePathIgnorePatterns: ['/node_modules/', '/test/'],
-
   transform: {
     '\\.(ts|tsx)$': 'ts-jest',
     '.+\\.(css|sass|scss)$': 'jest-transform-css',
   },
-
-  testRegex: '(/test/.*|\\.)\\.(test|spec)\\.(ts|tsx|js)$',
 
   moduleFileExtensions: ['ts', 'tsx', 'js'],
 
