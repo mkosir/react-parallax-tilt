@@ -8,7 +8,7 @@ module.exports = {
     builder: 'webpack5',
   },
 
-  webpackFinal: async (config) => {
+  webpackFinal: async (config: any) => {
     config.module.rules.push({
       test: /\.scss$/,
       use: ['style-loader', 'css-loader', 'sass-loader'],
