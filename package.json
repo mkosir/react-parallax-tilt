@@ -19,7 +19,7 @@
     "lint-fix": "eslint --fix .",
     "lint-staged-husky": "lint-staged",
     "format-lint": "prettier --config .prettierrc -l --ignore-unknown './**/*'",
-    "format": "prettier --config .prettierrc --write --ignore-unknown './**/*'",
+    "format-fix": "prettier --config .prettierrc --write --ignore-unknown './**/*'",
     "commit": "git-cz",
     "test": "jest --verbose --watch",
     "test:coverage": "jest --coverage --verbose",
@@ -27,7 +27,7 @@
     "storybook": "start-storybook -p 9009",
     "storybook:build": "build-storybook",
     "semantic-release": "semantic-release",
-    "generate-demos": "npx react-demo-tab-cli generate --prefix=_ && npm run format && npm run lint-fix",
+    "generate-demos": "npx react-demo-tab-cli generate --prefix=_ && npm run format-fix && npm run lint-fix",
     "validate": "npm run lint && npm run build && npm run test:coverage"
   },
   "devDependencies": {
