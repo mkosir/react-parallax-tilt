@@ -7,8 +7,7 @@ import visualizer from 'rollup-plugin-visualizer';
 // eslint-disable-next-line
 const pkg = require('./package.json');
 
-// eslint-disable-next-line
-export default defineConfig({
+const rollupConfig = defineConfig({
   input: 'src/index.ts',
   output: [
     {
@@ -52,3 +51,6 @@ export default defineConfig({
   // ensure that the dependencies are not bundled with the library (installed automatically within the parent app)
   external: [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})],
 });
+
+// eslint-disable-next-line
+export default rollupConfig;
