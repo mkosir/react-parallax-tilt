@@ -4,6 +4,28 @@ import { ElementSizePosition, ClientPosition } from '../common/types';
 import { GlareProps } from '../features/glare/types';
 import { TiltProps } from '../features/tilt/types';
 
+export type OnMoveParams = {
+  tiltAngleX: number;
+  tiltAngleY: number;
+  tiltAngleXPercentage: number;
+  tiltAngleYPercentage: number;
+  glareAngle: number;
+  glareOpacity: number;
+  eventType: string | null;
+};
+
+// export type OnMove = (onMoveParams: OnMoveParams) => void;
+
+export type OnMove = (
+  tiltAngleX: number,
+  tiltAngleY: number,
+  tiltAngleXPercentage: number,
+  tiltAngleYPercentage: number,
+  glareAngle: number,
+  glareOpacity: number,
+  eventType: string | null,
+) => void;
+
 export interface Props extends TiltProps, GlareProps, React.HTMLAttributes<HTMLDivElement> {
   /**
    * Scale of the component (1.5 = 150%, 2 = 200%, etc.).
@@ -44,15 +66,7 @@ export interface Props extends TiltProps, GlareProps, React.HTMLAttributes<HTMLD
   /**
    * Gets triggered when user moves on the component.
    */
-  onMove?: (
-    tiltAngleX: number,
-    tiltAngleY: number,
-    tiltAngleXPercentage: number,
-    tiltAngleYPercentage: number,
-    glareAngle: number,
-    glareOpacity: number,
-    eventType: string | null,
-  ) => void;
+  onMove?: OnMove;
   /**
    * Gets triggered when user enters the component.
    */
