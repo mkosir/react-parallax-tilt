@@ -14,17 +14,7 @@ export type OnMoveParams = {
   eventType: string | null;
 };
 
-// export type OnMove = (onMoveParams: OnMoveParams) => void;
-
-export type OnMove = (
-  tiltAngleX: number,
-  tiltAngleY: number,
-  tiltAngleXPercentage: number,
-  tiltAngleYPercentage: number,
-  glareAngle: number,
-  glareOpacity: number,
-  eventType: string | null,
-) => void;
+export type OnMove = (onMoveParams: OnMoveParams) => void;
 
 export interface Props extends TiltProps, GlareProps, React.HTMLAttributes<HTMLDivElement> {
   /**

@@ -184,15 +184,15 @@ export class ReactParallaxTilt extends PureComponent<Props> {
       glareOpacity = this.glare.glareOpacity;
     }
 
-    onMove(
-      this.tilt!.tiltAngleX!,
-      this.tilt!.tiltAngleY!,
-      this.tilt!.tiltAngleXPercentage!,
-      this.tilt!.tiltAngleYPercentage!,
+    onMove({
+      tiltAngleX: this.tilt!.tiltAngleX!,
+      tiltAngleY: this.tilt!.tiltAngleY!,
+      tiltAngleXPercentage: this.tilt!.tiltAngleXPercentage!,
+      tiltAngleYPercentage: this.tilt!.tiltAngleYPercentage!,
       glareAngle,
       glareOpacity,
-      event.type,
-    );
+      eventType: event.type,
+    });
   }
 
   private onLeave = (event: SupportedEvent) => {
