@@ -8,194 +8,233 @@ import { OnMoveParams } from '../src/react-parallax-tilt/types';
 
 configure({ adapter: new Adapter() });
 
-describe("Callback prop 'onMove' should return correct Glare calculated values", () => {
-  it("should calculate glare 'top'", () => {
-    const onMove = jest.fn();
+describe('Glare', () => {
+  describe("Callback prop 'onMove' should return correct Glare calculated values", () => {
+    it('should calculate glare with position top', () => {
+      const onMove = jest.fn();
 
-    const wrapper = mount<Tilt>(
-      <Tilt
-        tiltMaxAngleX={60}
-        tiltMaxAngleY={60}
-        tiltAngleXManual={-60}
-        tiltAngleYManual={60}
-        glareEnable={true}
-        glareMaxOpacity={1}
-        glarePosition="top"
-        onMove={onMove}
-      />,
-    );
+      const wrapper = mount<Tilt>(
+        <Tilt
+          tiltMaxAngleX={60}
+          tiltMaxAngleY={60}
+          tiltAngleXManual={-60}
+          tiltAngleYManual={60}
+          glareEnable={true}
+          glareMaxOpacity={1}
+          glarePosition="top"
+          onMove={onMove}
+        />,
+      );
 
-    wrapper.simulate('mousemove');
-    expect(onMove).toBeCalledWith<[OnMoveParams]>({
-      tiltAngleX: -60,
-      tiltAngleY: 60,
-      tiltAngleXPercentage: -100,
-      tiltAngleYPercentage: 100,
-      glareAngle: 45,
-      glareOpacity: 1,
-      eventType: 'mousemove',
+      wrapper.simulate('mousemove');
+
+      expect(onMove).toBeCalledWith<[OnMoveParams]>({
+        tiltAngleX: -60,
+        tiltAngleY: 60,
+        tiltAngleXPercentage: -100,
+        tiltAngleYPercentage: 100,
+        glareAngle: 45,
+        glareOpacity: 1,
+        eventType: 'mousemove',
+      });
     });
-  });
-});
 
-describe("Glare - angle/opacity - Callback 'onMove' should return correct calculated values for defined manual input angles", () => {
-  it("Glare 'top'", () => {
-    const onMove = jest.fn();
+    it("Glare 'right'", () => {
+      const onMove = jest.fn();
 
-    const wrapper = mount<Tilt>(
-      <Tilt
-        tiltMaxAngleX={60}
-        tiltMaxAngleY={60}
-        tiltAngleXManual={-60}
-        tiltAngleYManual={60}
-        glareEnable={true}
-        glareMaxOpacity={1}
-        glarePosition="top"
-        onMove={onMove}
-      />,
-    );
-    wrapper.simulate('mousemove');
-    expect(onMove).toBeCalledWith(-60, 60, -100, 100, 45, 1, 'mousemove');
-  });
+      const wrapper = mount<Tilt>(
+        <Tilt
+          tiltMaxAngleX={60}
+          tiltMaxAngleY={60}
+          tiltAngleXManual={0}
+          tiltAngleYManual={60}
+          glareEnable={true}
+          glareMaxOpacity={1}
+          glarePosition="right"
+          onMove={onMove}
+        />,
+      );
 
-  it("Glare 'right'", () => {
-    const onMove = jest.fn();
+      wrapper.simulate('mousemove');
 
-    const wrapper = mount<Tilt>(
-      <Tilt
-        tiltMaxAngleX={60}
-        tiltMaxAngleY={60}
-        tiltAngleXManual={0}
-        tiltAngleYManual={60}
-        glareEnable={true}
-        glareMaxOpacity={1}
-        glarePosition="right"
-        onMove={onMove}
-      />,
-    );
+      expect(onMove).toBeCalledWith<[OnMoveParams]>({
+        tiltAngleX: 0,
+        tiltAngleY: 60,
+        tiltAngleXPercentage: 0,
+        tiltAngleYPercentage: 100,
+        glareAngle: 0,
+        glareOpacity: 1,
+        eventType: 'mousemove',
+      });
+    });
 
-    wrapper.simulate('mousemove');
-    expect(onMove).toBeCalledWith(0, 60, 0, 100, 0, 1, 'mousemove');
-  });
+    it("Glare 'bottom'", () => {
+      const onMove = jest.fn();
 
-  it("Glare 'bottom'", () => {
-    const onMove = jest.fn();
+      const wrapper = mount<Tilt>(
+        <Tilt
+          tiltMaxAngleX={60}
+          tiltMaxAngleY={60}
+          tiltAngleXManual={60}
+          tiltAngleYManual={60}
+          glareEnable={true}
+          glareMaxOpacity={0.5}
+          glarePosition="bottom"
+          onMove={onMove}
+        />,
+      );
 
-    const wrapper = mount<Tilt>(
-      <Tilt
-        tiltMaxAngleX={60}
-        tiltMaxAngleY={60}
-        tiltAngleXManual={60}
-        tiltAngleYManual={60}
-        glareEnable={true}
-        glareMaxOpacity={0.5}
-        glarePosition="bottom"
-        onMove={onMove}
-      />,
-    );
+      wrapper.simulate('mousemove');
 
-    wrapper.simulate('mousemove');
-    expect(onMove).toBeCalledWith(60, 60, 100, 100, 135, 0.5, 'mousemove');
-  });
+      expect(onMove).toBeCalledWith<[OnMoveParams]>({
+        tiltAngleX: 60,
+        tiltAngleY: 60,
+        tiltAngleXPercentage: 100,
+        tiltAngleYPercentage: 100,
+        glareAngle: 135,
+        glareOpacity: 0.5,
+        eventType: 'mousemove',
+      });
+    });
 
-  it("Glare 'left'", () => {
-    const onMove = jest.fn();
+    it("Glare 'left'", () => {
+      const onMove = jest.fn();
 
-    const wrapper = mount<Tilt>(
-      <Tilt
-        tiltMaxAngleX={60}
-        tiltMaxAngleY={60}
-        tiltAngleXManual={-60}
-        tiltAngleYManual={60}
-        glareEnable={true}
-        glareMaxOpacity={1}
-        glarePosition="left"
-        glareReverse={true}
-        onMove={onMove}
-      />,
-    );
+      const wrapper = mount<Tilt>(
+        <Tilt
+          tiltMaxAngleX={60}
+          tiltMaxAngleY={60}
+          tiltAngleXManual={-60}
+          tiltAngleYManual={60}
+          glareEnable={true}
+          glareMaxOpacity={1}
+          glarePosition="left"
+          glareReverse={true}
+          onMove={onMove}
+        />,
+      );
 
-    wrapper.simulate('mousemove');
-    expect(onMove).toBeCalledWith(-60, 60, -100, 100, -135, 1, 'mousemove');
-  });
+      wrapper.simulate('mousemove');
 
-  it("Glare 'all'", () => {
-    const onMove = jest.fn();
+      expect(onMove).toBeCalledWith<[OnMoveParams]>({
+        tiltAngleX: -60,
+        tiltAngleY: 60,
+        tiltAngleXPercentage: -100,
+        tiltAngleYPercentage: 100,
+        glareAngle: -135,
+        glareOpacity: 1,
+        eventType: 'mousemove',
+      });
+    });
 
-    const wrapper = mount<Tilt>(
-      <Tilt
-        tiltMaxAngleX={60}
-        tiltMaxAngleY={60}
-        tiltAngleXManual={-60}
-        tiltAngleYManual={-60}
-        glareEnable={true}
-        glareMaxOpacity={1}
-        glarePosition="all"
-        onMove={onMove}
-      />,
-    );
+    it("Glare 'all'", () => {
+      const onMove = jest.fn();
 
-    wrapper.simulate('mousemove');
-    expect(onMove).toBeCalledWith(-60, -60, -100, -100, -45, 1, 'mousemove');
-  });
+      const wrapper = mount<Tilt>(
+        <Tilt
+          tiltMaxAngleX={60}
+          tiltMaxAngleY={60}
+          tiltAngleXManual={-60}
+          tiltAngleYManual={-60}
+          glareEnable={true}
+          glareMaxOpacity={1}
+          glarePosition="all"
+          onMove={onMove}
+        />,
+      );
 
-  it("Glare 'default'", () => {
-    const jestFn = jest.fn();
-    const wrapper = mount<Tilt>(
-      <Tilt
-        tiltMaxAngleX={60}
-        tiltMaxAngleY={60}
-        tiltAngleXManual={-60}
-        tiltAngleYManual={60}
-        glareEnable={true}
-        glareMaxOpacity={1}
-        onMove={jestFn}
-      />,
-    );
+      wrapper.simulate('mousemove');
 
-    wrapper.simulate('mousemove');
-    expect(jestFn).toHaveBeenCalledWith(-60, 60, -100, 100, 45, 0, 'mousemove');
-  });
+      expect(onMove).toBeCalledWith<[OnMoveParams]>({
+        tiltAngleX: -60,
+        tiltAngleY: -60,
+        tiltAngleXPercentage: -100,
+        tiltAngleYPercentage: -100,
+        glareAngle: -45,
+        glareOpacity: 1,
+        eventType: 'mousemove',
+      });
+    });
 
-  it("Glare 'setSize' - Should correctly set size of glare element (mock window resize)", () => {
-    const wrapper = mount<Tilt>(
-      <Tilt
-        tiltMaxAngleX={60}
-        tiltMaxAngleY={60}
-        tiltAngleXManual={-60}
-        tiltAngleYManual={60}
-        glareEnable={true}
-        glareMaxOpacity={1}
-      />,
-    );
-    const wrapperElSize: ElementSizePosition = { width: 150, height: 100, left: 0, top: 0 };
-    wrapper.instance()['glare']!.setSize(wrapperElSize);
-    const glareStyle = wrapper?.instance()['glare']?.glareEl?.style;
-    const { width: w, height: h } = wrapperElSize;
-    const wrapperElDiagonal = Math.sqrt(w! ** 2 + h! ** 2);
-    expect(glareStyle?.width).toEqual(`${wrapperElDiagonal}px`);
-    expect(glareStyle?.height).toEqual(`${wrapperElDiagonal}px`);
-  });
+    it("Glare 'default'", () => {
+      const onMove = jest.fn();
 
-  it('Glare with flip vertically/horizontally', () => {
-    const onMove = jest.fn();
+      const wrapper = mount<Tilt>(
+        <Tilt
+          tiltMaxAngleX={60}
+          tiltMaxAngleY={60}
+          tiltAngleXManual={-60}
+          tiltAngleYManual={60}
+          glareEnable={true}
+          glareMaxOpacity={1}
+          onMove={onMove}
+        />,
+      );
 
-    const wrapper = mount<Tilt>(
-      <Tilt
-        tiltMaxAngleX={60}
-        tiltMaxAngleY={60}
-        tiltAngleXManual={-60}
-        tiltAngleYManual={60}
-        glareEnable={true}
-        glareMaxOpacity={1}
-        glarePosition="top"
-        onMove={onMove}
-        flipVertically={true}
-        flipHorizontally={true}
-      />,
-    );
+      wrapper.simulate('mousemove');
 
-    wrapper.simulate('mousemove');
-    expect(onMove).toBeCalledWith(120, 120, 200, 200, 45, 0, 'mousemove');
+      expect(onMove).toBeCalledWith<[OnMoveParams]>({
+        tiltAngleX: -60,
+        tiltAngleY: 60,
+        tiltAngleXPercentage: -100,
+        tiltAngleYPercentage: 100,
+        glareAngle: 45,
+        glareOpacity: 0,
+        eventType: 'mousemove',
+      });
+    });
+
+    it("Glare 'setSize' - Should correctly set size of glare element (mock window resize)", () => {
+      const wrapper = mount<Tilt>(
+        <Tilt
+          tiltMaxAngleX={60}
+          tiltMaxAngleY={60}
+          tiltAngleXManual={-60}
+          tiltAngleYManual={60}
+          glareEnable={true}
+          glareMaxOpacity={1}
+        />,
+      );
+
+      const wrapperElSize: ElementSizePosition = { width: 150, height: 100, left: 0, top: 0 };
+      wrapper.instance()['glare']!.setSize(wrapperElSize);
+      const glareStyle = wrapper?.instance()['glare']?.glareEl?.style;
+      const { width: w, height: h } = wrapperElSize;
+      const wrapperElDiagonal = Math.sqrt(w! ** 2 + h! ** 2);
+
+      expect(glareStyle?.width).toEqual(`${wrapperElDiagonal}px`);
+      expect(glareStyle?.height).toEqual(`${wrapperElDiagonal}px`);
+    });
+
+    it('Glare with flip vertically/horizontally', () => {
+      const onMove = jest.fn();
+
+      const wrapper = mount<Tilt>(
+        <Tilt
+          tiltMaxAngleX={60}
+          tiltMaxAngleY={60}
+          tiltAngleXManual={-60}
+          tiltAngleYManual={60}
+          glareEnable={true}
+          glareMaxOpacity={1}
+          glarePosition="top"
+          onMove={onMove}
+          flipVertically={true}
+          flipHorizontally={true}
+        />,
+      );
+
+      wrapper.simulate('mousemove');
+
+      expect(onMove).toBeCalledWith<[OnMoveParams]>({
+        tiltAngleX: 120,
+        tiltAngleY: 120,
+        tiltAngleXPercentage: 200,
+        tiltAngleYPercentage: 200,
+        glareAngle: 45,
+        glareOpacity: 0,
+        eventType: 'mousemove',
+      });
+    });
   });
 });
