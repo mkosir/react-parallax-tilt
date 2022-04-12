@@ -4,20 +4,19 @@ import { defineConfig } from 'rollup';
 import { terser } from 'rollup-plugin-terser';
 import visualizer from 'rollup-plugin-visualizer';
 
-// eslint-disable-next-line
-const pkg = require('./package.json');
+import packageJson from './package.json';
 
 const rollupConfig = defineConfig({
   input: 'src/index.ts',
   output: [
     {
-      file: pkg.module,
+      file: packageJson.module,
       format: 'esm',
       sourcemap: true,
     },
     {
-      file: pkg.main,
-      name: pkg.name,
+      file: packageJson.main,
+      name: packageJson.name,
       format: 'umd',
       sourcemap: true,
       globals: {
@@ -44,12 +43,15 @@ const rollupConfig = defineConfig({
     }),
     visualizer({
       filename: 'bundle-analysis.html',
-      title: `${pkg.name} - Rollup Visualizer`,
+      title: `${packageJson.name} - Rollup Visualizer`,
       open: true,
     }),
   ],
-  // ensure that the dependencies are not bundled with the library (installed automatically within the parent app)
-  external: [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})],
+  // Ensure dependencies are not bundled with the library
+  external: [
+    //...Object.keys(packageJson.dependencies || {}),
+    ...Object.keys(packageJson.peerDependencies || {}),
+  ],
 });
 
 // eslint-disable-next-line
