@@ -1,15 +1,16 @@
 import { configure, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
-import { spy } from 'sinon';
 
 import Tilt from '../src';
+import { OnMoveParams } from '../src/react-parallax-tilt/types';
 
 configure({ adapter: new Adapter() });
 
 describe('Tilt - Limits', () => {
   it('Disable y axis - Y angle should bo 0 if only x axis is enabled', () => {
-    const wrapperSpy = spy();
+    const onMove = jest.fn();
+
     const wrapper = mount<Tilt>(
       <Tilt
         tiltAxis="x"
@@ -17,15 +18,26 @@ describe('Tilt - Limits', () => {
         tiltMaxAngleY={60}
         tiltAngleXManual={60}
         tiltAngleYManual={45}
-        onMove={wrapperSpy}
+        onMove={onMove}
       />,
     );
+
     wrapper.simulate('mousemove');
-    expect(wrapperSpy.calledWith(60, 0, 100, 0, 0, 0, 'mousemove')).toEqual(true);
+
+    expect(onMove).toBeCalledWith<[OnMoveParams]>({
+      tiltAngleX: 60,
+      tiltAngleY: 0,
+      tiltAngleXPercentage: 100,
+      tiltAngleYPercentage: 0,
+      glareAngle: 0,
+      glareOpacity: 0,
+      eventType: 'mousemove',
+    });
   });
 
   it('Disable x axis - X angle should bo 0 if only y axis is enabled', () => {
-    const wrapperSpy = spy();
+    const onMove = jest.fn();
+
     const wrapper = mount<Tilt>(
       <Tilt
         tiltAxis="y"
@@ -33,25 +45,40 @@ describe('Tilt - Limits', () => {
         tiltMaxAngleY={60}
         tiltAngleXManual={60}
         tiltAngleYManual={45}
-        onMove={wrapperSpy}
+        onMove={onMove}
       />,
     );
+
     wrapper.simulate('mousemove');
-    expect(wrapperSpy.calledWith(0, 45, 0, 75, 0, 0, 'mousemove')).toEqual(true);
+
+    expect(onMove).toBeCalledWith<[OnMoveParams]>({
+      tiltAngleX: 0,
+      tiltAngleY: 45,
+      tiltAngleXPercentage: 0,
+      tiltAngleYPercentage: 75,
+      glareAngle: 0,
+      glareOpacity: 0,
+      eventType: 'mousemove',
+    });
   });
 
   it("Constrain tilt angles - angles shouldn't be tilted more then specified constant", () => {
-    const wrapperSpy = spy();
+    const onMove = jest.fn();
+
     const wrapper = mount<Tilt>(
-      <Tilt
-        tiltMaxAngleX={300}
-        tiltMaxAngleY={300}
-        tiltAngleXManual={120}
-        tiltAngleYManual={260}
-        onMove={wrapperSpy}
-      />,
+      <Tilt tiltMaxAngleX={300} tiltMaxAngleY={300} tiltAngleXManual={120} tiltAngleYManual={260} onMove={onMove} />,
     );
+
     wrapper.simulate('mousemove');
-    expect(wrapperSpy.calledWith(90, 90, 30, 30, 0, 0, 'mousemove')).toEqual(true);
+
+    expect(onMove).toBeCalledWith<[OnMoveParams]>({
+      tiltAngleX: 90,
+      tiltAngleY: 90,
+      tiltAngleXPercentage: 30,
+      tiltAngleYPercentage: 30,
+      glareAngle: 0,
+      glareOpacity: 0,
+      eventType: 'mousemove',
+    });
   });
 });
