@@ -1,12 +1,11 @@
-export function setTransition<T extends HTMLElement>(
+export const setTransition = <T extends HTMLElement>(
   element: T,
   property: 'all' | 'opacity',
   duration: number,
   timing: string,
-): void {
+): void => {
   element.style.transition = `${property} ${duration}ms ${timing}`;
-}
+};
 
-export function constrainToRange(value: number, rangeMin: number, rangeMax: number): number {
-  return Math.min(Math.max(value, rangeMin), rangeMax);
-}
+export const constrainToRange = (value: number, rangeMin: number, rangeMax: number): number =>
+  Math.min(Math.max(value, rangeMin), rangeMax);
