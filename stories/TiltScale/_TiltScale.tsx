@@ -25,7 +25,7 @@ const TiltScale = () => {
             max="1.5"
             step="0.01"
             value={scale}
-            onChange={ev => setScale(parseFloat(ev.target.value))}
+            onChange={(ev) => setScale(parseFloat(ev.target.value))}
           />
         </div>
       </div>

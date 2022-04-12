@@ -6,6 +6,7 @@ import Demo from './FlipPage.demotab';
 const code = `import React, { useState } from 'react';
 
 import Tilt from '../../src';
+
 import './FlipPage.demotab.scss';
 import Page from './Page/Page';
 
@@ -18,8 +19,8 @@ const FlipPage = () => {
         <Page
           flipVertically={flipVertically}
           flipHorizontally={flipHorizontally}
-          toggleFlipVertically={checked => toggleFlip([checked, flipHorizontally])}
-          toggleFlipHorizontally={checked => toggleFlip([flipVertically, checked])}
+          toggleFlipVertically={(checked) => toggleFlip([checked, flipHorizontally])}
+          toggleFlipHorizontally={(checked) => toggleFlip([flipVertically, checked])}
         />
       </Tilt>
     </div>

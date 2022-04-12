@@ -12,7 +12,7 @@ import './TiltManualInput.demotab.scss';
 const TiltManualInput = () => {
   const [[manualTiltAngleX, manualTiltAngleY], setManualTiltAngle] = useState([0, 0]);
 
-  const onMove = stick => {
+  const onMove = (stick) => {
     setManualTiltAngle([stick.y, stick.x]);
   };
 
@@ -22,11 +22,7 @@ const TiltManualInput = () => {
 
   return (
     <div className="tilt-manual-input">
-      <Tilt
-        tiltAngleXManual={manualTiltAngleX}
-        tiltAngleYManual={manualTiltAngleY}
-        glareEnable={true}
-      >
+      <Tilt tiltAngleXManual={manualTiltAngleX} tiltAngleYManual={manualTiltAngleY} glareEnable={true}>
         <div className="react-parallax-tilt">
           <div>Axis x: {manualTiltAngleX.toFixed(0)}°</div>
           <div>Axis y: {manualTiltAngleY.toFixed(0)}°</div>
