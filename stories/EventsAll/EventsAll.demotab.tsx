@@ -17,7 +17,7 @@ class EventsAll extends PureComponent {
     trackOnLeave: true,
   };
 
-  onMove = (
+  onMove = ({
     tiltAngleX,
     tiltAngleY,
     tiltAngleXPercentage,
@@ -25,7 +25,7 @@ class EventsAll extends PureComponent {
     glareAngle,
     glareOpacity,
     eventType,
-  ) => {
+  }) => {
     this.setState({
       tiltAngleX,
       tiltAngleY,

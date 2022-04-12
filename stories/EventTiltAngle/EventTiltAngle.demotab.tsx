@@ -10,11 +10,8 @@ class EventTiltAngle extends PureComponent {
     tiltAngleY: 0,
   };
 
-  onMove = (tiltAngleX, tiltAngleY) => {
-    this.setState({
-      tiltAngleX,
-      tiltAngleY,
-    });
+  onMove = ({ tiltAngleX, tiltAngleY }) => {
+    this.setState({ tiltAngleX, tiltAngleY });
   };
 
   render() {
