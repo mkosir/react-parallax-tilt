@@ -1,7 +1,6 @@
-import type { StorybookConfig } from '@storybook/core-common';
+import path from 'path';
 
-// eslint-disable-next-line
-const path = require('path');
+import { StorybookConfig } from '@storybook/core-common';
 
 const storybookConfig: StorybookConfig = {
   stories: ['../stories/**/*.stories.tsx'],
