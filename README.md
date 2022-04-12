@@ -135,13 +135,13 @@ Track mouse and touch events on the whole window.
 **gyroscope**: _boolean_ ▶︎ `false`  
 Boolean to enable/disable device orientation detection.
 
-**onMove**: _Function_ => (**tiltAngleX**: _number_, **tiltAngleY**: _number_, **tiltAngleXPercentage**: _number_, **tiltAngleYPercentage**: _number_, **glareAngle**: _number_, **glareOpacity**: _number_, **eventType**: _string | null_)  
+**onMove**: _Function_ => ({ **tiltAngleX**: _number_, **tiltAngleY**: _number_, **tiltAngleXPercentage**: _number_, **tiltAngleYPercentage**: _number_, **glareAngle**: _number_, **glareOpacity**: _number_, **eventType**: _string | null_ }) => _void_  
 Gets triggered when user moves on the component.
 
-**onEnter**: _Function_ => (**eventType**: _string | null_)  
+**onEnter**: _Function_ => (**eventType**: _string | null_) => _void_  
 Gets triggered when user enters the component.
 
-**onLeave**: _Function_ => (**eventType**: _string | null_)  
+**onLeave**: _Function_ => (**eventType**: _string | null_) => _void_  
 Gets triggered when user leaves the component.
 
 ## Gyroscope - Device Orientation
