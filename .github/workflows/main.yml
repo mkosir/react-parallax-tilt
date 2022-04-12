@@ -64,7 +64,7 @@ jobs:
 
       - name: Build 🏗️
         run: |
-          npm run demotab
+          npm run generate-demos
           npm run storybook:build
 
       - name: Deploy 🚀
