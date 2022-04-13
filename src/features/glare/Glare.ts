@@ -96,7 +96,7 @@ export class Glare implements IStyle {
     const flipHorizontallyFactor = flipHorizontally ? -1 : 1;
     const glareReverseFactor = glareReverse ? -1 : 1;
 
-    let glareOpacityFactor: number;
+    let glareOpacityFactor = 0;
     switch (glarePosition) {
       case 'top':
         glareOpacityFactor = -xPercentage! * flipVerticallyFactor * glareReverseFactor;
@@ -105,6 +105,7 @@ export class Glare implements IStyle {
         glareOpacityFactor = yPercentage! * flipHorizontallyFactor * glareReverseFactor;
         break;
       case 'bottom':
+      case undefined:
         glareOpacityFactor = xPercentage! * flipVerticallyFactor * glareReverseFactor;
         break;
       case 'left':
@@ -113,8 +114,6 @@ export class Glare implements IStyle {
       case 'all':
         glareOpacityFactor = Math.hypot(xPercentage, yPercentage);
         break;
-      default:
-        glareOpacityFactor = xPercentage! * flipVerticallyFactor * glareReverseFactor;
     }
 
     const glareOpacityFactorRemoveNegative = constrainToRange(glareOpacityFactor, 0, 100);
