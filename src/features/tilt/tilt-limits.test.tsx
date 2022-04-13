@@ -2,8 +2,8 @@ import { configure, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 
-import Tilt from '../src';
-import { OnMoveParams } from '../src/react-parallax-tilt/types';
+import Tilt from '../../';
+import { OnMoveParams } from '../../react-parallax-tilt/types';
 
 configure({ adapter: new Adapter() });
 
