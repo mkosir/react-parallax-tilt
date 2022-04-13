@@ -9,9 +9,11 @@ const eslintConfig = {
     'plugin:jsx-a11y/recommended',
     'plugin:react/recommended',
     'plugin:no-array-reduce/recommended',
+    'plugin:testing-library/react',
+    'plugin:jest-dom/recommended',
   ],
 
-  plugins: ['@typescript-eslint', 'jest', 'import'],
+  plugins: ['@typescript-eslint', 'testing-library', 'jest-dom', 'jest', 'import'],
 
   rules: {
     'react/prop-types': 'off',
