@@ -4,6 +4,6 @@
   ],
   "*.{js,jsx,ts,tsx}": [
     "eslint --max-warnings 0",
-    "tsc --noEmit"
+    "bash -c tsc --noEmit"
   ]
 }
