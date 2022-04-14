@@ -1,19 +1,18 @@
-import { configure, mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { screen, render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import Tilt from '../../';
-import { ElementSizePosition } from '../../common/types';
 import { OnMoveParams } from '../../react-parallax-tilt/types';
 
-configure({ adapter: new Adapter() });
+export const TestComponent = () => <div style={{ height: '200px', backgroundColor: 'darkgreen' }}>test</div>;
 
 describe('Glare', () => {
   describe("Callback prop 'onMove' should return correct Glare calculated values", () => {
-    it('should calculate glare with position top', () => {
+    it('should calculate glare with top position', () => {
       const onMove = jest.fn();
 
-      const wrapper = mount<Tilt>(
+      render(
         <Tilt
           tiltMaxAngleX={60}
           tiltMaxAngleY={60}
@@ -23,10 +22,12 @@ describe('Glare', () => {
           glareMaxOpacity={1}
           glarePosition="top"
           onMove={onMove}
-        />,
+        >
+          <TestComponent />
+        </Tilt>,
       );
 
-      wrapper.simulate('mousemove');
+      userEvent.hover(screen.getByText('test'));
 
       expect(onMove).toBeCalledWith<[OnMoveParams]>({
         tiltAngleX: -60,
@@ -39,10 +40,10 @@ describe('Glare', () => {
       });
     });
 
-    it("Glare 'right'", () => {
+    it('should calculate glare with right position', () => {
       const onMove = jest.fn();
 
-      const wrapper = mount<Tilt>(
+      render(
         <Tilt
           tiltMaxAngleX={60}
           tiltMaxAngleY={60}
@@ -52,10 +53,12 @@ describe('Glare', () => {
           glareMaxOpacity={1}
           glarePosition="right"
           onMove={onMove}
-        />,
+        >
+          <TestComponent />
+        </Tilt>,
       );
 
-      wrapper.simulate('mousemove');
+      userEvent.hover(screen.getByText('test'));
 
       expect(onMove).toBeCalledWith<[OnMoveParams]>({
         tiltAngleX: 0,
@@ -68,10 +71,10 @@ describe('Glare', () => {
       });
     });
 
-    it("Glare 'bottom'", () => {
+    it('should calculate glare with bottom position', () => {
       const onMove = jest.fn();
 
-      const wrapper = mount<Tilt>(
+      render(
         <Tilt
           tiltMaxAngleX={60}
           tiltMaxAngleY={60}
@@ -81,10 +84,12 @@ describe('Glare', () => {
           glareMaxOpacity={0.5}
           glarePosition="bottom"
           onMove={onMove}
-        />,
+        >
+          <TestComponent />
+        </Tilt>,
       );
 
-      wrapper.simulate('mousemove');
+      userEvent.hover(screen.getByText('test'));
 
       expect(onMove).toBeCalledWith<[OnMoveParams]>({
         tiltAngleX: 60,
@@ -97,10 +102,10 @@ describe('Glare', () => {
       });
     });
 
-    it("Glare 'left'", () => {
+    it('should calculate glare with left position', () => {
       const onMove = jest.fn();
 
-      const wrapper = mount<Tilt>(
+      render(
         <Tilt
           tiltMaxAngleX={60}
           tiltMaxAngleY={60}
@@ -111,10 +116,12 @@ describe('Glare', () => {
           glarePosition="left"
           glareReverse={true}
           onMove={onMove}
-        />,
+        >
+          <TestComponent />
+        </Tilt>,
       );
 
-      wrapper.simulate('mousemove');
+      userEvent.hover(screen.getByText('test'));
 
       expect(onMove).toBeCalledWith<[OnMoveParams]>({
         tiltAngleX: -60,
@@ -127,10 +134,10 @@ describe('Glare', () => {
       });
     });
 
-    it("Glare 'all'", () => {
+    it('should calculate glare with all (sides) positions', () => {
       const onMove = jest.fn();
 
-      const wrapper = mount<Tilt>(
+      render(
         <Tilt
           tiltMaxAngleX={60}
           tiltMaxAngleY={60}
@@ -140,10 +147,12 @@ describe('Glare', () => {
           glareMaxOpacity={1}
           glarePosition="all"
           onMove={onMove}
-        />,
+        >
+          <TestComponent />
+        </Tilt>,
       );
 
-      wrapper.simulate('mousemove');
+      userEvent.hover(screen.getByText('test'));
 
       expect(onMove).toBeCalledWith<[OnMoveParams]>({
         tiltAngleX: -60,
@@ -156,10 +165,10 @@ describe('Glare', () => {
       });
     });
 
-    it("Glare 'default'", () => {
+    it('should calculate glare with default position', () => {
       const onMove = jest.fn();
 
-      const wrapper = mount<Tilt>(
+      render(
         <Tilt
           tiltMaxAngleX={60}
           tiltMaxAngleY={60}
@@ -168,10 +177,12 @@ describe('Glare', () => {
           glareEnable={true}
           glareMaxOpacity={1}
           onMove={onMove}
-        />,
+        >
+          <TestComponent />
+        </Tilt>,
       );
 
-      wrapper.simulate('mousemove');
+      userEvent.hover(screen.getByText('test'));
 
       expect(onMove).toBeCalledWith<[OnMoveParams]>({
         tiltAngleX: -60,
@@ -184,32 +195,10 @@ describe('Glare', () => {
       });
     });
 
-    it("Glare 'setSize' - Should correctly set size of glare element (mock window resize)", () => {
-      const wrapper = mount<Tilt>(
-        <Tilt
-          tiltMaxAngleX={60}
-          tiltMaxAngleY={60}
-          tiltAngleXManual={-60}
-          tiltAngleYManual={60}
-          glareEnable={true}
-          glareMaxOpacity={1}
-        />,
-      );
-
-      const wrapperElSize: ElementSizePosition = { width: 150, height: 100, left: 0, top: 0 };
-      wrapper.instance()['glare']!.setSize(wrapperElSize);
-      const glareStyle = wrapper?.instance()['glare']?.glareEl?.style;
-      const { width: w, height: h } = wrapperElSize;
-      const wrapperElDiagonal = Math.sqrt(w! ** 2 + h! ** 2);
-
-      expect(glareStyle?.width).toEqual(`${wrapperElDiagonal}px`);
-      expect(glareStyle?.height).toEqual(`${wrapperElDiagonal}px`);
-    });
-
-    it('Glare with flip vertically/horizontally', () => {
+    it('should calculate glare with flip vertically/horizontally enabled', () => {
       const onMove = jest.fn();
 
-      const wrapper = mount<Tilt>(
+      render(
         <Tilt
           tiltMaxAngleX={60}
           tiltMaxAngleY={60}
@@ -221,10 +210,12 @@ describe('Glare', () => {
           onMove={onMove}
           flipVertically={true}
           flipHorizontally={true}
-        />,
+        >
+          <TestComponent />
+        </Tilt>,
       );
 
-      wrapper.simulate('mousemove');
+      userEvent.hover(screen.getByText('test'));
 
       expect(onMove).toBeCalledWith<[OnMoveParams]>({
         tiltAngleX: 120,
