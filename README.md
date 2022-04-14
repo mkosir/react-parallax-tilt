@@ -167,7 +167,7 @@ When using gyroscope feature:
 </Tilt>
 ```
 
-it will present a permission dialog prompting the user to allow motion and orientation access at domain level:
+it will present a permission dialog prompting the user to allow motion and orientation access at domain level:  
 ![](device_orientation.jpg)
 
 Note that user needs to take some action (like tapping a button) to be able to display the dialog (invoking dialog on page load is not possible).
