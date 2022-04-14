@@ -91,11 +91,6 @@
     "react": "^15.0.0 || ^16.0.0 || ^17.0.0",
     "react-dom": "^15.0.0 || ^16.0.0 || ^17.0.0"
   },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mkosir/react-parallax-tilt.git"
