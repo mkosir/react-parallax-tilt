@@ -11,7 +11,7 @@
 
 _👀 Easily apply tilt hover effect on React components_
 
-[![react-parallax-tilt example image](demo.gif)](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--glare-effect)
+[![react-parallax-tilt example image](misc/demo.gif)](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--glare-effect)
 
 ## [Demo 💥](https://mkosir.github.io/react-parallax-tilt)
 
@@ -168,7 +168,7 @@ When using gyroscope feature:
 ```
 
 it will present a permission dialog prompting the user to allow motion and orientation access at domain level:  
-![](device_orientation.jpg)
+![](misc/device_orientation.jpg)
 
 Note that user needs to take some action (like tapping a button) to be able to display the dialog (invoking dialog on page load is not possible).
 
