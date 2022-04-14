@@ -2,8 +2,8 @@ import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
-import { TiltTest } from '../../common/TiltTest';
 import { OnMoveParams } from '../../react-parallax-tilt/types';
+import { TiltTest } from '../../utils/TiltTest';
 
 describe('Glare', () => {
   it('should calculate glare with top position', () => {

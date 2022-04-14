@@ -3,8 +3,8 @@ import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 
 import Tilt from '../..';
-import { ElementSizePosition } from '../../common/types';
 import { OnMoveParams } from '../../react-parallax-tilt/types';
+import { ElementSizePosition } from '../../utils/types';
 
 configure({ adapter: new Adapter() });
 

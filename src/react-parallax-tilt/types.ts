@@ -1,8 +1,8 @@
 import { MouseEvent, TouchEvent } from 'react';
 
-import { ElementSizePosition, ClientPosition } from '../common/types';
 import { GlareProps } from '../features/glare/types';
 import { TiltProps } from '../features/tilt/types';
+import { ElementSizePosition, ClientPosition } from '../utils/types';
 
 export type OnMoveParams = {
   tiltAngleX: number;
