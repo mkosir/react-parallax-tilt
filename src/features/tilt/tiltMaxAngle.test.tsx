@@ -1,21 +1,22 @@
-import { configure, mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { screen, render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import Tilt from '../..';
+import { TestComponent } from '../../common/TestComponent';
 import { OnMoveParams } from '../../react-parallax-tilt/types';
 
-configure({ adapter: new Adapter() });
-
 describe('Tilt - Max Angle', () => {
-  it("Constrain tilt angles - angles shouldn't be tilted more then specified constant", () => {
+  it('should constrain tilt angles to default constant', () => {
     const onMove = jest.fn();
 
-    const wrapper = mount<Tilt>(
-      <Tilt tiltMaxAngleX={300} tiltMaxAngleY={300} tiltAngleXManual={120} tiltAngleYManual={260} onMove={onMove} />,
+    render(
+      <Tilt tiltMaxAngleX={300} tiltMaxAngleY={300} tiltAngleXManual={120} tiltAngleYManual={260} onMove={onMove}>
+        <TestComponent />
+      </Tilt>,
     );
 
-    wrapper.simulate('mousemove');
+    userEvent.hover(screen.getByText('test'));
 
     expect(onMove).toBeCalledWith<[OnMoveParams]>({
       tiltAngleX: 90,

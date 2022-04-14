@@ -3,9 +3,8 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import Tilt from '../../';
+import { TestComponent } from '../../common/TestComponent';
 import { OnMoveParams } from '../../react-parallax-tilt/types';
-
-export const TestComponent = () => <div style={{ height: '200px', backgroundColor: 'darkgreen' }}>test</div>;
 
 describe('Glare', () => {
   it('should calculate glare with top position', () => {
