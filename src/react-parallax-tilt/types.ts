@@ -1,4 +1,4 @@
-import { MouseEvent, TouchEvent } from 'react';
+import React, { MouseEvent, TouchEvent } from 'react';
 
 import { GlareProps } from '../features/glare/types';
 import { TiltProps } from '../features/tilt/types';
@@ -16,7 +16,10 @@ export type OnMoveParams = {
 
 export type OnMove = (onMoveParams: OnMoveParams) => void;
 
-export interface ReactParallaxTiltProps extends TiltProps, GlareProps, React.HTMLAttributes<HTMLDivElement> {
+type HtmlDivTilt = Pick<React.HTMLAttributes<HTMLDivElement>, 'className' | 'style' | 'children'>;
+
+export interface ReactParallaxTiltProps extends TiltProps, GlareProps, HtmlDivTilt {
+  // children: React.ReactNode;
   /**
    * Scale of the component (1.5 = 150%, 2 = 200%, etc.).
    */
