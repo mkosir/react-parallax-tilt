@@ -5,9 +5,9 @@ import { Glare } from '../features/glare/Glare';
 import { Tilt } from '../features/tilt/Tilt';
 
 import { defaultProps } from './defaultProps';
-import { Props, SupportedEvent, EventType, CustomEventType, WrapperElement } from './types';
+import { ReactParallaxTiltProps, SupportedEvent, EventType, CustomEventType, WrapperElement } from './types';
 
-export class ReactParallaxTilt extends PureComponent<Props> {
+export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
   public static defaultProps = defaultProps;
   private wrapperEl: WrapperElement<HTMLDivElement> = {
     node: null,

@@ -1,7 +1,7 @@
 import { GlareProps } from '../features/glare/types';
 import { TiltProps } from '../features/tilt/types';
 
-import { Props } from './types';
+import { ReactParallaxTiltProps } from './types';
 
 const defaultGlareProps: GlareProps = {
   glareEnable: false,
@@ -24,7 +24,7 @@ const defaultTiltProps: TiltProps = {
   tiltAngleYManual: null,
 };
 
-export const defaultProps: Props = {
+export const defaultProps: ReactParallaxTiltProps = {
   scale: 1,
   perspective: 1000,
   flipVertically: false,

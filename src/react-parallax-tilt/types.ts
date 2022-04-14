@@ -16,7 +16,7 @@ export type OnMoveParams = {
 
 export type OnMove = (onMoveParams: OnMoveParams) => void;
 
-export interface Props extends TiltProps, GlareProps, React.HTMLAttributes<HTMLDivElement> {
+export interface ReactParallaxTiltProps extends TiltProps, GlareProps, React.HTMLAttributes<HTMLDivElement> {
   /**
    * Scale of the component (1.5 = 150%, 2 = 200%, etc.).
    */
