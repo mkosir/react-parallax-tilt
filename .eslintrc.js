@@ -46,7 +46,7 @@ const eslintConfig = {
   ],
 
   // ESlint default behaviour ignoring file/folders starting with "." - https://github.com/eslint/eslint/issues/10341
-  // Lint ".storybook" folder
+  // Lint files and folders starting with "." (.storybook, .commitlintrc.ts, etc.)
   ignorePatterns: ['!.*', 'dist', 'node_modules'],
 
   settings: {
