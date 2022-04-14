@@ -11,7 +11,7 @@
 
 _👀 Easily apply tilt hover effect on React components_
 
-[![react-parallax-tilt example image](misc/demo.gif)](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--glare-effect)
+[![](misc/demo.gif)](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--glare-effect)
 
 ## [Demo 💥](https://mkosir.github.io/react-parallax-tilt)
 
