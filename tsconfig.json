@@ -21,6 +21,7 @@
     "strictNullChecks": true,
     "stripInternal": true,
     "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
     "target": "ES6"
   },
   "include": ["src", "@types"],
