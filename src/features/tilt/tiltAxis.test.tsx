@@ -1,17 +1,16 @@
-import { configure, mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { screen, render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import Tilt from '../..';
+import { TestComponent } from '../../common/TestComponent';
 import { OnMoveParams } from '../../react-parallax-tilt/types';
 
-configure({ adapter: new Adapter() });
-
 describe('Tilt - Axis', () => {
-  it('Disable y axis - Y angle should bo 0 if only x axis is enabled', () => {
+  it('should disable y axis', () => {
     const onMove = jest.fn();
 
-    const wrapper = mount<Tilt>(
+    render(
       <Tilt
         tiltAxis="x"
         tiltMaxAngleX={60}
@@ -19,10 +18,12 @@ describe('Tilt - Axis', () => {
         tiltAngleXManual={60}
         tiltAngleYManual={45}
         onMove={onMove}
-      />,
+      >
+        <TestComponent />
+      </Tilt>,
     );
 
-    wrapper.simulate('mousemove');
+    userEvent.hover(screen.getByText('test'));
 
     expect(onMove).toBeCalledWith<[OnMoveParams]>({
       tiltAngleX: 60,
@@ -35,10 +36,10 @@ describe('Tilt - Axis', () => {
     });
   });
 
-  it('Disable x axis - X angle should bo 0 if only y axis is enabled', () => {
+  it('should disable x axis', () => {
     const onMove = jest.fn();
 
-    const wrapper = mount<Tilt>(
+    render(
       <Tilt
         tiltAxis="y"
         tiltMaxAngleX={60}
@@ -46,10 +47,12 @@ describe('Tilt - Axis', () => {
         tiltAngleXManual={60}
         tiltAngleYManual={45}
         onMove={onMove}
-      />,
+      >
+        <TestComponent />
+      </Tilt>,
     );
 
-    wrapper.simulate('mousemove');
+    userEvent.hover(screen.getByText('test'));
 
     expect(onMove).toBeCalledWith<[OnMoveParams]>({
       tiltAngleX: 0,
