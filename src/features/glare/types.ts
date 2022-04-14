@@ -22,7 +22,7 @@ export type GlareProps = {
   /**
    * Set the border radius of the glare.
    */
-  glareBorderRadius: string;
+  glareBorderRadius?: string;
 };
 
 export type GlarePosition = 'top' | 'right' | 'bottom' | 'left' | 'all';

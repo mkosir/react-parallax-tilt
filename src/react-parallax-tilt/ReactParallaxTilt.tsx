@@ -137,7 +137,7 @@ export class ReactParallaxTilt extends PureComponent<Props> {
       return;
     }
 
-    this.glare = new Glare(this.wrapperEl.size, glareBorderRadius);
+    this.glare = new Glare(this.wrapperEl.size, glareBorderRadius!);
     this.wrapperEl.node!.appendChild(this.glare.glareWrapperEl);
   }
 

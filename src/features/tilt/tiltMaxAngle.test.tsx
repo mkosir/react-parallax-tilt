@@ -2,8 +2,7 @@ import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
-import Tilt from '../..';
-import { TestComponent } from '../../common/TestComponent';
+import { TiltTest } from '../../common/TiltTest';
 import { OnMoveParams } from '../../react-parallax-tilt/types';
 
 describe('Tilt - Max Angle', () => {
@@ -11,9 +10,13 @@ describe('Tilt - Max Angle', () => {
     const onMove = jest.fn();
 
     render(
-      <Tilt tiltMaxAngleX={300} tiltMaxAngleY={300} tiltAngleXManual={120} tiltAngleYManual={260} onMove={onMove}>
-        <TestComponent />
-      </Tilt>,
+      <TiltTest
+        tiltMaxAngleX={300}
+        tiltMaxAngleY={300}
+        tiltAngleXManual={120}
+        tiltAngleYManual={260}
+        onMove={onMove}
+      />,
     );
 
     userEvent.hover(screen.getByText('test'));

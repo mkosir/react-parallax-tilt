@@ -2,8 +2,7 @@ import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
-import Tilt from '../../';
-import { TestComponent } from '../../common/TestComponent';
+import { TiltTest } from '../../common/TiltTest';
 import { OnMoveParams } from '../../react-parallax-tilt/types';
 
 describe('Glare', () => {
@@ -11,7 +10,7 @@ describe('Glare', () => {
     const onMove = jest.fn();
 
     render(
-      <Tilt
+      <TiltTest
         tiltMaxAngleX={60}
         tiltMaxAngleY={60}
         tiltAngleXManual={-60}
@@ -20,9 +19,7 @@ describe('Glare', () => {
         glareMaxOpacity={1}
         glarePosition="top"
         onMove={onMove}
-      >
-        <TestComponent />
-      </Tilt>,
+      />,
     );
 
     userEvent.hover(screen.getByText('test'));
@@ -42,7 +39,7 @@ describe('Glare', () => {
     const onMove = jest.fn();
 
     render(
-      <Tilt
+      <TiltTest
         tiltMaxAngleX={60}
         tiltMaxAngleY={60}
         tiltAngleXManual={0}
@@ -51,9 +48,7 @@ describe('Glare', () => {
         glareMaxOpacity={1}
         glarePosition="right"
         onMove={onMove}
-      >
-        <TestComponent />
-      </Tilt>,
+      />,
     );
 
     userEvent.hover(screen.getByText('test'));
@@ -73,7 +68,7 @@ describe('Glare', () => {
     const onMove = jest.fn();
 
     render(
-      <Tilt
+      <TiltTest
         tiltMaxAngleX={60}
         tiltMaxAngleY={60}
         tiltAngleXManual={60}
@@ -82,9 +77,7 @@ describe('Glare', () => {
         glareMaxOpacity={0.5}
         glarePosition="bottom"
         onMove={onMove}
-      >
-        <TestComponent />
-      </Tilt>,
+      />,
     );
 
     userEvent.hover(screen.getByText('test'));
@@ -104,7 +97,7 @@ describe('Glare', () => {
     const onMove = jest.fn();
 
     render(
-      <Tilt
+      <TiltTest
         tiltMaxAngleX={60}
         tiltMaxAngleY={60}
         tiltAngleXManual={-60}
@@ -114,9 +107,7 @@ describe('Glare', () => {
         glarePosition="left"
         glareReverse={true}
         onMove={onMove}
-      >
-        <TestComponent />
-      </Tilt>,
+      />,
     );
 
     userEvent.hover(screen.getByText('test'));
@@ -136,7 +127,7 @@ describe('Glare', () => {
     const onMove = jest.fn();
 
     render(
-      <Tilt
+      <TiltTest
         tiltMaxAngleX={60}
         tiltMaxAngleY={60}
         tiltAngleXManual={-60}
@@ -145,9 +136,7 @@ describe('Glare', () => {
         glareMaxOpacity={1}
         glarePosition="all"
         onMove={onMove}
-      >
-        <TestComponent />
-      </Tilt>,
+      />,
     );
 
     userEvent.hover(screen.getByText('test'));
@@ -167,7 +156,7 @@ describe('Glare', () => {
     const onMove = jest.fn();
 
     render(
-      <Tilt
+      <TiltTest
         tiltMaxAngleX={60}
         tiltMaxAngleY={60}
         tiltAngleXManual={-60}
@@ -175,9 +164,7 @@ describe('Glare', () => {
         glareEnable={true}
         glareMaxOpacity={1}
         onMove={onMove}
-      >
-        <TestComponent />
-      </Tilt>,
+      />,
     );
 
     userEvent.hover(screen.getByText('test'));
@@ -197,7 +184,7 @@ describe('Glare', () => {
     const onMove = jest.fn();
 
     render(
-      <Tilt
+      <TiltTest
         tiltMaxAngleX={60}
         tiltMaxAngleY={60}
         tiltAngleXManual={-60}
@@ -208,9 +195,7 @@ describe('Glare', () => {
         onMove={onMove}
         flipVertically={true}
         flipHorizontally={true}
-      >
-        <TestComponent />
-      </Tilt>,
+      />,
     );
 
     userEvent.hover(screen.getByText('test'));

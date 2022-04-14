@@ -2,8 +2,7 @@ import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
-import Tilt from '../..';
-import { TestComponent } from '../../common/TestComponent';
+import { TiltTest } from '../../common/TiltTest';
 import { OnMoveParams } from '../../react-parallax-tilt/types';
 
 describe('Tilt - Axis', () => {
@@ -11,16 +10,14 @@ describe('Tilt - Axis', () => {
     const onMove = jest.fn();
 
     render(
-      <Tilt
+      <TiltTest
         tiltAxis="x"
         tiltMaxAngleX={60}
         tiltMaxAngleY={60}
         tiltAngleXManual={60}
         tiltAngleYManual={45}
         onMove={onMove}
-      >
-        <TestComponent />
-      </Tilt>,
+      />,
     );
 
     userEvent.hover(screen.getByText('test'));
@@ -40,16 +37,14 @@ describe('Tilt - Axis', () => {
     const onMove = jest.fn();
 
     render(
-      <Tilt
+      <TiltTest
         tiltAxis="y"
         tiltMaxAngleX={60}
         tiltMaxAngleY={60}
         tiltAngleXManual={60}
         tiltAngleYManual={45}
         onMove={onMove}
-      >
-        <TestComponent />
-      </Tilt>,
+      />,
     );
 
     userEvent.hover(screen.getByText('test'));
