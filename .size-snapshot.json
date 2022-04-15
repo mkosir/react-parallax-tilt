@@ -1,0 +1,21 @@
+{
+  "index.umd.js": {
+    "bundled": 25337,
+    "minified": 11899,
+    "gzipped": 3716
+  },
+  "index.esm.js": {
+    "bundled": 22811,
+    "minified": 11921,
+    "gzipped": 3665,
+    "treeshaked": {
+      "rollup": {
+        "code": 11383,
+        "import_statements": 41
+      },
+      "webpack": {
+        "code": 12373
+      }
+    }
+  }
+}
