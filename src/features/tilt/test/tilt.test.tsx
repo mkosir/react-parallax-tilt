@@ -13,7 +13,7 @@ describe('sss', () => {
     const onMove = jest.fn();
     const onLeave = jest.fn();
 
-    render(<TiltTest onEnter={onEnter} onMove={onMove} onLeave={onLeave} />);
+    render(<TiltTest onEnter={onEnter} onMove={onMove} onLeave={onLeave} glareEnable={true} />);
 
     userEvent.hover(screen.getByText('test'));
     // wrapper.simulate('mouseenter');
