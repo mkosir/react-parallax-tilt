@@ -45,54 +45,6 @@ describe("Tilt - (manual input) - Callback 'onMove' should return correct calcul
     expect(onLeave).toBeCalledWith('mouseleave');
   });
 
-  it("Tilt events - Don't reset", () => {
-    const onEnter = jest.fn();
-    const onMove = jest.fn();
-    const onLeave = jest.fn();
-
-    const wrapper = mount<Tilt>(
-      <Tilt onEnter={onEnter} onMove={onMove} onLeave={onLeave} glareEnable={true} reset={false} />,
-    );
-
-    wrapper.instance()['wrapperEl'].size = mockWrapperElSizePosition;
-    wrapper.simulate('mouseenter');
-    wrapper.simulate('mousemove', { pageX: 100, pageY: 50 });
-    wrapper.simulate('mouseleave');
-
-    expect(onEnter).toBeCalledWith('mouseenter');
-    expect(onMove).toBeCalledWith<[OnMoveParams]>({
-      tiltAngleX: 0,
-      tiltAngleY: -0,
-      tiltAngleXPercentage: 0,
-      tiltAngleYPercentage: -0,
-      glareAngle: 0,
-      glareOpacity: 0,
-      eventType: 'initial',
-    });
-    expect(onLeave).toBeCalledWith('mouseleave');
-  });
-
-  it("Tilt events - Don't reset", () => {
-    const onMove = jest.fn();
-
-    const wrapper = mount<Tilt>(<Tilt onMove={onMove} />);
-
-    wrapper.instance()['wrapperEl'].size = mockWrapperElSizePosition;
-    wrapper.simulate('mouseenter');
-    wrapper.simulate('mousemove', { pageX: 100, pageY: 50 });
-    wrapper.simulate('mouseleave');
-
-    expect(onMove).toBeCalledWith<[OnMoveParams]>({
-      tiltAngleX: 0,
-      tiltAngleY: -0,
-      tiltAngleXPercentage: 0,
-      tiltAngleYPercentage: -0,
-      glareAngle: 0,
-      glareOpacity: 0,
-      eventType: 'initial',
-    });
-  });
-
   it('Tilt events', () => {
     jest.useFakeTimers();
     const onEnter = jest.fn();
