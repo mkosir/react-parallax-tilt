@@ -18,7 +18,7 @@ describe('sss', () => {
     userEvent.hover(screen.getByText('test'));
     // wrapper.simulate('mouseenter');
     jest.runAllTimers();
-    userEvent.hover(screen.getByText('test'));
+    userEvent.unhover(screen.getByText('test'));
     // wrapper.simulate('mousemove');
     // wrapper.simulate('mouseleave');
 
