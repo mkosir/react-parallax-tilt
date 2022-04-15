@@ -19,35 +19,6 @@ describe("Tilt - (manual input) - Callback 'onMove' should return correct calcul
     };
   });
 
-  it('Tilt - track on window', () => {
-    const onMove = jest.fn();
-
-    const wrapper = mount<Tilt>(
-      <Tilt
-        trackOnWindow={true}
-        tiltMaxAngleX={60}
-        tiltMaxAngleY={60}
-        tiltAngleXManual={60}
-        tiltAngleYManual={45}
-        onMove={onMove}
-      />,
-    );
-    wrapper.simulate('mousemove');
-
-    expect(onMove).toBeCalledWith<[OnMoveParams]>({
-      tiltAngleX: 60,
-      tiltAngleY: 45,
-      tiltAngleXPercentage: 100,
-      tiltAngleYPercentage: 75,
-      glareAngle: 0,
-      glareOpacity: 0,
-      eventType: 'mousemove',
-    });
-
-    wrapper.instance().componentDidUpdate();
-    wrapper.instance().componentWillUnmount();
-  });
-
   it('Tilt events', () => {
     jest.useFakeTimers();
 
