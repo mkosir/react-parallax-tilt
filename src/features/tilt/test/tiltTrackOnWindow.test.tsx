@@ -9,22 +9,13 @@ describe('Tilt - Track On Window', () => {
   it('should calculate tilt tracked on window', () => {
     const onMove = jest.fn();
 
-    render(
-      <TiltTest
-        trackOnWindow={true}
-        tiltMaxAngleX={60}
-        tiltMaxAngleY={60}
-        tiltAngleXManual={60}
-        tiltAngleYManual={45}
-        onMove={onMove}
-      />,
-    );
+    render(<TiltTest trackOnWindow={true} tiltAngleXManual={20} tiltAngleYManual={15} onMove={onMove} />);
 
     userEvent.hover(screen.getByText('test'));
 
     expect(onMove).toBeCalledWith<[OnMoveParams]>({
-      tiltAngleX: 60,
-      tiltAngleY: 45,
+      tiltAngleX: 20,
+      tiltAngleY: 15,
       tiltAngleXPercentage: 100,
       tiltAngleYPercentage: 75,
       glareAngle: 0,
