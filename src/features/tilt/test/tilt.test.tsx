@@ -45,16 +45,6 @@ describe("Tilt - (manual input) - Callback 'onMove' should return correct calcul
     expect(onLeave).toBeCalledWith('mouseleave');
   });
 
-  it('Tilt events', () => {
-    jest.useFakeTimers();
-    const onEnter = jest.fn();
-    const wrapper = mount<Tilt>(<Tilt onEnter={onEnter} />);
-    wrapper.simulate('mouseenter');
-    jest.runAllTimers();
-
-    expect(onEnter).toBeCalledWith('mouseenter');
-  });
-
   it("Process input - 'touchmove'", () => {
     const onMove = jest.fn();
 
