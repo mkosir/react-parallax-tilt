@@ -13,6 +13,7 @@ const jestConfig: Config.InitialOptions = {
     },
   },
   preset: 'ts-jest',
+  setupFilesAfterEnv: ['./jest.setup.ts'],
 };
 
 module.exports = jestConfig;
