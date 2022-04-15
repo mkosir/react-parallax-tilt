@@ -1,25 +1,26 @@
-import { configure, mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { screen, render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 
-import Tilt from '../../..';
 import { OnMoveParams } from '../../../react-parallax-tilt/types';
+import { TiltTest } from '../../../utils/TiltTest';
 
-configure({ adapter: new Adapter() });
-
-describe("Tilt - (manual input) - Callback 'onMove' should return correct calculated values for defined manual input angles", () => {
-  it('Tilt events', () => {
+describe('sss', () => {
+  it('Tilt events aaaa', () => {
     jest.useFakeTimers();
 
     const onEnter = jest.fn();
     const onMove = jest.fn();
     const onLeave = jest.fn();
 
-    const wrapper = mount<Tilt>(<Tilt onEnter={onEnter} onMove={onMove} onLeave={onLeave} glareEnable={true} />);
-    wrapper.simulate('mouseenter');
+    render(<TiltTest onEnter={onEnter} onMove={onMove} onLeave={onLeave} />);
+
+    userEvent.hover(screen.getByText('test'));
+    // wrapper.simulate('mouseenter');
     jest.runAllTimers();
-    wrapper.simulate('mousemove');
-    wrapper.simulate('mouseleave');
+    userEvent.hover(screen.getByText('test'));
+    // wrapper.simulate('mousemove');
+    // wrapper.simulate('mouseleave');
 
     expect(onEnter).toBeCalledWith('mouseenter');
     expect(onMove).toBeCalledWith<[OnMoveParams]>({
