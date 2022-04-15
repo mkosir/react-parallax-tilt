@@ -5,7 +5,7 @@ import React from 'react';
 import { OnMoveParams } from '../../../react-parallax-tilt/types';
 import { TiltTest } from '../../../utils/TiltTest';
 
-describe('Tilt -Reset', () => {
+describe('Tilt - Reset', () => {
   it('should not reset tilt', () => {
     const onEnter = jest.fn();
     const onMove = jest.fn();
