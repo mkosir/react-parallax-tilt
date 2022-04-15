@@ -45,25 +45,6 @@ describe("Tilt - (manual input) - Callback 'onMove' should return correct calcul
     expect(onLeave).toBeCalledWith('mouseleave');
   });
 
-  it("Process input - 'touchmove'", () => {
-    const onMove = jest.fn();
-
-    const wrapper = mount<Tilt>(<Tilt tiltMaxAngleX={60} tiltMaxAngleY={60} onMove={onMove} />);
-
-    wrapper.instance()['wrapperEl'].size = mockWrapperElSizePosition;
-    wrapper.simulate('touchmove', { touches: [{ pageX: 100, pageY: 50 }] });
-
-    expect(onMove).toBeCalledWith<[OnMoveParams]>({
-      tiltAngleX: 0,
-      tiltAngleY: -60,
-      tiltAngleXPercentage: 0,
-      tiltAngleYPercentage: -100,
-      glareAngle: 0,
-      glareOpacity: 0,
-      eventType: 'touchmove',
-    });
-  });
-
   it('Tilt disabled', () => {
     const onMove = jest.fn();
 
