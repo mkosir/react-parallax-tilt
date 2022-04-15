@@ -5,6 +5,6 @@ import { ReactParallaxTiltProps } from '../react-parallax-tilt/types';
 
 export const TiltTest = (reactParallaxTiltProps: ReactParallaxTiltProps) => (
   <Tilt {...reactParallaxTiltProps}>
-    <div style={{ height: '200px', backgroundColor: 'darkgreen' }}>test</div>
+    <div style={{ height: '300px', backgroundColor: 'darkgreen' }}>test</div>
   </Tilt>
 );
