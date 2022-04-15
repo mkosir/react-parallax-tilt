@@ -32,6 +32,5 @@ describe('sss', () => {
       glareOpacity: NaN,
       eventType: 'mousemove',
     });
-    expect(onLeave).toBeCalledWith('mouseleave');
   });
 });
