@@ -11,24 +11,10 @@ describe('Tilt -Reset', () => {
     const onMove = jest.fn();
     const onLeave = jest.fn();
 
-    render(
-      <TiltTest
-        // tiltAngleXManual={60}
-        // tiltAngleYManual={45}
-        onEnter={onEnter}
-        onMove={onMove}
-        onLeave={onLeave}
-        reset={false}
-      />,
-    );
+    render(<TiltTest onEnter={onEnter} onMove={onMove} onLeave={onLeave} reset={false} />);
 
     userEvent.hover(screen.getByText('test'));
     userEvent.unhover(screen.getByText('test'));
-
-    // wrapper.instance()['wrapperEl'].size = mockWrapperElSizePosition;
-    // wrapper.simulate('mouseenter');
-    // wrapper.simulate('mousemove', { pageX: 100, pageY: 50 });
-    // wrapper.simulate('mouseleave');
 
     expect(onEnter).toBeCalledWith('mouseenter');
     expect(onMove).toBeCalledWith<[OnMoveParams]>({
