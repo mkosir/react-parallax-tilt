@@ -24,7 +24,6 @@
     "commit": "git-cz",
     "test": "jest --verbose --watch",
     "test:coverage": "jest --coverage --verbose",
-    "test:coverage:watch": "jest --coverage --verbose --watch",
     "storybook": "start-storybook -p 9009",
     "storybook:build": "build-storybook",
     "semantic-release": "semantic-release",
