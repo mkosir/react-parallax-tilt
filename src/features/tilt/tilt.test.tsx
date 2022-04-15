@@ -19,24 +19,6 @@ describe("Tilt - (manual input) - Callback 'onMove' should return correct calcul
     };
   });
 
-  it('Tilt', () => {
-    const onMove = jest.fn();
-
-    const wrapper = mount<Tilt>(
-      <Tilt tiltMaxAngleX={60} tiltMaxAngleY={60} tiltAngleXManual={60} tiltAngleYManual={45} onMove={onMove} />,
-    );
-    wrapper.simulate('mousemove');
-    expect(onMove).toBeCalledWith<[OnMoveParams]>({
-      tiltAngleX: 60,
-      tiltAngleY: 45,
-      tiltAngleXPercentage: 100,
-      tiltAngleYPercentage: 75,
-      glareAngle: 0,
-      glareOpacity: 0,
-      eventType: 'mousemove',
-    });
-  });
-
   it('Tilt - reverse', () => {
     const onMove = jest.fn();
 
@@ -89,52 +71,6 @@ describe("Tilt - (manual input) - Callback 'onMove' should return correct calcul
 
     wrapper.instance().componentDidUpdate();
     wrapper.instance().componentWillUnmount();
-  });
-
-  it('Tilt&Glare', () => {
-    const onMove = jest.fn();
-
-    const wrapper = mount<Tilt>(
-      <Tilt
-        tiltMaxAngleX={60}
-        tiltMaxAngleY={60}
-        tiltAngleXManual={60}
-        glareEnable={true}
-        glareMaxOpacity={1}
-        glarePosition="bottom"
-        onMove={onMove}
-      />,
-    );
-
-    wrapper.simulate('mousemove');
-
-    expect(onMove).toBeCalledWith<[OnMoveParams]>({
-      tiltAngleX: 60,
-      tiltAngleY: 0,
-      tiltAngleXPercentage: 100,
-      tiltAngleYPercentage: 0,
-      glareAngle: 180,
-      glareOpacity: 1,
-      eventType: 'mousemove',
-    });
-  });
-
-  it('Tilt - only Y manual angle input', () => {
-    const onMove = jest.fn();
-
-    const wrapper = mount<Tilt>(<Tilt tiltMaxAngleX={60} tiltMaxAngleY={60} tiltAngleYManual={45} onMove={onMove} />);
-
-    wrapper.simulate('mousemove');
-
-    expect(onMove).toBeCalledWith<[OnMoveParams]>({
-      tiltAngleX: 0,
-      tiltAngleY: 45,
-      tiltAngleXPercentage: 0,
-      tiltAngleYPercentage: 75,
-      glareAngle: 0,
-      glareOpacity: 0,
-      eventType: 'mousemove',
-    });
   });
 
   it('Tilt events', () => {
