@@ -45,8 +45,6 @@
     "@testing-library/react": "^12.1.0",
     "@testing-library/react-hooks": "7.0.2",
     "@testing-library/user-event": "^13.2.1",
-    "@types/enzyme": "^3.10.12",
-    "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/eslint": "^8.4.1",
     "@types/jest": "^27.4.1",
     "@types/react": "^18.0.4",
@@ -102,7 +100,7 @@
   "bugs": {
     "url": "https://github.com/mkosir/react-parallax-tilt/issues"
   },
-  "homepage": "https://github.com/mkosir/react-parallax-tilt#readme",
+  "homepage": "https://mkosir.github.io/react-parallax-tilt",
   "keywords": [
     "react",
     "react-component",
