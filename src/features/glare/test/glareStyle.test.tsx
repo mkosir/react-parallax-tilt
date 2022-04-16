@@ -9,7 +9,7 @@ describe('Glare - Style', () => {
 
     const onMove = jest.fn();
 
-    const { container } = render(<TiltTest onMove={onMove} glareEnable={true} />);
+    const { container } = render(<TiltTest onMove={onMove} glareEnable={true} tiltEnable={false} />);
 
     const positionStart = [{ pageX: 50, pageY: 50 }];
     const positionEnd = [{ pageX: 100, pageY: 100 }];
