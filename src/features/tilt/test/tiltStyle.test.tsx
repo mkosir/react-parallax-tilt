@@ -10,20 +10,18 @@ describe('Tilt - Style', () => {
 
     const onMove = jest.fn();
 
-    render(<TiltTest onMove={onMove} glareEnable={true} />);
+    const { container } = render(<TiltTest onMove={onMove} glareEnable={true} />);
 
-    userEvent.hover(screen.getByText('test'));
+    const tiltElement = screen.getByText('test');
+
+    userEvent.hover(tiltElement);
+
     jest.runAllTimers();
 
-    // TODO check style
-    // expect(onMove).toHaveBeenLastCalledWith<[OnMoveParams]>({
-    //   tiltAngleX: 0,
-    //   tiltAngleY: -0,
-    //   tiltAngleXPercentage: 0,
-    //   tiltAngleYPercentage: -0,
-    //   glareAngle: 0,
-    //   glareOpacity: 0,
-    //   eventType: 'autoreset',
-    // });
+    expect(container.firstChild).toHaveStyle({
+      'will-change': 'transform',
+      transition: 'all 400ms cubic-bezier(.03,.98,.52,.99)',
+      transform: 'perspective(1000px) rotateX(NaNdeg) rotateY(NaNdeg) scale3d(1,1,1)',
+    });
   });
 });
