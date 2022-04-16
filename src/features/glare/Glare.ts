@@ -1,7 +1,7 @@
 import { CSSProperties } from 'react';
 
+import { constrainToRange } from '../../utils/helperFns';
 import { ElementSizePosition, ClientPosition, IStyle } from '../../utils/types';
-import { constrainToRange } from '../../utils/utils';
 
 import { GlareProps, GlareSize } from './types';
 
