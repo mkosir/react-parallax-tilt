@@ -1,4 +1,4 @@
-/** @type {import('@types/eslint').Linter.BaseConfig} */
+/** @type {import('@types/eslint').Linter.Config} */
 const eslintConfig = {
   parser: '@typescript-eslint/parser',
 
