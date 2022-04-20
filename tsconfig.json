@@ -24,8 +24,8 @@
     "skipLibCheck": true,
     "target": "ES6"
   },
-  "include": ["src", "@types"],
-  "exclude": ["node_modules", "dist"],
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*.test.ts", "src/**/*.test.tsx", "src/**/TiltTest.tsx"],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
