@@ -34,7 +34,7 @@ const rollupConfig = defineConfig({
       declaration: true,
       declarationDir: 'types',
     }),
-    sizeSnapshot(),
+    sizeSnapshot({ matchSnapshot: true }),
     terser({
       output: { comments: false },
       compress: {
