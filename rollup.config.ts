@@ -40,7 +40,6 @@ const rollupConfig = defineConfig({
       compress: {
         pure_getters: true,
       },
-      ecma: 5,
       // Compress and/or mangle variables in top level scope.
       toplevel: true,
     }),
