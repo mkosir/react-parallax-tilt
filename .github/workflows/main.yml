@@ -31,7 +31,7 @@ jobs:
         run: npm run build
 
       - name: Test 🚨
-        run: npm run test:coverage
+        run: npm run test-coverage
 
       - name: Upload coverage to Codecov
         if: always()
@@ -65,7 +65,7 @@ jobs:
       - name: Build 🏗️
         run: |
           npm run generate-demos
-          npm run storybook:build
+          npm run storybook-build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.8
