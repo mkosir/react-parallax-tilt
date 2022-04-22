@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Joystick } from 'react-joystick-component';
+import { IJoystickUpdateEvent } from 'react-joystick-component/build/lib/Joystick';
 
 import Tilt from '../../src';
 import './TiltManualInput.demotab.scss';
@@ -7,8 +8,8 @@ import './TiltManualInput.demotab.scss';
 const TiltManualInput = () => {
   const [[manualTiltAngleX, manualTiltAngleY], setManualTiltAngle] = useState([0, 0]);
 
-  const onMove = (stick) => {
-    setManualTiltAngle([stick.y, stick.x]);
+  const onMove = (stick: IJoystickUpdateEvent) => {
+    setManualTiltAngle([stick.y ?? 0, stick.x ?? 0]);
   };
 
   const onStop = () => {

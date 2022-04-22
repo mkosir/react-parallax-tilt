@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 
 import Tilt from '../../src';
+import { OnMoveParams } from '../../src/react-parallax-tilt/types';
 import './EventsAll.demotab.scss';
 
 class EventsAll extends PureComponent {
@@ -25,7 +26,7 @@ class EventsAll extends PureComponent {
     glareAngle,
     glareOpacity,
     eventType,
-  }) => {
+  }: OnMoveParams) => {
     this.setState({
       tiltAngleX,
       tiltAngleY,
@@ -44,7 +45,7 @@ class EventsAll extends PureComponent {
     });
   };
 
-  onEnter = (eventType) => {
+  onEnter = (eventType: string) => {
     if (!this.state.trackOnEnter) {
       return;
     }
@@ -53,7 +54,7 @@ class EventsAll extends PureComponent {
     });
   };
 
-  onLeave = (eventType) => {
+  onLeave = (eventType: string) => {
     if (!this.state.trackOnLeave) {
       return;
     }
@@ -62,8 +63,8 @@ class EventsAll extends PureComponent {
     });
   };
 
-  toggleCheck = (e) => {
-    const { name, checked } = e.target;
+  toggleCheck = (ev: any) => {
+    const { name, checked } = ev.target;
     this.setState({
       eventType: null,
       [name]: checked,
