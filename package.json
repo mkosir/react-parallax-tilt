@@ -27,8 +27,7 @@
     "storybook": "TS_NODE_PROJECT=tsconfig.dev.json start-storybook -p 9009",
     "storybook:build": "build-storybook",
     "semantic-release": "semantic-release",
-    "generate-demos": "npx react-demo-tab-cli generate --prefix=_ && npm run format-fix && npm run lint-fix",
-    "validate": "npm run lint && npm run build && npm run test:coverage"
+    "generate-demos": "npx react-demo-tab-cli generate --prefix=_ && npm run format-fix && npm run lint-fix"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
