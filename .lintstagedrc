@@ -4,6 +4,6 @@
   ],
   "*.{js,jsx,ts,tsx}": [
     "eslint --max-warnings 0",
-    "tsc-files --noEmit"
+    "tsc-files --noEmit -p tsconfig.dev.json"
   ]
 }
