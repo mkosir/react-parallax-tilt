@@ -11,6 +11,7 @@ const eslintConfig = {
     'plugin:no-array-reduce/recommended',
     'plugin:testing-library/react',
     'plugin:jest-dom/recommended',
+    'plugin:storybook/recommended',
   ],
 
   plugins: ['@typescript-eslint', 'testing-library', 'jest-dom', 'jest', 'import'],
