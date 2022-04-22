@@ -218,7 +218,7 @@ Please take a moment to review guidelines [PR](.github/pull_request_template.md)
 [downloads-badge]: https://img.shields.io/npm/dm/react-parallax-tilt.svg?color=blue
 [build-badge]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/main.yml/badge.svg
 [build-url]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/main.yml
-[coverage-badge]: https://codecov.io/gh/mkosir/react-parallax-tilt/branch/master/graph/badge.svg
+[coverage-badge]: https://codecov.io/gh/mkosir/react-parallax-tilt/branch/main/graph/badge.svg
 [coverage-url]: https://codecov.io/gh/mkosir/react-parallax-tilt
 [semantic-badge]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-url]: https://github.com/semantic-release/semantic-release
