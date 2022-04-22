@@ -30,7 +30,7 @@ const rollupConfig = defineConfig({
   plugins: [
     commonjs(),
     typescript({
-      tsconfig: './tsconfig.json',
+      tsconfig: './tsconfig.prod.json',
       declaration: true,
       declarationDir: 'types',
     }),
