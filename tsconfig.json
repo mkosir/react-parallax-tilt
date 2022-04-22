@@ -23,12 +23,5 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
     "target": "ES6"
-  },
-  "include": ["src/**/*"],
-  "exclude": ["src/**/*.test.ts", "src/**/*.test.tsx", "src/**/TiltTest.tsx"],
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS"
-    }
   }
 }
