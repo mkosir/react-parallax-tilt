@@ -222,7 +222,7 @@ Please take a moment to review guidelines [PR](.github/pull_request_template.md)
 [coverage-url]: https://codecov.io/gh/mkosir/react-parallax-tilt
 [semantic-badge]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-url]: https://github.com/semantic-release/semantic-release
-[typescript-badge]: https://badges.frapsoft.com/typescript/code/typescript.svg?v=101
-[typescript-url]: https://github.com/microsoft/TypeScript
 [prettier-badge]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
 [prettier-url]: https://github.com/prettier/prettier
+[typescript-badge]: https://badges.frapsoft.com/typescript/code/typescript.svg?v=101
+[typescript-url]: https://github.com/microsoft/TypeScript
