@@ -16,10 +16,13 @@ export type OnMoveParams = {
 
 export type OnMove = (onMoveParams: OnMoveParams) => void;
 
-type HtmlDivTilt = Pick<React.HTMLAttributes<HTMLDivElement>, 'className' | 'style' | 'children'>;
+type HtmlDivTilt = Pick<React.HTMLAttributes<HTMLDivElement>, 'className' | 'style'>;
 
 export interface ReactParallaxTiltProps extends TiltProps, GlareProps, HtmlDivTilt {
-  // children: React.ReactNode;
+  /**
+   * Tilt children component
+   */
+  children?: React.ReactNode;
   /**
    * Scale of the component (1.5 = 150%, 2 = 200%, etc.).
    */
