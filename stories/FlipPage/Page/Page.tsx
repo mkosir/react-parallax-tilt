@@ -3,7 +3,14 @@ import React from 'react';
 import './Page.scss';
 import sampleImg from './lorem-picsum.png';
 
-const Page = ({ flipVertically, flipHorizontally, toggleFlipVertically, toggleFlipHorizontally }) => (
+type PageProps = {
+  flipVertically: boolean;
+  flipHorizontally: boolean;
+  toggleFlipVertically: (isEnabled: boolean) => void;
+  toggleFlipHorizontally: (isEnabled: boolean) => void;
+};
+
+const Page = ({ flipVertically, flipHorizontally, toggleFlipVertically, toggleFlipHorizontally }: PageProps) => (
   <div className="page">
     <ul>
       <li>Home</li>
