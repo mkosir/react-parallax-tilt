@@ -63,9 +63,7 @@ jobs:
         run: npm ci
 
       - name: Build 🏗️
-        run: |
-          npm run generate-demos
-          npm run storybook-build
+        run: npm run storybook-build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.3.2
