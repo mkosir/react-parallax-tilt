@@ -51,6 +51,15 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+/**
+ * Prism: Lightweight, robust, elegant syntax highlighting
+ *
+ * @license MIT <https://opensource.org/licenses/MIT>
+ * @author Lea Verou <https://lea.verou.me>
+ * @namespace
+ * @public
+ */
+
 //! stable.js 0.1.8, https://github.com/Two-Screen/stable
 
 //! © 2018 Angry Bytes and contributors. MIT licensed.
