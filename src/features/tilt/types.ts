@@ -24,9 +24,9 @@ export type TiltProps = {
    */
   tiltMaxAngleY?: number;
   /**
-   * Which axis should be enabled. If null both are enabled.
+   * Which axis should be enabled.
    */
-  tiltAxis?: Axis | null;
+  tiltAxis?: Axis;
   /**
    * Manual tilt rotation (degrees) on x axis.
    */

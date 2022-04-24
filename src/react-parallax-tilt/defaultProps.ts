@@ -19,7 +19,7 @@ const defaultTiltProps: TiltProps = {
   tiltAngleYInitial: 0,
   tiltMaxAngleX: 20,
   tiltMaxAngleY: 20,
-  tiltAxis: null,
+  tiltAxis: undefined,
   tiltAngleXManual: null,
   tiltAngleYManual: null,
 };
