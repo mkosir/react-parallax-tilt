@@ -82,8 +82,8 @@ Max tilt rotation (degrees) on x axis (range: `0°-90°`).
 **tiltMaxAngleY**: _number_ ▶︎ `20`  
 Max tilt rotation (degrees) on y axis (range: `0°-90°`).
 
-**tiltAxis**: _'x' | 'y' | null_ ▶︎ `null`  
-Which axis should be enabled. If null both are enabled.
+**tiltAxis**: _'x' | 'y'_ ▶︎ `undefined`  
+Enable tilt on single axis.
 
 **tiltAngleXManual**: _number_ | null} ▶︎ `null`  
 Manual tilt rotation (degrees) on x axis.
