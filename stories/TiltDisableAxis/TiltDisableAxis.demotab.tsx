@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
 import Tilt from '../../src';
+import { Axis } from '../../src/features/tilt/types';
 import './TiltDisableAxis.demotab.scss';
 
 const TiltDisableAxis = () => {
-  const [axisEnabled, toggleAxis] = useState('x');
+  const [axisEnabled, toggleAxis] = useState<Axis>('x');
 
   return (
     <Tilt tiltAxis={axisEnabled}>
@@ -16,7 +17,7 @@ const TiltDisableAxis = () => {
         <div className="form">
           <label>
             <input
-              onChange={(ev) => toggleAxis(ev.target.value)}
+              onChange={(ev) => toggleAxis(ev.target.value as Axis)}
               value={'x'}
               checked={axisEnabled === 'x'}
               type="radio"
@@ -25,7 +26,7 @@ const TiltDisableAxis = () => {
           </label>
           <label>
             <input
-              onChange={(ev) => toggleAxis(ev.target.value)}
+              onChange={(ev) => toggleAxis(ev.target.value as Axis)}
               value={'y'}
               checked={axisEnabled === 'y'}
               type="radio"
