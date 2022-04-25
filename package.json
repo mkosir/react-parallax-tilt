@@ -14,7 +14,6 @@
     "prepare": "husky install",
     "prebuild": "rimraf dist",
     "build": "rollup -c",
-    "build-watch": "rollup -c -w",
     "lint": "eslint --max-warnings 0 . && npm run tsc",
     "lint-fix": "eslint --fix .",
     "lint-staged-husky": "lint-staged",
