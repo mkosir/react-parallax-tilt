@@ -47,8 +47,9 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
   }
 
   public componentDidUpdate() {
-    const eventType = new CustomEvent<CustomEventType>('propChanged' as CustomEventType);
+    const eventType = new CustomEvent<CustomEventType>('propChange' as CustomEventType);
     this.mainLoop(eventType);
+    this.emitOnMove(eventType);
   }
 
   private addEventListeners() {
@@ -65,6 +66,7 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
       window.addEventListener('touchend', this.onLeave);
     }
 
+    /* istanbul ignore next */
     if (gyroscope) {
       this.addDeviceOrientationEventListener();
     }
@@ -264,7 +266,7 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
 
     const isAngleSetToDefaultAlready = eventType !== 'autoreset';
     const isAngleRetrievedFromGyroscope = eventType !== 'deviceorientation';
-    const isPropChanged = eventType !== 'propChanged';
+    const isPropChanged = eventType !== 'propChange';
     const isUpdateCalculationNeeded = isAngleSetToDefaultAlready && isAngleRetrievedFromGyroscope && isPropChanged;
     if (isUpdateCalculationNeeded) {
       this.updateClientInput();
