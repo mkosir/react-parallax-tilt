@@ -71,6 +71,7 @@
     "react": "^18.0.0",
     "react-demo-tab": "^1.0.1",
     "react-dom": "^18.0.0",
+    "react-joystick-component": "^4.0.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.70.2",
     "rollup-plugin-size-snapshot": "^0.12.0",
