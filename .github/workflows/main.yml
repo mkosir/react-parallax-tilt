@@ -2,6 +2,9 @@ name: CI
 
 on: push
 
+env:
+  NODE_ENV: 'production'
+
 jobs:
   validate:
     runs-on: ubuntu-latest
