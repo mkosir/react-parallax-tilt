@@ -20,7 +20,7 @@
     "tsc": "tsc --noEmit -p tsconfig.dev.json",
     "format-lint": "prettier --config .prettierrc -l --ignore-unknown .",
     "format-fix": "prettier --config .prettierrc --write --ignore-unknown .",
-    "commit": "git-cz",
+    "commit": "git-czz",
     "test": "jest --verbose --watch",
     "test-coverage": "jest --coverage --verbose",
     "storybook": "TS_NODE_PROJECT=tsconfig.dev.json start-storybook -p 9009",
