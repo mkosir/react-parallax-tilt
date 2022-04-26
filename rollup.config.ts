@@ -8,19 +8,21 @@ import visualizer from 'rollup-plugin-visualizer';
 
 import packageJson from './package.json';
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 const rollupConfig = defineConfig({
   input: 'src/index.ts',
   output: [
     {
       file: packageJson.module,
       format: 'esm',
-      sourcemap: true,
+      sourcemap: !isProduction,
     },
     {
       file: packageJson.main,
       name: packageJson.name,
       format: 'umd',
-      sourcemap: true,
+      sourcemap: !isProduction,
       globals: {
         react: 'React',
         'react-dom': 'ReactDOM',
@@ -28,13 +30,13 @@ const rollupConfig = defineConfig({
     },
   ],
   plugins: [
+    sizeSnapshot({ matchSnapshot: Boolean(process.env.MATCH_SNAPSHOT) }),
     commonjs(),
     typescript({
       tsconfig: './tsconfig.prod.json',
       declaration: true,
       declarationDir: 'types',
     }),
-    sizeSnapshot({ matchSnapshot: Boolean(process.env.MATCH_SNAPSHOT) }),
     terser({
       output: { comments: false },
       compress: {
