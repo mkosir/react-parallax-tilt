@@ -6,7 +6,7 @@ import Demo from './Gyroscope.demotab';
 const code = `import React from 'react';
 
 import Tilt from '../../src';
-import DefaultComponent from '../_DefaultComponent/DefaultComponent';
+import { DefaultComponent } from '../_DefaultComponent/DefaultComponent';
 
 const Gyroscope = () => (
   <Tilt gyroscope={true} tiltMaxAngleX={45} tiltMaxAngleY={45}>

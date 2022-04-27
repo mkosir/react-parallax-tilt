@@ -31,6 +31,7 @@ const meta: Meta = {
   title: 'React Parallax Tilt',
 };
 
+// eslint-disable-next-line
 export default meta;
 
 export const Default = () => <_Default />;

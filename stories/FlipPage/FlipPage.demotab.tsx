@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Tilt from '../../src';
 
 import './FlipPage.demotab.scss';
-import Page from './Page/Page';
+import { Page } from './Page/Page';
 
 const FlipPage = () => {
   const [[flipVertically, flipHorizontally], toggleFlip] = useState([false, false]);

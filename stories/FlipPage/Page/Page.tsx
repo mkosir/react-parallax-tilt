@@ -10,7 +10,7 @@ type PageProps = {
   toggleFlipHorizontally: (isEnabled: boolean) => void;
 };
 
-const Page = ({ flipVertically, flipHorizontally, toggleFlipVertically, toggleFlipHorizontally }: PageProps) => (
+export const Page = ({ flipVertically, flipHorizontally, toggleFlipVertically, toggleFlipHorizontally }: PageProps) => (
   <div className="page">
     <ul>
       <li>Home</li>
@@ -91,5 +91,3 @@ const Page = ({ flipVertically, flipHorizontally, toggleFlipVertically, toggleFl
     <div className="footer">&copy; {new Date().getFullYear()} Footer.com</div>
   </div>
 );
-
-export default Page;
