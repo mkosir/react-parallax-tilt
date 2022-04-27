@@ -51,10 +51,8 @@ const style = `@import '../ReactParallaxTilt.scss';
 }
 `;
 
-const _ParallaxEffect = () => (
+export const _ParallaxEffect = () => (
   <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
   </DemoTab>
 );
-
-export default _ParallaxEffect;

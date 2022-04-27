@@ -71,10 +71,8 @@ const style = `@import '../ReactParallaxTilt.scss';
 }
 `;
 
-const _TiltScale = () => (
+export const _TiltScale = () => (
   <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
   </DemoTab>
 );
-
-export default _TiltScale;

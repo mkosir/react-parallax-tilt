@@ -34,10 +34,8 @@ const style = `.tilt-img {
 }
 `;
 
-const _TiltImg = () => (
+export const _TiltImg = () => (
   <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
   </DemoTab>
 );
-
-export default _TiltImg;

@@ -17,10 +17,8 @@ const Gyroscope = () => (
 export default Gyroscope;
 `;
 
-const _Gyroscope = () => (
+export const _Gyroscope = () => (
   <DemoTab code={code} codeExt="tsx">
     <Demo />
   </DemoTab>
 );
-
-export default _Gyroscope;

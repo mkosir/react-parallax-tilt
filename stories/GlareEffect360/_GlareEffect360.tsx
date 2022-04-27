@@ -17,10 +17,8 @@ const GlareEffect360 = () => (
 export default GlareEffect360;
 `;
 
-const _GlareEffect360 = () => (
+export const _GlareEffect360 = () => (
   <DemoTab code={code} codeExt="tsx">
     <Demo />
   </DemoTab>
 );
-
-export default _GlareEffect360;

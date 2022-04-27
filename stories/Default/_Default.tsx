@@ -17,10 +17,8 @@ const Default = () => (
 export default Default;
 `;
 
-const _Default = () => (
+export const _Default = () => (
   <DemoTab code={code} codeExt="tsx">
     <Demo />
   </DemoTab>
 );
-
-export default _Default;

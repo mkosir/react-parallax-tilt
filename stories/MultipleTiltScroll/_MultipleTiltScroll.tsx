@@ -34,10 +34,8 @@ const style = `.multiple-tilt-scroll > * {
 }
 `;
 
-const _MultipleTiltScroll = () => (
+export const _MultipleTiltScroll = () => (
   <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
   </DemoTab>
 );
-
-export default _MultipleTiltScroll;

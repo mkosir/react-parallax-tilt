@@ -6,6 +6,7 @@ import Demo from './EventTiltAngle.demotab';
 const code = `import React, { PureComponent } from 'react';
 
 import Tilt from '../../src';
+import { OnMoveParams } from '../../src/react-parallax-tilt/types';
 import DefaultComponent from '../_DefaultComponent/DefaultComponent';
 import './EventTiltAngle.demotab.scss';
 
@@ -15,7 +16,7 @@ class EventTiltAngle extends PureComponent {
     tiltAngleY: 0,
   };
 
-  onMove = ({ tiltAngleX, tiltAngleY }) => {
+  onMove = ({ tiltAngleX, tiltAngleY }: OnMoveParams) => {
     this.setState({ tiltAngleX, tiltAngleY });
   };
 
@@ -74,10 +75,8 @@ const style = `@import '../ReactParallaxTilt.scss';
 }
 `;
 
-const _EventTiltAngle = () => (
+export const _EventTiltAngle = () => (
   <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
   </DemoTab>
 );
-
-export default _EventTiltAngle;

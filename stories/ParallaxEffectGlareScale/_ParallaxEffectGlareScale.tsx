@@ -57,10 +57,8 @@ const style = `@import '../ReactParallaxTilt.scss';
 }
 `;
 
-const _ParallaxEffectGlareScale = () => (
+export const _ParallaxEffectGlareScale = () => (
   <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
   </DemoTab>
 );
-
-export default _ParallaxEffectGlareScale;

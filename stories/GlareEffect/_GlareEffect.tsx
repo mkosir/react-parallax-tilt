@@ -17,10 +17,8 @@ const GlareEffect = () => (
 export default GlareEffect;
 `;
 
-const _GlareEffect = () => (
+export const _GlareEffect = () => (
   <DemoTab code={code} codeExt="tsx">
     <Demo />
   </DemoTab>
 );
-
-export default _GlareEffect;

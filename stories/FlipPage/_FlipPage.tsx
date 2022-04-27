@@ -44,10 +44,8 @@ const style = `body {
 }
 `;
 
-const _FlipPage = () => (
+export const _FlipPage = () => (
   <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
   </DemoTab>
 );
-
-export default _FlipPage;

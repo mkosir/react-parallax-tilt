@@ -42,10 +42,8 @@ const style = `.parallax-effect-img {
 }
 `;
 
-const _ParallaxEffectImg = () => (
+export const _ParallaxEffectImg = () => (
   <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
   </DemoTab>
 );
-
-export default _ParallaxEffectImg;

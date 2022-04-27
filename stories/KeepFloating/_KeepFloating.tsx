@@ -17,10 +17,8 @@ const KeepFloating = () => (
 export default KeepFloating;
 `;
 
-const _KeepFloating = () => (
+export const _KeepFloating = () => (
   <DemoTab code={code} codeExt="tsx">
     <Demo />
   </DemoTab>
 );
-
-export default _KeepFloating;

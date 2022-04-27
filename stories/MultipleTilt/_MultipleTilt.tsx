@@ -48,10 +48,8 @@ const style = `.multiple-tilt {
 }
 `;
 
-const _MultipleTilt = () => (
+export const _MultipleTilt = () => (
   <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
   </DemoTab>
 );
-
-export default _MultipleTilt;

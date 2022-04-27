@@ -76,10 +76,8 @@ const style = `@import '../ReactParallaxTilt.scss';
 }
 `;
 
-const _FlipVH = () => (
+export const _FlipVH = () => (
   <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
   </DemoTab>
 );
-
-export default _FlipVH;

@@ -17,10 +17,8 @@ const GlareEffectNoTilt = () => (
 export default GlareEffectNoTilt;
 `;
 
-const _GlareEffectNoTilt = () => (
+export const _GlareEffectNoTilt = () => (
   <DemoTab code={code} codeExt="tsx">
     <Demo />
   </DemoTab>
 );
-
-export default _GlareEffectNoTilt;

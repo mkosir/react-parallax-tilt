@@ -17,10 +17,8 @@ const ReverseTilt = () => (
 export default ReverseTilt;
 `;
 
-const _ReverseTilt = () => (
+export const _ReverseTilt = () => (
   <DemoTab code={code} codeExt="tsx">
     <Demo />
   </DemoTab>
 );
-
-export default _ReverseTilt;

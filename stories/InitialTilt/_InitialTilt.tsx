@@ -17,10 +17,8 @@ const Default = () => (
 export default Default;
 `;
 
-const _InitialTilt = () => (
+export const _InitialTilt = () => (
   <DemoTab code={code} codeExt="tsx">
     <Demo />
   </DemoTab>
 );
-
-export default _InitialTilt;

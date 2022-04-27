@@ -59,10 +59,8 @@ const style = `@import '../ReactParallaxTilt.scss';
 }
 `;
 
-const _TrackOnWindow = () => (
+export const _TrackOnWindow = () => (
   <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
   </DemoTab>
 );
-
-export default _TrackOnWindow;

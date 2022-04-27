@@ -68,10 +68,8 @@ const style = `@import '../ReactParallaxTilt.scss';
 }
 `;
 
-const _ScaleNoTilt = () => (
+export const _ScaleNoTilt = () => (
   <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
     <Demo />
   </DemoTab>
 );
-
-export default _ScaleNoTilt;
