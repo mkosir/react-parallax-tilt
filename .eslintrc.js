@@ -39,7 +39,7 @@ const eslintConfig = {
 
   overrides: [
     {
-      files: ['stories/**/*'],
+      files: ['stories/**/*.demotab.tsx'],
       rules: {
         'import/no-default-export': 'off',
       },
