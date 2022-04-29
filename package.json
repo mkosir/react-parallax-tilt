@@ -45,7 +45,7 @@
     "@types/eslint": "^8.4.1",
     "@types/jest": "^27.4.1",
     "@types/react": "^18.0.8",
-    "@types/react-dom": "^18.0.2",
+    "@types/react-dom": "^18.0.3",
     "@typescript-eslint/eslint-plugin": "^5.21.0",
     "@typescript-eslint/parser": "^5.21.0",
     "codecov": "^3.8.3",
@@ -82,7 +82,7 @@
     "ts-jest": "^27.1.4",
     "tsc-files": "^1.1.3",
     "tsconfig-paths-webpack-plugin": "^3.5.2",
-    "typescript": "^4.6.3"
+    "typescript": "^4.6.4"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0",
