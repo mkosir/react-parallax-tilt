@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import Tilt from '../../src';
-import './ScaleNoTilt.demotab.scss';
+import './ScaleNoTilt.demozap.scss';
 
 const ScaleNoTilt = () => {
   const [scale, setScale] = useState(1.3);

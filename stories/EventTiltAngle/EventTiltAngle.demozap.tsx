@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 import Tilt from '../../src';
 import { OnMoveParams } from '../../src/react-parallax-tilt/types';
 import { DefaultComponent } from '../_DefaultComponent/DefaultComponent';
-import './EventTiltAngle.demotab.scss';
+import './EventTiltAngle.demozap.scss';
 
 class EventTiltAngle extends PureComponent {
   state = {

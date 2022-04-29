@@ -1,7 +1,7 @@
 import React from 'react';
 import { DemoTab } from 'react-demo-tab';
 
-import Demo from './ReverseTilt.demotab';
+import Demo from './ReverseTilt.demozap';
 
 const code = `import React from 'react';
 

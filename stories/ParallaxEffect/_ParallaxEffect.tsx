@@ -1,12 +1,12 @@
 import React from 'react';
 import { DemoTab } from 'react-demo-tab';
 
-import Demo from './ParallaxEffect.demotab';
+import Demo from './ParallaxEffect.demozap';
 
 const code = `import React from 'react';
 
 import Tilt from '../../src';
-import './ParallaxEffect.demotab.scss';
+import './ParallaxEffect.demozap.scss';
 
 const ParallaxEffect = () => (
   <Tilt className="parallax-effect" perspective={500}>

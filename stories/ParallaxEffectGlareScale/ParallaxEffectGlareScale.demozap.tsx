@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Tilt from '../../src';
-import './ParallaxEffectGlareScale.demotab.scss';
+import './ParallaxEffectGlareScale.demozap.scss';
 
 const ParallaxEffectGlareScale = () => (
   <Tilt

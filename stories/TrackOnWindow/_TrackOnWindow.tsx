@@ -1,12 +1,12 @@
 import React from 'react';
 import { DemoTab } from 'react-demo-tab';
 
-import Demo from './TrackOnWindow.demotab';
+import Demo from './TrackOnWindow.demozap';
 
 const code = `import React from 'react';
 
 import Tilt from '../../src';
-import './TrackOnWindow.demotab.scss';
+import './TrackOnWindow.demozap.scss';
 
 const TrackOnWindow = () => (
   <Tilt

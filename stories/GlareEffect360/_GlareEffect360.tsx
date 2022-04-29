@@ -1,7 +1,7 @@
 import React from 'react';
 import { DemoTab } from 'react-demo-tab';
 
-import Demo from './GlareEffect360.demotab';
+import Demo from './GlareEffect360.demozap';
 
 const code = `import React from 'react';
 

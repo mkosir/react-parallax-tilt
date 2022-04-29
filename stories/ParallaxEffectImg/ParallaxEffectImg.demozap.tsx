@@ -2,7 +2,7 @@ import React from 'react';
 
 import Tilt from '../../src';
 
-import './ParallaxEffectImg.demotab.scss';
+import './ParallaxEffectImg.demozap.scss';
 import imgTree from './img/tree.png';
 
 const ParallaxEffectImg = () => (

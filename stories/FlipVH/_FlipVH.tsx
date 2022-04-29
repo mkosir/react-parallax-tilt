@@ -1,12 +1,12 @@
 import React from 'react';
 import { DemoTab } from 'react-demo-tab';
 
-import Demo from './FlipVH.demotab';
+import Demo from './FlipVH.demozap';
 
 const code = `import React, { useState } from 'react';
 
 import Tilt from '../../src';
-import './FlipVH.demotab.scss';
+import './FlipVH.demozap.scss';
 
 const FlipVH = () => {
   const [[flipVertically, flipHorizontally], toggleFlip] = useState([false, false]);

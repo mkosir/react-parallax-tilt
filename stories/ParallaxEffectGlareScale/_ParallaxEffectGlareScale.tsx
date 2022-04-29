@@ -1,12 +1,12 @@
 import React from 'react';
 import { DemoTab } from 'react-demo-tab';
 
-import Demo from './ParallaxEffectGlareScale.demotab';
+import Demo from './ParallaxEffectGlareScale.demozap';
 
 const code = `import React from 'react';
 
 import Tilt from '../../src';
-import './ParallaxEffectGlareScale.demotab.scss';
+import './ParallaxEffectGlareScale.demozap.scss';
 
 const ParallaxEffectGlareScale = () => (
   <Tilt

@@ -1,12 +1,12 @@
 import React from 'react';
 import { DemoTab } from 'react-demo-tab';
 
-import Demo from './MultipleTiltScroll.demotab';
+import Demo from './MultipleTiltScroll.demozap';
 
 const code = `import React from 'react';
 
 import Tilt from '../../src';
-import './MultipleTiltScroll.demotab.scss';
+import './MultipleTiltScroll.demozap.scss';
 import { DefaultComponent } from '../_DefaultComponent/DefaultComponent';
 
 const MultipleTiltScroll = () => (

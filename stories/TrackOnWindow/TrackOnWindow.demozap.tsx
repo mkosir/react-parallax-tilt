@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Tilt from '../../src';
-import './TrackOnWindow.demotab.scss';
+import './TrackOnWindow.demozap.scss';
 
 const TrackOnWindow = () => (
   <Tilt

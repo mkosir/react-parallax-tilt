@@ -3,7 +3,7 @@ import { Joystick } from 'react-joystick-component';
 import { IJoystickUpdateEvent } from 'react-joystick-component/build/lib/Joystick';
 
 import Tilt from '../../src';
-import './TiltManualInput.demotab.scss';
+import './TiltManualInput.demozap.scss';
 
 const TiltManualInput = () => {
   const [[manualTiltAngleX, manualTiltAngleY], setManualTiltAngle] = useState([0, 0]);

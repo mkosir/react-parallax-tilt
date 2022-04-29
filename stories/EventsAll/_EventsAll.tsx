@@ -1,13 +1,13 @@
 import React from 'react';
 import { DemoTab } from 'react-demo-tab';
 
-import Demo from './EventsAll.demotab';
+import Demo from './EventsAll.demozap';
 
 const code = `import React, { PureComponent } from 'react';
 
 import Tilt from '../../src';
 import { OnMoveParams } from '../../src/react-parallax-tilt/types';
-import './EventsAll.demotab.scss';
+import './EventsAll.demozap.scss';
 
 class EventsAll extends PureComponent {
   state = {

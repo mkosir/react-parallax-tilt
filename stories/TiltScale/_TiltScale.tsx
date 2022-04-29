@@ -1,12 +1,12 @@
 import React from 'react';
 import { DemoTab } from 'react-demo-tab';
 
-import Demo from './TiltScale.demotab';
+import Demo from './TiltScale.demozap';
 
 const code = `import React, { useState } from 'react';
 
 import Tilt from '../../src';
-import './TiltScale.demotab.scss';
+import './TiltScale.demozap.scss';
 
 const TiltScale = () => {
   const [scale, setScale] = useState(1.15);

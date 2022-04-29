@@ -1,13 +1,13 @@
 import React from 'react';
 import { DemoTab } from 'react-demo-tab';
 
-import Demo from './ParallaxEffectImg.demotab';
+import Demo from './ParallaxEffectImg.demozap';
 
 const code = `import React from 'react';
 
 import Tilt from '../../src';
 
-import './ParallaxEffectImg.demotab.scss';
+import './ParallaxEffectImg.demozap.scss';
 import imgTree from './img/tree.png';
 
 const ParallaxEffectImg = () => (

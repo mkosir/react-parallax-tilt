@@ -1,7 +1,7 @@
 import React from 'react';
 import { DemoTab } from 'react-demo-tab';
 
-import Demo from './KeepFloating.demotab';
+import Demo from './KeepFloating.demozap';
 
 const code = `import React from 'react';
 

@@ -1,13 +1,13 @@
 import React from 'react';
 import { DemoTab } from 'react-demo-tab';
 
-import Demo from './TiltImg.demotab';
+import Demo from './TiltImg.demozap';
 
 const code = `import React from 'react';
 
 import Tilt from '../../src';
 
-import './TiltImg.demotab.scss';
+import './TiltImg.demozap.scss';
 import imgNyc from './img/nyc.jpg';
 
 const TiltImg = () => (

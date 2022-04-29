@@ -1,13 +1,13 @@
 import React from 'react';
 import { DemoTab } from 'react-demo-tab';
 
-import Demo from './FlipPage.demotab';
+import Demo from './FlipPage.demozap';
 
 const code = `import React, { useState } from 'react';
 
 import Tilt from '../../src';
 
-import './FlipPage.demotab.scss';
+import './FlipPage.demozap.scss';
 import Page from './Page/Page';
 
 const FlipPage = () => {
