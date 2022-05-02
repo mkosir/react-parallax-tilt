@@ -51,6 +51,9 @@ const eslintConfig = {
   ignorePatterns: ['!.*', 'dist', 'node_modules'],
 
   settings: {
+    'import/resolver': {
+      typescript: {},
+    },
     react: {
       version: 'detect',
     },
