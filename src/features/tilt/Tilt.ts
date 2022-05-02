@@ -1,5 +1,5 @@
-import { constrainToRange } from '../../utils/helperFns';
-import { ClientPosition, IStyle } from '../../utils/types';
+import { constrainToRange } from 'utils/helperFns';
+import { ClientPosition, IStyle } from 'utils/types';
 
 import { TiltProps } from './types';
 

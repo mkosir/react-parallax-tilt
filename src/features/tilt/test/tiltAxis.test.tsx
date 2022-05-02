@@ -2,8 +2,8 @@ import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
-import { OnMoveParams } from '../../../react-parallax-tilt/types';
-import { TiltTest } from '../../../utils/TiltTest';
+import { OnMoveParams } from 'react-parallax-tilt/types';
+import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - Axis', () => {
   it('should disable y axis', () => {

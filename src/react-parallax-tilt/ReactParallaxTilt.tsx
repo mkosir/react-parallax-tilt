@@ -1,8 +1,8 @@
 import React, { PureComponent, MouseEvent, TouchEvent } from 'react';
 
-import { Glare } from '../features/glare/Glare';
-import { Tilt } from '../features/tilt/Tilt';
-import { setTransition, constrainToRange } from '../utils/helperFns';
+import { Glare } from 'features/glare/Glare';
+import { Tilt } from 'features/tilt/Tilt';
+import { setTransition, constrainToRange } from 'utils/helperFns';
 
 import { defaultProps } from './defaultProps';
 import { ReactParallaxTiltProps, SupportedEvent, EventType, CustomEventType, WrapperElement } from './types';

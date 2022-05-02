@@ -1,5 +1,5 @@
-import { GlareProps } from '../features/glare/types';
-import { TiltProps } from '../features/tilt/types';
+import { GlareProps } from 'features/glare/types';
+import { TiltProps } from 'features/tilt/types';
 
 import { ReactParallaxTiltProps } from './types';
 
