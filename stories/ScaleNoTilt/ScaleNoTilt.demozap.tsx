@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Tilt from '../../src';
+import Tilt from 'index';
 import './ScaleNoTilt.demozap.scss';
 
 const ScaleNoTilt = () => {

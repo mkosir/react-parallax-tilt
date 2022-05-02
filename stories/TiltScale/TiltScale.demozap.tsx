@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Tilt from '../../src';
+import Tilt from 'index';
 import './TiltScale.demozap.scss';
 
 const TiltScale = () => {

@@ -5,7 +5,7 @@ import Demo from './TrackOnWindow.demozap';
 
 const code = `import React from 'react';
 
-import Tilt from '../../src';
+import Tilt from 'index';
 import './TrackOnWindow.demozap.scss';
 
 const TrackOnWindow = () => (

@@ -5,7 +5,7 @@ import Demo from './ParallaxEffect.demozap';
 
 const code = `import React from 'react';
 
-import Tilt from '../../src';
+import Tilt from 'index';
 import './ParallaxEffect.demozap.scss';
 
 const ParallaxEffect = () => (

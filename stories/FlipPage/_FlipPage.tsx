@@ -5,7 +5,7 @@ import Demo from './FlipPage.demozap';
 
 const code = `import React, { useState } from 'react';
 
-import Tilt from '../../src';
+import Tilt from 'index';
 
 import './FlipPage.demozap.scss';
 import { Page } from './Page/Page';

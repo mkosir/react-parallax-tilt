@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
 
-import Tilt from '../../src';
-import { OnMoveParams } from '../../src/react-parallax-tilt/types';
+import Tilt from 'index';
+import { OnMoveParams } from 'react-parallax-tilt/types';
+
 import { DefaultComponent } from '../_DefaultComponent/DefaultComponent';
 import './EventTiltAngle.demozap.scss';
 

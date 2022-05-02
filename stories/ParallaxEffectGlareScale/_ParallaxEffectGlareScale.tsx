@@ -5,7 +5,7 @@ import Demo from './ParallaxEffectGlareScale.demozap';
 
 const code = `import React from 'react';
 
-import Tilt from '../../src';
+import Tilt from 'index';
 import './ParallaxEffectGlareScale.demozap.scss';
 
 const ParallaxEffectGlareScale = () => (

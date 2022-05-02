@@ -5,7 +5,7 @@ import Demo from './TiltImg.demozap';
 
 const code = `import React from 'react';
 
-import Tilt from '../../src';
+import Tilt from 'index';
 
 import './TiltImg.demozap.scss';
 import imgNyc from './img/nyc.jpg';

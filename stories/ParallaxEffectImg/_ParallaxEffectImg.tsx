@@ -5,7 +5,7 @@ import Demo from './ParallaxEffectImg.demozap';
 
 const code = `import React from 'react';
 
-import Tilt from '../../src';
+import Tilt from 'index';
 
 import './ParallaxEffectImg.demozap.scss';
 import imgTree from './img/tree.png';
