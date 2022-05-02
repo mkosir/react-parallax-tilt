@@ -21,6 +21,7 @@
     "stripInternal": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
+    "esModuleInterop": true,
     "baseUrl": "src",
     "target": "ES6"
   }

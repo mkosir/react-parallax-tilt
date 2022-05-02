@@ -5,7 +5,6 @@
   // Storybook
   "ts-node": {
     "compilerOptions": {
-      "esModuleInterop": true,
       "module": "CommonJS"
     }
   }
