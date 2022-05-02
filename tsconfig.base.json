@@ -3,7 +3,6 @@
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "declarationDir": "dist",
-    "esModuleInterop": true,
     "importHelpers": true,
     "jsx": "react",
     "lib": ["ESNext", "dom"],
@@ -22,6 +21,7 @@
     "stripInternal": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
+    "baseUrl": "src",
     "target": "ES6"
   }
 }

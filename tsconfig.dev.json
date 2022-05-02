@@ -1,9 +1,11 @@
 {
   "extends": "./tsconfig.base.json",
   "include": ["."],
+  "exclude": ["dist"],
   // Storybook
   "ts-node": {
     "compilerOptions": {
+      "esModuleInterop": true,
       "module": "CommonJS"
     }
   }
