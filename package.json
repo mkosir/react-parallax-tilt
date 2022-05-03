@@ -17,7 +17,7 @@
     "lint": "eslint --max-warnings 0 . && npm run tsc",
     "lint-fix": "eslint --fix .",
     "lint-staged-husky": "lint-staged",
-    "tsc": "tsc --noEmit -p tsconfig.dev.json",
+    "tsc": "tsc -p tsconfig.dev.json",
     "format-lint": "prettier --config .prettierrc --check --ignore-unknown .",
     "format-fix": "prettier --config .prettierrc --write --ignore-unknown .",
     "commit": "git-cz",
