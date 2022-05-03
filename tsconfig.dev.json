@@ -1,10 +1,6 @@
 {
   "extends": "./tsconfig.base.json",
   "include": ["."],
-  "exclude": ["dist"],
-  "compilerOptions": {
-    "noEmit": true
-  },
   // Storybook
   "ts-node": {
     "compilerOptions": {
