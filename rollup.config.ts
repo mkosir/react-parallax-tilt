@@ -34,8 +34,6 @@ const rollupConfig = defineConfig({
     commonjs(),
     typescript({
       tsconfig: './tsconfig.prod.json',
-      declaration: true,
-      declarationDir: 'types',
     }),
     terser({
       output: { comments: false },
