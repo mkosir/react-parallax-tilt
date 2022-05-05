@@ -6,6 +6,7 @@ import Demo from './GlareEffect360.demozap';
 const code = `import React from 'react';
 
 import Tilt from 'index';
+
 import { DefaultComponent } from '../_DefaultComponent/DefaultComponent';
 
 const GlareEffect360 = () => (
