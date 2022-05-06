@@ -1,0 +1,61 @@
+/** @type {import('@types/eslint').Linter.Config} */
+{
+  "parser": "@typescript-eslint/parser",
+
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:prettier/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react/recommended",
+    "plugin:no-array-reduce/recommended",
+    "plugin:testing-library/react",
+    "plugin:jest-dom/recommended",
+    "plugin:storybook/recommended"
+  ],
+
+  "plugins": ["@typescript-eslint", "testing-library", "jest-dom", "jest", "import"],
+
+  "rules": {
+    "react/prop-types": "off",
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-ts-comment": ["error", { "ts-ignore": "allow-with-description" }],
+
+    // Import
+    "import/no-default-export": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "parent", "sibling"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+  },
+
+  "overrides": [
+    {
+      "files": ["stories/**/*.demozap.*"],
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    }
+  ],
+
+  // ESlint default behaviour ignores file/folders starting with "." - https://github.com/eslint/eslint/issues/10341
+  "ignorePatterns": ["!.*", "dist", "node_modules"],
+
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    },
+    "react": {
+      "version": "detect"
+    }
+  }
+}
