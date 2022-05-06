@@ -3,7 +3,7 @@
     "noEmit": true,
     "outDir": "compiled",
     "declaration": true,
-    "declarationDir": "dist",
+    "declarationDir": "types",
     "baseUrl": "src",
     "paths": {
       ".": ["."]
