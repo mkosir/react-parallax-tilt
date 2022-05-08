@@ -1,6 +1,5 @@
-import { ReactParallaxTilt } from 'react-parallax-tilt/ReactParallaxTilt';
-// eslint-disable-next-line
-export default ReactParallaxTilt;
+// eslint-disable-next-line import/no-default-export
+export { ReactParallaxTilt as default } from 'react-parallax-tilt/ReactParallaxTilt';
 
 // Public exposed library types
 export * from 'features/glare/types.public';
