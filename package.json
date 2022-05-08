@@ -4,7 +4,7 @@
   "version": "0.0.0-development",
   "module": "./dist/index.esm.js",
   "main": "./dist/index.umd.js",
-  "types": "./types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "types",
