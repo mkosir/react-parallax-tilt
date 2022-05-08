@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 
 import Tilt from 'index';
-import { OnMoveParams } from 'react-parallax-tilt/types';
+import { OnMoveParams } from 'types';
 import './EventsAll.demozap.scss';
 
 class EventsAll extends PureComponent {
