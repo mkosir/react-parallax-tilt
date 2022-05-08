@@ -6,6 +6,8 @@
     "paths": {
       ".": ["."]
     },
+    "declaration": true,
+    "declarationDir": "types",
     "importHelpers": true,
     "jsx": "react",
     "lib": ["ESNext", "dom"],
