@@ -5,8 +5,8 @@ on: push
 jobs:
   validate:
     runs-on: ubuntu-latest
-    env:
-      MATCH_SNAPSHOT: true
+    # env:
+    #   MATCH_SNAPSHOT: true
 
     steps:
       - name: Checkout 🛎️
