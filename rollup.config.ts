@@ -17,11 +17,6 @@ const rollupConfig = defineConfig([
     input: 'src/index.ts',
     output: [
       {
-        file: packageJson.module,
-        format: 'esm',
-        sourcemap: !isProduction,
-      },
-      {
         file: packageJson.main,
         name: packageJson.name,
         format: 'umd',
@@ -30,6 +25,11 @@ const rollupConfig = defineConfig([
           react: 'React',
           'react-dom': 'ReactDOM',
         },
+      },
+      {
+        file: packageJson.module,
+        format: 'esm',
+        sourcemap: !isProduction,
       },
     ],
     plugins: [
@@ -60,7 +60,7 @@ const rollupConfig = defineConfig([
   },
   {
     input: 'src/types.d.ts',
-    output: { file: packageJson.types, format: 'esm' },
+    output: { file: packageJson.types, format: 'es' },
     plugins: [
       dts({
         compilerOptions: {
