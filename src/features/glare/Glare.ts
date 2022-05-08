@@ -3,7 +3,8 @@ import { CSSProperties } from 'react';
 import { constrainToRange } from 'utils/helperFns';
 import { ElementSizePosition, ClientPosition, IStyle } from 'utils/types';
 
-import { GlareProps, GlareSize } from './types';
+import { GlareSize } from './types';
+import { GlareProps } from './types.public';
 
 export class Glare implements IStyle {
   public glareWrapperEl: HTMLDivElement;

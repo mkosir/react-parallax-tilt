@@ -2,7 +2,7 @@ import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
-import { OnMoveParams } from 'react-parallax-tilt/types';
+import { OnMoveParams } from 'types';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - Manual Angle', () => {

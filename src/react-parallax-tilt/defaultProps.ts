@@ -1,7 +1,7 @@
-import { GlareProps } from 'features/glare/types';
-import { TiltProps } from 'features/tilt/types';
+import { GlareProps } from 'features/glare/types.public';
+import { TiltProps } from 'features/tilt/types.public';
 
-import { ReactParallaxTiltProps } from './types';
+import { ReactParallaxTiltProps } from './types.public';
 
 const defaultGlareProps: GlareProps = {
   glareEnable: false,

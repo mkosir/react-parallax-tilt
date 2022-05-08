@@ -5,7 +5,8 @@ import { Tilt } from 'features/tilt/Tilt';
 import { setTransition, constrainToRange } from 'utils/helperFns';
 
 import { defaultProps } from './defaultProps';
-import { ReactParallaxTiltProps, SupportedEvent, EventType, CustomEventType, WrapperElement } from './types';
+import { SupportedEvent, EventType, CustomEventType, WrapperElement } from './types';
+import { ReactParallaxTiltProps } from './types.public';
 
 export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
   public static defaultProps = defaultProps;

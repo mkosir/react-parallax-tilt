@@ -1,7 +1,7 @@
 import { constrainToRange } from 'utils/helperFns';
 import { ClientPosition, IStyle } from 'utils/types';
 
-import { TiltProps } from './types';
+import { TiltProps } from './types.public';
 
 const TILT_ANGLE_CONSTRAINT = 90;
 

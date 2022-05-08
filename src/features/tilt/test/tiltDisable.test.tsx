@@ -1,7 +1,7 @@
 import { screen, render, fireEvent } from '@testing-library/react';
 import React from 'react';
 
-import { OnMoveParams } from 'react-parallax-tilt/types';
+import { OnMoveParams } from 'types';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - Disable', () => {
