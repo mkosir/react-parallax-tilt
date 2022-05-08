@@ -1,5 +1,5 @@
-import { GlareProps } from 'features/glare/types.public';
-import { TiltProps } from 'features/tilt/types.public';
+import { GlareProps } from '../features/glare/types.public';
+import { TiltProps } from '../features/tilt/types.public';
 
 export type OnMoveParams = {
   tiltAngleX: number;
