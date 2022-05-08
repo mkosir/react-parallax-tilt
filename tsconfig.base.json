@@ -2,8 +2,6 @@
   "compilerOptions": {
     "noEmit": true,
     "outDir": "compiled",
-    "declaration": true,
-    "declarationDir": "types",
     "baseUrl": "src",
     "paths": {
       ".": ["."]
