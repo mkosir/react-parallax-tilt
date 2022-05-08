@@ -1,14 +1,14 @@
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import { defineConfig } from 'rollup';
-import dts from 'rollup-plugin-dts';
+// import dts from 'rollup-plugin-dts';
 //@ts-ignore types package is broken - https://www.npmjs.com/package/@types/rollup-plugin-size-snapshot
 import { sizeSnapshot } from 'rollup-plugin-size-snapshot';
 import { terser } from 'rollup-plugin-terser';
 import visualizer from 'rollup-plugin-visualizer';
 
 import packageJson from './package.json';
-import tsConfig from './tsconfig.base.json';
+// import tsConfig from './tsconfig.base.json';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -58,18 +58,18 @@ const rollupConfig = defineConfig([
       ...Object.keys(packageJson.peerDependencies || {}),
     ],
   },
-  {
-    input: 'src/types.d.ts',
-    output: { file: packageJson.types, format: 'es' },
-    plugins: [
-      dts({
-        compilerOptions: {
-          baseUrl: tsConfig.compilerOptions.baseUrl,
-          paths: tsConfig.compilerOptions.paths,
-        },
-      }),
-    ],
-  },
+  // {
+  //   input: 'src/types.d.ts',
+  //   output: { file: packageJson.types, format: 'esm' },
+  //   plugins: [
+  //     dts({
+  //       compilerOptions: {
+  //         baseUrl: tsConfig.compilerOptions.baseUrl,
+  //         paths: tsConfig.compilerOptions.paths,
+  //       },
+  //     }),
+  //   ],
+  // },
 ]);
 
 // eslint-disable-next-line
