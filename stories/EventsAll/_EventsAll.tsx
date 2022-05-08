@@ -5,8 +5,7 @@ import Demo from './EventsAll.demozap';
 
 const code = `import React, { PureComponent } from 'react';
 
-import Tilt from 'index';
-import { OnMoveParams } from 'types';
+import Tilt, { OnMoveParams } from 'index';
 import './EventsAll.demozap.scss';
 
 class EventsAll extends PureComponent {
