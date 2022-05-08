@@ -59,7 +59,7 @@ const rollupConfig = defineConfig([
     ],
   },
   {
-    input: 'src/types.d.ts',
+    input: 'src/index.ts',
     output: { file: packageJson.types, format: 'esm' },
     plugins: [
       dts({
