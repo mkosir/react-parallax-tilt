@@ -1,6 +1,6 @@
 {
   "name": "react-parallax-tilt",
-  "description": "3Easily apply tilt hover effect on React components - lightweight/zero dependencies",
+  "description": "4Easily apply tilt hover effect on React components - lightweight/zero dependencies",
   "version": "0.0.0-development",
   "main": "./dist/index.js",
   "module": "./dist/es/index.js",
