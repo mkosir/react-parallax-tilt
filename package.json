@@ -90,16 +90,16 @@
     "react": "^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0",
     "react-dom": "^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0"
   },
+  "license": "MIT",
+  "author": "Marko Kosir <kosir.mar@gmail.com>",
+  "homepage": "https://mkosir.github.io/react-parallax-tilt",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mkosir/react-parallax-tilt.git"
   },
-  "author": "Marko Kosir <kosir.mar@gmail.com>",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/mkosir/react-parallax-tilt/issues"
   },
-  "homepage": "https://mkosir.github.io/react-parallax-tilt",
   "keywords": [
     "react",
     "react-component",
