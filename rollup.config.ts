@@ -43,7 +43,6 @@ const rollupConfig = defineConfig([
         compress: {
           pure_getters: true,
         },
-        // Compress and/or mangle variables in top level scope.
         toplevel: true,
       }),
       visualizer({
@@ -54,8 +53,8 @@ const rollupConfig = defineConfig([
     ],
     // Ensure dependencies are not bundled with the library
     external: [
-      //...Object.keys(packageJson.dependencies || {}),
       ...Object.keys(packageJson.peerDependencies || {}),
+      //...Object.keys(packageJson.dependencies || {}),
     ],
   },
   {
