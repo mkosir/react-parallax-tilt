@@ -12,9 +12,11 @@ import tsConfig from './tsconfig.base.json';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
+const inputFile = 'src/index.ts';
+
 const rollupConfig = defineConfig([
   {
-    input: 'src/index.ts',
+    input: inputFile,
     output: [
       {
         file: packageJson.main,
@@ -58,7 +60,7 @@ const rollupConfig = defineConfig([
     ],
   },
   {
-    input: 'src/index.ts',
+    input: inputFile,
     output: { file: packageJson.types, format: 'esm' },
     plugins: [
       dts({
