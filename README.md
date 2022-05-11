@@ -180,7 +180,7 @@ Note that user needs to take some action (like tapping a button) to be able to d
 
 _Easily set up a local development environment!_
 
-Build all the examples and start storybook server on [localhost](http://localhost:9009):
+Build project and start storybook on [localhost](http://localhost:9009):
 
 - clone
 - `npm install`
