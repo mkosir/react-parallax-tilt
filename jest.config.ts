@@ -1,6 +1,6 @@
-import { Config } from '@jest/types';
+import { Config } from 'jest';
 
-const jestConfig: Config.InitialOptions = {
+const jestConfig: Config = {
   testEnvironment: 'jsdom',
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.{ts,tsx}'],
