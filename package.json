@@ -30,7 +30,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
-    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-commonjs": "^22.0.1",
     "@rollup/plugin-typescript": "^8.3.3",
     "@storybook/addons": "^6.5.9",
     "@storybook/builder-webpack5": "^6.5.9",
@@ -60,7 +60,7 @@
     "eslint-plugin-no-array-reduce": "^1.0.60",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.30.1",
-    "eslint-plugin-storybook": "^0.5.12",
+    "eslint-plugin-storybook": "^0.5.13",
     "eslint-plugin-testing-library": "^5.5.1",
     "husky": "^8.0.1",
     "jest": "^28.1.1",
