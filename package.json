@@ -58,7 +58,7 @@
     "eslint-plugin-jest-dom": "^4.0.2",
     "eslint-plugin-jsx-a11y": "^6.6.0",
     "eslint-plugin-no-array-reduce": "^1.0.60",
-    "eslint-plugin-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-storybook": "^0.5.13",
     "eslint-plugin-testing-library": "^5.5.1",
