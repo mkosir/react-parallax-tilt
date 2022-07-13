@@ -34,6 +34,7 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
     this.tilt = new Tilt<HTMLDivElement>();
     this.initGlare();
     this.addEventListeners();
+    if (typeof CustomEvent === 'undefined') return;
     const autoreset = new CustomEvent<CustomEventType>('autoreset' as CustomEventType);
     this.mainLoop(autoreset);
     const initialEvent = new CustomEvent<CustomEventType>('initial' as CustomEventType);
