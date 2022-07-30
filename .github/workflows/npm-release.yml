@@ -1,14 +1,10 @@
 name: npm-release
 
-# on:
-#   push:
-#     branches:
-#       - 'main'
 on:
   workflow_run:
     workflows: [validate]
     types: [completed]
-    branches: [main]
+    branches: ['main']
 
 jobs:
   npm-release:
