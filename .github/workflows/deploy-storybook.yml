@@ -1,12 +1,15 @@
-name: validate
+name: deploy-storybook
 
-on: push
+on:
+  workflow_run:
+    workflows: [validate]
+    types: [completed]
+    branches: [main]
 
 jobs:
-  validate:
+  deploy-storybook:
     runs-on: ubuntu-latest
-    env:
-      MATCH_SNAPSHOT: true
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
       - name: Checkout 🛎️
@@ -26,17 +29,12 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
 
-      - name: Lint ✅
-        run: npm run lint
-
       - name: Build 🏗️
-        run: npm run build
+        run: npm run storybook-build
 
-      - name: Test 🚨
-        run: npm run test-coverage
-
-      - name: Upload coverage to Codecov
-        if: always()
-        uses: codecov/codecov-action@v1
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.4.0
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+          branch: gh-pages
+          folder: storybook-static
+          clean: true
