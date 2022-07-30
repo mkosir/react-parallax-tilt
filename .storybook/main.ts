@@ -1,7 +1,7 @@
 import path from 'path';
 
 import { StorybookConfig } from '@storybook/core-common';
-// import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
+import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
 
 const storybookConfig: StorybookConfig = {
   stories: ['../stories/**/*.stories.tsx'],
@@ -20,11 +20,11 @@ const storybookConfig: StorybookConfig = {
     config.resolve!.modules!.push(path.resolve(process.cwd(), 'src'));
 
     // Plugin 'TsconfigPathsPlugin' issue with Webpack v5 - https://github.com/dividab/tsconfig-paths-webpack-plugin/issues/60
-    // config.resolve!.plugins! = [
-    //   new TsconfigPathsPlugin({
-    //     configFile: path.resolve(__dirname, '../tsconfig.dev.json'),
-    //   }),
-    // ];
+    config.resolve!.plugins! = [
+      new TsconfigPathsPlugin({
+        configFile: path.resolve(__dirname, '../tsconfig.dev.json'),
+      }),
+    ];
 
     return config;
   },
