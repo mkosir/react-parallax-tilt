@@ -25,7 +25,7 @@ describe('Glare', () => {
     userEvent.hover(screen.getByText('test'));
 
     expect(onMove).toBeCalledWith<[OnMoveParams]>({
-      tiltAngleX: -60,
+      tiltAngleX: -65,
       tiltAngleY: 60,
       tiltAngleXPercentage: -100,
       tiltAngleYPercentage: 100,
