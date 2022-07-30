@@ -19,7 +19,6 @@ const storybookConfig: StorybookConfig = {
     // Resolve absolute imports
     config.resolve!.modules!.push(path.resolve(process.cwd(), 'src'));
 
-    // Plugin 'TsconfigPathsPlugin' issue with Webpack v5 - https://github.com/dividab/tsconfig-paths-webpack-plugin/issues/60
     config.resolve!.plugins! = [
       new TsconfigPathsPlugin({
         configFile: path.resolve(__dirname, '../tsconfig.dev.json'),
