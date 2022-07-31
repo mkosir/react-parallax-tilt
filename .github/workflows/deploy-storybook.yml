@@ -2,7 +2,7 @@ name: deploy-storybook
 
 on:
   workflow_run:
-    workflows: [validate]
+    workflows: [build]
     types: [completed]
     branches: [main]
 
