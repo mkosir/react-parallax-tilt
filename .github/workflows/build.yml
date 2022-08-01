@@ -2,6 +2,9 @@ name: build
 
 on: push
 
+env:
+  CACHE_KEY_NODE_MODULES: node-modules-${{ hashFiles('package-lock.json') }}
+
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -20,7 +23,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: node_modules
-          key: node-modules-${{ hashFiles('package-lock.json') }}
+          key: $CACHE_KEY_NODE_MODULES
 
       - name: Install dependencies 🔧
         if: steps.cache.outputs.cache-hit != 'true'
@@ -48,7 +51,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: node_modules
-          key: node-modules-${{ hashFiles('package-lock.json') }}
+          key: $CACHE_KEY_NODE_MODULES
 
       - name: Install dependencies 🔧
         if: steps.cache.outputs.cache-hit != 'true'
@@ -74,7 +77,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: node_modules
-          key: node-modules-${{ hashFiles('package-lock.json') }}
+          key: $CACHE_KEY_NODE_MODULES
 
       - name: Install dependencies 🔧
         if: steps.cache.outputs.cache-hit != 'true'
