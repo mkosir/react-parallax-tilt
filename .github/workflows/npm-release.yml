@@ -2,7 +2,7 @@ name: npm-release
 
 on:
   workflow_run:
-    workflows: [build]
+    workflows: [build, test]
     types: [completed]
     branches: [main]
 
