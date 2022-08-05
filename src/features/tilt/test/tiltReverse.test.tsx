@@ -29,7 +29,7 @@ describe('Tilt - Reverse', () => {
       tiltAngleYPercentage: -75,
       glareAngle: 0,
       glareOpacity: 0,
-      eventType: 'mousemove',
+      eventType: 'initial',
     });
   });
 });

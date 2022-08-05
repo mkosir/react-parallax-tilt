@@ -31,7 +31,7 @@ describe('Glare', () => {
       tiltAngleYPercentage: 100,
       glareAngle: 45,
       glareOpacity: 1,
-      eventType: 'mousemove',
+      eventType: 'initial',
     });
   });
 
@@ -60,7 +60,7 @@ describe('Glare', () => {
       tiltAngleYPercentage: 100,
       glareAngle: 0,
       glareOpacity: 1,
-      eventType: 'mousemove',
+      eventType: 'initial',
     });
   });
 
@@ -89,7 +89,7 @@ describe('Glare', () => {
       tiltAngleYPercentage: 100,
       glareAngle: 135,
       glareOpacity: 0.5,
-      eventType: 'mousemove',
+      eventType: 'initial',
     });
   });
 
@@ -119,7 +119,7 @@ describe('Glare', () => {
       tiltAngleYPercentage: 100,
       glareAngle: -135,
       glareOpacity: 1,
-      eventType: 'mousemove',
+      eventType: 'initial',
     });
   });
 
@@ -148,7 +148,7 @@ describe('Glare', () => {
       tiltAngleYPercentage: -100,
       glareAngle: -45,
       glareOpacity: 1,
-      eventType: 'mousemove',
+      eventType: 'initial',
     });
   });
 
@@ -176,7 +176,7 @@ describe('Glare', () => {
       tiltAngleYPercentage: 100,
       glareAngle: 45,
       glareOpacity: 0,
-      eventType: 'mousemove',
+      eventType: 'initial',
     });
   });
 
@@ -207,7 +207,7 @@ describe('Glare', () => {
       tiltAngleYPercentage: 200,
       glareAngle: 45,
       glareOpacity: 0,
-      eventType: 'mousemove',
+      eventType: 'initial',
     });
   });
 });

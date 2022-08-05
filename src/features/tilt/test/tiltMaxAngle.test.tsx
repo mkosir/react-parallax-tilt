@@ -28,7 +28,7 @@ describe('Tilt - Max Angle', () => {
       tiltAngleYPercentage: 30,
       glareAngle: 0,
       glareOpacity: 0,
-      eventType: 'mousemove',
+      eventType: 'initial',
     });
   });
 });

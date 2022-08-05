@@ -22,7 +22,7 @@ describe('Tilt - Manual Angle', () => {
       tiltAngleYPercentage: 75,
       glareAngle: 0,
       glareOpacity: 0,
-      eventType: 'mousemove',
+      eventType: 'initial',
     });
   });
 
@@ -50,7 +50,7 @@ describe('Tilt - Manual Angle', () => {
       tiltAngleYPercentage: 0,
       glareAngle: 180,
       glareOpacity: 1,
-      eventType: 'mousemove',
+      eventType: 'initial',
     });
   });
 
@@ -68,7 +68,7 @@ describe('Tilt - Manual Angle', () => {
       tiltAngleYPercentage: 75,
       glareAngle: 0,
       glareOpacity: 0,
-      eventType: 'mousemove',
+      eventType: 'initial',
     });
   });
 });

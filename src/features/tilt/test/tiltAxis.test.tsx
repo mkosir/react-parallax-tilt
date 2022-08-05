@@ -29,7 +29,7 @@ describe('Tilt - Axis', () => {
       tiltAngleYPercentage: 0,
       glareAngle: 0,
       glareOpacity: 0,
-      eventType: 'mousemove',
+      eventType: 'initial',
     });
   });
 
@@ -56,7 +56,7 @@ describe('Tilt - Axis', () => {
       tiltAngleYPercentage: 75,
       glareAngle: 0,
       glareOpacity: 0,
-      eventType: 'mousemove',
+      eventType: 'initial',
     });
   });
 });
