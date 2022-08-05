@@ -1,5 +1,4 @@
-import { screen, render } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { screen, render, fireEvent } from '@testing-library/react';
 import React from 'react';
 
 import { OnMoveParams } from 'index';
@@ -13,8 +12,7 @@ describe('Tilt - Reset', () => {
 
     render(<TiltTest onEnter={onEnter} onMove={onMove} onLeave={onLeave} reset={false} />);
 
-    userEvent.hover(screen.getByText('test'));
-    userEvent.unhover(screen.getByText('test'));
+    fireEvent.mouseEnter(screen.getByText('test'));
 
     expect(onEnter).toBeCalledWith('mouseenter');
     expect(onMove).toBeCalledWith<[OnMoveParams]>({
@@ -26,6 +24,8 @@ describe('Tilt - Reset', () => {
       glareOpacity: 0,
       eventType: 'initial',
     });
+
+    fireEvent.mouseLeave(screen.getByText('test'));
     expect(onLeave).toBeCalledWith('mouseleave');
   });
 });

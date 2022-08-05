@@ -1,5 +1,4 @@
-import { screen, render } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { screen, render, fireEvent } from '@testing-library/react';
 import React from 'react';
 
 import { TiltTest } from 'utils/TiltTest';
@@ -10,7 +9,7 @@ describe('Tilt - onLeave', () => {
 
     render(<TiltTest onLeave={onLeave} />);
 
-    userEvent.unhover(screen.getByText('test'));
+    fireEvent.mouseLeave(screen.getByText('test'));
 
     expect(onLeave).toBeCalledWith('mouseleave');
   });
