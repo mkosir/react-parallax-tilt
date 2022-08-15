@@ -4,16 +4,6 @@ import Tilt, { OnMoveParams } from 'index';
 
 import './EventParams.demozap.scss';
 
-type EventParams = {
-  tiltAngleX: number;
-  tiltAngleY: number;
-  tiltAngleXPercentage: number;
-  tiltAngleYPercentage: number;
-  glareAngle: number;
-  glareOpacity: number;
-  eventType: null | string;
-};
-
 type SelectedEvents = {
   trackOnMove: boolean;
   trackOnEnter: boolean;
@@ -21,15 +11,15 @@ type SelectedEvents = {
 };
 
 const EventParams = () => {
-  const [eventParams, setEventParams] = useState<EventParams>({
+  const [eventParams, setEventParams] = useState<Omit<OnMoveParams, 'eventType'>>({
     tiltAngleX: 0,
     tiltAngleY: 0,
     tiltAngleXPercentage: 0,
     tiltAngleYPercentage: 0,
     glareAngle: 0,
     glareOpacity: 0,
-    eventType: null,
   });
+  const [evenDescription, setEvenDescription] = useState<string | null>(null);
 
   const [selectedEvents, setSelectedEvents] = useState<SelectedEvents>({
     trackOnMove: true,
@@ -37,28 +27,18 @@ const EventParams = () => {
     trackOnLeave: true,
   });
 
-  const onMove = (onMoveParams: OnMoveParams) => {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { eventType: eventTypeCurrent, ...restCurrent } = onMoveParams;
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { eventType: eventTypePrevious, ...restPrevious } = eventParams;
-
-    if (JSON.stringify(restCurrent) === JSON.stringify(restPrevious)) {
+  const onMove = ({ eventType, ...restParamsCurrent }: OnMoveParams) => {
+    if (JSON.stringify(restParamsCurrent) === JSON.stringify(eventParams)) {
       return;
     }
 
     if (!selectedEvents.trackOnMove) {
-      setEventParams((prevEventParams) => ({
-        ...prevEventParams,
-        ...restCurrent,
-      }));
+      setEventParams(restParamsCurrent);
       return;
     }
 
-    setEventParams({
-      ...restCurrent,
-      eventType: onMoveParams.eventType,
-    });
+    setEvenDescription(`Event 'onMove' triggered by '${eventType}' event type.`);
+    setEventParams(restParamsCurrent);
   };
 
   const onEnter = (eventType: string) => {
@@ -66,6 +46,7 @@ const EventParams = () => {
       return;
     }
 
+    setEvenDescription(`Event 'onEnter' triggered by '${eventType}' event type.`);
     setEventParams((eventParams) => ({ ...eventParams, eventType }));
   };
 
@@ -74,12 +55,14 @@ const EventParams = () => {
       return;
     }
 
+    setEvenDescription(`Event 'onLeave' triggered by '${eventType}' event type.`);
     setEventParams((eventParams) => ({ ...eventParams, eventType }));
   };
 
   const toggleCheck = (event: any) => {
     const { name, checked } = event.target;
 
+    setEvenDescription(null);
     setSelectedEvents((selectedEvents) => ({
       ...selectedEvents,
       [name]: checked,
@@ -126,11 +109,7 @@ const EventParams = () => {
           <input onChange={toggleCheck} checked={selectedEvents.trackOnLeave} name={'trackOnLeave'} type="checkbox" />
           onLeave
         </label>
-        {eventParams.eventType && (
-          <div>
-            Event type <span>{eventParams.eventType}</span> triggered.
-          </div>
-        )}
+        {evenDescription && <div>{evenDescription}</div>}
       </div>
     </div>
   );
