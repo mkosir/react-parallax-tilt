@@ -46,27 +46,19 @@ const EventParams = () => {
     glareOpacity,
     eventType,
   }: OnMoveParams) => {
-    console.log('🔎 Log ~ EventParams ~ glareOpacity', glareOpacity);
-    console.log('🔎 Log ~ EventParams ~ glareAngle', glareAngle);
-    console.log('🔎 Log ~ EventParams ~ tiltAngleYPercentage', tiltAngleYPercentage);
-    console.log('🔎 Log ~ EventParams ~ tiltAngleXPercentage', tiltAngleXPercentage);
-    console.log('🔎 Log ~ EventParams ~ tiltAngleY', tiltAngleY);
-    console.log('🔎 Log ~ EventParams ~ tiltAngleX', tiltAngleX);
     const eventTypeFormatted = selectedEvents.trackOnMove
       ? `Event 'onMove' triggered by '${eventType}' event type.`
       : null;
 
-    console.log('🔎 Log ~ EventParams ~ eventTypeFormatted', eventTypeFormatted);
-
-    // setEventParams({
-    //   tiltAngleX,
-    //   tiltAngleY,
-    //   tiltAngleXPercentage,
-    //   tiltAngleYPercentage,
-    //   glareAngle,
-    //   glareOpacity,
-    //   eventType: eventTypeFormatted,
-    // });
+    setEventParams({
+      tiltAngleX,
+      tiltAngleY,
+      tiltAngleXPercentage,
+      tiltAngleYPercentage,
+      glareAngle,
+      glareOpacity,
+      eventType: eventTypeFormatted,
+    });
   };
 
   const onEnter = (eventType: string) => {
