@@ -32,29 +32,23 @@ const EventParams = () => {
       return;
     }
 
-    if (!selectedEvents.trackOnMove) {
-      setEventParams(restEventParams);
-      return;
+    if (selectedEvents.trackOnMove) {
+      setEvenDescription(`Event 'onMove' triggered by '${eventType}' event type.`);
     }
 
     setEventParams(restEventParams);
-    setEvenDescription(`Event 'onMove' triggered by '${eventType}' event type.`);
   };
 
   const onEnter = (eventType: string) => {
-    if (!selectedEvents.trackOnEnter) {
-      return;
+    if (selectedEvents.trackOnEnter) {
+      setEvenDescription(`Event 'onEnter' triggered by '${eventType}' event type.`);
     }
-
-    setEvenDescription(`Event 'onEnter' triggered by '${eventType}' event type.`);
   };
 
   const onLeave = (eventType: string) => {
-    if (!selectedEvents.trackOnLeave) {
-      return;
+    if (selectedEvents.trackOnLeave) {
+      setEvenDescription(`Event 'onLeave' triggered by '${eventType}' event type.`);
     }
-
-    setEvenDescription(`Event 'onLeave' triggered by '${eventType}' event type.`);
   };
 
   const toggleCheck = (event: any) => {
