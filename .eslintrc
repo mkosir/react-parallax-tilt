@@ -1,6 +1,11 @@
 /** @type {import('@types/eslint').Linter.Config} */
 {
   "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["./tsconfig.dev.json"]
+  },
+
+  "plugins": ["@typescript-eslint", "testing-library", "jest-dom", "jest", "import"],
 
   "extends": [
     "plugin:@typescript-eslint/recommended",
@@ -15,17 +20,16 @@
     "plugin:storybook/recommended"
   ],
 
-  "plugins": ["@typescript-eslint", "testing-library", "jest-dom", "jest", "import"],
-
   "rules": {
     "react/prop-types": "off",
+
     "@typescript-eslint/consistent-type-definitions": ["error", "type"],
     "@typescript-eslint/array-type": ["error", { "default": "generic" }],
+    "@typescript-eslint/prefer-nullish-coalescing": "error",
     "@typescript-eslint/ban-ts-comment": ["error", { "ts-ignore": "allow-with-description" }],
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-explicit-any": "off",
 
-    // Import
     "import/no-default-export": "error",
     "import/order": [
       "error",
