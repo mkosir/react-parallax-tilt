@@ -37,50 +37,39 @@ const EventParams = () => {
     trackOnLeave: true,
   });
 
-  const onMove = ({
-    tiltAngleX,
-    tiltAngleY,
-    tiltAngleXPercentage,
-    tiltAngleYPercentage,
-    glareAngle,
-    glareOpacity,
-    eventType,
-  }: OnMoveParams) => {
-    const eventTypeFormatted = selectedEvents.trackOnMove
-      ? `Event 'onMove' triggered by '${eventType}' event type.`
-      : null;
+  const onMove = (onMoveParams: OnMoveParams) => {
+    const { eventType: eventTypeCurrent, ...restCurrent } = onMoveParams;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { eventType: eventTypePrevious, ...restPrevious } = eventParams;
 
-    setEventParams({
-      tiltAngleX,
-      tiltAngleY,
-      tiltAngleXPercentage,
-      tiltAngleYPercentage,
-      glareAngle,
-      glareOpacity,
-      eventType: eventTypeFormatted,
-    });
+    if (JSON.stringify(restCurrent) === JSON.stringify(restPrevious)) {
+      return;
+    }
+
+    setEventParams(
+      selectedEvents.trackOnMove
+        ? {
+            ...restCurrent,
+            eventType: eventTypeCurrent,
+          }
+        : onMoveParams,
+    );
   };
 
   const onEnter = (eventType: string) => {
-    const eventTypeFormatted = selectedEvents.trackOnEnter
-      ? `Event 'onEnter' triggered by '${eventType}' event type.`
-      : null;
+    if (!selectedEvents.trackOnEnter) {
+      return;
+    }
 
-    setEventParams((eventParams) => ({
-      ...eventParams,
-      eventType: eventTypeFormatted,
-    }));
+    setEventParams((eventParams) => ({ ...eventParams, eventType }));
   };
 
   const onLeave = (eventType: string) => {
-    const eventTypeFormatted = selectedEvents.trackOnLeave
-      ? `Event 'onLeave' triggered by '${eventType}' event type.`
-      : null;
+    if (!selectedEvents.trackOnLeave) {
+      return;
+    }
 
-    setEventParams((eventParams) => ({
-      ...eventParams,
-      eventType: eventTypeFormatted,
-    }));
+    setEventParams((eventParams) => ({ ...eventParams, eventType }));
   };
 
   const toggleCheck = (event: any) => {
@@ -132,7 +121,11 @@ const EventParams = () => {
           <input onChange={toggleCheck} checked={selectedEvents.trackOnLeave} name={'trackOnLeave'} type="checkbox" />
           onLeave
         </label>
-        {eventParams.eventType && <div>{eventParams.eventType}</div>}
+        {eventParams.eventType && (
+          <div>
+            Event type <span>{eventParams.eventType}</span> triggered.
+          </div>
+        )}
       </div>
     </div>
   );
