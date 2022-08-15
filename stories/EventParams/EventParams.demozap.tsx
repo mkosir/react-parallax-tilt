@@ -46,14 +46,18 @@ const EventParams = () => {
       return;
     }
 
-    setEventParams(
-      selectedEvents.trackOnMove
-        ? {
-            ...restCurrent,
-            eventType: eventTypeCurrent,
-          }
-        : onMoveParams,
-    );
+    if (!selectedEvents.trackOnMove) {
+      setEventParams({
+        ...restCurrent,
+        eventType: eventTypePrevious,
+      });
+      return;
+    }
+
+    setEventParams({
+      ...restCurrent,
+      eventType: eventTypeCurrent,
+    });
   };
 
   const onEnter = (eventType: string) => {
