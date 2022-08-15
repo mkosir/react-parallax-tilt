@@ -37,8 +37,8 @@ const EventParams = () => {
       return;
     }
 
-    setEvenDescription(`Event 'onMove' triggered by '${eventType}' event type.`);
     setEventParams(restEventParams);
+    setEvenDescription(`Event 'onMove' triggered by '${eventType}' event type.`);
   };
 
   const onEnter = (eventType: string) => {
@@ -47,7 +47,6 @@ const EventParams = () => {
     }
 
     setEvenDescription(`Event 'onEnter' triggered by '${eventType}' event type.`);
-    setEventParams((eventParams) => ({ ...eventParams, eventType }));
   };
 
   const onLeave = (eventType: string) => {
@@ -56,7 +55,6 @@ const EventParams = () => {
     }
 
     setEvenDescription(`Event 'onLeave' triggered by '${eventType}' event type.`);
-    setEventParams((eventParams) => ({ ...eventParams, eventType }));
   };
 
   const toggleCheck = (event: any) => {
