@@ -62,7 +62,7 @@ const EventParams = () => {
   };
 
   return (
-    <div className="parallax-events-all">
+    <div className="event-params">
       <Tilt
         onMove={onMove}
         onEnter={onEnter}
