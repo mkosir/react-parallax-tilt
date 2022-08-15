@@ -23,10 +23,11 @@
   "rules": {
     "react/prop-types": "off",
 
+    "@typescript-eslint/ban-ts-comment": ["error", { "ts-ignore": "allow-with-description" }],
     "@typescript-eslint/consistent-type-definitions": ["error", "type"],
     "@typescript-eslint/array-type": ["error", { "default": "generic" }],
     "@typescript-eslint/prefer-nullish-coalescing": "error",
-    "@typescript-eslint/ban-ts-comment": ["error", { "ts-ignore": "allow-with-description" }],
+    "@typescript-eslint/no-unnecessary-condition": "error",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-explicit-any": "off",
 
