@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Tilt, { OnMoveParams } from 'index';
 
-import './EventsAll.demozap.scss';
+import './EventParams.demozap.scss';
 
 type EventParams = {
   tiltAngleX: number;
