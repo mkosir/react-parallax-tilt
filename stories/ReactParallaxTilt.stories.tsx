@@ -2,7 +2,7 @@ import type { Meta } from '@storybook/react';
 import React from 'react';
 
 import { _Default } from './Default/_Default';
-import { _EventsAll } from './EventsAll/_EventsAll';
+import { _EventParams } from './EventParams/_EventParams';
 import { _EventTiltAngle } from './EventTiltAngle/_EventTiltAngle';
 import { _FlipPage } from './FlipPage/_FlipPage';
 import { _FlipVH } from './FlipVH/_FlipVH';
@@ -98,5 +98,5 @@ MultipleTiltScroll.storyName = 'Multiple tilt - Scroll';
 export const EventTiltAngle = () => <_EventTiltAngle />;
 EventTiltAngle.storyName = 'Event - Tilt angle';
 
-export const EventsAll = () => <_EventsAll />;
-EventsAll.storyName = 'Event - All';
+export const EventParams = () => <_EventParams />;
+EventParams.storyName = 'Event - Params';
