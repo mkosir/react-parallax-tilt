@@ -38,6 +38,7 @@ const EventParams = () => {
   });
 
   const onMove = (onMoveParams: OnMoveParams) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { eventType: eventTypeCurrent, ...restCurrent } = onMoveParams;
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { eventType: eventTypePrevious, ...restPrevious } = eventParams;
@@ -47,16 +48,16 @@ const EventParams = () => {
     }
 
     if (!selectedEvents.trackOnMove) {
-      setEventParams({
+      setEventParams((prevEventParams) => ({
+        ...prevEventParams,
         ...restCurrent,
-        eventType: eventTypePrevious,
-      });
+      }));
       return;
     }
 
     setEventParams({
       ...restCurrent,
-      eventType: eventTypeCurrent,
+      eventType: onMoveParams.eventType,
     });
   };
 
