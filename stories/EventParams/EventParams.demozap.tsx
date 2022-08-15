@@ -27,18 +27,18 @@ const EventParams = () => {
     trackOnLeave: true,
   });
 
-  const onMove = ({ eventType, ...restParamsCurrent }: OnMoveParams) => {
-    if (JSON.stringify(restParamsCurrent) === JSON.stringify(eventParams)) {
+  const onMove = ({ eventType, ...restEventParams }: OnMoveParams) => {
+    if (JSON.stringify(restEventParams) === JSON.stringify(eventParams)) {
       return;
     }
 
     if (!selectedEvents.trackOnMove) {
-      setEventParams(restParamsCurrent);
+      setEventParams(restEventParams);
       return;
     }
 
     setEvenDescription(`Event 'onMove' triggered by '${eventType}' event type.`);
-    setEventParams(restParamsCurrent);
+    setEventParams(restEventParams);
   };
 
   const onEnter = (eventType: string) => {
