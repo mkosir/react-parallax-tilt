@@ -28,6 +28,10 @@ const EventParams = () => {
   });
 
   const onMove = ({ eventType, ...restEventParams }: OnMoveParams) => {
+    if (JSON.stringify(restEventParams) === JSON.stringify(eventParams)) {
+      return;
+    }
+
     if (!selectedEvents.trackOnMove) {
       setEventParams(restEventParams);
       return;
