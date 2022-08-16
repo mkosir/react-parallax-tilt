@@ -76,6 +76,7 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
 
   /* istanbul ignore next */
   private addDeviceOrientationEventListener = async () => {
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     if (!window.DeviceOrientationEvent && process.env.NODE_ENV === 'development') {
       console.warn("Browser doesn't support Device Orientation.");
       return;
@@ -114,6 +115,7 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
 
     // jest - instance of DeviceOrientationEvent not possible
     /* istanbul ignore next */
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     if (gyroscope && window.DeviceOrientationEvent) {
       window.removeEventListener('deviceorientation', this.onMove);
     }
