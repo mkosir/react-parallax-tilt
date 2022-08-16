@@ -19,5 +19,5 @@ export type EventType = DOMEventType | CustomEventType;
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
 export interface DeviceOrientationEventiOS extends DeviceOrientationEvent {
-  requestPermission: () => Promise<'granted' | 'denied'>;
+  requestPermission?: () => Promise<'granted' | 'denied'>;
 }
