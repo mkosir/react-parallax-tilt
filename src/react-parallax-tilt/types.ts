@@ -2,8 +2,8 @@ import { MouseEvent, TouchEvent } from 'react';
 
 import { ElementSizePosition, ClientPosition } from 'utils/types';
 
-export type WrapperElement<T extends HTMLElement> = {
-  node: T | null;
+export type WrapperElement = {
+  node: HTMLDivElement | null;
   size: ElementSizePosition;
   clientPosition: ClientPosition;
   updateAnimationId: number | null;

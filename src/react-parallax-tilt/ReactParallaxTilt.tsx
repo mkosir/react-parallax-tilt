@@ -10,7 +10,7 @@ import { ReactParallaxTiltProps } from './types.public';
 
 export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
   public static defaultProps = defaultProps;
-  private wrapperEl: WrapperElement<HTMLDivElement> = {
+  private wrapperEl: WrapperElement = {
     node: null,
     size: {
       width: 0,
