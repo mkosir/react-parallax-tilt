@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent } from 'react';
 
 import Tilt, { OnMoveParams } from 'index';
 
@@ -51,7 +51,7 @@ const EventParams = () => {
     }
   };
 
-  const toggleCheck = (event: any) => {
+  const toggleCheck = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = event.target;
 
     setEvenDescription(null);
