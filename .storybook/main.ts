@@ -8,7 +8,7 @@ const storybookConfig: StorybookConfig = {
   core: {
     builder: 'webpack5',
   },
-  webpackFinal: async (config) => {
+  webpackFinal: (config) => {
     config.module?.rules?.push({
       test: /\.scss$/,
       use: ['style-loader', 'css-loader', 'sass-loader'],
