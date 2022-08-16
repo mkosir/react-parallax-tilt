@@ -1,7 +1,6 @@
 import path from 'path';
 
 import { StorybookConfig } from '@storybook/core-common';
-import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
 
 const storybookConfig: StorybookConfig = {
   stories: ['../stories/**/*.stories.tsx'],
@@ -10,20 +9,14 @@ const storybookConfig: StorybookConfig = {
     builder: 'webpack5',
   },
   webpackFinal: async (config) => {
-    config.module!.rules!.push({
+    config.module?.rules?.push({
       test: /\.scss$/,
       use: ['style-loader', 'css-loader', 'sass-loader'],
       include: path.resolve(__dirname, '../'),
     });
 
     // Resolve absolute imports
-    config.resolve!.modules!.push(path.resolve(process.cwd(), 'src'));
-
-    config.resolve!.plugins! = [
-      new TsconfigPathsPlugin({
-        configFile: path.resolve(__dirname, '../tsconfig.dev.json'),
-      }),
-    ];
+    config.resolve?.modules?.push(path.resolve(process.cwd(), 'src'));
 
     return config;
   },
