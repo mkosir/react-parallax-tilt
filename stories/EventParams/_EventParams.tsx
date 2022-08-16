@@ -3,21 +3,11 @@ import { DemoTab } from 'react-demo-tab';
 
 import Demo from './EventParams.demozap';
 
-const code = `import React, { useState } from 'react';
+const code = `import React, { useState, ChangeEvent } from 'react';
 
 import Tilt, { OnMoveParams } from 'index';
 
-import './EventsAll.demozap.scss';
-
-type EventParams = {
-  tiltAngleX: number;
-  tiltAngleY: number;
-  tiltAngleXPercentage: number;
-  tiltAngleYPercentage: number;
-  glareAngle: number;
-  glareOpacity: number;
-  eventType: null | string;
-};
+import './EventParams.demozap.scss';
 
 type SelectedEvents = {
   trackOnMove: boolean;
@@ -26,15 +16,15 @@ type SelectedEvents = {
 };
 
 const EventParams = () => {
-  const [eventParams, setEventParams] = useState<EventParams>({
+  const [eventParams, setEventParams] = useState<Omit<OnMoveParams, 'eventType'>>({
     tiltAngleX: 0,
     tiltAngleY: 0,
     tiltAngleXPercentage: 0,
     tiltAngleYPercentage: 0,
     glareAngle: 0,
     glareOpacity: 0,
-    eventType: null,
   });
+  const [evenDescription, setEvenDescription] = useState<string | null>(null);
 
   const [selectedEvents, setSelectedEvents] = useState<SelectedEvents>({
     trackOnMove: true,
@@ -42,61 +32,34 @@ const EventParams = () => {
     trackOnLeave: true,
   });
 
-  const onMove = ({
-    tiltAngleX,
-    tiltAngleY,
-    tiltAngleXPercentage,
-    tiltAngleYPercentage,
-    glareAngle,
-    glareOpacity,
-    eventType,
-  }: OnMoveParams) => {
-    console.log('🔎 Log ~ EventParams ~ glareOpacity', glareOpacity);
-    console.log('🔎 Log ~ EventParams ~ glareAngle', glareAngle);
-    console.log('🔎 Log ~ EventParams ~ tiltAngleYPercentage', tiltAngleYPercentage);
-    console.log('🔎 Log ~ EventParams ~ tiltAngleXPercentage', tiltAngleXPercentage);
-    console.log('🔎 Log ~ EventParams ~ tiltAngleY', tiltAngleY);
-    console.log('🔎 Log ~ EventParams ~ tiltAngleX', tiltAngleX);
-    const eventTypeFormatted = selectedEvents.trackOnMove
-      ? \`Event 'onMove' triggered by '\${eventType}' event type.\`
-      : null;
+  const onMove = ({ eventType, ...restEventParams }: OnMoveParams) => {
+    if (JSON.stringify(restEventParams) === JSON.stringify(eventParams)) {
+      return;
+    }
 
-    // setEventParams({
-    //   tiltAngleX,
-    //   tiltAngleY,
-    //   tiltAngleXPercentage,
-    //   tiltAngleYPercentage,
-    //   glareAngle,
-    //   glareOpacity,
-    //   eventType: eventTypeFormatted,
-    // });
+    if (selectedEvents.trackOnMove) {
+      setEvenDescription(\`Event 'onMove' triggered by '\${eventType}' event type.\`);
+    }
+
+    setEventParams(restEventParams);
   };
 
   const onEnter = (eventType: string) => {
-    const eventTypeFormatted = selectedEvents.trackOnEnter
-      ? \`Event 'onEnter' triggered by '\${eventType}' event type.\`
-      : null;
-
-    setEventParams((eventParams) => ({
-      ...eventParams,
-      eventType: eventTypeFormatted,
-    }));
+    if (selectedEvents.trackOnEnter) {
+      setEvenDescription(\`Event 'onEnter' triggered by '\${eventType}' event type.\`);
+    }
   };
 
   const onLeave = (eventType: string) => {
-    const eventTypeFormatted = selectedEvents.trackOnLeave
-      ? \`Event 'onLeave' triggered by '\${eventType}' event type.\`
-      : null;
-
-    setEventParams((eventParams) => ({
-      ...eventParams,
-      eventType: eventTypeFormatted,
-    }));
+    if (selectedEvents.trackOnLeave) {
+      setEvenDescription(\`Event 'onLeave' triggered by '\${eventType}' event type.\`);
+    }
   };
 
-  const toggleCheck = (event: any) => {
+  const toggleCheck = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = event.target;
 
+    setEvenDescription(null);
     setSelectedEvents((selectedEvents) => ({
       ...selectedEvents,
       [name]: checked,
@@ -104,7 +67,7 @@ const EventParams = () => {
   };
 
   return (
-    <div className="parallax-events-all">
+    <div className="event-params">
       <Tilt
         onMove={onMove}
         onEnter={onEnter}
@@ -143,7 +106,7 @@ const EventParams = () => {
           <input onChange={toggleCheck} checked={selectedEvents.trackOnLeave} name={'trackOnLeave'} type="checkbox" />
           onLeave
         </label>
-        {eventParams.eventType && <div>{eventParams.eventType}</div>}
+        {evenDescription && <div>{evenDescription}</div>}
       </div>
     </div>
   );
@@ -154,7 +117,7 @@ export default EventParams;
 
 const style = `@import '../ReactParallaxTilt.scss';
 
-.parallax-events-all {
+.event-params {
   display: flex;
   flex-direction: column;
   justify-content: center;
