@@ -13,7 +13,7 @@ jobs:
 
     environment:
       name: storybook-demos
-      url: https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--events-all
+      url: https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--event-params
 
     steps:
       - name: Checkout 🛎️
