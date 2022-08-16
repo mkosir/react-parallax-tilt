@@ -13,7 +13,7 @@ type PageProps = {
 export const Page = ({ flipVertically, flipHorizontally, toggleFlipVertically, toggleFlipHorizontally }: PageProps) => (
   <div className="page">
     <ul>
-      <li>Home</li>
+      <li>HXXXome</li>
       <li>News</li>
       <li>Contact</li>
       <li>About</li>
