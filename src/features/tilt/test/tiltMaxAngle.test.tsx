@@ -6,7 +6,7 @@ import { OnMoveParams } from 'index';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - Max Angle', () => {
-  it('should constrain tilt angles to default constant', () => {
+  it('should constrain tilt angles to default constant', async () => {
     const onMove = jest.fn();
 
     render(
@@ -19,7 +19,7 @@ describe('Tilt - Max Angle', () => {
       />,
     );
 
-    userEvent.hover(screen.getByText('test'));
+    await userEvent.hover(screen.getByText('test'));
 
     expect(onMove).toBeCalledWith<[OnMoveParams]>({
       tiltAngleX: 90,

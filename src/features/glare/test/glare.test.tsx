@@ -6,7 +6,7 @@ import { OnMoveParams } from 'index';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Glare', () => {
-  it('should calculate glare with top position', () => {
+  it('should calculate glare with top position', async () => {
     const onMove = jest.fn();
 
     render(
@@ -22,7 +22,7 @@ describe('Glare', () => {
       />,
     );
 
-    userEvent.hover(screen.getByText('test'));
+    await userEvent.hover(screen.getByText('test'));
 
     expect(onMove).toBeCalledWith<[OnMoveParams]>({
       tiltAngleX: -60,
@@ -35,7 +35,7 @@ describe('Glare', () => {
     });
   });
 
-  it('should calculate glare with right position', () => {
+  it('should calculate glare with right position', async () => {
     const onMove = jest.fn();
 
     render(
@@ -51,7 +51,7 @@ describe('Glare', () => {
       />,
     );
 
-    userEvent.hover(screen.getByText('test'));
+    await userEvent.hover(screen.getByText('test'));
 
     expect(onMove).toBeCalledWith<[OnMoveParams]>({
       tiltAngleX: 0,
@@ -64,7 +64,7 @@ describe('Glare', () => {
     });
   });
 
-  it('should calculate glare with bottom position', () => {
+  it('should calculate glare with bottom position', async () => {
     const onMove = jest.fn();
 
     render(
@@ -80,7 +80,7 @@ describe('Glare', () => {
       />,
     );
 
-    userEvent.hover(screen.getByText('test'));
+    await userEvent.hover(screen.getByText('test'));
 
     expect(onMove).toBeCalledWith<[OnMoveParams]>({
       tiltAngleX: 60,
@@ -93,7 +93,7 @@ describe('Glare', () => {
     });
   });
 
-  it('should calculate glare with left position', () => {
+  it('should calculate glare with left position', async () => {
     const onMove = jest.fn();
 
     render(
@@ -110,7 +110,7 @@ describe('Glare', () => {
       />,
     );
 
-    userEvent.hover(screen.getByText('test'));
+    await userEvent.hover(screen.getByText('test'));
 
     expect(onMove).toBeCalledWith<[OnMoveParams]>({
       tiltAngleX: -60,
@@ -123,7 +123,7 @@ describe('Glare', () => {
     });
   });
 
-  it('should calculate glare with all (sides) positions', () => {
+  it('should calculate glare with all (sides) positions', async () => {
     const onMove = jest.fn();
 
     render(
@@ -139,7 +139,7 @@ describe('Glare', () => {
       />,
     );
 
-    userEvent.hover(screen.getByText('test'));
+    await userEvent.hover(screen.getByText('test'));
 
     expect(onMove).toBeCalledWith<[OnMoveParams]>({
       tiltAngleX: -60,
@@ -152,7 +152,7 @@ describe('Glare', () => {
     });
   });
 
-  it('should calculate glare with default position', () => {
+  it('should calculate glare with default position', async () => {
     const onMove = jest.fn();
 
     render(
@@ -167,7 +167,7 @@ describe('Glare', () => {
       />,
     );
 
-    userEvent.hover(screen.getByText('test'));
+    await userEvent.hover(screen.getByText('test'));
 
     expect(onMove).toBeCalledWith<[OnMoveParams]>({
       tiltAngleX: -60,
@@ -180,7 +180,7 @@ describe('Glare', () => {
     });
   });
 
-  it('should calculate glare with flip vertically/horizontally enabled', () => {
+  it('should calculate glare with flip vertically/horizontally enabled', async () => {
     const onMove = jest.fn();
 
     render(
@@ -198,7 +198,7 @@ describe('Glare', () => {
       />,
     );
 
-    userEvent.hover(screen.getByText('test'));
+    await userEvent.hover(screen.getByText('test'));
 
     expect(onMove).toBeCalledWith<[OnMoveParams]>({
       tiltAngleX: 120,

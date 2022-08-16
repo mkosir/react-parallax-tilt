@@ -6,7 +6,7 @@ import { OnMoveParams } from 'index';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - Reverse', () => {
-  it('should calculate reverse tilt', () => {
+  it('should calculate reverse tilt', async () => {
     const onMove = jest.fn();
 
     render(
@@ -20,7 +20,7 @@ describe('Tilt - Reverse', () => {
       />,
     );
 
-    userEvent.hover(screen.getByText('test'));
+    await userEvent.hover(screen.getByText('test'));
 
     expect(onMove).toBeCalledWith<[OnMoveParams]>({
       tiltAngleX: -60,

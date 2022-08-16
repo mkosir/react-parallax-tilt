@@ -6,14 +6,14 @@ import { OnMoveParams } from 'index';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - Prop change', () => {
-  it('should re-calculate tilt when manual tilt angle y prop changes', () => {
+  it('should re-calculate tilt when manual tilt angle y prop changes', async () => {
     const onMove = jest.fn();
 
     const { rerender } = render(
       <TiltTest tiltMaxAngleX={60} tiltMaxAngleY={60} tiltAngleXManual={60} tiltAngleYManual={45} onMove={onMove} />,
     );
 
-    userEvent.hover(screen.getByText('test'));
+    await userEvent.hover(screen.getByText('test'));
 
     expect(onMove).toBeCalledWith<[OnMoveParams]>({
       tiltAngleX: 60,

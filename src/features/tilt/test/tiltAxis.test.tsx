@@ -6,7 +6,7 @@ import { OnMoveParams } from 'index';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - Axis', () => {
-  it('should disable y axis', () => {
+  it('should disable y axis', async () => {
     const onMove = jest.fn();
 
     render(
@@ -20,7 +20,7 @@ describe('Tilt - Axis', () => {
       />,
     );
 
-    userEvent.hover(screen.getByText('test'));
+    await userEvent.hover(screen.getByText('test'));
 
     expect(onMove).toBeCalledWith<[OnMoveParams]>({
       tiltAngleX: 60,
@@ -33,7 +33,7 @@ describe('Tilt - Axis', () => {
     });
   });
 
-  it('should disable x axis', () => {
+  it('should disable x axis', async () => {
     const onMove = jest.fn();
 
     render(
@@ -47,7 +47,7 @@ describe('Tilt - Axis', () => {
       />,
     );
 
-    userEvent.hover(screen.getByText('test'));
+    await userEvent.hover(screen.getByText('test'));
 
     expect(onMove).toBeCalledWith<[OnMoveParams]>({
       tiltAngleX: 0,

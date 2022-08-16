@@ -6,14 +6,14 @@ import { OnMoveParams } from 'index';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - Manual Angle', () => {
-  it('should calculate tilt with manual input', () => {
+  it('should calculate tilt with manual input', async () => {
     const onMove = jest.fn();
 
     render(
       <TiltTest tiltMaxAngleX={60} tiltMaxAngleY={60} tiltAngleXManual={60} tiltAngleYManual={45} onMove={onMove} />,
     );
 
-    userEvent.hover(screen.getByText('test'));
+    await userEvent.hover(screen.getByText('test'));
 
     expect(onMove).toBeCalledWith<[OnMoveParams]>({
       tiltAngleX: 60,
@@ -26,7 +26,7 @@ describe('Tilt - Manual Angle', () => {
     });
   });
 
-  it('should calculate tilt with only X manual input', () => {
+  it('should calculate tilt with only X manual input', async () => {
     const onMove = jest.fn();
 
     render(
@@ -41,7 +41,7 @@ describe('Tilt - Manual Angle', () => {
       />,
     );
 
-    userEvent.hover(screen.getByText('test'));
+    await userEvent.hover(screen.getByText('test'));
 
     expect(onMove).toBeCalledWith<[OnMoveParams]>({
       tiltAngleX: 60,
@@ -54,12 +54,12 @@ describe('Tilt - Manual Angle', () => {
     });
   });
 
-  it('should calculate tilt with only Y manual input', () => {
+  it('should calculate tilt with only Y manual input', async () => {
     const onMove = jest.fn();
 
     render(<TiltTest tiltMaxAngleX={60} tiltMaxAngleY={60} tiltAngleYManual={45} onMove={onMove} />);
 
-    userEvent.hover(screen.getByText('test'));
+    await userEvent.hover(screen.getByText('test'));
 
     expect(onMove).toBeCalledWith<[OnMoveParams]>({
       tiltAngleX: 0,
