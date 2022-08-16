@@ -35,6 +35,7 @@ const rollupConfig = defineConfig([
       },
     ],
     plugins: [
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
       sizeSnapshot({ matchSnapshot: Boolean(process.env.MATCH_SNAPSHOT) }),
       commonjs(),
       typescript({
