@@ -73,7 +73,7 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
 
     /* istanbul ignore next */
     if (gyroscope) {
-      this.addDeviceOrientationEventListener();
+      void this.addDeviceOrientationEventListener();
     }
   }
 
@@ -342,7 +342,7 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
   private renderPerspective(): void {
     const { perspective } = this.props;
 
-    this.wrapperEl.node!.style.transform += `perspective(${perspective}px) `;
+    this.wrapperEl.node!.style.transform += `perspective(${perspective!}px) `;
   }
 
   private renderScale(): void {
