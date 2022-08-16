@@ -190,10 +190,10 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
     }
 
     onMove({
-      tiltAngleX: this.tilt!.tiltAngleX!,
-      tiltAngleY: this.tilt!.tiltAngleY!,
-      tiltAngleXPercentage: this.tilt!.tiltAngleXPercentage!,
-      tiltAngleYPercentage: this.tilt!.tiltAngleYPercentage!,
+      tiltAngleX: this.tilt!.tiltAngleX,
+      tiltAngleY: this.tilt!.tiltAngleY,
+      tiltAngleXPercentage: this.tilt!.tiltAngleXPercentage,
+      tiltAngleYPercentage: this.tilt!.tiltAngleYPercentage,
       glareAngle,
       glareOpacity,
       eventType: event.type,
@@ -257,8 +257,8 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
     const angleX = event.beta; // motion of the device around the x axis in degree in the range:[-180,180]
     const angleY = event.gamma; // motion of the device around the y axis in degree in the range:[-90,90]
 
-    this.wrapperEl.clientPosition.xPercentage = (angleX! / tiltMaxAngleX!) * 100;
-    this.wrapperEl.clientPosition.yPercentage = (angleY! / tiltMaxAngleY!) * 100;
+    this.wrapperEl.clientPosition.xPercentage = (angleX / tiltMaxAngleX!) * 100;
+    this.wrapperEl.clientPosition.yPercentage = (angleY / tiltMaxAngleY!) * 100;
 
     this.wrapperEl.clientPosition.xPercentage = constrainToRange(this.wrapperEl.clientPosition.xPercentage, -100, 100);
     this.wrapperEl.clientPosition.yPercentage = constrainToRange(this.wrapperEl.clientPosition.yPercentage, -100, 100);

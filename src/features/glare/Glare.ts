@@ -103,17 +103,17 @@ export class Glare {
     let glareOpacityFactor = 0;
     switch (glarePosition) {
       case 'top':
-        glareOpacityFactor = -xPercentage! * flipVerticallyFactor * glareReverseFactor;
+        glareOpacityFactor = -xPercentage * flipVerticallyFactor * glareReverseFactor;
         break;
       case 'right':
-        glareOpacityFactor = yPercentage! * flipHorizontallyFactor * glareReverseFactor;
+        glareOpacityFactor = yPercentage * flipHorizontallyFactor * glareReverseFactor;
         break;
       case 'bottom':
       case undefined:
-        glareOpacityFactor = xPercentage! * flipVerticallyFactor * glareReverseFactor;
+        glareOpacityFactor = xPercentage * flipVerticallyFactor * glareReverseFactor;
         break;
       case 'left':
-        glareOpacityFactor = -yPercentage! * flipHorizontallyFactor * glareReverseFactor;
+        glareOpacityFactor = -yPercentage * flipHorizontallyFactor * glareReverseFactor;
         break;
       case 'all':
         glareOpacityFactor = Math.hypot(xPercentage, yPercentage);

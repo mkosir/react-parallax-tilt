@@ -29,8 +29,8 @@ export class Tilt {
     const { tiltMaxAngleX, tiltMaxAngleY } = props;
 
     const tiltTowardMouse = -1;
-    this.tiltAngleX = (xPercentage! * tiltMaxAngleX!) / 100;
-    this.tiltAngleY = ((yPercentage! * tiltMaxAngleY!) / 100) * tiltTowardMouse;
+    this.tiltAngleX = (xPercentage * tiltMaxAngleX!) / 100;
+    this.tiltAngleY = ((yPercentage * tiltMaxAngleY!) / 100) * tiltTowardMouse;
   };
 
   private updateTiltManualInput = (wrapperElClientPosition: ClientPosition, props: TiltProps): void => {
