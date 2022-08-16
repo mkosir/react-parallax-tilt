@@ -8,7 +8,7 @@ export type OnMoveParams = {
   tiltAngleYPercentage: number;
   glareAngle: number;
   glareOpacity: number;
-  eventType: string | null;
+  eventType: string;
 };
 
 type OnMove = (onMoveParams: OnMoveParams) => void;
