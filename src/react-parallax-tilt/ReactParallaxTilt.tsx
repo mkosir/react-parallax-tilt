@@ -8,6 +8,9 @@ import { defaultProps } from './defaultProps';
 import { SupportedEvent, EventType, CustomEventType, WrapperElement, DeviceOrientationEventiOS } from './types';
 import { ReactParallaxTiltProps } from './types.public';
 
+// All props are initialized by default with non-null values
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+
 export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
   public static defaultProps = defaultProps;
   private wrapperEl: WrapperElement = {

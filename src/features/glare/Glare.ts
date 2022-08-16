@@ -6,6 +6,9 @@ import { ElementSizePosition, ClientPosition } from 'utils/types';
 import { GlareSize } from './types';
 import { GlareProps } from './types.public';
 
+// All props are initialized by default with non-null values
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+
 export class Glare {
   public glareWrapperEl: HTMLDivElement;
   public glareEl: HTMLDivElement;

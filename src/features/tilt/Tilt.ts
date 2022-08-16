@@ -5,6 +5,9 @@ import { TiltProps } from './types.public';
 
 const TILT_ANGLE_CONSTRAINT = 90;
 
+// All props are initialized by default with non-null values
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+
 export class Tilt {
   public glareAngle = 0;
   public glareOpacity = 0;
