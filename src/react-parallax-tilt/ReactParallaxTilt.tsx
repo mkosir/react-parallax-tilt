@@ -5,7 +5,7 @@ import { Tilt } from 'features/tilt/Tilt';
 import { setTransition, constrainToRange } from 'utils/helperFns';
 
 import { defaultProps } from './defaultProps';
-import { SupportedEvent, EventType, CustomEventType, WrapperElement } from './types';
+import { SupportedEvent, EventType, CustomEventType, WrapperElement, DeviceOrientationEventiOS } from './types';
 import { ReactParallaxTiltProps } from './types.public';
 
 export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
@@ -27,11 +27,11 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
     updateAnimationId: null,
     scale: 1,
   };
-  private tilt: Tilt<HTMLDivElement> | null = null;
+  private tilt: Tilt | null = null;
   private glare: Glare | null = null;
 
   public componentDidMount() {
-    this.tilt = new Tilt<HTMLDivElement>();
+    this.tilt = new Tilt();
     this.initGlare();
     this.addEventListeners();
     if (typeof CustomEvent === 'undefined') return;
@@ -82,10 +82,11 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
       return;
     }
 
-    const iOS13OrHigherDevice = typeof (DeviceOrientationEvent as any).requestPermission === 'function';
-    if (iOS13OrHigherDevice) {
+    const iOS =
+      typeof (DeviceOrientationEvent as unknown as DeviceOrientationEventiOS).requestPermission === 'function';
+    if (iOS) {
       try {
-        const response = await (DeviceOrientationEvent as any).requestPermission();
+        const response = await (DeviceOrientationEvent as unknown as DeviceOrientationEventiOS).requestPermission();
         if (response === 'granted') {
           window.addEventListener('deviceorientation', this.onMove);
         }

@@ -1,11 +1,11 @@
 import { constrainToRange } from 'utils/helperFns';
-import { ClientPosition, IStyle } from 'utils/types';
+import { ClientPosition } from 'utils/types';
 
 import { TiltProps } from './types.public';
 
 const TILT_ANGLE_CONSTRAINT = 90;
 
-export class Tilt<T extends HTMLElement> implements IStyle {
+export class Tilt {
   public glareAngle = 0;
   public glareOpacity = 0;
 
@@ -68,7 +68,7 @@ export class Tilt<T extends HTMLElement> implements IStyle {
     this.tiltAngleYPercentage = (this.tiltAngleY / tiltMaxAngleY!) * 100;
   };
 
-  public render = (element: T): void => {
+  public render = (element: HTMLDivElement): void => {
     element.style.transform += `rotateX(${this.tiltAngleX}deg) rotateY(${this.tiltAngleY}deg) `;
   };
 }
