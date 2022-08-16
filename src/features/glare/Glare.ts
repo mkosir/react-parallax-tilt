@@ -128,6 +128,6 @@ export class Glare {
     const { glareColor } = props;
     this.glareEl.style.transform = `rotate(${this.glareAngle}deg) translate(-50%, -50%)`;
     this.glareEl.style.opacity = this.glareOpacity.toString();
-    this.glareEl.style.background = `linear-gradient(0deg, rgba(255,255,255,0) 0%, ${glareColor} 100%)`;
+    this.glareEl.style.background = `linear-gradient(0deg, rgba(255,255,255,0) 0%, ${glareColor!} 100%)`;
   };
 }
