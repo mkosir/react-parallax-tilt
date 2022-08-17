@@ -216,8 +216,8 @@ Please take a moment to review guidelines [PR](.github/pull_request_template.md)
 [npm-badge]: https://img.shields.io/npm/v/react-parallax-tilt.svg
 [size-badge]: https://badgen.net/bundlephobia/minzip/react-parallax-tilt
 [downloads-badge]: https://img.shields.io/npm/dm/react-parallax-tilt.svg?color=blue
-[build-badge]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/build.yml/badge.svg
-[build-url]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/build.yml
+[build-badge]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/build-rollup.yml/badge.svg
+[build-url]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/build-rollup.yml
 [coverage-badge]: https://codecov.io/gh/mkosir/react-parallax-tilt/branch/main/graph/badge.svg
 [coverage-url]: https://codecov.io/gh/mkosir/react-parallax-tilt
 [issues-badge]: https://img.shields.io/github/issues/mkosir/react-parallax-tilt
