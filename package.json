@@ -101,6 +101,9 @@
   "bugs": {
     "url": "https://github.com/mkosir/react-parallax-tilt/issues"
   },
+  "engines": {
+    "node": "16"
+  },
   "keywords": [
     "react",
     "react-component",
