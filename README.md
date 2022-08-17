@@ -3,15 +3,15 @@
 [![npm version][npm-badge]][npm-url]
 [![npm downloads][downloads-badge]][npm-url]
 [![npm bundle size][size-badge]][npm-url]
+[![Open issues][issues-badge]][issues-url]
+[![semantic-release][semantic-badge]][semantic-url]
+[![TypeScript][typescript-badge]][typescript-url]
 [![CI][lint-badge]][lint-url]
 [![CI][build-badge]][build-url]
 [![CI][test-badge]][test-url]
 [![Codecov Coverage][coverage-badge]][coverage-url]
 [![CI][deploy-storybook-badge]][deploy-storybook-url]
 [![CI][npm-release-badge]][npm-release-url]
-[![Open issues][issues-badge]][issues-url]
-[![semantic-release][semantic-badge]][semantic-url]
-[![TypeScript][typescript-badge]][typescript-url]
 
 _👀 Easily apply tilt hover effect on React components_
 
