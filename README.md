@@ -3,8 +3,12 @@
 [![npm version][npm-badge]][npm-url]
 [![npm downloads][downloads-badge]][npm-url]
 [![npm bundle size][size-badge]][npm-url]
+[![CI][lint-badge]][lint-url]
 [![CI][build-badge]][build-url]
+[![CI][test-badge]][test-url]
 [![Codecov Coverage][coverage-badge]][coverage-url]
+[![CI][deploy-storybook-badge]][deploy-storybook-url]
+[![CI][npm-release-badge]][npm-release-url]
 [![Open issues][issues-badge]][issues-url]
 [![semantic-release][semantic-badge]][semantic-url]
 [![TypeScript][typescript-badge]][typescript-url]
@@ -216,8 +220,16 @@ Please take a moment to review guidelines [PR](.github/pull_request_template.md)
 [npm-badge]: https://img.shields.io/npm/v/react-parallax-tilt.svg
 [size-badge]: https://badgen.net/bundlephobia/minzip/react-parallax-tilt
 [downloads-badge]: https://img.shields.io/npm/dm/react-parallax-tilt.svg?color=blue
-[build-badge]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/build-rollup.yml/badge.svg
-[build-url]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/build-rollup.yml
+[lint-badge]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/lint.yml/badge.svg
+[lint-url]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/lint.yml
+[build-badge]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/build.yml/badge.svg
+[build-url]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/build.yml
+[test-badge]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/test.yml/badge.svg
+[test-url]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/test.yml
+[deploy-storybook-badge]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/deploy-storybook.yml/badge.svg
+[deploy-storybook-url]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/deploy-storybook.yml
+[npm-realease-badge]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/npm-realease.yml/badge.svg
+[npm-realease-url]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/npm-realease.yml
 [coverage-badge]: https://codecov.io/gh/mkosir/react-parallax-tilt/branch/main/graph/badge.svg
 [coverage-url]: https://codecov.io/gh/mkosir/react-parallax-tilt
 [issues-badge]: https://img.shields.io/github/issues/mkosir/react-parallax-tilt
