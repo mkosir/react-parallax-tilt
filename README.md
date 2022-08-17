@@ -228,8 +228,8 @@ Please take a moment to review guidelines [PR](.github/pull_request_template.md)
 [test-url]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/test.yml
 [deploy-storybook-badge]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/deploy-storybook.yml/badge.svg
 [deploy-storybook-url]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/deploy-storybook.yml
-[npm-realease-badge]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/npm-realease.yml/badge.svg
-[npm-realease-url]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/npm-realease.yml
+[npm-release-badge]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/npm-release.yml/badge.svg
+[npm-release-url]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/npm-release.yml
 [coverage-badge]: https://codecov.io/gh/mkosir/react-parallax-tilt/branch/main/graph/badge.svg
 [coverage-url]: https://codecov.io/gh/mkosir/react-parallax-tilt
 [issues-badge]: https://img.shields.io/github/issues/mkosir/react-parallax-tilt
