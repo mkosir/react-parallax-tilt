@@ -4,8 +4,8 @@
 [![npm downloads][downloads-badge]][npm-url]
 [![npm bundle size][size-badge]][npm-url]
 [![Open issues][issues-badge]][issues-url]
-[![semantic-release][semantic-badge]][semantic-url]
 [![TypeScript][typescript-badge]][typescript-url]
+[![semantic-release][semantic-badge]][semantic-url]
 
 [![CI][lint-badge]][lint-url]
 [![CI][build-badge]][build-url]
