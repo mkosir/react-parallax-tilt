@@ -2,7 +2,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import { defineConfig } from 'rollup';
 import dts from 'rollup-plugin-dts';
-//@ts-ignore types package is broken - https://www.npmjs.com/package/@types/rollup-plugin-size-snapshot
+//@ts-expect-error types package is broken - https://www.npmjs.com/package/@types/rollup-plugin-size-snapshot
 import { sizeSnapshot } from 'rollup-plugin-size-snapshot';
 import { terser } from 'rollup-plugin-terser';
 import visualizer from 'rollup-plugin-visualizer';
