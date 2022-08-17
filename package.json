@@ -92,7 +92,7 @@
     "react-dom": "^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0"
   },
   "engines": {
-    "node": "16"
+    "node": "16.x"
   },
   "license": "MIT",
   "author": "Marko Kosir <kosir.mar@gmail.com>",
