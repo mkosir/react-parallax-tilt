@@ -6,10 +6,12 @@
 [![Open issues][issues-badge]][issues-url]
 [![semantic-release][semantic-badge]][semantic-url]
 [![TypeScript][typescript-badge]][typescript-url]
+
 [![CI][lint-badge]][lint-url]
 [![CI][build-badge]][build-url]
 [![CI][test-badge]][test-url]
 [![Codecov Coverage][coverage-badge]][coverage-url]
+
 [![CI][deploy-storybook-badge]][deploy-storybook-url]
 [![CI][npm-release-badge]][npm-release-url]
 
