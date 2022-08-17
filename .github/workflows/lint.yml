@@ -1,12 +1,10 @@
-name: build
+name: lint
 
 on: push
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
-    env:
-      MATCH_SNAPSHOT: true
 
     steps:
       - name: Checkout 🛎️
@@ -15,5 +13,5 @@ jobs:
       - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
         uses: ./.github/workflows/actions/setup_node-cache_dep-install_dep
 
-      - name: Build 🏗️
-        run: npm run build
+      - name: Lint ✅
+        run: npm run lint
