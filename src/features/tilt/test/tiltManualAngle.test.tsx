@@ -6,7 +6,7 @@ import { OnMoveParams } from 'index';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - Manual Angle', () => {
-  it('should calculate tilt with manual input', async () => {
+  it('should calculate tilt when manual input is provided', async () => {
     const onMove = jest.fn();
 
     render(
@@ -26,7 +26,7 @@ describe('Tilt - Manual Angle', () => {
     });
   });
 
-  it('should calculate tilt with only X manual input', async () => {
+  it('should calculate tilt when only X manual input is provided', async () => {
     const onMove = jest.fn();
 
     render(
@@ -54,7 +54,7 @@ describe('Tilt - Manual Angle', () => {
     });
   });
 
-  it('should calculate tilt with only Y manual input', async () => {
+  it('should calculate tilt when only Y manual input is provided', async () => {
     const onMove = jest.fn();
 
     render(<TiltTest tiltMaxAngleX={60} tiltMaxAngleY={60} tiltAngleYManual={45} onMove={onMove} />);

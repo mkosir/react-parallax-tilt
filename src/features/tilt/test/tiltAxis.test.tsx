@@ -6,7 +6,7 @@ import { OnMoveParams } from 'index';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - Axis', () => {
-  it('should disable y axis', async () => {
+  it('should disable y axis when only x tilt axis prop is enabled', async () => {
     const onMove = jest.fn();
 
     render(
@@ -33,7 +33,7 @@ describe('Tilt - Axis', () => {
     });
   });
 
-  it('should disable x axis', async () => {
+  it('should disable x axis when only y tilt axis prop is enabled', async () => {
     const onMove = jest.fn();
 
     render(

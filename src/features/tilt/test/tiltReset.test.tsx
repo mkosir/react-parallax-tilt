@@ -5,7 +5,7 @@ import { OnMoveParams } from 'index';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - Reset', () => {
-  it('should not reset tilt', () => {
+  it('should not reset tilt when mouse leave an element', () => {
     const onEnter = jest.fn();
     const onMove = jest.fn();
     const onLeave = jest.fn();

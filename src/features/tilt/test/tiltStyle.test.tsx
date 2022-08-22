@@ -4,7 +4,7 @@ import React from 'react';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - Style', () => {
-  it('should update tilt style on hovering element', () => {
+  it('should update tilt style when hover on element', () => {
     jest.useFakeTimers();
 
     const onMove = jest.fn();

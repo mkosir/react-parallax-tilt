@@ -6,7 +6,7 @@ import { OnMoveParams } from 'index';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - Track On Window', () => {
-  it('should calculate tilt tracked on window', async () => {
+  it('should calculate tilt when hover on window', async () => {
     const onMove = jest.fn();
 
     render(<TiltTest trackOnWindow={true} tiltAngleXManual={20} tiltAngleYManual={15} onMove={onMove} />);

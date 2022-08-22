@@ -6,7 +6,7 @@ import { OnMoveParams } from 'index';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Glare', () => {
-  it('should calculate glare with top position', async () => {
+  it('should calculate glare with top position when top position prop value is provided', async () => {
     const onMove = jest.fn();
 
     render(
@@ -35,7 +35,7 @@ describe('Glare', () => {
     });
   });
 
-  it('should calculate glare with right position', async () => {
+  it('should calculate glare with right position when right position prop value is provided', async () => {
     const onMove = jest.fn();
 
     render(
@@ -64,7 +64,7 @@ describe('Glare', () => {
     });
   });
 
-  it('should calculate glare with bottom position', async () => {
+  it('should calculate glare with bottom position when bottom position prop value is provided', async () => {
     const onMove = jest.fn();
 
     render(
@@ -93,7 +93,7 @@ describe('Glare', () => {
     });
   });
 
-  it('should calculate glare with left position', async () => {
+  it('should calculate glare with left position when left position prop value is provided', async () => {
     const onMove = jest.fn();
 
     render(
@@ -123,7 +123,7 @@ describe('Glare', () => {
     });
   });
 
-  it('should calculate glare with all (sides) positions', async () => {
+  it('should calculate glare with all positions when all position prop value is provided', async () => {
     const onMove = jest.fn();
 
     render(
@@ -152,7 +152,7 @@ describe('Glare', () => {
     });
   });
 
-  it('should calculate glare with default position', async () => {
+  it('should calculate glare with default position when glare position prop is not provided', async () => {
     const onMove = jest.fn();
 
     render(
@@ -180,7 +180,7 @@ describe('Glare', () => {
     });
   });
 
-  it('should calculate glare with flip vertically/horizontally enabled', async () => {
+  it('should calculate flipped glare when flip vertically/horizontally props are enabled', async () => {
     const onMove = jest.fn();
 
     render(

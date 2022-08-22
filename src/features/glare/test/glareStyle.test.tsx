@@ -4,7 +4,7 @@ import React from 'react';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Glare - Style', () => {
-  it('should update glare style on hovering element', () => {
+  it('should update glare style when hover on element', () => {
     jest.useFakeTimers();
 
     const onMove = jest.fn();
