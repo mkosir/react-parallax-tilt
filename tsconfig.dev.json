@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.base.json",
   // Files and folders starting with a . are ignored by the glob patterns
-  "include": [".", ".storybook/**/*", ".commitlintrc.ts"],
+  "include": [".", ".storybook/**/*", ".commitlintrc.ts", ".eslintrc.js"],
   // Storybook
   "ts-node": {
     "compilerOptions": {
