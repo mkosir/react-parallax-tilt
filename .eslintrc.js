@@ -30,6 +30,15 @@ const eslintConfig = {
     '@typescript-eslint/prefer-nullish-coalescing': 'error',
     '@typescript-eslint/no-unnecessary-condition': 'error',
 
+    'jest/valid-title': [
+      'error',
+      {
+        mustMatch: {
+          it: [/should.*when/u.source, "Test title must include 'should' and 'when'"],
+        },
+      },
+    ],
+
     'import/no-default-export': 'error',
     'import/order': [
       'error',
