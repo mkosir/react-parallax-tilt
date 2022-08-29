@@ -24,9 +24,12 @@ const eslintConfig = {
   rules: {
     'react/prop-types': 'off',
 
+    'prefer-template': 'error',
+
     '@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }],
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     '@typescript-eslint/array-type': ['error', { default: 'generic' }],
+    '@typescript-eslint/ban-types': 'error',
     '@typescript-eslint/prefer-nullish-coalescing': 'error',
     '@typescript-eslint/no-unnecessary-condition': 'error',
 
