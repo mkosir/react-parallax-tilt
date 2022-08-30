@@ -25,6 +25,10 @@ const eslintConfig = {
     'react/prop-types': 'off',
 
     'prefer-template': 'error',
+    'no-nested-ternary': 'error',
+    'no-unneeded-ternary': 'error',
+    'spaced-comment': 'error',
+    'id-length': ['error', { min: 2 }],
 
     '@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }],
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
