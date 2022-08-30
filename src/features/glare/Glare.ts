@@ -52,8 +52,8 @@ export class Glare {
   }
 
   private calculateGlareSize = (wrapperElSize: ElementSizePosition): GlareSize => {
-    const { width: w, height: h } = wrapperElSize;
-    const wrapperElDiagonal = Math.sqrt(w! ** 2 + h! ** 2);
+    const { width, height } = wrapperElSize;
+    const wrapperElDiagonal = Math.sqrt(width! ** 2 + height! ** 2);
     return {
       width: wrapperElDiagonal,
       height: wrapperElDiagonal,
