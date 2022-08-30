@@ -28,7 +28,7 @@
     "demozap": "demozap generate --prefix=_ && npm run format-fix && npm run lint-fix"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.1.1",
+    "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-typescript": "^8.4.0",
@@ -45,8 +45,8 @@
     "@types/jest": "^28.1.8",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
-    "@typescript-eslint/eslint-plugin": "^5.35.1",
-    "@typescript-eslint/parser": "^5.35.1",
+    "@typescript-eslint/eslint-plugin": "^5.36.0",
+    "@typescript-eslint/parser": "^5.36.0",
     "codecov": "^3.8.3",
     "commitizen": "^4.2.5",
     "demozap": "^1.3.42",
@@ -79,7 +79,7 @@
     "rollup-plugin-size-snapshot": "^0.12.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-visualizer": "^5.8.0",
-    "sass": "^1.54.5",
+    "sass": "^1.54.6",
     "sass-loader": "^13.0.2",
     "semantic-release": "^19.0.5",
     "shx": "^0.3.4",
