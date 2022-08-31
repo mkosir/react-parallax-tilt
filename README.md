@@ -8,6 +8,7 @@
 [![semantic-release][semantic-badge]][semantic-url]
 
 [![CI][lint-badge]][lint-url]
+[![CI][tsc-badge]][tsc-url]
 [![CI][build-badge]][build-url]
 [![CI][test-badge]][test-url]
 [![Codecov Coverage][coverage-badge]][coverage-url]
@@ -224,6 +225,8 @@ Please take a moment to review guidelines [PR](.github/pull_request_template.md)
 [downloads-badge]: https://img.shields.io/npm/dm/react-parallax-tilt.svg?color=blue
 [lint-badge]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/lint.yml/badge.svg
 [lint-url]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/lint.yml
+[tsc-badge]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/tsc.yml/badge.svg
+[tsc-url]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/tsc.yml
 [build-badge]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/build.yml/badge.svg
 [build-url]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/build.yml
 [test-badge]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/test.yml/badge.svg
