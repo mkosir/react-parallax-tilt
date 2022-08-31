@@ -13,7 +13,7 @@
     "start": "npm run storybook",
     "prepare": "husky install",
     "build": "shx rm -rf dist && rollup -c",
-    "lint": "eslint --max-warnings 0 . && npm run tsc",
+    "lint": "eslint --max-warnings 0 .",
     "lint-fix": "eslint --fix .",
     "lint-staged-husky": "lint-staged",
     "tsc": "tsc -p tsconfig.dev.json",
