@@ -3,7 +3,7 @@ name: tsc
 on: push
 
 jobs:
-  lint:
+  tsc:
     runs-on: ubuntu-latest
 
     steps:
