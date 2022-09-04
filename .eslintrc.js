@@ -23,7 +23,6 @@ const eslintConfig = {
 
   rules: {
     'react/prop-types': 'off',
-    'react/no-unknown-property': 'off',
 
     'prefer-template': 'error',
     'no-nested-ternary': 'error',
