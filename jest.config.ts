@@ -5,7 +5,6 @@ const jestConfig: Config = {
   preset: 'ts-jest',
   moduleDirectories: ['node_modules', 'src'],
   setupFilesAfterEnv: ['./jest.setup.ts'],
-  collectCoverage: true,
   collectCoverageFrom: ['src/**/*.{ts,tsx}'],
   coverageThreshold: {
     global: {
