@@ -25,7 +25,8 @@
     "storybook": "TS_NODE_PROJECT=tsconfig.dev.json start-storybook -p 9009",
     "storybook-build": "build-storybook",
     "semantic-release": "semantic-release --branches main",
-    "demozap": "demozap generate --prefix=_ && npm run format-fix && npm run lint-fix"
+    "demozap": "demozap generate --prefix=_ && npm run format-fix && npm run lint-fix",
+    "clean": "shx rm -rf node_modules coverage dist compiled"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
@@ -45,8 +46,8 @@
     "@types/jest": "^29.1.1",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
-    "@typescript-eslint/eslint-plugin": "^5.38.1",
-    "@typescript-eslint/parser": "^5.38.1",
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
     "codecov": "^3.8.3",
     "commitizen": "^4.2.5",
     "demozap": "^1.3.42",
@@ -54,7 +55,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-typescript": "^3.5.1",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jest": "^27.0.4",
+    "eslint-plugin-jest": "^27.1.0",
     "eslint-plugin-jest-dom": "^4.0.2",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-no-array-reduce": "^1.0.62",
