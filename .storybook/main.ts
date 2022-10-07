@@ -4,7 +4,7 @@ import { StorybookConfig } from '@storybook/core-common';
 
 const storybookConfig: StorybookConfig = {
   stories: ['../stories/**/*.stories.tsx'],
-  typescript: { reactDocgen: 'react-docgen' },
+  typescript: { reactDocgen: 'react-docgen-typescript' },
   core: {
     builder: 'webpack5',
   },
