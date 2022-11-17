@@ -5,8 +5,6 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      MATCH_SNAPSHOT: true
 
     steps:
       - name: Checkout 🛎️

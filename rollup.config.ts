@@ -1,14 +1,11 @@
 import commonjs from '@rollup/plugin-commonjs';
+import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 import { defineConfig } from 'rollup';
 import dts from 'rollup-plugin-dts';
-// @ts-expect-error types package is broken - https://www.npmjs.com/package/@types/rollup-plugin-size-snapshot
-import { sizeSnapshot } from 'rollup-plugin-size-snapshot';
-import { terser } from 'rollup-plugin-terser';
-import visualizer from 'rollup-plugin-visualizer';
 
-import packageJson from './package.json';
-import tsConfig from './tsconfig.base.json';
+import packageJson from './package.json' assert { type: 'json' };
+import tsConfig from './tsconfig.base.json' assert { type: 'json' };
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -35,8 +32,6 @@ const rollupConfig = defineConfig([
       },
     ],
     plugins: [
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-      sizeSnapshot({ matchSnapshot: Boolean(process.env.MATCH_SNAPSHOT) }),
       commonjs(),
       typescript({
         tsconfig: './tsconfig.prod.json',
@@ -47,11 +42,6 @@ const rollupConfig = defineConfig([
           pure_getters: true,
         },
         toplevel: true,
-      }),
-      visualizer({
-        filename: 'bundle-analysis.html',
-        title: `${packageJson.name} - Rollup Visualizer`,
-        open: false,
       }),
     ],
     // Ensure dependencies are not bundled with the library

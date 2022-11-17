@@ -74,7 +74,7 @@ const eslintConfig = {
 
   settings: {
     'import/resolver': {
-      typescript: {},
+      typescript: { project: 'tsconfig.base.json' },
     },
     react: {
       version: 'detect',
