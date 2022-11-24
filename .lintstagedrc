@@ -1,11 +1,5 @@
 {
-  "*": [
-    "pretty-quick --staged"
-  ],
-  "*.{js,jsx,ts,tsx}": [
-    "eslint --max-warnings 0"
-  ],
-  "*.{ts,tsx}": [
-    "tsc-files --noEmit -p tsconfig.dev.json stories/types/images.d.ts"
-  ]
+  "*": ["pretty-quick --staged"],
+  "*.{js,jsx,ts,tsx}": ["eslint --max-warnings 0"],
+  "*.{ts,tsx}": ["tsc-files --noEmit -p tsconfig.dev.json stories/types/images.d.ts"]
 }
