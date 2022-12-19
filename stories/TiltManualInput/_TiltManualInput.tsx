@@ -14,7 +14,7 @@ const TiltManualInput = () => {
   const [[manualTiltAngleX, manualTiltAngleY], setManualTiltAngle] = useState([0, 0]);
 
   const onMove = (stick: IJoystickUpdateEvent) => {
-    setManualTiltAngle([stick.y ?? 0, stick.x ?? 0]);
+    setManualTiltAngle([stick.y ? stick.y * 100 : 0, stick.x ? stick.x * 100 : 0]);
   };
 
   const onStop = () => {
