@@ -80,7 +80,7 @@
     "rollup-plugin-dts": "5.1.1",
     "sass": "1.57.1",
     "sass-loader": "13.2.0",
-    "semantic-release": "20.0.0",
+    "semantic-release": "20.0.2",
     "shx": "0.3.4",
     "ts-jest": "29.0.3",
     "tsc-files": "1.1.3",
