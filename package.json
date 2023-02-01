@@ -78,7 +78,7 @@
     "react-joystick-component": "6.0.0",
     "rollup": "3.12.0",
     "rollup-plugin-dts": "5.1.1",
-    "sass": "1.57.1",
+    "sass": "1.58.0",
     "sass-loader": "13.2.0",
     "semantic-release": "20.1.0",
     "shx": "0.3.4",
