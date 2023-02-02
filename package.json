@@ -43,7 +43,7 @@
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "13.4.0",
     "@testing-library/user-event": "14.4.3",
-    "@types/eslint": "8.4.10",
+    "@types/eslint": "8.21.0",
     "@types/jest": "29.4.0",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
