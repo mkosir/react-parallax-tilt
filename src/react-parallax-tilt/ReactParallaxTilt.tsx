@@ -79,9 +79,9 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
 
   /* istanbul ignore next */
   private addDeviceOrientationEventListener = async () => {
+    // Browser doesn't support Device Orientation.
     // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-    if (!window.DeviceOrientationEvent && process.env.NODE_ENV === 'development') {
-      console.warn("Browser doesn't support Device Orientation.");
+    if (!window.DeviceOrientationEvent) {
       return;
     }
 
