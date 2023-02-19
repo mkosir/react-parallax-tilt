@@ -1,7 +1,7 @@
 const eslintConfig = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: ['./tsconfig.dev.json'],
+    project: ['./tsconfigs/tsconfig.dev.json'],
   },
 
   plugins: ['@typescript-eslint', 'testing-library', 'jest-dom', 'jest', 'import'],
@@ -74,7 +74,7 @@ const eslintConfig = {
 
   settings: {
     'import/resolver': {
-      typescript: { project: 'tsconfig.base.json' },
+      typescript: { project: 'tsconfigs/tsconfig.base.json' },
     },
     react: {
       version: 'detect',
