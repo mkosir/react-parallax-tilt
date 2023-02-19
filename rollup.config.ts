@@ -5,7 +5,7 @@ import { defineConfig } from 'rollup';
 import dts from 'rollup-plugin-dts';
 
 import packageJson from './package.json' assert { type: 'json' };
-import tsConfig from './tsconfig.base.json' assert { type: 'json' };
+import tsConfig from './tsconfigs/tsconfig.base.json' assert { type: 'json' };
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -34,7 +34,7 @@ const rollupConfig = defineConfig([
     plugins: [
       commonjs(),
       typescript({
-        tsconfig: './tsconfig.prod.json',
+        tsconfig: './tsconfigs/tsconfig.prod.json',
         sourceMap: !isProduction,
       }),
       terser({
@@ -57,7 +57,7 @@ const rollupConfig = defineConfig([
     plugins: [
       dts({
         compilerOptions: {
-          baseUrl: tsConfig.compilerOptions.baseUrl,
+          baseUrl: './src',
           paths: tsConfig.compilerOptions.paths,
         },
       }),
