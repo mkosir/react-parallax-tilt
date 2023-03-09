@@ -76,7 +76,7 @@
     "react-demo-tab": "1.3.9",
     "react-dom": "18.2.0",
     "react-joystick-component": "6.0.0",
-    "rollup": "3.18.0",
+    "rollup": "3.19.0",
     "rollup-plugin-dts": "5.2.0",
     "sass": "1.58.3",
     "sass-loader": "13.2.0",
