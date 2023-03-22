@@ -29,7 +29,7 @@
     "clean": "shx rm -rf node_modules coverage dist compiled"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.4.4",
+    "@commitlint/cli": "17.5.0",
     "@commitlint/config-conventional": "17.4.4",
     "@rollup/plugin-commonjs": "24.0.1",
     "@rollup/plugin-terser": "0.4.0",
