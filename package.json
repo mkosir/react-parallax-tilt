@@ -22,7 +22,7 @@
     "commit": "git-cz",
     "test": "jest --verbose --watch",
     "test-coverage": "jest --coverage --verbose",
-    "storybook": "TS_NODE_PROJECT=tsconfig.dev.json start-storybook -p 9009 --quiet",
+    "storybook": "TS_NODE_PROJECT=tsconfigs/tsconfig.dev.json start-storybook -p 9009 --quiet",
     "storybook-build": "build-storybook",
     "semantic-release": "semantic-release --branches main",
     "demozap": "demozap generate --prefix=_ && npm run format-fix && npm run lint-fix",
