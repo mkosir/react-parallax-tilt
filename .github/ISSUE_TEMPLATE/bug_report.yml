@@ -13,7 +13,7 @@ body:
   - type: 'input'
     id: 'reproduction_link'
     attributes:
-      label: 'Link to Reproduction'
+      label: 'Link to Reproduction - Please provide demo in online code editor [CodeSandbox](https://codesandbox.io/) or similar. - Issues without a reproduction link are likely to stall.'
       description: |
         Please provide demo in online code editor [CodeSandbox](https://codesandbox.io/) or similar.
         Issues without a reproduction link are likely to stall.
