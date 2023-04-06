@@ -62,7 +62,7 @@ const eslintConfig = {
 
   overrides: [
     {
-      files: ['stories/**/*.demozap.*'],
+      files: ['stories/**/*.demozap.*', '**/*.stories.*'],
       rules: {
         'import/no-default-export': 'off',
       },
