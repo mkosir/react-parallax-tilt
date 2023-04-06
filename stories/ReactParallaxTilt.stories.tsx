@@ -1,4 +1,4 @@
-import type { Meta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 
 import { _Default } from './Default/_Default';
@@ -29,74 +29,126 @@ import './ReactParallaxTilt.scss';
 
 const meta: Meta = {
   title: 'React Parallax Tilt',
+  decorators: [
+    (Story) => (
+      <div className="root-story">
+        <Story />
+      </div>
+    ),
+  ],
 };
 
-// eslint-disable-next-line
 export default meta;
 
-export const Default = () => <_Default />;
+export const Default: StoryObj = {
+  render: () => <_Default />,
+};
 
-export const KeepFloating = () => <_KeepFloating />;
-KeepFloating.storyName = 'Keep floating';
+export const KeepFloating: StoryObj = {
+  render: () => <_KeepFloating />,
+  name: 'Keep floating',
+};
 
-export const ReverseTilt = () => <_ReverseTilt />;
-ReverseTilt.storyName = 'Reverse tilt';
+export const ReverseTilt: StoryObj = {
+  render: () => <_ReverseTilt />,
+  name: 'Reverse tilt',
+};
 
-export const Scale = () => <_TiltScale />;
+export const Scale: StoryObj = {
+  render: () => <_TiltScale />,
+};
 
-export const ScaleNoTilt = () => <_ScaleNoTilt />;
-ScaleNoTilt.storyName = 'Scale - No tilt';
+export const ScaleNoTilt: StoryObj = {
+  render: () => <_ScaleNoTilt />,
+  name: 'Scale - No tilt',
+};
 
-export const TiltDisableAxis = () => <_TiltDisableAxis />;
-TiltDisableAxis.storyName = 'Disable x/y axis';
+export const TiltDisableAxis: StoryObj = {
+  render: () => <_TiltDisableAxis />,
+  name: 'Disable x/y axis',
+};
 
-export const InitialTilt = () => <_InitialTilt />;
-InitialTilt.storyName = 'Initial tilt';
+export const InitialTilt: StoryObj = {
+  render: () => <_InitialTilt />,
+  name: 'Initial tilt',
+};
 
-export const FlipVH = () => <_FlipVH />;
-FlipVH.storyName = 'Flip vertically/horizontally';
+export const FlipVH: StoryObj = {
+  render: () => <_FlipVH />,
+  name: 'Flip vertically/horizontally',
+};
 
-export const FlipPage = () => <_FlipPage />;
-FlipPage.storyName = 'Flip page';
+export const FlipPage: StoryObj = {
+  render: () => <_FlipPage />,
+  name: 'Flip page',
+};
 
-export const ParallaxEffect = () => <_ParallaxEffect />;
-ParallaxEffect.storyName = 'Parallax effect';
+export const ParallaxEffect: StoryObj = {
+  render: () => <_ParallaxEffect />,
+  name: 'Parallax effect',
+};
 
-export const ParallaxEffectGlareScale = () => <_ParallaxEffectGlareScale />;
-ParallaxEffectGlareScale.storyName = 'Parallax effect - Glare & Scale';
+export const ParallaxEffectGlareScale: StoryObj = {
+  render: () => <_ParallaxEffectGlareScale />,
+  name: 'Parallax effect - Glare & Scale',
+};
 
-export const ParallaxEffectImg = () => <_ParallaxEffectImg />;
-ParallaxEffectImg.storyName = 'Parallax effect image';
+export const ParallaxEffectImg: StoryObj = {
+  render: () => <_ParallaxEffectImg />,
+  name: 'Parallax effect image',
+};
 
-export const TiltImg = () => <_TiltImg />;
-TiltImg.storyName = 'Tilt image';
+export const TiltImg: StoryObj = {
+  render: () => <_TiltImg />,
+  name: 'Tilt image',
+};
 
-export const GlareEffect = () => <_GlareEffect />;
-GlareEffect.storyName = 'Glare effect';
+export const GlareEffect: StoryObj = {
+  render: () => <_GlareEffect />,
+  name: 'Glare effect',
+};
 
-export const GlareEffectNoTilt = () => <_GlareEffectNoTilt />;
-GlareEffectNoTilt.storyName = 'Glare effect - No tilt';
+export const GlareEffectNoTilt: StoryObj = {
+  render: () => <_GlareEffectNoTilt />,
+  name: 'Glare effect - No tilt',
+};
 
-export const GlareEffect360 = () => <_GlareEffect360 />;
-GlareEffect360.storyName = 'Glare effect - 360';
+export const GlareEffect360: StoryObj = {
+  render: () => <_GlareEffect360 />,
+  name: 'Glare effect - 360',
+};
 
-export const TrackOnWindow = () => <_TrackOnWindow />;
-TrackOnWindow.storyName = 'Track on window';
+export const TrackOnWindow: StoryObj = {
+  render: () => <_TrackOnWindow />,
+  name: 'Track on window',
+};
 
-export const TiltManualInput = () => <_TiltManualInput />;
-TiltManualInput.storyName = 'Tilt manual input';
+export const TiltManualInput: StoryObj = {
+  render: () => <_TiltManualInput />,
+  name: 'Tilt manual input',
+};
 
-export const Gyroscope = () => <_Gyroscope />;
-Gyroscope.storyName = 'Gyroscope tilt';
+export const Gyroscope: StoryObj = {
+  render: () => <_Gyroscope />,
+  name: 'Gyroscope tilt',
+};
 
-export const MultipleTilt = () => <_MultipleTilt />;
-MultipleTilt.storyName = 'Multiple tilt';
+export const MultipleTilt: StoryObj = {
+  render: () => <_MultipleTilt />,
+  name: 'Multiple tilt',
+};
 
-export const MultipleTiltScroll = () => <_MultipleTiltScroll />;
-MultipleTiltScroll.storyName = 'Multiple tilt - Scroll';
+export const MultipleTiltScroll: StoryObj = {
+  render: () => <_MultipleTiltScroll />,
+  name: 'Multiple tilt - Scroll',
+};
 
-export const EventTiltAngle = () => <_EventTiltAngle />;
-EventTiltAngle.storyName = 'Event - Tilt angle';
+export const EventTiltAngle: StoryObj = {
+  render: () => <_EventTiltAngle />,
+  name: 'Event - Tilt angle',
+};
 
-export const EventParams = () => <_EventParams />;
-EventParams.storyName = 'Event - Params';
+export const EventParams: StoryObj = {
+  render: () => <_EventParams />,
+  name: 'Event - Params',
+};

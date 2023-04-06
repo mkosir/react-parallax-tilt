@@ -1,12 +1,13 @@
 import path from 'path';
 
-import { StorybookConfig } from '@storybook/core-common';
+import { StorybookConfig } from '@storybook/react-webpack5';
 
 const storybookConfig: StorybookConfig = {
   stories: ['../stories/**/*.stories.tsx'],
   typescript: { reactDocgen: 'react-docgen-typescript' },
-  core: {
-    builder: 'webpack5',
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {},
   },
   webpackFinal: (config) => {
     config.module?.rules?.push({
@@ -22,4 +23,5 @@ const storybookConfig: StorybookConfig = {
   },
 };
 
-module.exports = storybookConfig;
+// eslint-disable-next-line import/no-default-export
+export default storybookConfig;
