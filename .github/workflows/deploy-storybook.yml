@@ -29,5 +29,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: storybook-static
+          folder: build-storybook-static
           clean: true

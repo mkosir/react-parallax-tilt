@@ -23,10 +23,10 @@
     "test": "jest --verbose --watch",
     "test-coverage": "jest --coverage --verbose",
     "storybook": "TS_NODE_PROJECT=tsconfigs/tsconfig.dev.json storybook dev -p 9009 --quiet",
-    "storybook-build": "storybook build",
+    "storybook-build": "storybook build -o build-storybook-static",
     "semantic-release": "semantic-release --branches main",
     "demozap": "demozap generate --prefix=_ && npm run format-fix && npm run lint-fix",
-    "clean": "shx rm -rf node_modules coverage dist compiled"
+    "clean": "shx rm -rf node_modules coverage dist compiled build-storybook-static"
   },
   "devDependencies": {
     "@babel/preset-env": "7.21.4",
