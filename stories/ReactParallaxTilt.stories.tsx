@@ -27,7 +27,7 @@ import { _TrackOnWindow } from './TrackOnWindow/_TrackOnWindow';
 
 import './ReactParallaxTilt.scss';
 
-const meta: Meta = {
+export default {
   title: 'React Parallax Tilt',
   decorators: [
     (Story) => (
@@ -36,9 +36,7 @@ const meta: Meta = {
       </div>
     ),
   ],
-};
-
-export default meta;
+} satisfies Meta;
 
 export const Default: StoryObj = {
   render: () => <_Default />,
