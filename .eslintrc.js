@@ -1,15 +1,16 @@
 const eslintConfig = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: ['./tsconfigs/tsconfig.dev.json'],
+    project: true,
+    tsconfigRootDir: __dirname,
   },
 
   plugins: ['@typescript-eslint', 'testing-library', 'jest-dom', 'jest', 'import'],
 
   extends: [
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:@typescript-eslint/strict',
+    'plugin:@typescript-eslint/recommended-type-checked',
+    'plugin:@typescript-eslint/strict-type-checked',
+    'plugin:@typescript-eslint/stylistic-type-checked',
     'prettier',
     'plugin:prettier/recommended',
     'plugin:jsx-a11y/recommended',
@@ -30,12 +31,13 @@ const eslintConfig = {
     'spaced-comment': 'error',
     'id-length': ['error', { min: 2, properties: 'never' }],
 
-    '@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }],
+    '@typescript-eslint/ban-ts-comment': ['error', { 'ts-expect-error': 'allow-with-description' }],
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     '@typescript-eslint/array-type': ['error', { default: 'generic' }],
     '@typescript-eslint/ban-types': 'error',
     '@typescript-eslint/prefer-nullish-coalescing': 'error',
     '@typescript-eslint/no-unnecessary-condition': 'error',
+    '@typescript-eslint/no-confusing-void-expression': ['error', { ignoreArrowShorthand: true }],
 
     'jest/valid-title': [
       'error',
@@ -69,7 +71,7 @@ const eslintConfig = {
     },
   ],
 
-  // ESlint default behaviour ignores file/folders starting with "." - https://github.com/eslint/eslint/issues/10341
+  // ESlint default behavior ignores file/folders starting with "." - https://github.com/eslint/eslint/issues/10341
   ignorePatterns: ['!.*', 'dist', 'node_modules'],
 
   settings: {
