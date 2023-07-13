@@ -264,12 +264,12 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
     this.wrapperEl.clientPosition.yPercentage = constrainToRange(this.wrapperEl.clientPosition.yPercentage, -100, 100);
   };
 
-  private update = (eventType: EventType | string): void => {
+  private update = (eventType: string): void => {
     const { tiltEnable, flipVertically, flipHorizontally } = this.props;
 
-    const isAngleSetToDefaultAlready = eventType !== 'autoreset';
-    const isAngleRetrievedFromGyroscope = eventType !== 'deviceorientation';
-    const isPropChanged = eventType !== 'propChange';
+    const isAngleSetToDefaultAlready = eventType !== ('autoreset' satisfies EventType);
+    const isAngleRetrievedFromGyroscope = eventType !== ('deviceorientation' satisfies EventType);
+    const isPropChanged = eventType !== ('propChange' satisfies EventType);
     const isUpdateCalculationNeeded = isAngleSetToDefaultAlready && isAngleRetrievedFromGyroscope && isPropChanged;
     if (isUpdateCalculationNeeded) {
       this.updateClientInput();
