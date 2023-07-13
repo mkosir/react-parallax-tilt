@@ -29,7 +29,7 @@
     "clean": "shx rm -rf node_modules coverage dist compiled build-storybook-static"
   },
   "devDependencies": {
-    "@babel/preset-env": "7.22.7",
+    "@babel/preset-env": "7.22.9",
     "@babel/preset-react": "7.22.5",
     "@babel/preset-typescript": "7.22.5",
     "@commitlint/cli": "17.6.6",
@@ -37,8 +37,8 @@
     "@rollup/plugin-commonjs": "25.0.2",
     "@rollup/plugin-terser": "0.4.3",
     "@rollup/plugin-typescript": "11.1.2",
-    "@storybook/react": "7.0.26",
-    "@storybook/react-webpack5": "7.0.26",
+    "@storybook/react": "7.0.27",
+    "@storybook/react-webpack5": "7.0.27",
     "@testing-library/dom": "9.3.1",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "14.0.0",
@@ -46,7 +46,7 @@
     "@types/eslint": "8.44.0",
     "@types/jest": "29.5.3",
     "@types/react": "18.2.14",
-    "@types/react-dom": "18.2.6",
+    "@types/react-dom": "18.2.7",
     "@typescript-eslint/eslint-plugin": "5.61.0",
     "@typescript-eslint/parser": "5.61.0",
     "codecov": "3.8.3",
@@ -82,7 +82,7 @@
     "sass-loader": "13.3.2",
     "semantic-release": "21.0.7",
     "shx": "0.3.4",
-    "storybook": "7.0.26",
+    "storybook": "7.0.27",
     "ts-jest": "29.1.1",
     "tsc-files": "1.1.4",
     "typescript": "5.1.6"
