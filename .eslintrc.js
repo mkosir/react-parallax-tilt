@@ -8,7 +8,6 @@ const eslintConfig = {
   plugins: ['@typescript-eslint', 'testing-library', 'jest-dom', 'jest', 'import'],
 
   extends: [
-    'plugin:@typescript-eslint/recommended-type-checked',
     'plugin:@typescript-eslint/strict-type-checked',
     'plugin:@typescript-eslint/stylistic-type-checked',
     'prettier',
