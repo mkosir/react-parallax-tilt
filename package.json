@@ -79,7 +79,7 @@
     "rollup-plugin-dts": "6.0.0",
     "sass": "1.66.1",
     "sass-loader": "13.3.2",
-    "semantic-release": "21.0.7",
+    "semantic-release": "21.0.9",
     "shx": "0.3.4",
     "storybook": "7.3.2",
     "ts-jest": "29.1.1",
