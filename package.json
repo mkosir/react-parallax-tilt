@@ -12,7 +12,7 @@
   "scripts": {
     "start": "npm run storybook",
     "prepare": "husky install",
-    "build": "shx rm -rf dist && rollup --config rollup.config.ts --configPlugin typescript",
+    "build": "rm -rf dist && rollup --config rollup.config.ts --configPlugin typescript",
     "lint": "eslint --max-warnings 0 .",
     "lint-fix": "eslint --fix .",
     "lint-staged-husky": "lint-staged",
@@ -26,7 +26,7 @@
     "storybook-build": "storybook build -o build-storybook-static",
     "semantic-release": "semantic-release --branches main",
     "demozap": "demozap generate --prefix=_ && npm run format-fix && npm run lint-fix",
-    "clean": "shx rm -rf node_modules coverage dist compiled build-storybook-static"
+    "clean": "rm -rf node_modules coverage dist compiled build-storybook-static"
   },
   "devDependencies": {
     "@babel/preset-env": "7.22.20",
@@ -82,7 +82,6 @@
     "sass": "1.68.0",
     "sass-loader": "13.3.2",
     "semantic-release": "22.0.5",
-    "shx": "0.3.4",
     "storybook": "7.4.5",
     "ts-jest": "29.1.1",
     "tsc-files": "1.1.4",
