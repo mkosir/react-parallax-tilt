@@ -92,10 +92,10 @@ Max tilt rotation (degrees) on y axis (range: `0°-90°`).
 **tiltAxis**: _'x' | 'y'_ ▶︎ `undefined`  
 Enable tilt on single axis.
 
-**tiltAngleXManual**: _number_ | null} ▶︎ `null`  
+**tiltAngleXManual**: _number_ | null ▶︎ `null`  
 Manual tilt rotation (degrees) on x axis.
 
-**tiltAngleYManual**: _number_ | null} ▶︎ `null`  
+**tiltAngleYManual**: _number_ | null ▶︎ `null`  
 Manual tilt rotation (degrees) on y axis.
 
 **glareEnable**: _boolean_ ▶︎ `false`  
