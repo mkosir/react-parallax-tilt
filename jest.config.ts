@@ -1,6 +1,6 @@
-import { Config } from 'jest';
+import type { JestConfigWithTsJest } from 'ts-jest';
 
-const jestConfig: Config = {
+const jestConfig: JestConfigWithTsJest = {
   testEnvironment: 'jsdom',
   preset: 'ts-jest',
   moduleDirectories: ['node_modules', 'src'],
@@ -16,4 +16,5 @@ const jestConfig: Config = {
   },
 };
 
-module.exports = jestConfig;
+// eslint-disable-next-line import/no-default-export
+export default jestConfig;
