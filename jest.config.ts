@@ -6,6 +6,15 @@ const jestConfig: JestConfigWithTsJest = {
   moduleDirectories: ['node_modules', 'src'],
   setupFilesAfterEnv: ['./jest.setup.ts'],
   collectCoverageFrom: ['src/**/*.{ts,tsx}'],
+  extensionsToTreatAsEsm: ['.ts', '.tsx'],
+  transform: {
+    '^.+\\.ts?$': [
+      'ts-jest',
+      {
+        useESM: true,
+      },
+    ],
+  },
   coverageThreshold: {
     global: {
       branches: 90,
