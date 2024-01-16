@@ -29,6 +29,10 @@ const rollupConfig = defineConfig([
         file: packageJson.module,
         format: 'esm',
         sourcemap: !isProduction,
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM',
+        },
       },
     ],
     plugins: [
