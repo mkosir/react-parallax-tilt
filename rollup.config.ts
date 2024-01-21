@@ -74,14 +74,12 @@ const MODERN_CONFIG = [
     input: PATH_INPUT_FILE,
     output: [
       {
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
         file: packageJson.exports.import.default,
         format: 'esm',
         sourcemap: !IS_PRODUCTION,
         globals: GLOBALS,
       },
       {
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
         file: packageJson.exports.require.default,
         name: packageJson.name,
         format: 'umd',
@@ -109,9 +107,7 @@ const MODERN_CONFIG = [
   {
     input: PATH_INPUT_FILE,
     output: [
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
       { file: packageJson.exports.import.types, format: 'esm' },
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
       { file: packageJson.exports.require.types, format: 'cjs' },
     ],
     plugins: [
