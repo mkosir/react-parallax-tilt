@@ -4,4 +4,5 @@ const commitlintConfig: UserConfig = {
   extends: ['@commitlint/config-conventional'],
 };
 
-module.exports = commitlintConfig;
+// eslint-disable-next-line import/no-default-export
+export default commitlintConfig;
