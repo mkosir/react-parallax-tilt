@@ -29,8 +29,7 @@ const LEGACY_CONFIG = [
       },
       {
         file: packageJson.main,
-        name: packageJson.name,
-        format: 'umd',
+        format: 'cjs',
         sourcemap: !IS_PRODUCTION,
         globals: GLOBALS,
       },
@@ -81,8 +80,7 @@ const MODERN_CONFIG = [
       },
       {
         file: packageJson.exports.require.default,
-        name: packageJson.name,
-        format: 'umd',
+        format: 'cjs',
         sourcemap: !IS_PRODUCTION,
         globals: GLOBALS,
       },
