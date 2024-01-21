@@ -4,8 +4,8 @@ import typescript from '@rollup/plugin-typescript';
 import { defineConfig, RollupOptions } from 'rollup';
 import { dts } from 'rollup-plugin-dts';
 
-import packageJson from './package.json' assert { type: 'json' };
-import tsConfig from './tsconfigs/tsconfig.base.json' assert { type: 'json' };
+import packageJson from '../package.json' assert { type: 'json' };
+import tsConfig from '../tsconfigs/tsconfig.base.json' assert { type: 'json' };
 
 const IS_PRODUCTION = process.env.NODE_ENV === 'production';
 
