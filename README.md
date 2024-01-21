@@ -31,6 +31,7 @@ npm install react-parallax-tilt
 ## Features
 
 - Lightweight (≈3kB), zero dependencies 📦
+- Supports CommonJS and ESM, tree-shakable 🌳
 - Works with React v15 onwards
 - Supports **mouse** and **touch** events
 - Support for device tilting (**gyroscope**)
