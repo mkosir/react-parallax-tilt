@@ -16,6 +16,7 @@
       "default": "./dist/modern/index.cjs"
     }
   },
+  "sideEffects": false,
   "files": [
     "dist",
     "README.md"
