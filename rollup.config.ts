@@ -49,10 +49,7 @@ const LEGACY_CONFIG = [
       }),
     ],
     // Ensure dependencies are not bundled with the library
-    external: [
-      ...Object.keys(packageJson.peerDependencies),
-      // ...Object.keys(packageJson.dependencies ?? {}),
-    ],
+    external: [...Object.keys(packageJson.peerDependencies)],
   },
   {
     input: PATH_INPUT_FILE,
