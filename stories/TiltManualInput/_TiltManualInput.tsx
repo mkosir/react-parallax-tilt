@@ -8,7 +8,7 @@ import { Joystick } from 'react-joystick-component';
 import { IJoystickUpdateEvent } from 'react-joystick-component/build/lib/Joystick';
 
 import Tilt from 'index';
-import './TiltManualInput.demozap.scss';
+import './TiltManualInput.demozap.css';
 
 const TiltManualInput = () => {
   const [[manualTiltAngleX, manualTiltAngleY], setManualTiltAngle] = useState([0, 0]);
@@ -22,7 +22,7 @@ const TiltManualInput = () => {
   };
 
   return (
-    <div className="tilt-manual-input">
+    <div className="background-stripes tilt-manual-input">
       <Tilt tiltAngleXManual={manualTiltAngleX} tiltAngleYManual={manualTiltAngleY} glareEnable={true}>
         <div className="react-parallax-tilt">
           <div>Axis x: {manualTiltAngleX.toFixed(0)}°</div>
@@ -39,7 +39,7 @@ const TiltManualInput = () => {
 export default TiltManualInput;
 `;
 
-const style = `@import '../ReactParallaxTilt.scss';
+const style = `@import '../ReactParallaxTilt.css';
 
 .tilt-manual-input {
   display: flex;
@@ -48,7 +48,6 @@ const style = `@import '../ReactParallaxTilt.scss';
   align-items: center;
 
   .react-parallax-tilt {
-    @include background;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,7 +72,7 @@ const style = `@import '../ReactParallaxTilt.scss';
 `;
 
 export const _TiltManualInput = () => (
-  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} style={style} codeExt="tsx" styleExt="css">
     <Demo />
   </DemoTab>
 );

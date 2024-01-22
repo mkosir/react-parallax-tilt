@@ -6,11 +6,11 @@ import Demo from './ParallaxEffectGlareScale.demozap';
 const code = `import React from 'react';
 
 import Tilt from 'index';
-import './ParallaxEffectGlareScale.demozap.scss';
+import './ParallaxEffectGlareScale.demozap.css';
 
 const ParallaxEffectGlareScale = () => (
   <Tilt
-    className="parallax-effect-glare-scale"
+    className="background-stripes parallax-effect-glare-scale"
     perspective={500}
     glareEnable={true}
     glareMaxOpacity={0.45}
@@ -27,10 +27,9 @@ const ParallaxEffectGlareScale = () => (
 export default ParallaxEffectGlareScale;
 `;
 
-const style = `@import '../ReactParallaxTilt.scss';
+const style = `@import '../ReactParallaxTilt.css';
 
 .parallax-effect-glare-scale {
-  @include background;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,7 +57,7 @@ const style = `@import '../ReactParallaxTilt.scss';
 `;
 
 export const _ParallaxEffectGlareScale = () => (
-  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} style={style} codeExt="tsx" styleExt="css">
     <Demo />
   </DemoTab>
 );

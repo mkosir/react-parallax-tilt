@@ -7,7 +7,7 @@ const code = `import React from 'react';
 
 import Tilt from 'index';
 
-import './ParallaxEffectImg.demozap.scss';
+import './ParallaxEffectImg.demozap.css';
 import imgTree from './img/tree.png';
 
 const ParallaxEffectImg = () => (
@@ -43,7 +43,7 @@ const style = `.parallax-effect-img {
 `;
 
 export const _ParallaxEffectImg = () => (
-  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} style={style} codeExt="tsx" styleExt="css">
     <Demo />
   </DemoTab>
 );

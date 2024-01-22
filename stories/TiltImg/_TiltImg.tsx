@@ -7,7 +7,7 @@ const code = `import React from 'react';
 
 import Tilt from 'index';
 
-import './TiltImg.demozap.scss';
+import './TiltImg.demozap.css';
 import imgNyc from './img/nyc.jpg';
 
 const TiltImg = () => (
@@ -35,7 +35,7 @@ const style = `.tilt-img {
 `;
 
 export const _TiltImg = () => (
-  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} style={style} codeExt="tsx" styleExt="css">
     <Demo />
   </DemoTab>
 );

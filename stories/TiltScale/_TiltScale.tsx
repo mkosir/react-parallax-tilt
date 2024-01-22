@@ -6,14 +6,14 @@ import Demo from './TiltScale.demozap';
 const code = `import React, { useState } from 'react';
 
 import Tilt from 'index';
-import './TiltScale.demozap.scss';
+import './TiltScale.demozap.css';
 
 const TiltScale = () => {
   const [scale, setScale] = useState(1.15);
 
   return (
     <Tilt scale={scale} transitionSpeed={2500}>
-      <div className="tilt-scale">
+      <div className="background-stripes tilt-scale">
         <div className="header">
           <div>Scale x{scale}</div>
           <hr />
@@ -36,10 +36,9 @@ const TiltScale = () => {
 export default TiltScale;
 `;
 
-const style = `@import '../ReactParallaxTilt.scss';
+const style = `@import '../ReactParallaxTilt.css';
 
 .tilt-scale {
-  @include background;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,7 +71,7 @@ const style = `@import '../ReactParallaxTilt.scss';
 `;
 
 export const _TiltScale = () => (
-  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} style={style} codeExt="tsx" styleExt="css">
     <Demo />
   </DemoTab>
 );

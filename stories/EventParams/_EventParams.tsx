@@ -7,7 +7,7 @@ const code = `import React, { useState, ChangeEvent } from 'react';
 
 import Tilt, { OnMoveParams } from 'index';
 
-import './EventParams.demozap.scss';
+import './EventParams.demozap.css';
 
 type SelectedEvents = {
   trackOnMove: boolean;
@@ -67,7 +67,7 @@ const EventParams = () => {
   };
 
   return (
-    <div className="event-params">
+    <div className="background-stripes event-params">
       <Tilt
         onMove={onMove}
         onEnter={onEnter}
@@ -115,7 +115,7 @@ const EventParams = () => {
 export default EventParams;
 `;
 
-const style = `@import '../ReactParallaxTilt.scss';
+const style = `@import '../ReactParallaxTilt.css';
 
 .event-params {
   display: flex;
@@ -124,7 +124,6 @@ const style = `@import '../ReactParallaxTilt.scss';
   align-items: center;
 
   .react-parallax-tilt {
-    @include background;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -159,7 +158,7 @@ const style = `@import '../ReactParallaxTilt.scss';
 `;
 
 export const _EventParams = () => (
-  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} style={style} codeExt="tsx" styleExt="css">
     <Demo />
   </DemoTab>
 );

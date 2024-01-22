@@ -6,11 +6,11 @@ import Demo from './TrackOnWindow.demozap';
 const code = `import React from 'react';
 
 import Tilt from 'index';
-import './TrackOnWindow.demozap.scss';
+import './TrackOnWindow.demozap.css';
 
 const TrackOnWindow = () => (
   <Tilt
-    className="track-on-window"
+    className="background-stripes track-on-window"
     perspective={500}
     glareEnable={true}
     glareMaxOpacity={0.75}
@@ -29,10 +29,9 @@ const TrackOnWindow = () => (
 export default TrackOnWindow;
 `;
 
-const style = `@import '../ReactParallaxTilt.scss';
+const style = `@import '../ReactParallaxTilt.css';
 
 .track-on-window {
-  @include background;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,7 +59,7 @@ const style = `@import '../ReactParallaxTilt.scss';
 `;
 
 export const _TrackOnWindow = () => (
-  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} style={style} codeExt="tsx" styleExt="css">
     <Demo />
   </DemoTab>
 );

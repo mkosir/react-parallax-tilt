@@ -8,7 +8,7 @@ const code = `import React, { PureComponent } from 'react';
 import Tilt, { OnMoveParams } from 'index';
 
 import { DefaultComponent } from '../_DefaultComponent/DefaultComponent';
-import './EventTiltAngle.demozap.scss';
+import './EventTiltAngle.demozap.css';
 
 class EventTiltAngle extends PureComponent {
   state = {
@@ -47,9 +47,7 @@ class EventTiltAngle extends PureComponent {
 export default EventTiltAngle;
 `;
 
-const style = `@import '../ReactParallaxTilt.scss';
-
-.event-tilt-angle {
+const style = `.event-tilt-angle {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,7 +74,7 @@ const style = `@import '../ReactParallaxTilt.scss';
 `;
 
 export const _EventTiltAngle = () => (
-  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} style={style} codeExt="tsx" styleExt="css">
     <Demo />
   </DemoTab>
 );

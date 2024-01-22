@@ -7,7 +7,7 @@ const code = `import React from 'react';
 
 import Tilt from 'index';
 
-import './MultipleTiltScroll.demozap.scss';
+import './MultipleTiltScroll.demozap.css';
 import { DefaultComponent } from '../_DefaultComponent/DefaultComponent';
 
 const MultipleTiltScroll = () => (
@@ -36,7 +36,7 @@ const style = `.multiple-tilt-scroll > * {
 `;
 
 export const _MultipleTiltScroll = () => (
-  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} style={style} codeExt="tsx" styleExt="css">
     <Demo />
   </DemoTab>
 );

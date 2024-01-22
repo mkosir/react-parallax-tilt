@@ -7,14 +7,14 @@ const code = `import React, { useState } from 'react';
 
 import Tilt, { Axis } from 'index';
 
-import './TiltDisableAxis.demozap.scss';
+import './TiltDisableAxis.demozap.css';
 
 const TiltDisableAxis = () => {
   const [axisEnabled, toggleAxis] = useState<Axis>('x');
 
   return (
     <Tilt tiltAxis={axisEnabled}>
-      <div className="tilt-disable-axis">
+      <div className="background-stripes tilt-disable-axis">
         <div className="header">
           <div>Toggle Axis</div>
           <hr />
@@ -47,10 +47,9 @@ const TiltDisableAxis = () => {
 export default TiltDisableAxis;
 `;
 
-const style = `@import '../ReactParallaxTilt.scss';
+const style = `@import '../ReactParallaxTilt.css';
 
 .tilt-disable-axis {
-  @include background;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -80,7 +79,7 @@ const style = `@import '../ReactParallaxTilt.scss';
 `;
 
 export const _TiltDisableAxis = () => (
-  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} style={style} codeExt="tsx" styleExt="css">
     <Demo />
   </DemoTab>
 );

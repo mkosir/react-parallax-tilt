@@ -7,7 +7,7 @@ const code = `import React from 'react';
 
 import Tilt from 'index';
 
-import './MultipleTilt.demozap.scss';
+import './MultipleTilt.demozap.css';
 import { DefaultComponent } from '../_DefaultComponent/DefaultComponent';
 
 const MultipleTilt = () => (
@@ -39,18 +39,17 @@ const style = `.multiple-tilt {
   flex-direction: row;
 
   .col {
-    $spacing: 20px;
-    margin-right: $spacing;
+    margin-right: 20px;
 
     :first-child {
-      margin-bottom: $spacing;
+      margin-bottom: 20px;
     }
   }
 }
 `;
 
 export const _MultipleTilt = () => (
-  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} style={style} codeExt="tsx" styleExt="css">
     <Demo />
   </DemoTab>
 );

@@ -7,7 +7,7 @@ const code = `import React, { useState } from 'react';
 
 import Tilt from 'index';
 
-import './FlipPage.demozap.scss';
+import './FlipPage.demozap.css';
 import { Page } from './Page/Page';
 
 const FlipPage = () => {
@@ -45,7 +45,7 @@ const style = `body {
 `;
 
 export const _FlipPage = () => (
-  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} style={style} codeExt="tsx" styleExt="css">
     <Demo />
   </DemoTab>
 );

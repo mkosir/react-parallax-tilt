@@ -6,14 +6,14 @@ import Demo from './FlipVH.demozap';
 const code = `import React, { useState } from 'react';
 
 import Tilt from 'index';
-import './FlipVH.demozap.scss';
+import './FlipVH.demozap.css';
 
 const FlipVH = () => {
   const [[flipVertically, flipHorizontally], toggleFlip] = useState([false, false]);
 
   return (
     <Tilt flipVertically={flipVertically} flipHorizontally={flipHorizontally}>
-      <div className="flip-vh">
+      <div className="background-stripes flip-vh">
         <div className="header">
           <div>Toggle Axis</div>
           <hr />
@@ -44,10 +44,9 @@ const FlipVH = () => {
 export default FlipVH;
 `;
 
-const style = `@import '../ReactParallaxTilt.scss';
+const style = `@import '../ReactParallaxTilt.css';
 
 .flip-vh {
-  @include background;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,7 +76,7 @@ const style = `@import '../ReactParallaxTilt.scss';
 `;
 
 export const _FlipVH = () => (
-  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} style={style} codeExt="tsx" styleExt="css">
     <Demo />
   </DemoTab>
 );

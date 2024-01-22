@@ -6,10 +6,10 @@ import Demo from './ParallaxEffect.demozap';
 const code = `import React from 'react';
 
 import Tilt from 'index';
-import './ParallaxEffect.demozap.scss';
+import './ParallaxEffect.demozap.css';
 
 const ParallaxEffect = () => (
-  <Tilt className="parallax-effect" perspective={500}>
+  <Tilt className="background-stripes parallax-effect" perspective={500}>
     <div className="inner-element">
       <div>React</div>
       <div>Parallax Tilt</div>
@@ -21,10 +21,9 @@ const ParallaxEffect = () => (
 export default ParallaxEffect;
 `;
 
-const style = `@import '../ReactParallaxTilt.scss';
+const style = `@import '../ReactParallaxTilt.css';
 
 .parallax-effect {
-  @include background;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,7 +51,7 @@ const style = `@import '../ReactParallaxTilt.scss';
 `;
 
 export const _ParallaxEffect = () => (
-  <DemoTab code={code} style={style} codeExt="tsx" styleExt="scss">
+  <DemoTab code={code} style={style} codeExt="tsx" styleExt="css">
     <Demo />
   </DemoTab>
 );
