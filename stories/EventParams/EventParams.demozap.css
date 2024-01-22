@@ -1,31 +1,40 @@
-@import '../ReactParallaxTilt.scss';
+@import '../ReactParallaxTilt.css';
 
-.tilt-manual-input {
+.event-params {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   .react-parallax-tilt {
-    @include background;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 300px;
-    height: 300px;
-    font-size: 35px;
+    width: 350px;
+    height: 350px;
+    font-size: 28px;
     font-style: italic;
     background-color: darkgreen;
     color: white;
     border: 5px solid black;
     border-radius: 20px;
+
+    .header {
+      margin-top: 12px;
+      font-size: 35px;
+      border-top: 2px solid white;
+      min-width: 200px;
+      text-align: center;
+    }
   }
 
-  .manual-input {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  .event-type {
     margin-top: 20px;
+    font-size: 20px;
+
+    div {
+      margin-top: 10px;
+    }
   }
 }

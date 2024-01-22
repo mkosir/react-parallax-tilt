@@ -1,7 +1,6 @@
-@import '../ReactParallaxTilt.scss';
+@import '../ReactParallaxTilt.css';
 
-.parallax-effect-glare-scale {
-  @include background;
+.parallax-effect {
   display: flex;
   flex-direction: column;
   justify-content: center;

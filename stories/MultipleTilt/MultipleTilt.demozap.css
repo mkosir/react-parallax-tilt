@@ -3,11 +3,10 @@
   flex-direction: row;
 
   .col {
-    $spacing: 20px;
-    margin-right: $spacing;
+    margin-right: 20px;
 
     :first-child {
-      margin-bottom: $spacing;
+      margin-bottom: 20px;
     }
   }
 }

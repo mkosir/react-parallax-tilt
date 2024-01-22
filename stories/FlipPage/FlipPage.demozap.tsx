@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Tilt from 'index';
 
-import './FlipPage.demozap.scss';
+import './FlipPage.demozap.css';
 import { Page } from './Page/Page';
 
 const FlipPage = () => {

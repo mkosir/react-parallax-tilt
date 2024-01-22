@@ -10,15 +10,17 @@
   }
 }
 
-$default-stripe-bg-color: #077407;
-$default-stripe-color: #015f01;
+:root {
+  --default-stripe-bg-color: #077407;
+  --default-stripe-color: #015f01;
+}
 
-@mixin background {
+.background-stripes {
   background: repeating-linear-gradient(
     45deg,
-    $default-stripe-color,
-    $default-stripe-color 35px,
-    $default-stripe-bg-color 35px,
-    $default-stripe-bg-color 70px
+    var(--default-stripe-color),
+    var(--default-stripe-color) 35px,
+    var(--default-stripe-bg-color) 35px,
+    var(--default-stripe-bg-color) 70px
   );
 }

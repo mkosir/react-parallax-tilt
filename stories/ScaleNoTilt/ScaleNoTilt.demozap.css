@@ -1,7 +1,6 @@
-@import '../ReactParallaxTilt.scss';
+@import '../ReactParallaxTilt.css';
 
-.tilt-scale {
-  @include background;
+.scale-no-tilt {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,16 +13,13 @@
   color: white;
   border: 5px solid black;
   border-radius: 20px;
-
   .header {
     font-size: 38px;
   }
-
   .form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
     input {
       transform: scale(1.5);
       height: 20px;

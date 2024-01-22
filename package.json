@@ -91,8 +91,6 @@
     "react-joystick-component": "6.2.1",
     "rollup": "4.9.6",
     "rollup-plugin-dts": "6.1.0",
-    "sass": "1.70.0",
-    "sass-loader": "14.0.0",
     "semantic-release": "23.0.0",
     "storybook": "7.6.10",
     "ts-jest": "29.1.2",

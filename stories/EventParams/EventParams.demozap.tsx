@@ -2,7 +2,7 @@ import React, { useState, ChangeEvent } from 'react';
 
 import Tilt, { OnMoveParams } from 'index';
 
-import './EventParams.demozap.scss';
+import './EventParams.demozap.css';
 
 type SelectedEvents = {
   trackOnMove: boolean;
@@ -62,7 +62,7 @@ const EventParams = () => {
   };
 
   return (
-    <div className="event-params">
+    <div className="background-stripes event-params">
       <Tilt
         onMove={onMove}
         onEnter={onEnter}

@@ -1,7 +1,6 @@
-@import '../ReactParallaxTilt.scss';
+@import '../ReactParallaxTilt.css';
 
-.parallax-effect {
-  @include background;
+.track-on-window {
   display: flex;
   flex-direction: column;
   justify-content: center;

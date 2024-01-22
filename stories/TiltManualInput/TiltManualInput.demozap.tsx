@@ -3,7 +3,7 @@ import { Joystick } from 'react-joystick-component';
 import { IJoystickUpdateEvent } from 'react-joystick-component/build/lib/Joystick';
 
 import Tilt from 'index';
-import './TiltManualInput.demozap.scss';
+import './TiltManualInput.demozap.css';
 
 const TiltManualInput = () => {
   const [[manualTiltAngleX, manualTiltAngleY], setManualTiltAngle] = useState([0, 0]);
@@ -17,7 +17,7 @@ const TiltManualInput = () => {
   };
 
   return (
-    <div className="tilt-manual-input">
+    <div className="background-stripes tilt-manual-input">
       <Tilt tiltAngleXManual={manualTiltAngleX} tiltAngleYManual={manualTiltAngleY} glareEnable={true}>
         <div className="react-parallax-tilt">
           <div>Axis x: {manualTiltAngleX.toFixed(0)}°</div>

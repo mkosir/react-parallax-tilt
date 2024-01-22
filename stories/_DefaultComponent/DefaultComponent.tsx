@@ -1,9 +1,9 @@
 import React from 'react';
 
-import './DefaultComponent.scss';
+import './DefaultComponent.css';
 
 export const DefaultComponent = () => (
-  <div className="default-component">
+  <div className="background-stripes default-component">
     <div>React</div>
     <div>Parallax Tilt</div>
     <div>👀</div>

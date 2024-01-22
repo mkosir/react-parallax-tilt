@@ -1,11 +1,11 @@
 import React from 'react';
 
 import Tilt from 'index';
-import './ParallaxEffectGlareScale.demozap.scss';
+import './ParallaxEffectGlareScale.demozap.css';
 
 const ParallaxEffectGlareScale = () => (
   <Tilt
-    className="parallax-effect-glare-scale"
+    className="background-stripes parallax-effect-glare-scale"
     perspective={500}
     glareEnable={true}
     glareMaxOpacity={0.45}

@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 
 import Tilt, { Axis } from 'index';
 
-import './TiltDisableAxis.demozap.scss';
+import './TiltDisableAxis.demozap.css';
 
 const TiltDisableAxis = () => {
   const [axisEnabled, toggleAxis] = useState<Axis>('x');
 
   return (
     <Tilt tiltAxis={axisEnabled}>
-      <div className="tilt-disable-axis">
+      <div className="background-stripes tilt-disable-axis">
         <div className="header">
           <div>Toggle Axis</div>
           <hr />

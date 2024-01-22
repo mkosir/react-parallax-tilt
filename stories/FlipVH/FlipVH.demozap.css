@@ -1,7 +1,6 @@
-@import '../ReactParallaxTilt.scss';
+@import '../ReactParallaxTilt.css';
 
 .flip-vh {
-  @include background;
   display: flex;
   flex-direction: column;
   justify-content: center;

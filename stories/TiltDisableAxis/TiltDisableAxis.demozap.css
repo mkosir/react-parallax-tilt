@@ -1,7 +1,6 @@
-@import '../ReactParallaxTilt.scss';
+@import '../ReactParallaxTilt.css';
 
-.scale-no-tilt {
-  @include background;
+.tilt-disable-axis {
   display: flex;
   flex-direction: column;
   justify-content: center;

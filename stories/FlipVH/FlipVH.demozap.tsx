@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
 import Tilt from 'index';
-import './FlipVH.demozap.scss';
+import './FlipVH.demozap.css';
 
 const FlipVH = () => {
   const [[flipVertically, flipHorizontally], toggleFlip] = useState([false, false]);
 
   return (
     <Tilt flipVertically={flipVertically} flipHorizontally={flipHorizontally}>
-      <div className="flip-vh">
+      <div className="background-stripes flip-vh">
         <div className="header">
           <div>Toggle Axis</div>
           <hr />

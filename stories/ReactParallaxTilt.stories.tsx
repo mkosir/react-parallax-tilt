@@ -25,7 +25,7 @@ import { _TiltManualInput } from './TiltManualInput/_TiltManualInput';
 import { _TiltScale } from './TiltScale/_TiltScale';
 import { _TrackOnWindow } from './TrackOnWindow/_TrackOnWindow';
 
-import './ReactParallaxTilt.scss';
+import './ReactParallaxTilt.css';
 
 export default {
   title: 'React Parallax Tilt',

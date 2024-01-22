@@ -1,10 +1,10 @@
 import React from 'react';
 
 import Tilt from 'index';
-import './ParallaxEffect.demozap.scss';
+import './ParallaxEffect.demozap.css';
 
 const ParallaxEffect = () => (
-  <Tilt className="parallax-effect" perspective={500}>
+  <Tilt className="background-stripes parallax-effect" perspective={500}>
     <div className="inner-element">
       <div>React</div>
       <div>Parallax Tilt</div>

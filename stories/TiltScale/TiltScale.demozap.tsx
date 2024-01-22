@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
 import Tilt from 'index';
-import './TiltScale.demozap.scss';
+import './TiltScale.demozap.css';
 
 const TiltScale = () => {
   const [scale, setScale] = useState(1.15);
 
   return (
     <Tilt scale={scale} transitionSpeed={2500}>
-      <div className="tilt-scale">
+      <div className="background-stripes tilt-scale">
         <div className="header">
           <div>Scale x{scale}</div>
           <hr />

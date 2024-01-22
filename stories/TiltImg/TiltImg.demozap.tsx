@@ -2,7 +2,7 @@ import React from 'react';
 
 import Tilt from 'index';
 
-import './TiltImg.demozap.scss';
+import './TiltImg.demozap.css';
 import imgNyc from './img/nyc.jpg';
 
 const TiltImg = () => (

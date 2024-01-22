@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Page.scss';
+import './Page.css';
 import sampleImg from './lorem-picsum.png';
 
 type PageProps = {

@@ -1,5 +1,3 @@
-@import '../ReactParallaxTilt.scss';
-
 .event-tilt-angle {
   display: flex;
   flex-direction: column;

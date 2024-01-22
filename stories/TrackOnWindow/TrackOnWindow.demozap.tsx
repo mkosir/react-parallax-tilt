@@ -1,11 +1,11 @@
 import React from 'react';
 
 import Tilt from 'index';
-import './TrackOnWindow.demozap.scss';
+import './TrackOnWindow.demozap.css';
 
 const TrackOnWindow = () => (
   <Tilt
-    className="track-on-window"
+    className="background-stripes track-on-window"
     perspective={500}
     glareEnable={true}
     glareMaxOpacity={0.75}

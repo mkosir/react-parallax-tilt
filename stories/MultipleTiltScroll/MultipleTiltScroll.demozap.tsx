@@ -2,7 +2,7 @@ import React from 'react';
 
 import Tilt from 'index';
 
-import './MultipleTiltScroll.demozap.scss';
+import './MultipleTiltScroll.demozap.css';
 import { DefaultComponent } from '../_DefaultComponent/DefaultComponent';
 
 const MultipleTiltScroll = () => (
