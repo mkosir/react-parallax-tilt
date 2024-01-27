@@ -6,6 +6,9 @@ on:
     types: [completed]
     branches: [main]
 
+env:
+  FILE_PATH_STORYBOOK_BUILD: ./build-storybook-static
+
 jobs:
   deploy-storybook:
     runs-on: ubuntu-latest
@@ -29,5 +32,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: build-storybook-static
+          folder: ${{ env.FILE_PATH_STORYBOOK_BUILD }}
           clean: true
