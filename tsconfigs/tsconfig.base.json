@@ -16,7 +16,7 @@
     "noUnusedParameters": true,
     "resolveJsonModule": true,
     "pretty": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "strict": true,
     "stripInternal": true,
     "forceConsistentCasingInFileNames": true,
