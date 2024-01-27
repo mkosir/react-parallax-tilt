@@ -15,6 +15,7 @@ const jestConfig: JestConfigWithTsJest = {
       },
     ],
   },
+  testRegex: '(/__tests__/.*|(\\.|/)(test))\\.[jt]sx?$',
   coverageThreshold: {
     global: {
       branches: 90,
