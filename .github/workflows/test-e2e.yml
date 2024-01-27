@@ -13,8 +13,14 @@ jobs:
       - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
         uses: ./.github/workflows/actions/setup_node-cache_dep-install_dep
 
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
       - name: Test E2E 🧪
-        run: npm run test-e2e
+        run: npx playwright test
+
+      # - name: Test E2E 🧪
+      #   run: npm run test-e2e
 
       # - name: Upload report 📈
       #   uses: codecov/codecov-action@v3
