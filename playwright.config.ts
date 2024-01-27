@@ -2,9 +2,6 @@ import { defineConfig, devices } from '@playwright/test';
 
 const IS_CI = process.env.CI === 'true';
 
-/**
- * See https://playwright.dev/docs/test-configuration.
- */
 // eslint-disable-next-line import/no-default-export
 export default defineConfig({
   testDir: './e2e',
@@ -24,7 +21,6 @@ export default defineConfig({
     trace: 'on-first-retry',
   },
 
-  /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
