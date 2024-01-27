@@ -9,6 +9,8 @@ import tsConfig from '../tsconfigs/tsconfig.base.json' assert { type: 'json' };
 
 const IS_PRODUCTION = process.env.NODE_ENV === 'production';
 
+console.log('🔎 Log ~ process.env.NODE_ENV:', process.env.NODE_ENV);
+
 const PATH_INPUT_FILE = 'src/index.ts';
 const PATH_TSCONFIG = './tsconfigs/tsconfig.prod.json';
 

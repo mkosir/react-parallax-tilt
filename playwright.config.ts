@@ -5,7 +5,7 @@ import { defineConfig, devices } from '@playwright/test';
  * https://github.com/motdotla/dotenv
  */
 // require('dotenv').config();
-
+console.log('🔎 Log ~ process.env.CI:', process.env.CI);
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
