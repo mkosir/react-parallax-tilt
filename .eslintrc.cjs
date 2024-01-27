@@ -68,6 +68,14 @@ const eslintConfig = {
         'import/no-default-export': 'off',
       },
     },
+    {
+      files: ['**/*.spec.*'],
+      rules: {
+        // Ideally turn off all the rules from eslint-plugin-testing-library plugin, since it's not applicable for Playwright tests.
+        // 'testing-library/*': 'off',
+        'testing-library/prefer-screen-queries': 'off',
+      },
+    },
   ],
 
   // ESlint default behavior ignores file/folders starting with "." - https://github.com/eslint/eslint/issues/10341
