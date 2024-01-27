@@ -235,7 +235,7 @@ Please take a moment to review guidelines [PR](.github/pull_request_template.md)
 [test-badge]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/test.yml/badge.svg
 [test-url]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/test.yml
 [test-e2e-badge]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/test-e2e.yml/badge.svg
-[test-e2e-url]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/test-e2e.yml
+[test-e2e-url]: https://react-parallax-tilt-playwright-report.netlify.app/
 [deploy-storybook-badge]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/deploy-storybook.yml/badge.svg
 [deploy-storybook-url]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/deploy-storybook.yml
 [npm-release-badge]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/npm-release.yml/badge.svg
