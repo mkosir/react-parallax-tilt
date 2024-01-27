@@ -2,6 +2,9 @@ name: test-e2e
 
 on: push
 
+env:
+  FILE_PATH_PLAYWRIGHT_REPORT: ./playwright-report
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -20,8 +23,11 @@ jobs:
         run: npx playwright test
         # run: npm run test-e2e
 
-      # - name: Upload report 📈
-      #   uses: codecov/codecov-action@v3
-      #   with:
-      #     token: ${{ secrets.CODECOV_TOKEN }}
-      #     fail_ci_if_error: true
+      - name: Upload report 📈
+        uses: nwtgck/actions-netlify@v2
+        with:
+          publish-dir: ${{ env.FILE_PATH_PLAYWRIGHT_REPORT }}
+          production-deploy: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_PLAYWRIGHT_REPORT }}
