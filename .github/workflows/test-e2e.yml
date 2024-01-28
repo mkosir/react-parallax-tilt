@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     # Upload test report also in case of test failure.
-    continue-on-error: true
+    if: always()
 
     steps:
       - name: Checkout 🛎️
