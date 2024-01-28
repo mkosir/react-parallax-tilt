@@ -31,6 +31,10 @@
       }
     }
 
+    .test-params {
+      display: none;
+    }
+
     .test-ref {
       position: absolute;
       width: 20px;

@@ -78,6 +78,9 @@ const EventParams = () => {
           <div data-testid="topRight" className="test-ref top-right" />
           <div data-testid="bottomRight" className="test-ref bottom-right" />
           <div data-testid="bottomLeft" className="test-ref bottom-left" />
+          <pre data-testid="params" className="test-params">
+            {JSON.stringify(eventParams)}
+          </pre>
           <div className="param">
             <div className="header">Axis x</div>
             <div data-testid="tiltAngleX">
