@@ -13,7 +13,7 @@ test('should get max values of move params when mouse is positioned at border/co
   await content.getByTestId('topLeft').hover({ position: { x: 10, y: 10 } });
   await expect(content.getByTestId('tiltAngleX')).toHaveText('-20.00° / -100.00%');
   await expect(content.getByTestId('tiltAngleY')).toHaveText('20.00° / 100.00%');
-  await expect(content.getByTestId('glareAngle')).toHaveText('-45.00°');
+  await expect(content.getByTestId('glareAngle')).toHaveText('-415.00°');
   await expect(content.getByTestId('glareOpacity')).toHaveText('0.00');
 
   // const paramsString = await content.getByTestId('params').innerText();
