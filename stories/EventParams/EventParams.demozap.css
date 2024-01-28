@@ -30,6 +30,33 @@
         font-size: 35px;
       }
     }
+
+    .test-ref {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: transparent;
+    }
+    .top-left {
+      top: -10px;
+      left: -10px;
+    }
+    .top-mid-left {
+      top: 80px;
+      left: 80px;
+    }
+    .top-right {
+      top: -10px;
+      right: -10px;
+    }
+    .bottom-right {
+      bottom: -10px;
+      right: -10px;
+    }
+    .bottom-left {
+      bottom: -11px;
+      left: -11px;
+    }
   }
 
   .event-type {

@@ -73,6 +73,11 @@ const EventParams = () => {
         gyroscope={true}
       >
         <div className="background-stripes tilt-content">
+          <div data-testid="topLeft" className="test-ref top-left" />
+          <div data-testid="topMidLeft" className="test-ref top-mid-left" />
+          <div data-testid="topRight" className="test-ref top-right" />
+          <div data-testid="bottomRight" className="test-ref bottom-right" />
+          <div data-testid="bottomLeft" className="test-ref bottom-left" />
           <div className="param">
             <div className="header">Axis x</div>
             <div data-testid="tiltAngleX">
