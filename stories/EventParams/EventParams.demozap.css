@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
 
-  .react-parallax-tilt {
+  .tilt-content {
     display: flex;
     flex-direction: column;
     justify-content: center;

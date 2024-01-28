@@ -72,7 +72,7 @@ const EventParams = () => {
         glareColor="white"
         gyroscope={true}
       >
-        <div className="background-stripes react-parallax-tilt">
+        <div className="background-stripes tilt-content">
           <div className="param">
             <div className="header">Axis x</div>
             <div data-testid="tiltAngleX">
