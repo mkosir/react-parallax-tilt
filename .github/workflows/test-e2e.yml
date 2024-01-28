@@ -9,6 +9,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    # Upload test report also in case of test failure.
+    continue-on-error: true
+
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
