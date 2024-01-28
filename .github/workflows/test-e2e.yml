@@ -9,9 +9,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    # Upload test report also in case of test failure.
-    if: always()
-
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
@@ -28,6 +25,8 @@ jobs:
 
       - name: Upload report 📈
         uses: nwtgck/actions-netlify@v2
+        # Upload test report also in case of test failure.
+        if: always()
         with:
           publish-dir: ${{ env.FILE_PATH_PLAYWRIGHT_REPORT }}
           production-deploy: true
