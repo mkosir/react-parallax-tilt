@@ -62,7 +62,7 @@ const EventParams = () => {
   };
 
   return (
-    <div className="background-stripes event-params">
+    <div className="event-params">
       <Tilt
         onMove={onMove}
         onEnter={onEnter}
@@ -72,7 +72,7 @@ const EventParams = () => {
         glareColor="white"
         gyroscope={true}
       >
-        <div className="react-parallax-tilt">
+        <div className="background-stripes react-parallax-tilt">
           <div className="header">Axis x</div>
           <div>
             {eventParams.tiltAngleX.toFixed(2)}° / {eventParams.tiltAngleXPercentage.toFixed(2)}%
