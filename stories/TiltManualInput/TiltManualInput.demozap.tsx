@@ -17,9 +17,9 @@ const TiltManualInput = () => {
   };
 
   return (
-    <div className="background-stripes tilt-manual-input">
+    <div className="tilt-manual-input">
       <Tilt tiltAngleXManual={manualTiltAngleX} tiltAngleYManual={manualTiltAngleY} glareEnable={true}>
-        <div className="react-parallax-tilt">
+        <div className="background-stripes react-parallax-tilt">
           <div>Axis x: {manualTiltAngleX.toFixed(0)}°</div>
           <div>Axis y: {manualTiltAngleY.toFixed(0)}°</div>
         </div>
