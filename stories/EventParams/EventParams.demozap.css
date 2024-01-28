@@ -19,13 +19,16 @@
     color: white;
     border: 5px solid black;
     border-radius: 20px;
+    text-align: center;
 
-    .header {
+    .param {
       margin-top: 12px;
-      font-size: 35px;
       border-top: 2px solid white;
-      min-width: 200px;
-      text-align: center;
+      min-width: 220px;
+
+      .header {
+        font-size: 35px;
+      }
     }
   }
 

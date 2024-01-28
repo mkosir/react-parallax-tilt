@@ -73,18 +73,26 @@ const EventParams = () => {
         gyroscope={true}
       >
         <div className="background-stripes react-parallax-tilt">
-          <div className="header">Axis x</div>
-          <div>
-            {eventParams.tiltAngleX.toFixed(2)}° / {eventParams.tiltAngleXPercentage.toFixed(2)}%
+          <div className="param">
+            <div className="header">Axis x</div>
+            <div data-testid="tiltAngleX">
+              {eventParams.tiltAngleX.toFixed(2)}° / {eventParams.tiltAngleXPercentage.toFixed(2)}%
+            </div>
           </div>
-          <div className="header">Axis y</div>
-          <div>
-            {eventParams.tiltAngleY.toFixed(2)}° / {eventParams.tiltAngleYPercentage.toFixed(2)}%
+          <div className="param">
+            <div className="header">Axis y</div>
+            <div data-testid="tiltAngleY">
+              {eventParams.tiltAngleY.toFixed(2)}° / {eventParams.tiltAngleYPercentage.toFixed(2)}%
+            </div>
           </div>
-          <div className="header">Glare angle</div>
-          <div>{eventParams.glareAngle.toFixed(2)}°</div>
-          <div className="header">Glare opacity</div>
-          <div>{eventParams.glareOpacity.toFixed(2)}</div>
+          <div className="param">
+            <div className="header">Glare angle</div>
+            <div data-testid="glareAngle">{eventParams.glareAngle.toFixed(2)}°</div>
+          </div>
+          <div className="param">
+            <div className="header">Glare opacity</div>
+            <div data-testid="glareOpacity">{eventParams.glareOpacity.toFixed(2)}</div>
+          </div>
         </div>
       </Tilt>
       <div className="event-type">
