@@ -12,6 +12,7 @@ export default defineConfig({
   retries: IS_CI ? 2 : 0,
   workers: IS_CI ? 1 : undefined,
   reporter: [['list'], ['html']],
+  timeout: 5000,
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
