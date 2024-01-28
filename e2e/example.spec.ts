@@ -7,12 +7,13 @@ test('has title', async ({ page }) => {
   await expect(page).toHaveTitle(/Playwright/);
 });
 
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+test('get move params', async ({ page }) => {
+  await page.goto('http://localhost:9009');
+  await page.getByRole('link', { name: 'Event - Params' }).click();
 
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
+  const content = page.frameLocator('iframe[title="storybook-preview-iframe"]');
 
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+  await content.getByText('Axis x').hover();
+
+  await expect(content.getByTestId('tiltAngleX')).toHaveText('-15.61° / -78.06%');
 });
