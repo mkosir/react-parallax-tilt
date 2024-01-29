@@ -33,7 +33,7 @@
     "format-fix": "prettier --config .prettierrc --write --ignore-unknown -l .",
     "commit": "git-cz",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose --watch",
-    "test-coverage": "NODE_OPTIONS=--experimental-vm-modules jest --coverage --verbose",
+    "test-report": "NODE_OPTIONS=--experimental-vm-modules jest --coverage --verbose",
     "test-e2e": "playwright test",
     "test-e2e-ui": "playwright test --ui",
     "test-e2e-report": "playwright show-report",
@@ -41,7 +41,7 @@
     "storybook-build": "storybook build -o build-storybook-static",
     "semantic-release": "semantic-release --branches main",
     "demozap": "demozap generate --prefix=_ && npm run format-fix && npm run lint-fix",
-    "clean": "rm -rf node_modules coverage playwright-report dist compiled build-storybook-static"
+    "clean": "rm -rf node_modules test-unit-report playwright-report test-e2e-results dist compiled build-storybook-static"
   },
   "devDependencies": {
     "@babel/preset-env": "7.23.9",

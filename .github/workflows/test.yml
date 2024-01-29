@@ -14,7 +14,7 @@ jobs:
         uses: ./.github/workflows/actions/setup_node-cache_dep-install_dep
 
       - name: Test 🧪
-        run: npm run test-coverage
+        run: npm run test-report
 
       - name: Upload coverage to Codecov 📈
         uses: codecov/codecov-action@v3
