@@ -241,7 +241,7 @@ Please take a moment to review guidelines [PR](.github/pull_request_template.md)
 [npm-release-badge]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/npm-release.yml/badge.svg
 [npm-release-url]: https://github.com/mkosir/react-parallax-tilt/actions/workflows/npm-release.yml
 [coverage-badge]: https://codecov.io/gh/mkosir/react-parallax-tilt/branch/main/graph/badge.svg
-[coverage-url]: https://codecov.io/gh/mkosir/react-parallax-tilt
+[coverage-url]: https://app.codecov.io/github/mkosir/react-parallax-tilt/tree/main
 [issues-badge]: https://img.shields.io/github/issues/mkosir/react-parallax-tilt
 [issues-url]: https://github.com/mkosir/react-parallax-tilt/issues
 [semantic-badge]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
