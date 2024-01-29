@@ -17,7 +17,7 @@ const jestConfig: JestConfigWithTsJest = {
   },
   testRegex: '(/__tests__/.*|(\\.|/)(test))\\.[jt]sx?$',
   coverageDirectory: 'test-unit-report',
-  coverageReporters: ['text', 'text-summary', 'html'],
+  coverageReporters: ['text', 'text-summary', 'html', 'lcov'],
   coverageThreshold: {
     global: {
       branches: 90,
