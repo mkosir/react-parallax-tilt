@@ -41,7 +41,7 @@
     "storybook-build": "storybook build -o build-storybook-static",
     "semantic-release": "semantic-release --branches main",
     "demozap": "demozap generate --prefix=_ && npm run format-fix && npm run lint-fix",
-    "clean": "rm -rf node_modules test-unit-report playwright-report test-e2e-results dist compiled build-storybook-static"
+    "clean": "rm -rf node_modules test-unit-report test-e2e-report test-e2e-results dist compiled build-storybook-static"
   },
   "devDependencies": {
     "@babel/preset-env": "7.23.9",

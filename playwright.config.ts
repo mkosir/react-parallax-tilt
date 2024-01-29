@@ -12,7 +12,7 @@ export default defineConfig({
   retries: IS_CI ? 2 : 0,
   workers: IS_CI ? 1 : undefined,
   outputDir: 'test-e2e-results',
-  reporter: [['list'], ['html']],
+  reporter: [['list'], ['html', { outputFolder: 'test-e2e-report' }]],
   timeout: 20000,
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
