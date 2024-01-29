@@ -16,6 +16,6 @@ npm-debug.log*
 .vscode
 .idea
 /test-e2e-results/
-/playwright-report/
+/test-e2e-report/
 /blob-report/
 /playwright/.cache/
