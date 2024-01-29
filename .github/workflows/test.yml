@@ -28,7 +28,7 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_TEST_UNIT_REPORT }}
 
-      - name: Upload coverage to Codecov 📈
+      - name: Upload coverage to Codecov 📶
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
