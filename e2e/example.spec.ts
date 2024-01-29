@@ -5,7 +5,7 @@ import { test, expect } from '@playwright/test';
 test('should get max values of move params when mouse is positioned at border/corner of tilt element', async ({
   page,
 }) => {
-  await page.goto('http://localhost:9009');
+  await page.goto('/');
   await page.getByRole('link', { name: 'Event - Params' }).click();
 
   const content = page.frameLocator('iframe[title="storybook-preview-iframe"]');

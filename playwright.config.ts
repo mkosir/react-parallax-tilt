@@ -1,6 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 
 const IS_CI = process.env.CI === 'true';
+const BASE_URL = 'http://localhost:9009';
 
 // eslint-disable-next-line import/no-default-export
 export default defineConfig({
@@ -14,10 +15,8 @@ export default defineConfig({
   outputDir: 'test-e2e-results',
   reporter: [['list'], ['html', { outputFolder: 'test-e2e-report' }]],
   timeout: 20000,
-  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://127.0.0.1:3000',
+    baseURL: BASE_URL,
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
@@ -63,7 +62,7 @@ export default defineConfig({
   /* Run dev server before starting the tests */
   webServer: {
     command: 'npm run start',
-    url: 'http://localhost:9009',
+    url: BASE_URL,
     reuseExistingServer: !IS_CI,
   },
 });
