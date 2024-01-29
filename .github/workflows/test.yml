@@ -2,6 +2,9 @@ name: test
 
 on: push
 
+env:
+  FOLDER_PATH_TEST_UNIT_REPORT: ./test-unit-report
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -15,6 +18,15 @@ jobs:
 
       - name: Test 🧪
         run: npm run test-report
+
+      - name: Upload report 📈
+        uses: nwtgck/actions-netlify@v2
+        with:
+          publish-dir: ${{ env.FOLDER_PATH_TEST_UNIT_REPORT }}
+          production-deploy: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_TEST_UNIT_REPORT }}
 
       - name: Upload coverage to Codecov 📈
         uses: codecov/codecov-action@v3

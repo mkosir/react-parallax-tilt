@@ -3,7 +3,7 @@ name: test-e2e
 on: push
 
 env:
-  FOLDER_PATH_E2E_REPORT: ./test-e2e-report
+  FOLDER_PATH_TEST_E2E_REPORT: ./test-e2e-report
 
 jobs:
   test:
@@ -28,7 +28,7 @@ jobs:
         # Upload test report also in case of test failure.
         if: always()
         with:
-          publish-dir: ${{ env.FOLDER_PATH_E2E_REPORT }}
+          publish-dir: ${{ env.FOLDER_PATH_TEST_E2E_REPORT }}
           production-deploy: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
