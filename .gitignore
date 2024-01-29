@@ -1,5 +1,5 @@
 node_modules
-coverage
+test-unit-report
 dist
 build-storybook-static
 compiled
