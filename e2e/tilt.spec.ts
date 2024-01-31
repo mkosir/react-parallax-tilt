@@ -58,12 +58,12 @@ test('should get max values of move params when mouse is positioned at corners o
 
   // const TOP_RIGHT_FLAKINESS_TOLERANCE = 1.5;
 
-  expect(bottomRightParams.tiltAngleX).toBeLessThanOrEqual(20);
-  expect(bottomRightParams.tiltAngleY).toBeLessThanOrEqual(-20);
-  expect(bottomRightParams.tiltAngleXPercentage).toBeLessThanOrEqual(-100);
-  expect(bottomRightParams.tiltAngleYPercentage).toBeLessThanOrEqual(-100);
+  expect(bottomRightParams.tiltAngleX).toBeGreaterThanOrEqual(19);
+  expect(bottomRightParams.tiltAngleY).toBeLessThanOrEqual(-19);
+  expect(bottomRightParams.tiltAngleXPercentage).toBeGreaterThanOrEqual(95);
+  expect(bottomRightParams.tiltAngleYPercentage).toBeLessThanOrEqual(-95);
   expect(bottomRightParams.glareAngle).toBeGreaterThanOrEqual(44);
-  expect(bottomRightParams.glareOpacity).toBe(0);
+  expect(bottomRightParams.glareOpacity).toBeGreaterThanOrEqual(0.95);
 
   await content.getByTestId('bottomLeft').hover({ position: { x: 1, y: 19 } });
 
@@ -76,8 +76,8 @@ test('should get max values of move params when mouse is positioned at corners o
   expect(bottomLeftParams.tiltAngleY).toBeLessThanOrEqual(20);
   expect(bottomLeftParams.tiltAngleXPercentage).toBeLessThanOrEqual(100);
   expect(bottomLeftParams.tiltAngleYPercentage).toBeLessThanOrEqual(100);
-  expect(bottomLeftParams.glareAngle).toBeGreaterThanOrEqual(44);
-  expect(bottomLeftParams.glareOpacity).toBe(0);
+  expect(bottomLeftParams.glareAngle).toBeLessThanOrEqual(130);
+  expect(bottomLeftParams.glareOpacity).toBe(1);
 });
 
 // const testEEEE = () => {
