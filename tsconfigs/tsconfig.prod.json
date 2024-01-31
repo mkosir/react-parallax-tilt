@@ -1,5 +1,11 @@
 {
   "extends": "./tsconfig.base.json",
   "include": ["../src/**/*"],
-  "exclude": ["../src/**/*.test.ts", "../src/**/*.test.tsx", "../src/**/TiltTest.tsx"]
+  "exclude": [
+    "../src/**/*.test.ts",
+    "../src/**/*.test.tsx",
+    "../src/**/TiltTest.tsx",
+    "../src/**/*.spec.ts",
+    "../src/**/*.spec.tsx"
+  ]
 }
