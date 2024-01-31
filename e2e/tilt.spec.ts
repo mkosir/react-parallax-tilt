@@ -2,13 +2,15 @@ import { test, expect } from '@playwright/test';
 
 import { OnMoveParams } from 'index';
 
+const IFRAME_LOCATOR = 'iframe[title="storybook-preview-iframe"]';
+
 test('should get max values of move params rendered when mouse is positioned at top left corner of tilt element', async ({
   page,
 }) => {
   await page.goto('/');
   await page.getByRole('link', { name: 'Event - Params' }).click();
 
-  const content = page.frameLocator('iframe[title="storybook-preview-iframe"]');
+  const content = page.frameLocator(IFRAME_LOCATOR);
 
   await content.getByTestId('topLeft').hover({ position: { x: 10, y: 10 } });
   await expect(content.getByTestId('tiltAngleX')).toHaveText('-20.00° / -100.00%');
@@ -21,14 +23,12 @@ test('should get max values of move params when mouse is positioned at corners o
   await page.goto('/');
   await page.getByRole('link', { name: 'Event - Params' }).click();
 
-  const content = page.frameLocator('iframe[title="storybook-preview-iframe"]');
+  const content = page.frameLocator(IFRAME_LOCATOR);
 
   await content.getByTestId('topLeft').hover({ position: { x: 10, y: 10 } });
 
   const topLeftParamsString = await content.getByTestId('params').innerText();
   const topLeftParams = JSON.parse(topLeftParamsString) as OnMoveParams;
-
-  // const TOP_LEFT_FLAKINESS_TOLERANCE = 0;
 
   expect(topLeftParams.tiltAngleX).toBeLessThanOrEqual(-20);
   expect(topLeftParams.tiltAngleY).toBeGreaterThanOrEqual(20);
@@ -42,8 +42,6 @@ test('should get max values of move params when mouse is positioned at corners o
   const topRightParamsString = await content.getByTestId('params').innerText();
   const topRightParams = JSON.parse(topRightParamsString) as OnMoveParams;
 
-  // const TOP_RIGHT_FLAKINESS_TOLERANCE = 1.5;
-
   expect(topRightParams.tiltAngleX).toBeLessThanOrEqual(-20);
   expect(topRightParams.tiltAngleY).toBeLessThanOrEqual(-19);
   expect(topRightParams.tiltAngleXPercentage).toBeLessThanOrEqual(-100);
@@ -55,8 +53,6 @@ test('should get max values of move params when mouse is positioned at corners o
 
   const bottomRightParamsString = await content.getByTestId('params').innerText();
   const bottomRightParams = JSON.parse(bottomRightParamsString) as OnMoveParams;
-
-  // const TOP_RIGHT_FLAKINESS_TOLERANCE = 1.5;
 
   expect(bottomRightParams.tiltAngleX).toBeGreaterThanOrEqual(19);
   expect(bottomRightParams.tiltAngleY).toBeLessThanOrEqual(-19);
@@ -70,8 +66,6 @@ test('should get max values of move params when mouse is positioned at corners o
   const bottomLeftParamsString = await content.getByTestId('params').innerText();
   const bottomLeftParams = JSON.parse(bottomLeftParamsString) as OnMoveParams;
 
-  // const TOP_RIGHT_FLAKINESS_TOLERANCE = 1.5;
-
   expect(bottomLeftParams.tiltAngleX).toBeLessThanOrEqual(20);
   expect(bottomLeftParams.tiltAngleY).toBeLessThanOrEqual(20);
   expect(bottomLeftParams.tiltAngleXPercentage).toBeLessThanOrEqual(100);
@@ -80,22 +74,21 @@ test('should get max values of move params when mouse is positioned at corners o
   expect(bottomLeftParams.glareOpacity).toBe(1);
 });
 
-// const testEEEE = () => {
-//   await page.goto('http://localhost:9009');
-//   await page.getByRole('link', { name: 'Event - Params' }).click();
+test('should get half of max value when mouse is positioned in the middle of tilt element', async ({ page }) => {
+  await page.goto('http://localhost:9009');
+  await page.getByRole('link', { name: 'Event - Params' }).click();
 
-//   const content = page.frameLocator('iframe[title="storybook-preview-iframe"]');
+  const content = page.frameLocator(IFRAME_LOCATOR);
 
-//   await content.getByTestId('topMidLeft').hover({ position: { x: 10, y: 10 } });
-//   await expect(content.getByTestId('tiltAngleX')).toHaveText('-9.65° / -48.24%');
-// };
+  await content.getByTestId('topMidLeft').hover({ position: { x: 10, y: 10 } });
 
-// test('should get half of max value when mouse is positioned in the middle of tilt element', async ({ page }) => {
-//   await page.goto('http://localhost:9009');
-//   await page.getByRole('link', { name: 'Event - Params' }).click();
+  const topMidLeftParamsString = await content.getByTestId('params').innerText();
+  const topMidLeftParams = JSON.parse(topMidLeftParamsString) as OnMoveParams;
 
-//   const content = page.frameLocator('iframe[title="storybook-preview-iframe"]');
-
-//   await content.getByTestId('topMidLeft').hover({ position: { x: 10, y: 10 } });
-//   await expect(content.getByTestId('tiltAngleX')).toHaveText('-9.65° / -48.24%');
-// });
+  expect(topMidLeftParams.tiltAngleX).toBeLessThanOrEqual(-10);
+  expect(topMidLeftParams.tiltAngleY).toBeGreaterThanOrEqual(10);
+  expect(topMidLeftParams.tiltAngleXPercentage).toBeLessThanOrEqual(-50);
+  expect(topMidLeftParams.tiltAngleYPercentage).toBeGreaterThanOrEqual(50);
+  expect(topMidLeftParams.glareAngle).toBeLessThanOrEqual(-40);
+  expect(topMidLeftParams.glareOpacity).toBe(0);
+});
