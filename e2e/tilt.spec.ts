@@ -61,7 +61,7 @@ test('should get max values of move params when mouse is positioned at corners o
   expect(bottomRightParams.glareAngle).toBeGreaterThanOrEqual(44);
   expect(bottomRightParams.glareOpacity).toBeGreaterThanOrEqual(0.95);
 
-  await content.getByTestId('bottomLeft').hover({ position: { x: 1, y: 19 } });
+  await content.getByTestId('bottomLeft').hover({ position: { x: 5, y: 20 } });
 
   const bottomLeftParamsString = await content.getByTestId('params').innerText();
   const bottomLeftParams = JSON.parse(bottomLeftParamsString) as OnMoveParams;
