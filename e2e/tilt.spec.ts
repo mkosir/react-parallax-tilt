@@ -51,13 +51,33 @@ test('should get max values of move params when mouse is positioned at corners o
   expect(topRightParams.glareAngle).toBeGreaterThanOrEqual(44);
   expect(topRightParams.glareOpacity).toBe(0);
 
-  // await content.getByTestId('bottomRight').hover({ position: { x: 19, y: 19 } });
-  // await expect(content.getByTestId('tiltAngleX')).toHaveText('20.00° / 100.00%');
-  // await expect(content.getByTestId('tiltAngleY')).toHaveText('-20.00° / -100.00%');
+  await content.getByTestId('bottomRight').hover({ position: { x: 19, y: 19 } });
 
-  // await content.getByTestId('bottomLeft').hover({ position: { x: 1, y: 19 } });
-  // await expect(content.getByTestId('tiltAngleX')).toHaveText('20.00° / 100.00%');
-  // await expect(content.getByTestId('tiltAngleY')).toHaveText('20.00° / 100.00%');
+  const bottomRightParamsString = await content.getByTestId('params').innerText();
+  const bottomRightParams = JSON.parse(bottomRightParamsString) as OnMoveParams;
+
+  // const TOP_RIGHT_FLAKINESS_TOLERANCE = 1.5;
+
+  expect(bottomRightParams.tiltAngleX).toBeLessThanOrEqual(20);
+  expect(bottomRightParams.tiltAngleY).toBeLessThanOrEqual(-20);
+  expect(bottomRightParams.tiltAngleXPercentage).toBeLessThanOrEqual(-100);
+  expect(bottomRightParams.tiltAngleYPercentage).toBeLessThanOrEqual(-100);
+  expect(bottomRightParams.glareAngle).toBeGreaterThanOrEqual(44);
+  expect(bottomRightParams.glareOpacity).toBe(0);
+
+  await content.getByTestId('bottomLeft').hover({ position: { x: 1, y: 19 } });
+
+  const bottomLeftParamsString = await content.getByTestId('params').innerText();
+  const bottomLeftParams = JSON.parse(bottomLeftParamsString) as OnMoveParams;
+
+  // const TOP_RIGHT_FLAKINESS_TOLERANCE = 1.5;
+
+  expect(bottomLeftParams.tiltAngleX).toBeLessThanOrEqual(20);
+  expect(bottomLeftParams.tiltAngleY).toBeLessThanOrEqual(20);
+  expect(bottomLeftParams.tiltAngleXPercentage).toBeLessThanOrEqual(100);
+  expect(bottomLeftParams.tiltAngleYPercentage).toBeLessThanOrEqual(100);
+  expect(bottomLeftParams.glareAngle).toBeGreaterThanOrEqual(44);
+  expect(bottomLeftParams.glareOpacity).toBe(0);
 });
 
 // const testEEEE = () => {
