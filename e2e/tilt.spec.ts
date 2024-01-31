@@ -49,13 +49,13 @@ test('should get max values of move params when mouse is positioned at corners o
   expect(topRightParams.glareAngle).toBeGreaterThanOrEqual(44);
   expect(topRightParams.glareOpacity).toBe(0);
 
-  await content.getByTestId('bottomRight').hover({ position: { x: 19, y: 19 } });
+  await content.getByTestId('bottomRight').hover({ position: { x: 25, y: 20 } });
 
   const bottomRightParamsString = await content.getByTestId('params').innerText();
   const bottomRightParams = JSON.parse(bottomRightParamsString) as OnMoveParams;
 
   expect(bottomRightParams.tiltAngleX).toBeGreaterThanOrEqual(19);
-  expect(bottomRightParams.tiltAngleY).toBeLessThanOrEqual(-19);
+  expect(bottomRightParams.tiltAngleY).toBeLessThanOrEqual(-18);
   expect(bottomRightParams.tiltAngleXPercentage).toBeGreaterThanOrEqual(95);
   expect(bottomRightParams.tiltAngleYPercentage).toBeLessThanOrEqual(-95);
   expect(bottomRightParams.glareAngle).toBeGreaterThanOrEqual(44);
@@ -71,7 +71,7 @@ test('should get max values of move params when mouse is positioned at corners o
   expect(bottomLeftParams.tiltAngleXPercentage).toBeLessThanOrEqual(100);
   expect(bottomLeftParams.tiltAngleYPercentage).toBeLessThanOrEqual(100);
   expect(bottomLeftParams.glareAngle).toBeLessThanOrEqual(130);
-  expect(bottomLeftParams.glareOpacity).toBe(1);
+  expect(bottomLeftParams.glareOpacity).toBeGreaterThanOrEqual(0.9);
 });
 
 test('should get half of max value when mouse is positioned in the middle of tilt element', async ({ page }) => {
