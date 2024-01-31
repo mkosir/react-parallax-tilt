@@ -38,11 +38,11 @@ test('should get max values of move params when mouse is positioned at corners o
     glareOpacity: 0,
   });
 
-  // await content.getByTestId('topRight').hover({ position: { x: 25, y: 10 } });
-  // const paramsString2 = await content.getByTestId('params').innerText();
-  // const params2 = JSON.parse(paramsString2) as OnMoveParams;
+  await content.getByTestId('topRight').hover({ position: { x: 25, y: 10 } });
+  const paramsString2 = await content.getByTestId('params').innerText();
+  const params2 = JSON.parse(paramsString2) as OnMoveParams;
 
-  // console.log('🔎 Log ~ test ~ params2:', params2);
+  console.log('🔎 Log ~ test ~ params2:', params2);
 
   // expect(params2).toStrictEqual({
   //   tiltAngleX: -20,
@@ -52,6 +52,12 @@ test('should get max values of move params when mouse is positioned at corners o
   //   glareAngle: -45,
   //   glareOpacity: 0,
   // });
+  expect(params2.tiltAngleX).toBeLessThanOrEqual(-20);
+  expect(params2.tiltAngleY).toBeLessThanOrEqual(-19);
+  expect(params2.tiltAngleXPercentage).toBeLessThanOrEqual(-100);
+  expect(params2.tiltAngleYPercentage).toBeLessThanOrEqual(-95);
+  expect(params2.glareAngle).toBeGreaterThanOrEqual(44);
+  expect(params2.glareOpacity).toBe(0);
 
   // await content.getByTestId('bottomRight').hover({ position: { x: 19, y: 19 } });
   // await expect(content.getByTestId('tiltAngleX')).toHaveText('20.00° / 100.00%');
