@@ -2,6 +2,7 @@ import { defineConfig, devices } from '@playwright/test';
 
 const IS_CI = process.env.CI === 'true';
 const BASE_URL = 'http://localhost:9009';
+const TIMEOUT_SECONDS = 20;
 
 // eslint-disable-next-line import/no-default-export
 export default defineConfig({
@@ -14,7 +15,7 @@ export default defineConfig({
   workers: IS_CI ? 1 : undefined,
   outputDir: 'test-e2e-results',
   reporter: [['list'], ['html', { outputFolder: 'test-e2e-report' }]],
-  timeout: 20000,
+  timeout: TIMEOUT_SECONDS * 1000,
   use: {
     baseURL: BASE_URL,
 
