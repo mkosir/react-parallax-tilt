@@ -18,6 +18,7 @@ const eslintConfig = {
     'plugin:no-array-reduce/recommended',
     'plugin:testing-library/react',
     'plugin:jest-dom/recommended',
+    'plugin:playwright/recommended',
     'plugin:storybook/recommended',
   ],
 
@@ -43,6 +44,14 @@ const eslintConfig = {
       {
         mustMatch: {
           it: [/should.*when/u.source, "Test title must include 'should' and 'when'"],
+        },
+      },
+    ],
+    'playwright/valid-title': [
+      'error',
+      {
+        mustMatch: {
+          test: [/should.*when/u.source, "Test title must include 'should' and 'when'"],
         },
       },
     ],
@@ -74,6 +83,14 @@ const eslintConfig = {
         // Ideally turn off all the rules from eslint-plugin-testing-library plugin, since it's not applicable for Playwright tests.
         // 'testing-library/*': 'off',
         'testing-library/prefer-screen-queries': 'off',
+      },
+    },
+    {
+      files: ['**/*.test.*'],
+      rules: {
+        // Turn off all the rules from eslint-plugin-playwright plugin, since it's not applicable for Jest tests.
+        // 'playwright/*': 'off',
+        'playwright/missing-playwright-await': 'off',
       },
     },
   ],
