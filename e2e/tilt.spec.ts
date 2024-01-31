@@ -4,12 +4,14 @@ import { OnMoveParams } from 'index';
 
 const IFRAME_LOCATOR = 'iframe[title="storybook-preview-iframe"]';
 
+test.beforeEach(async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('link', { name: 'Event - Params' }).click();
+});
+
 test('should get max values of move params rendered when mouse is positioned at top left corner of tilt element', async ({
   page,
 }) => {
-  await page.goto('/');
-  await page.getByRole('link', { name: 'Event - Params' }).click();
-
   const content = page.frameLocator(IFRAME_LOCATOR);
 
   await content.getByTestId('topLeft').hover({ position: { x: 10, y: 10 } });
@@ -20,9 +22,6 @@ test('should get max values of move params rendered when mouse is positioned at 
 });
 
 test('should get max values of move params when mouse is positioned at corners of tilt element', async ({ page }) => {
-  await page.goto('/');
-  await page.getByRole('link', { name: 'Event - Params' }).click();
-
   const content = page.frameLocator(IFRAME_LOCATOR);
 
   await content.getByTestId('topLeft').hover({ position: { x: 10, y: 10 } });
@@ -75,9 +74,6 @@ test('should get max values of move params when mouse is positioned at corners o
 });
 
 test('should get half of max value when mouse is positioned in the middle of tilt element', async ({ page }) => {
-  await page.goto('http://localhost:9009');
-  await page.getByRole('link', { name: 'Event - Params' }).click();
-
   const content = page.frameLocator(IFRAME_LOCATOR);
 
   await content.getByTestId('topMidLeft').hover({ position: { x: 10, y: 10 } });
