@@ -105,20 +105,38 @@ const EventParams = () => {
       </Tilt>
       <div className="event-type">
         Track events:
-        <label>
-          <input onChange={toggleCheck} checked={selectedEvents.trackOnMove} name={'trackOnMove'} type="checkbox" />
-          onMove
-        </label>
-        <label>
-          <input onChange={toggleCheck} checked={selectedEvents.trackOnEnter} name={'trackOnEnter'} type="checkbox" />
-          onEnter
-        </label>
-        <label>
-          <input onChange={toggleCheck} checked={selectedEvents.trackOnLeave} name={'trackOnLeave'} type="checkbox" />
-          onLeave
-        </label>
-        {evenDescription && <div data-testid="evenDescription">{evenDescription}</div>}
+        <div>
+          <input
+            id="onMove"
+            onChange={toggleCheck}
+            checked={selectedEvents.trackOnMove}
+            name={'trackOnMove'}
+            type="checkbox"
+          />
+          <label htmlFor="onMove">onMove</label>
+        </div>
+        <div>
+          <input
+            id="onEnter"
+            onChange={toggleCheck}
+            checked={selectedEvents.trackOnEnter}
+            name={'trackOnEnter'}
+            type="checkbox"
+          />
+          <label htmlFor="onEnter">onEnter</label>
+        </div>
+        <div>
+          <input
+            id="onLeave"
+            onChange={toggleCheck}
+            checked={selectedEvents.trackOnLeave}
+            name={'trackOnLeave'}
+            type="checkbox"
+          />
+          <label htmlFor="onLeave">onLeave</label>
+        </div>
       </div>
+      {evenDescription && <div data-testid="evenDescription">{evenDescription}</div>}
     </div>
   );
 };

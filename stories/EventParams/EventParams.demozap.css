@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 20px;
 
   .tilt-content {
     display: flex;
@@ -64,11 +65,7 @@
   }
 
   .event-type {
+    display: flex;
     margin-top: 20px;
-    font-size: 20px;
-
-    div {
-      margin-top: 10px;
-    }
   }
 }
