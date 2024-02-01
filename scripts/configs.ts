@@ -1,7 +1,7 @@
 import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
-import { RollupOptions } from 'rollup';
+import { GlobalsOption, RollupOptions } from 'rollup';
 import { dts } from 'rollup-plugin-dts';
 
 import packageJson from '../package.json' assert { type: 'json' };
@@ -15,7 +15,7 @@ const PATH_TSCONFIG = './tsconfigs/tsconfig.prod.json';
 const GLOBALS = {
   react: 'React',
   'react-dom': 'ReactDOM',
-} as const;
+} as const satisfies GlobalsOption;
 
 export const LEGACY_CONFIG = [
   {
