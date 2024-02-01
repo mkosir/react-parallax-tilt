@@ -117,7 +117,7 @@ const EventParams = () => {
           <input onChange={toggleCheck} checked={selectedEvents.trackOnLeave} name={'trackOnLeave'} type="checkbox" />
           onLeave
         </label>
-        {evenDescription && <div>{evenDescription}</div>}
+        {evenDescription && <div data-testid="evenDescription">{evenDescription}</div>}
       </div>
     </div>
   );
