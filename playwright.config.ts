@@ -8,7 +8,7 @@ const TIMEOUT_SECONDS = IS_CI ? 15 : 5;
 export default defineConfig({
   testDir: './e2e',
   fullyParallel: true,
-  forbidOnly: true,
+  forbidOnly: IS_CI,
   retries: IS_CI ? 2 : 0,
   workers: IS_CI ? 1 : undefined,
   outputDir: 'test-e2e-results',
