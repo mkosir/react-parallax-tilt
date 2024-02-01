@@ -7,11 +7,21 @@ test.beforeEach(async ({ page }) => {
   await page.getByRole('link', { name: 'Event - Params' }).click();
 });
 
-test('should trigger onMove event when hovers tilt element', async ({ page }) => {
+test("should trigger 'onMove' event with 'mousemove' event type when mouse hovers tilt element", async ({ page }) => {
   const content = page.frameLocator(IFRAME_LOCATOR);
 
   await content.getByTestId('topMidLeft').hover({ position: { x: 10, y: 10 } });
   await expect(content.getByTestId('evenDescription')).toHaveText(
     "Event 'onMove' triggered by 'mousemove' event type.",
+  );
+});
+
+test("should trigger 'onMove' event with 'autoreset' event type when mouse leaves tilt element", async ({ page }) => {
+  const content = page.frameLocator(IFRAME_LOCATOR);
+
+  await content.getByTestId('topMidLeft').hover({ position: { x: 10, y: 10 } });
+  await content.getByText('Track events:').hover();
+  await expect(content.getByTestId('evenDescription')).toHaveText(
+    "Event 'onMove' triggered by 'autoreset' event type.",
   );
 });
