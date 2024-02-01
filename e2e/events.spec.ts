@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const IFRAME_LOCATOR = 'iframe[title="storybook-preview-iframe"]';
+import { IFRAME_SELECTOR } from './consts';
 
 test.beforeEach(async ({ page }) => {
   await page.goto('/');
@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test("should trigger 'onMove' event with 'mousemove' event type when mouse hovers tilt element", async ({ page }) => {
-  const content = page.frameLocator(IFRAME_LOCATOR);
+  const content = page.frameLocator(IFRAME_SELECTOR);
 
   await content.getByTestId('topMidLeft').hover({ position: { x: 10, y: 10 } });
   await expect(content.getByTestId('evenDescription')).toHaveText(
@@ -17,7 +17,7 @@ test("should trigger 'onMove' event with 'mousemove' event type when mouse hover
 });
 
 test("should trigger 'onMove' event with 'autoreset' event type when mouse leaves tilt element", async ({ page }) => {
-  const content = page.frameLocator(IFRAME_LOCATOR);
+  const content = page.frameLocator(IFRAME_SELECTOR);
 
   await content.getByTestId('topMidLeft').hover({ position: { x: 10, y: 10 } });
   await content.getByText('Track events:').hover();
@@ -27,7 +27,7 @@ test("should trigger 'onMove' event with 'autoreset' event type when mouse leave
 });
 
 test("should trigger 'onEnter' event with 'mouseenter' event type when mouse enters tilt element", async ({ page }) => {
-  const content = page.frameLocator(IFRAME_LOCATOR);
+  const content = page.frameLocator(IFRAME_SELECTOR);
 
   await content.getByLabel('onMove').uncheck();
   await content.getByTestId('topMidLeft').hover({ position: { x: 10, y: 10 } });
@@ -37,7 +37,7 @@ test("should trigger 'onEnter' event with 'mouseenter' event type when mouse ent
 });
 
 test("should trigger 'onLeave' event with 'mouseleave' event type when mouse enters tilt element", async ({ page }) => {
-  const content = page.frameLocator(IFRAME_LOCATOR);
+  const content = page.frameLocator(IFRAME_SELECTOR);
 
   await content.getByLabel('onMove').uncheck();
   await content.getByTestId('topMidLeft').hover({ position: { x: 10, y: 10 } });
