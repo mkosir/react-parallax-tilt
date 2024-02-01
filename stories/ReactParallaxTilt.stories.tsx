@@ -9,7 +9,6 @@ import { _FlipVH } from './FlipVH/_FlipVH';
 import { _GlareEffect } from './GlareEffect/_GlareEffect';
 import { _GlareEffect360 } from './GlareEffect360/_GlareEffect360';
 import { _GlareEffectNoTilt } from './GlareEffectNoTilt/_GlareEffectNoTilt';
-import { _Gyroscope } from './Gyroscope/_Gyroscope';
 import { _InitialTilt } from './InitialTilt/_InitialTilt';
 import { _KeepFloating } from './KeepFloating/_KeepFloating';
 import { _MultipleTilt } from './MultipleTilt/_MultipleTilt';
@@ -124,11 +123,6 @@ export const TrackOnWindow: StoryObj = {
 export const TiltManualInput: StoryObj = {
   render: () => <_TiltManualInput />,
   name: 'Tilt manual input',
-};
-
-export const Gyroscope: StoryObj = {
-  render: () => <_Gyroscope />,
-  name: 'Gyroscope tilt',
 };
 
 export const MultipleTilt: StoryObj = {
