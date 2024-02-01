@@ -8,7 +8,6 @@ const TIMEOUT_SECONDS = IS_CI ? 15 : 5;
 export default defineConfig({
   testDir: './e2e',
   fullyParallel: true,
-  /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: true,
   retries: IS_CI ? 2 : 0,
   workers: IS_CI ? 1 : undefined,
@@ -17,9 +16,7 @@ export default defineConfig({
   timeout: TIMEOUT_SECONDS * 1000,
   use: {
     baseURL: BASE_URL,
-
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: 'on',
   },
 
   projects: [
