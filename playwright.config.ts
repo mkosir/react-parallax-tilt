@@ -2,7 +2,7 @@ import { defineConfig, devices } from '@playwright/test';
 
 const IS_CI = process.env.CI === 'true';
 const BASE_URL = 'http://localhost:9009';
-const TIMEOUT_SECONDS = 20;
+const TIMEOUT_SECONDS = 10;
 
 // eslint-disable-next-line import/no-default-export
 export default defineConfig({

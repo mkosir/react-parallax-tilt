@@ -25,3 +25,13 @@ test("should trigger 'onMove' event with 'autoreset' event type when mouse leave
     "Event 'onMove' triggered by 'autoreset' event type.",
   );
 });
+
+test("should trigger 'onEnter' event with 'mouseenter' event type when mouse enters tilt element", async ({ page }) => {
+  const content = page.frameLocator(IFRAME_LOCATOR);
+
+  await page.getByLabel('onMove').uncheck();
+  await content.getByTestId('topMidLeft').hover({ position: { x: 10, y: 10 } });
+  await expect(content.getByTestId('evenDescription')).toHaveText(
+    "Event 'onEnter' triggered by 'mouseenter' event type.",
+  );
+});
