@@ -35,3 +35,14 @@ test("should trigger 'onEnter' event with 'mouseenter' event type when mouse ent
     "Event 'onEnter' triggered by 'mouseenter' event type.",
   );
 });
+
+test("should trigger 'onLeave' event with 'mouseleave' event type when mouse enters tilt element", async ({ page }) => {
+  const content = page.frameLocator(IFRAME_LOCATOR);
+
+  await content.getByLabel('onMove').uncheck();
+  await content.getByTestId('topMidLeft').hover({ position: { x: 10, y: 10 } });
+  await content.getByText('Track events:').hover();
+  await expect(content.getByTestId('evenDescription')).toHaveText(
+    "Event 'onLeave' triggered by 'mouseleave' event type.",
+  );
+});
