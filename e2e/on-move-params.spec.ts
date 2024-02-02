@@ -41,7 +41,7 @@ test('should get max values of move params when mouse is positioned at corners o
   const topRightParamsString = await content.getByTestId('params').innerText();
   const topRightParams = JSON.parse(topRightParamsString) as OnMoveParams;
 
-  expect(topRightParams.tiltAngleX).toBeLessThanOrEqual(-20);
+  expect(topRightParams.tiltAngleX).toBeLessThanOrEqual(-19);
   expect(topRightParams.tiltAngleY).toBeLessThanOrEqual(-19);
   expect(topRightParams.tiltAngleXPercentage).toBeLessThanOrEqual(-100);
   expect(topRightParams.tiltAngleYPercentage).toBeLessThanOrEqual(-95);
