@@ -1,4 +1,4 @@
-// import { test as setup } from '@playwright/test';
+import { test as setup } from '@playwright/test';
 
 // setup('do login', async ({ page }) => {
 //   await page.goto('/');
@@ -11,3 +11,8 @@
 
 //   await page.context().storageState({ path: STORAGE_STATE });
 // });
+
+setup("remove Storybook 'what's new' popup", async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Dismiss notification' }).click();
+});
