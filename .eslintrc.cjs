@@ -78,9 +78,9 @@ const eslintConfig = {
       },
     },
     {
-      files: ['**/*.spec.*'],
+      files: ['**/*.spec.*', 'global.setup.ts'],
       rules: {
-        // Ideally turn off all the rules from eslint-plugin-testing-library plugin, since it's not applicable for Playwright tests.
+        // Turn off (ideally all the rules) from eslint-plugin-testing-library plugin, since it's not applicable for Playwright tests.
         // 'testing-library/*': 'off',
         'testing-library/prefer-screen-queries': 'off',
       },
