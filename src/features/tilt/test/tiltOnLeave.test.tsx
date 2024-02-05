@@ -11,6 +11,6 @@ describe('Tilt - onLeave', () => {
 
     fireEvent.mouseLeave(screen.getByText('test'));
 
-    expect(onLeave).toBeCalledWith('mouseleave');
+    expect(onLeave).toHaveBeenCalledWith('mouseleave');
   });
 });

@@ -11,6 +11,6 @@ describe('Tilt - onEnter', () => {
 
     fireEvent.mouseEnter(screen.getByText('test'));
 
-    expect(onEnter).toBeCalledWith('mouseenter');
+    expect(onEnter).toHaveBeenCalledWith('mouseenter');
   });
 });

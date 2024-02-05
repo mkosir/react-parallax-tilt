@@ -22,7 +22,7 @@ describe('Tilt - Axis', () => {
 
     await userEvent.hover(screen.getByText('test'));
 
-    expect(onMove).toBeCalledWith<[OnMoveParams]>({
+    expect(onMove).toHaveBeenCalledWith<[OnMoveParams]>({
       tiltAngleX: 60,
       tiltAngleY: 0,
       tiltAngleXPercentage: 100,
@@ -49,7 +49,7 @@ describe('Tilt - Axis', () => {
 
     await userEvent.hover(screen.getByText('test'));
 
-    expect(onMove).toBeCalledWith<[OnMoveParams]>({
+    expect(onMove).toHaveBeenCalledWith<[OnMoveParams]>({
       tiltAngleX: 0,
       tiltAngleY: 45,
       tiltAngleXPercentage: 0,

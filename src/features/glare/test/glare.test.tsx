@@ -24,7 +24,7 @@ describe('Glare', () => {
 
     await userEvent.hover(screen.getByText('test'));
 
-    expect(onMove).toBeCalledWith<[OnMoveParams]>({
+    expect(onMove).toHaveBeenCalledWith<[OnMoveParams]>({
       tiltAngleX: -60,
       tiltAngleY: 60,
       tiltAngleXPercentage: -100,
@@ -53,7 +53,7 @@ describe('Glare', () => {
 
     await userEvent.hover(screen.getByText('test'));
 
-    expect(onMove).toBeCalledWith<[OnMoveParams]>({
+    expect(onMove).toHaveBeenCalledWith<[OnMoveParams]>({
       tiltAngleX: 0,
       tiltAngleY: 60,
       tiltAngleXPercentage: 0,
@@ -82,7 +82,7 @@ describe('Glare', () => {
 
     await userEvent.hover(screen.getByText('test'));
 
-    expect(onMove).toBeCalledWith<[OnMoveParams]>({
+    expect(onMove).toHaveBeenCalledWith<[OnMoveParams]>({
       tiltAngleX: 60,
       tiltAngleY: 60,
       tiltAngleXPercentage: 100,
@@ -112,7 +112,7 @@ describe('Glare', () => {
 
     await userEvent.hover(screen.getByText('test'));
 
-    expect(onMove).toBeCalledWith<[OnMoveParams]>({
+    expect(onMove).toHaveBeenCalledWith<[OnMoveParams]>({
       tiltAngleX: -60,
       tiltAngleY: 60,
       tiltAngleXPercentage: -100,
@@ -141,7 +141,7 @@ describe('Glare', () => {
 
     await userEvent.hover(screen.getByText('test'));
 
-    expect(onMove).toBeCalledWith<[OnMoveParams]>({
+    expect(onMove).toHaveBeenCalledWith<[OnMoveParams]>({
       tiltAngleX: -60,
       tiltAngleY: -60,
       tiltAngleXPercentage: -100,
@@ -169,7 +169,7 @@ describe('Glare', () => {
 
     await userEvent.hover(screen.getByText('test'));
 
-    expect(onMove).toBeCalledWith<[OnMoveParams]>({
+    expect(onMove).toHaveBeenCalledWith<[OnMoveParams]>({
       tiltAngleX: -60,
       tiltAngleY: 60,
       tiltAngleXPercentage: -100,
@@ -200,7 +200,7 @@ describe('Glare', () => {
 
     await userEvent.hover(screen.getByText('test'));
 
-    expect(onMove).toBeCalledWith<[OnMoveParams]>({
+    expect(onMove).toHaveBeenCalledWith<[OnMoveParams]>({
       tiltAngleX: 120,
       tiltAngleY: 120,
       tiltAngleXPercentage: 200,

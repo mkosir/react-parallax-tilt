@@ -14,8 +14,8 @@ describe('Tilt - Reset', () => {
 
     fireEvent.mouseEnter(screen.getByText('test'));
 
-    expect(onEnter).toBeCalledWith('mouseenter');
-    expect(onMove).toBeCalledWith<[OnMoveParams]>({
+    expect(onEnter).toHaveBeenCalledWith('mouseenter');
+    expect(onMove).toHaveBeenCalledWith<[OnMoveParams]>({
       tiltAngleX: 0,
       tiltAngleY: -0,
       tiltAngleXPercentage: 0,
@@ -26,6 +26,6 @@ describe('Tilt - Reset', () => {
     });
 
     fireEvent.mouseLeave(screen.getByText('test'));
-    expect(onLeave).toBeCalledWith('mouseleave');
+    expect(onLeave).toHaveBeenCalledWith('mouseleave');
   });
 });

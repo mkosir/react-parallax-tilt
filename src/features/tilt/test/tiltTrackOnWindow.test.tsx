@@ -13,7 +13,7 @@ describe('Tilt - Track On Window', () => {
 
     await userEvent.hover(screen.getByText('test'));
 
-    expect(onMove).toBeCalledWith<[OnMoveParams]>({
+    expect(onMove).toHaveBeenCalledWith<[OnMoveParams]>({
       tiltAngleX: 20,
       tiltAngleY: 15,
       tiltAngleXPercentage: 100,

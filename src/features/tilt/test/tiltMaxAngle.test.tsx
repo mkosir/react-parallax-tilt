@@ -21,7 +21,7 @@ describe('Tilt - Max Angle', () => {
 
     await userEvent.hover(screen.getByText('test'));
 
-    expect(onMove).toBeCalledWith<[OnMoveParams]>({
+    expect(onMove).toHaveBeenCalledWith<[OnMoveParams]>({
       tiltAngleX: 90,
       tiltAngleY: 90,
       tiltAngleXPercentage: 30,
