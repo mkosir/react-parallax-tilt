@@ -1,6 +1,10 @@
 const eslintConfig = {
   root: true,
   parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: true,
+    tsconfigRootDir: __dirname,
+  },
 
   plugins: ['@typescript-eslint', 'testing-library', 'jest-dom', 'jest', 'import'],
 
