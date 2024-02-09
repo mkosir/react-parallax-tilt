@@ -161,6 +161,9 @@ Check the [browser compatibility](https://caniuse.com/#search=DeviceOrientation)
 A few takeaways when using device orientation event:
 
 - always use secure origins (such as `https`)
+  - if you're using VS Code, then you can
+    - use the in-built port-forwarding feature to expose your localhost to the internet and optionally change the protocol to `https`
+    - alternatively, use microsoft's [live-share](https://visualstudio.microsoft.com/services/live-share/) extension which supports [sharing server](https://learn.microsoft.com/en-us/visualstudio/liveshare/use/share-server-visual-studio-code#share-a-server) through a tunnel.
 - it doesn't work in all browsers when using it in cross-origin `<iframe>` element
 
 <details>
