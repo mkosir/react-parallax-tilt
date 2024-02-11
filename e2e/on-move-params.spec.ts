@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 import { OnMoveParams } from 'index';
 
-import { IFRAME_SELECTOR } from './consts';
+import { getIframeContent } from './consts';
 
 test.beforeEach(async ({ page }) => {
   await page.goto('/');
@@ -12,7 +12,7 @@ test.beforeEach(async ({ page }) => {
 test('should get max values of move params rendered when mouse is positioned at top left corner of tilt element', async ({
   page,
 }) => {
-  const content = page.frameLocator(IFRAME_SELECTOR);
+  const content = getIframeContent(page);
 
   await content.getByTestId('topLeft').hover({ position: { x: 10, y: 10 } });
   await expect(content.getByTestId('tiltAngleX')).toHaveText('-20.00° / -100.00%');
@@ -22,7 +22,7 @@ test('should get max values of move params rendered when mouse is positioned at 
 });
 
 test('should get max values of move params when mouse is positioned at corners of tilt element', async ({ page }) => {
-  const content = page.frameLocator(IFRAME_SELECTOR);
+  const content = getIframeContent(page);
 
   await content.getByTestId('topLeft').hover({ position: { x: 10, y: 10 } });
 
@@ -74,7 +74,7 @@ test('should get max values of move params when mouse is positioned at corners o
 });
 
 test('should get half of max value when mouse is positioned in the middle of tilt element', async ({ page }) => {
-  const content = page.frameLocator(IFRAME_SELECTOR);
+  const content = getIframeContent(page);
 
   await content.getByTestId('topMidLeft').hover({ position: { x: 10, y: 10 } });
 
