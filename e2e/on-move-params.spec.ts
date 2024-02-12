@@ -9,7 +9,7 @@ test.beforeEach(async ({ page }) => {
   await page.getByRole('link', { name: 'Event - Params' }).click();
 });
 
-test('should get max values of move params rendered when mouse is positioned at top left corner of tilt element', async ({
+test('should get move params max values rendered when mouse is positioned at top left corner of tilt element', async ({
   page,
 }) => {
   const content = getIframeContent(page);
@@ -21,7 +21,7 @@ test('should get max values of move params rendered when mouse is positioned at 
   await expect(content.getByTestId('glareOpacity')).toHaveText('0.00');
 });
 
-test('should get max values of move params when mouse is positioned at corners of tilt element', async ({ page }) => {
+test('should get move params max values when mouse is positioned at corners of tilt element', async ({ page }) => {
   const content = getIframeContent(page);
 
   await content.getByTestId('topLeft').hover({ position: { x: 10, y: 10 } });
@@ -73,7 +73,9 @@ test('should get max values of move params when mouse is positioned at corners o
   expect(bottomLeftParams.glareOpacity).toBeGreaterThanOrEqual(0.9);
 });
 
-test('should get half of max value when mouse is positioned in the middle of tilt element', async ({ page }) => {
+test('should get move params half max values when mouse is positioned in the middle of tilt element', async ({
+  page,
+}) => {
   const content = getIframeContent(page);
 
   await content.getByTestId('topMidLeft').hover({ position: { x: 10, y: 10 } });
