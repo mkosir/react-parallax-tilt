@@ -92,6 +92,7 @@ const eslintConfig = {
         // Turn off all the rules from eslint-plugin-playwright plugin, since it's not applicable for Jest tests.
         // 'playwright/*': 'off',
         'playwright/missing-playwright-await': 'off',
+        'playwright/no-standalone-expect': 'off',
       },
     },
   ],
