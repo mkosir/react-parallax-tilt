@@ -24,7 +24,7 @@ jobs:
         # run: npm run test-e2e
 
       - name: Upload report 📈
-        uses: nwtgck/actions-netlify@v2
+        uses: nwtgck/actions-netlify@v3
         # Upload test report also in case of test failure.
         if: always()
         with:
