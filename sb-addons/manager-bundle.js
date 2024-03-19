@@ -1,3 +1,0 @@
-try{
-(()=>{var h=__STORYBOOK_ADDONS__,{addons:a,types:p,mockChannel:d}=__STORYBOOK_ADDONS__;var b=__STORYBOOK_THEMING__,{CacheProvider:f,ClassNames:S,Global:u,ThemeProvider:R,background:k,color:y,convert:C,create:o,createCache:N,createGlobal:B,createReset:D,css:G,darken:K,ensure:P,ignoreSsrWarning:Y,isPropValid:v,jsx:A,keyframes:E,lighten:H,styled:I,themes:M,typography:j,useTheme:w,withTheme:U}=__STORYBOOK_THEMING__;var s=o({base:"light",brandTitle:"React Parallax Tilt \u{1F440}",brandUrl:"https://github.com/mkosir/react-parallax-tilt"});a.setConfig({theme:s});})();
-}catch(e){ console.error("[Storybook] One of your manager-entries failed: " + import.meta.url, e); }
