@@ -39,6 +39,7 @@ const eslintConfig = {
     '@typescript-eslint/prefer-nullish-coalescing': 'error',
     '@typescript-eslint/no-unnecessary-condition': 'error',
     '@typescript-eslint/no-confusing-void-expression': ['error', { ignoreArrowShorthand: true }],
+    '@typescript-eslint/restrict-template-expressions': 'off',
 
     'jest/valid-title': [
       'error',
