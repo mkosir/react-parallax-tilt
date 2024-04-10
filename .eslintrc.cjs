@@ -41,6 +41,20 @@ const eslintConfig = {
     '@typescript-eslint/no-confusing-void-expression': ['error', { ignoreArrowShorthand: true }],
     '@typescript-eslint/restrict-template-expressions': 'off',
 
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        selector: 'typeAlias',
+        format: ['PascalCase'],
+      },
+      {
+        // Generic type parameter must start with letter T, followed by any uppercase letter.
+        selector: 'typeParameter',
+        format: ['PascalCase'],
+        custom: { regex: '^T[A-Z]', match: true },
+      },
+    ],
+
     'jest/valid-title': [
       'error',
       {
