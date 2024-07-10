@@ -96,7 +96,7 @@
     "rollup-plugin-dts": "6.1.1",
     "semantic-release": "24.0.0",
     "storybook": "8.2.1",
-    "ts-jest": "29.2.1",
+    "ts-jest": "29.2.2",
     "tsc-files": "1.1.4",
     "typescript": "5.5.3"
   },
