@@ -46,7 +46,7 @@
   "devDependencies": {
     "@commitlint/cli": "19.3.0",
     "@commitlint/config-conventional": "19.2.2",
-    "@playwright/test": "1.45.3",
+    "@playwright/test": "1.46.0",
     "@rollup/plugin-commonjs": "26.0.1",
     "@rollup/plugin-terser": "0.4.4",
     "@rollup/plugin-typescript": "11.1.6",
