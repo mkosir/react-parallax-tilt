@@ -131,8 +131,5 @@
     "gyroscope",
     "sensor",
     "mirror"
-  ],
-  "dependencies": {
-    "react-parallax-tilt": "file:"
-  }
+  ]
 }
