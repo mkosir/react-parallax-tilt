@@ -73,8 +73,8 @@ Below is the complete list of possible props and their options:
 
 > ▶︎ indicates the default value if there's one
 
-**tiltEnable**: _boolean_ ▶︎ `true`  
-Boolean to enable/disable tilt effect.
+**tiltEnable**: _boolean_ | {**tiltEnable**: _boolean_, **options**: {**savePosition**: _boolean_}} ▶︎ `true`  
+Boolean/Object to enable/disable tilt effect.
 
 **tiltReverse**: _boolean_ ▶︎ `false`  
 Reverse the tilt direction.

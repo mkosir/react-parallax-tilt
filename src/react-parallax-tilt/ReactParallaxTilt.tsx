@@ -7,6 +7,7 @@ import { setTransition, constrainToRange } from 'utils/helperFns';
 import { defaultProps } from './defaultProps';
 import { SupportedEvent, EventType, CustomEventType, WrapperElement, DeviceOrientationEventiOS } from './types';
 import { ReactParallaxTiltProps } from './types.public';
+import { TiltEnable } from 'features/tilt/types.public';
 
 // All props are initialized by default with non-null values
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
@@ -263,7 +264,29 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
     this.wrapperEl.clientPosition.xPercentage = constrainToRange(this.wrapperEl.clientPosition.xPercentage, -100, 100);
     this.wrapperEl.clientPosition.yPercentage = constrainToRange(this.wrapperEl.clientPosition.yPercentage, -100, 100);
   };
-
+  // If save position and tilt are not needed, then reset position with autoreset and update.
+  private isResetNeeded = (tiltEnable: TiltEnable | undefined): boolean => {
+    const existAndObject = typeof tiltEnable !== 'boolean' && typeof tiltEnable !== 'undefined';
+    if (existAndObject && !tiltEnable.tiltEnable && !tiltEnable.options.savePosition) return true;
+    return false;
+  };
+  // if tilt is needed then update
+  private isTiltNeeded = (tiltEnable: TiltEnable | undefined): boolean => {
+    if (typeof tiltEnable === 'boolean' && tiltEnable) return true;
+    if (typeof tiltEnable !== 'boolean' && tiltEnable && tiltEnable.tiltEnable) return true;
+    return false;
+  };
+  // all the work with tiltEnabled property
+  private tiltProcess = (tiltEnable: TiltEnable | undefined) => {
+    if (this.isTiltNeeded(tiltEnable)) {
+      this.tilt!.update(this.wrapperEl.clientPosition, this.props);
+    }
+    if (this.isResetNeeded(tiltEnable)) {
+      const autoResetEvent = new CustomEvent<CustomEventType>('autoreset' as CustomEventType);
+      this.processInput(autoResetEvent);
+      this.tilt!.update(this.wrapperEl.clientPosition, this.props);
+    }
+  };
   private update = (eventType: string): void => {
     const { tiltEnable, flipVertically, flipHorizontally } = this.props;
 
@@ -275,10 +298,7 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
       this.updateClientInput();
     }
 
-    if (tiltEnable) {
-      this.tilt!.update(this.wrapperEl.clientPosition, this.props);
-    }
-
+    this.tiltProcess(tiltEnable);
     this.updateFlip();
 
     this.tilt!.updateTiltAnglesPercentage(this.props);

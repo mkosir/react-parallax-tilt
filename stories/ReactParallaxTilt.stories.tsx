@@ -23,6 +23,7 @@ import { _TiltImg } from './TiltImg/_TiltImg';
 import { _TiltManualInput } from './TiltManualInput/_TiltManualInput';
 import { _TiltScale } from './TiltScale/_TiltScale';
 import { _TrackOnWindow } from './TrackOnWindow/_TrackOnWindow';
+import { _TiltEnable } from './TiltEnable/_TiltEnable';
 
 import './ReactParallaxTilt.css';
 
@@ -143,4 +144,9 @@ export const EventTiltAngle: StoryObj = {
 export const EventParams: StoryObj = {
   render: () => <_EventParams />,
   name: 'Event - Params',
+};
+
+export const TiltEnable: StoryObj = {
+  render: () => <_TiltEnable />,
+  name: 'Prop - TiltEnable',
 };
