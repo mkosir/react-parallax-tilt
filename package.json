@@ -94,7 +94,7 @@
     "react-joystick-component": "6.2.1",
     "rollup": "4.21.2",
     "rollup-plugin-dts": "6.1.1",
-    "semantic-release": "24.1.0",
+    "semantic-release": "24.1.1",
     "storybook": "8.2.9",
     "ts-jest": "29.2.5",
     "tsc-files": "1.1.4",
