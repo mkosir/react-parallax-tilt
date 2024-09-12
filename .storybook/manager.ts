@@ -11,6 +11,6 @@ addons.setConfig({
     copy: { hidden: false },
     fullscreen: { hidden: false },
   },
-  bottomPanelHeight: 50,
+  bottomPanelHeight: 0,
   panelPosition: false,
 });
