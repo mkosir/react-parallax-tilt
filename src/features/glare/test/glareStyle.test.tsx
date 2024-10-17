@@ -5,9 +5,9 @@ import { TiltTest } from 'utils/TiltTest';
 
 describe('Glare - Style', () => {
   it('should update glare style when hover on element', () => {
-    jest.useFakeTimers();
+    vi.useFakeTimers();
 
-    const onMove = jest.fn();
+    const onMove = vi.fn();
 
     const { container } = render(<TiltTest onMove={onMove} glareEnable={true} tiltEnable={false} />);
 
@@ -18,7 +18,7 @@ describe('Glare - Style', () => {
     fireEvent.touchStart(testElement, { touches: positionStart });
     fireEvent.touchMove(testElement, { touches: positionEnd });
 
-    jest.runAllTimers();
+    vi.runAllTimers();
 
     // eslint-disable-next-line
     const tiltElement = container.firstElementChild as Element;

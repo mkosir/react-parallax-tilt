@@ -71,13 +71,13 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
       window.addEventListener('touchend', this.onLeave);
     }
 
-    /* istanbul ignore next */
+    /* v8 ignore next 3 */
     if (gyroscope) {
       void this.addDeviceOrientationEventListener();
     }
   }
 
-  /* istanbul ignore next */
+  /* v8 ignore next 19 */
   private addDeviceOrientationEventListener = async () => {
     // Browser doesn't support Device Orientation.
     // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
@@ -112,8 +112,8 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
       window.removeEventListener('touchend', this.onLeave);
     }
 
-    // jest - instance of DeviceOrientationEvent not possible
-    /* istanbul ignore next */
+    // Instance of DeviceOrientationEvent not possible.
+    /* v8 ignore next 4 */
     // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     if (gyroscope && window.DeviceOrientationEvent) {
       window.removeEventListener('deviceorientation', this.onMove);
@@ -228,8 +228,8 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
         this.wrapperEl.clientPosition.y = (event as TouchEvent).touches[0].pageY;
         this.wrapperEl.scale = scale!;
         break;
-      // jest - instance of DeviceOrientationEvent not possible
-      /* istanbul ignore next */
+      // Instance of DeviceOrientationEvent not possible.
+      /* v8 ignore next 4 */
       case 'deviceorientation':
         this.processInputDeviceOrientation(event as DeviceOrientationEvent);
         this.wrapperEl.scale = scale!;
@@ -245,8 +245,7 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
     }
   };
 
-  // jest - instance of DeviceOrientationEvent not possible
-  /* istanbul ignore next */
+  /* v8 ignore next 16 */
   private processInputDeviceOrientation = (event: DeviceOrientationEvent): void => {
     if (!event.gamma || !event.beta || !this.props.gyroscope) {
       return;

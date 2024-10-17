@@ -5,7 +5,7 @@ import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - onLeave', () => {
   it('should trigger onLeave event when mouse leaves an element', () => {
-    const onLeave = jest.fn();
+    const onLeave = vi.fn();
 
     render(<TiltTest onLeave={onLeave} />);
 

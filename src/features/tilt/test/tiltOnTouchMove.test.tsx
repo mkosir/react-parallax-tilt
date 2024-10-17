@@ -6,7 +6,7 @@ import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - onTouchMove', () => {
   it('should call onMove prop when onTouchMove event is triggered', () => {
-    const onMove = jest.fn();
+    const onMove = vi.fn();
 
     render(<TiltTest onMove={onMove} />);
 

@@ -22,7 +22,8 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "target": "ES6"
+    "target": "ES6",
+    "types": ["vitest/globals"]
   },
   "exclude": ["dist", "node_modules"]
 }

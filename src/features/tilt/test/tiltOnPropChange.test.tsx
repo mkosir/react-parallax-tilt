@@ -7,7 +7,7 @@ import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - Prop change', () => {
   it('should re-calculate tilt when manual tilt angle y prop changes', async () => {
-    const onMove = jest.fn();
+    const onMove = vi.fn();
 
     const { rerender } = render(
       <TiltTest tiltMaxAngleX={60} tiltMaxAngleY={60} tiltAngleXManual={60} tiltAngleYManual={45} onMove={onMove} />,
@@ -25,7 +25,7 @@ describe('Tilt - Prop change', () => {
       eventType: 'initial',
     });
 
-    const onMoveRerender = jest.fn();
+    const onMoveRerender = vi.fn();
 
     rerender(
       <TiltTest

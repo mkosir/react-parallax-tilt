@@ -6,7 +6,7 @@ const eslintConfig = {
     tsconfigRootDir: __dirname,
   },
 
-  plugins: ['@typescript-eslint', 'testing-library', 'jest-dom', 'jest', 'import'],
+  plugins: ['@typescript-eslint', 'testing-library', 'jest-dom', 'import'],
 
   extends: [
     'plugin:@typescript-eslint/strict-type-checked',
@@ -55,14 +55,15 @@ const eslintConfig = {
       },
     ],
 
-    'jest/valid-title': [
-      'error',
-      {
-        mustMatch: {
-          it: [/should.*when/u.source, "Test title must include 'should' and 'when'"],
-        },
-      },
-    ],
+    // Upgrade eslint to v9 - https://github.com/vitest-dev/eslint-plugin-vitest
+    // 'jest/valid-title': [
+    //   'error',
+    //   {
+    //     mustMatch: {
+    //       it: [/should.*when/u.source, "Test title must include 'should' and 'when'"],
+    //     },
+    //   },
+    // ],
     'playwright/valid-title': [
       'error',
       {
@@ -104,7 +105,7 @@ const eslintConfig = {
     {
       files: ['**/*.test.*'],
       rules: {
-        // Turn off all the rules from eslint-plugin-playwright plugin, since it's not applicable for Jest tests.
+        // Turn off all the rules from eslint-plugin-playwright plugin, since it's not applicable for Vitest tests.
         // 'playwright/*': 'off',
         'playwright/missing-playwright-await': 'off',
         'playwright/no-standalone-expect': 'off',

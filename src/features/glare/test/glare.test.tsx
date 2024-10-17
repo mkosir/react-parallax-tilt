@@ -7,7 +7,7 @@ import { TiltTest } from 'utils/TiltTest';
 
 describe('Glare', () => {
   it('should calculate glare with top position when top position prop value is provided', async () => {
-    const onMove = jest.fn();
+    const onMove = vi.fn();
 
     render(
       <TiltTest
@@ -36,7 +36,7 @@ describe('Glare', () => {
   });
 
   it('should calculate glare with right position when right position prop value is provided', async () => {
-    const onMove = jest.fn();
+    const onMove = vi.fn();
 
     render(
       <TiltTest
@@ -65,7 +65,7 @@ describe('Glare', () => {
   });
 
   it('should calculate glare with bottom position when bottom position prop value is provided', async () => {
-    const onMove = jest.fn();
+    const onMove = vi.fn();
 
     render(
       <TiltTest
@@ -94,7 +94,7 @@ describe('Glare', () => {
   });
 
   it('should calculate glare with left position when left position prop value is provided', async () => {
-    const onMove = jest.fn();
+    const onMove = vi.fn();
 
     render(
       <TiltTest
@@ -124,7 +124,7 @@ describe('Glare', () => {
   });
 
   it('should calculate glare with all positions when all position prop value is provided', async () => {
-    const onMove = jest.fn();
+    const onMove = vi.fn();
 
     render(
       <TiltTest
@@ -153,7 +153,7 @@ describe('Glare', () => {
   });
 
   it('should calculate glare with default position when glare position prop is not provided', async () => {
-    const onMove = jest.fn();
+    const onMove = vi.fn();
 
     render(
       <TiltTest
@@ -181,7 +181,7 @@ describe('Glare', () => {
   });
 
   it('should calculate flipped glare when flip vertically/horizontally props are enabled', async () => {
-    const onMove = jest.fn();
+    const onMove = vi.fn();
 
     render(
       <TiltTest

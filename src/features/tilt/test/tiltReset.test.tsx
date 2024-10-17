@@ -6,9 +6,9 @@ import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - Reset', () => {
   it('should not reset tilt when mouse leave an element', () => {
-    const onEnter = jest.fn();
-    const onMove = jest.fn();
-    const onLeave = jest.fn();
+    const onEnter = vi.fn();
+    const onMove = vi.fn();
+    const onLeave = vi.fn();
 
     render(<TiltTest onEnter={onEnter} onMove={onMove} onLeave={onLeave} reset={false} />);
 

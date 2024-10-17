@@ -6,7 +6,7 @@ import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - Disable', () => {
   it('should not calculate tilt when disabled', () => {
-    const onMove = jest.fn();
+    const onMove = vi.fn();
 
     render(<TiltTest tiltEnable={false} onMove={onMove} />);
 

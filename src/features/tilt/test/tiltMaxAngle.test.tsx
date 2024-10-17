@@ -7,7 +7,7 @@ import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - Max Angle', () => {
   it('should constrain tilt angles to default constant when hover on element', async () => {
-    const onMove = jest.fn();
+    const onMove = vi.fn();
 
     render(
       <TiltTest
