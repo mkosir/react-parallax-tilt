@@ -1,5 +1,5 @@
-export const setTransition = <TElement extends HTMLElement>(
-  element: TElement,
+export const setTransition = (
+  element: HTMLElement,
   property: 'all' | 'opacity',
   duration: number,
   timing: string,

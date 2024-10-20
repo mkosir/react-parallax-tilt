@@ -234,7 +234,7 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
         this.processInputDeviceOrientation(event as DeviceOrientationEvent);
         this.wrapperEl.scale = scale!;
         break;
-      case 'autoreset':
+      case 'autoreset': {
         const { tiltAngleXInitial, tiltAngleYInitial, tiltMaxAngleX, tiltMaxAngleY } = this.props;
         const xPercentage = (tiltAngleXInitial! / tiltMaxAngleX!) * 100;
         const yPercentage = (tiltAngleYInitial! / tiltMaxAngleY!) * 100;
@@ -242,6 +242,7 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
         this.wrapperEl.clientPosition.yPercentage = constrainToRange(yPercentage, -100, 100);
         this.wrapperEl.scale = 1;
         break;
+      }
     }
   };
 
@@ -352,10 +353,10 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
 
   private setTransitions() {
     const { transitionSpeed, transitionEasing } = this.props;
-    setTransition<HTMLDivElement>(this.wrapperEl.node!, 'all', transitionSpeed!, transitionEasing!);
+    setTransition(this.wrapperEl.node!, 'all', transitionSpeed!, transitionEasing!);
 
     if (this.glare) {
-      setTransition<HTMLDivElement>(this.glare.glareEl, 'opacity', transitionSpeed!, transitionEasing!);
+      setTransition(this.glare.glareEl, 'opacity', transitionSpeed!, transitionEasing!);
     }
   }
 
