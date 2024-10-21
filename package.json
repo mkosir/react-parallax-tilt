@@ -75,7 +75,7 @@
     "eslint-import-resolver-typescript": "3.6.3",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-jest-dom": "5.4.0",
-    "eslint-plugin-jsx-a11y": "6.10.0",
+    "eslint-plugin-jsx-a11y": "6.10.1",
     "eslint-plugin-no-array-reduce": "1.0.62",
     "eslint-plugin-playwright": "1.8.0",
     "eslint-plugin-prettier": "5.2.1",
