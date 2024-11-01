@@ -1,6 +1,6 @@
 import { defineConfig } from 'rollup';
 
-import { LEGACY_CONFIG, MODERN_CONFIG } from './configs';
+import { LEGACY_CONFIG, MODERN_CONFIG } from './rollupConfigs';
 
 const rollupConfig = defineConfig([...LEGACY_CONFIG, ...MODERN_CONFIG]);
 
