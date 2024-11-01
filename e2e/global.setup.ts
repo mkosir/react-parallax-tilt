@@ -16,11 +16,6 @@ setup("remove Storybook 'what's new' popup", async ({ page }) => {
   });
 
   console.log(
-    '🔎 Log ~ setup ~ await page.getByTestId(topMidLeft).isVisible():',
-    await page.getByTestId('topMidLeft').isVisible(),
-  );
-
-  console.log(
     '🔎 Log ~ setup ~ await page.isVisible("text=Learn whats new in Storybook"):',
     await page.isVisible("text='Learn what's new in Storybook'"),
   );
