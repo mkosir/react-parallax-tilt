@@ -10,7 +10,7 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: IS_CI,
   retries: IS_CI ? 2 : 0,
-  maxFailures: 1,
+  // maxFailures: 1,
   workers: IS_CI ? 1 : undefined,
   outputDir: 'test-e2e-results',
   reporter: [['list'], ['html', { outputFolder: 'test-e2e-report' }]],
@@ -72,6 +72,6 @@ export default defineConfig({
   webServer: {
     command: 'npm run start',
     url: BASE_URL,
-    reuseExistingServer: !IS_CI,
+    // reuseExistingServer: !IS_CI,
   },
 });
