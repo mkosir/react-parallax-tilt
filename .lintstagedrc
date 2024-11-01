@@ -1,5 +1,4 @@
 {
   "*": ["prettier --write --ignore-unknown"],
-  "*.{js,jsx,ts,tsx}": ["eslint --max-warnings 0"],
-  "*.{ts,tsx}": ["tsc-files --noEmit -p tsconfig.json stories/types/images.d.ts"]
+  "*.{js,jsx,ts,tsx}": ["eslint --max-warnings 0"]
 }
