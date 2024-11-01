@@ -6,6 +6,11 @@ setup("remove Storybook 'what's new' popup", async ({ page }) => {
   await page.getByRole('link', { name: 'Keep floating' }).isVisible();
 
   console.log(
+    '🔎 Log ~ setup ~ page.getByRole(link, { name: Keep floating }).isVisible():',
+    page.getByRole('link', { name: 'Keep floating' }).isVisible(),
+  );
+
+  console.log(
     '🔎 Log ~ setup ~ await page.isVisible("text=Learn whats new in Storybook"):',
     await page.isVisible("text='Learn what's new in Storybook'"),
   );
