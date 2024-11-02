@@ -43,7 +43,7 @@ const style = `.parallax-effect-img {
 `;
 
 export const _ParallaxEffectImg = () => (
-  <DemoTab code={code} style={style} codeExt="tsx" styleExt="css">
+  <DemoTab code={code} codeExt="tsx" style={style} styleExt="css">
     <Demo />
   </DemoTab>
 );

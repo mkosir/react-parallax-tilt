@@ -74,7 +74,7 @@ const style = `.event-tilt-angle {
 `;
 
 export const _EventTiltAngle = () => (
-  <DemoTab code={code} style={style} codeExt="tsx" styleExt="css">
+  <DemoTab code={code} codeExt="tsx" style={style} styleExt="css">
     <Demo />
   </DemoTab>
 );

@@ -79,7 +79,7 @@ const style = `@import '../ReactParallaxTilt.css';
 `;
 
 export const _TiltDisableAxis = () => (
-  <DemoTab code={code} style={style} codeExt="tsx" styleExt="css">
+  <DemoTab code={code} codeExt="tsx" style={style} styleExt="css">
     <Demo />
   </DemoTab>
 );

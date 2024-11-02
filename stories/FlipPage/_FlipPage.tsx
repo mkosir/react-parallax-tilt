@@ -45,7 +45,7 @@ const style = `body {
 `;
 
 export const _FlipPage = () => (
-  <DemoTab code={code} style={style} codeExt="tsx" styleExt="css">
+  <DemoTab code={code} codeExt="tsx" style={style} styleExt="css">
     <Demo />
   </DemoTab>
 );

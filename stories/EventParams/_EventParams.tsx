@@ -67,7 +67,7 @@ const EventParams = () => {
   };
 
   return (
-    <div className="background-stripes event-params">
+    <div className="event-params">
       <Tilt
         onMove={onMove}
         onEnter={onEnter}
@@ -77,37 +77,71 @@ const EventParams = () => {
         glareColor="white"
         gyroscope={true}
       >
-        <div className="react-parallax-tilt">
-          <div className="header">Axis x</div>
-          <div>
-            {eventParams.tiltAngleX.toFixed(2)}° / {eventParams.tiltAngleXPercentage.toFixed(2)}%
+        <div className="background-stripes tilt-content">
+          <div data-testid="topLeft" className="test-ref top-left" />
+          <div data-testid="topMidLeft" className="test-ref top-mid-left" />
+          <div data-testid="topRight" className="test-ref top-right" />
+          <div data-testid="bottomRight" className="test-ref bottom-right" />
+          <div data-testid="bottomLeft" className="test-ref bottom-left" />
+          <pre data-testid="params" className="test-params">
+            {JSON.stringify(eventParams)}
+          </pre>
+          <div className="param">
+            <div className="header">Axis x</div>
+            <div data-testid="tiltAngleX">
+              {eventParams.tiltAngleX.toFixed(2)}° / {eventParams.tiltAngleXPercentage.toFixed(2)}%
+            </div>
           </div>
-          <div className="header">Axis y</div>
-          <div>
-            {eventParams.tiltAngleY.toFixed(2)}° / {eventParams.tiltAngleYPercentage.toFixed(2)}%
+          <div className="param">
+            <div className="header">Axis y</div>
+            <div data-testid="tiltAngleY">
+              {eventParams.tiltAngleY.toFixed(2)}° / {eventParams.tiltAngleYPercentage.toFixed(2)}%
+            </div>
           </div>
-          <div className="header">Glare angle</div>
-          <div>{eventParams.glareAngle.toFixed(2)}°</div>
-          <div className="header">Glare opacity</div>
-          <div>{eventParams.glareOpacity.toFixed(2)}</div>
+          <div className="param">
+            <div className="header">Glare angle</div>
+            <div data-testid="glareAngle">{eventParams.glareAngle.toFixed(2)}°</div>
+          </div>
+          <div className="param">
+            <div className="header">Glare opacity</div>
+            <div data-testid="glareOpacity">{eventParams.glareOpacity.toFixed(2)}</div>
+          </div>
         </div>
       </Tilt>
       <div className="event-type">
         Track events:
-        <label>
-          <input onChange={toggleCheck} checked={selectedEvents.trackOnMove} name={'trackOnMove'} type="checkbox" />
-          onMove
-        </label>
-        <label>
-          <input onChange={toggleCheck} checked={selectedEvents.trackOnEnter} name={'trackOnEnter'} type="checkbox" />
-          onEnter
-        </label>
-        <label>
-          <input onChange={toggleCheck} checked={selectedEvents.trackOnLeave} name={'trackOnLeave'} type="checkbox" />
-          onLeave
-        </label>
-        {evenDescription && <div>{evenDescription}</div>}
+        <div>
+          <input
+            id="onMove"
+            onChange={toggleCheck}
+            checked={selectedEvents.trackOnMove}
+            name={'trackOnMove'}
+            type="checkbox"
+          />
+          <label htmlFor="onMove">onMove</label>
+        </div>
+        <div>
+          <input
+            id="onEnter"
+            onChange={toggleCheck}
+            checked={selectedEvents.trackOnEnter}
+            name={'trackOnEnter'}
+            type="checkbox"
+          />
+          <label htmlFor="onEnter">onEnter</label>
+        </div>
+        <div>
+          <input
+            id="onLeave"
+            onChange={toggleCheck}
+            checked={selectedEvents.trackOnLeave}
+            name={'trackOnLeave'}
+            type="checkbox"
+          />
+          <label htmlFor="onLeave">onLeave</label>
+        </div>
       </div>
+      {evenDescription && <div data-testid="evenDescription">{evenDescription}</div>}
     </div>
   );
 };
@@ -122,8 +156,9 @@ const style = `@import '../ReactParallaxTilt.css';
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 20px;
 
-  .react-parallax-tilt {
+  .tilt-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -136,29 +171,60 @@ const style = `@import '../ReactParallaxTilt.css';
     color: white;
     border: 5px solid black;
     border-radius: 20px;
+    text-align: center;
 
-    .header {
+    .param {
       margin-top: 12px;
-      font-size: 35px;
       border-top: 2px solid white;
-      min-width: 200px;
-      text-align: center;
+      min-width: 220px;
+
+      .header {
+        font-size: 35px;
+      }
+    }
+
+    .test-params {
+      display: none;
+    }
+
+    .test-ref {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-color: transparent;
+    }
+    .top-left {
+      top: -10px;
+      left: -10px;
+    }
+    .top-mid-left {
+      top: 80px;
+      left: 80px;
+    }
+    .top-right {
+      top: -10px;
+      right: -10px;
+    }
+    .bottom-right {
+      bottom: -10px;
+      right: -10px;
+    }
+    .bottom-left {
+      bottom: -11px;
+      left: -11px;
     }
   }
 
   .event-type {
+    display: flex;
     margin-top: 20px;
-    font-size: 20px;
-
-    div {
-      margin-top: 10px;
-    }
+    margin-bottom: 10px;
   }
 }
 `;
 
 export const _EventParams = () => (
-  <DemoTab code={code} style={style} codeExt="tsx" styleExt="css">
+  <DemoTab code={code} codeExt="tsx" style={style} styleExt="css">
     <Demo />
   </DemoTab>
 );
