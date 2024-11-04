@@ -40,7 +40,7 @@
     "test-e2e-report": "playwright show-report test-e2e-report",
     "storybook": "TS_NODE_PROJECT=tsconfigs/tsconfig.dev.json storybook dev -p 9009 --quiet",
     "storybook-build": "storybook build -o build-storybook-static",
-    "semantic-release": "semantic-release --branches main",
+    "release": "semantic-release --branches main",
     "demozap": "demozap generate --prefix=_ && npm run format-fix && npm run lint-fix",
     "clean": "rm -rf node_modules test-unit-report test-e2e-report test-e2e-results dist compiled build-storybook-static"
   },
