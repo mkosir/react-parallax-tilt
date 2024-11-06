@@ -1,0 +1,7 @@
+{
+  "extends": "./tsconfig.base.json",
+  // Type check and lint all files and folders.
+  // Explicitly include those starting with a dot (.) as they are ignored by default in glob patterns.
+  "include": ["../.", "../.storybook/**/*", "../.commitlintrc.ts"],
+  "exclude": ["dist", "node_modules"]
+}

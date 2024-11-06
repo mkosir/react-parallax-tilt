@@ -5,12 +5,13 @@ import { GlobalsOption, RollupOptions } from 'rollup';
 import { dts } from 'rollup-plugin-dts';
 
 import packageJson from '../package.json' with { type: 'json' };
-import tsConfig from '../tsconfigs/tsconfig.base.json' with { type: 'json' };
+
+import tsConfig from './tsconfig.base.json' with { type: 'json' };
 
 const IS_PRODUCTION = process.env.NODE_ENV === 'production';
 
 const PATH_INPUT_FILE = 'src/index.ts';
-const PATH_TSCONFIG = './tsconfigs/tsconfig.prod.json';
+const PATH_TSCONFIG_BUILD = 'scripts/tsconfig.build.json';
 
 const GLOBALS = {
   react: 'React',
@@ -37,7 +38,7 @@ export const LEGACY_CONFIG = [
     plugins: [
       commonjs(),
       typescript({
-        tsconfig: PATH_TSCONFIG,
+        tsconfig: PATH_TSCONFIG_BUILD,
         sourceMap: !IS_PRODUCTION,
       }),
       terser({
@@ -85,7 +86,7 @@ export const MODERN_CONFIG = [
     plugins: [
       commonjs(),
       typescript({
-        tsconfig: PATH_TSCONFIG,
+        tsconfig: PATH_TSCONFIG_BUILD,
         sourceMap: !IS_PRODUCTION,
       }),
       terser({

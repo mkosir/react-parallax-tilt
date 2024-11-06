@@ -9,7 +9,6 @@ import eslintPluginTestingLibrary from 'eslint-plugin-testing-library';
 import eslintPluginJestDom from 'eslint-plugin-jest-dom';
 import eslintPluginJsxA11y from 'eslint-plugin-jsx-a11y';
 import eslintPluginVitest from '@vitest/eslint-plugin';
-// eslint-disable-next-line import/no-unresolved
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
@@ -30,21 +29,13 @@ export default tseslint.config(
   eslintPluginJestDom.configs['flat/recommended'],
   eslintPluginPlaywright.configs['flat/recommended'],
   eslintPluginPrettierRecommended,
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   eslintConfigPrettier,
   // https://eslint.org/docs/latest/use/configure/configuration-files#excluding-files-with-ignores
   // When in their own config block without files, it tells ESLint to ignore those files.
   // When in a config block with files, it stops that specific config block from affecting those ignored files.
   {
-    ignores: [
-      '!.*',
-      '**/*.css',
-      'dist',
-      'node_modules',
-      'test-e2e-report',
-      'test-e2e-results',
-      'test-unit-report',
-      'eslint.config.mjs',
-    ],
+    ignores: ['!.*', '**/*.css', 'dist', 'node_modules', 'test-e2e-report', 'test-e2e-results', 'test-unit-report'],
   },
   {
     languageOptions: {
@@ -56,7 +47,7 @@ export default tseslint.config(
     },
     settings: {
       'import/resolver': {
-        typescript: { project: './tsconfigs/tsconfig.dev.json' },
+        typescript: { project: './tsconfig.json' },
       },
       react: { version: 'detect' },
     },

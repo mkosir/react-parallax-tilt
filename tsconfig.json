@@ -1,3 +1,3 @@
 {
-  "extends": "./tsconfigs/tsconfig.dev.json"
+  "extends": "./scripts/tsconfig.dev.json"
 }
