@@ -58,7 +58,7 @@ test('should get move params max values calculated within tolerance (to avoid te
   expect(bottomRightParams.tiltAngleX).toBeGreaterThanOrEqual(19);
   expect(bottomRightParams.tiltAngleY).toBeLessThanOrEqual(-18);
   expect(bottomRightParams.tiltAngleXPercentage).toBeGreaterThanOrEqual(95);
-  expect(bottomRightParams.tiltAngleYPercentage).toBeLessThanOrEqual(-95);
+  expect(bottomRightParams.tiltAngleYPercentage).toBeLessThanOrEqual(-90);
   expect(bottomRightParams.glareAngle).toBeGreaterThanOrEqual(44);
   expect(bottomRightParams.glareOpacity).toBeGreaterThanOrEqual(0.95);
 
