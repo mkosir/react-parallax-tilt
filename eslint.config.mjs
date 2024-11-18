@@ -25,7 +25,6 @@ export default tseslint.config(
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
   eslintPluginTestingLibrary.configs['flat/react'],
   eslintPluginVitest.configs.recommended,
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
   eslintPluginJestDom.configs['flat/recommended'],
   eslintPluginPlaywright.configs['flat/recommended'],
   eslintPluginPrettierRecommended,
