@@ -1,6 +1,8 @@
 import { GlareProps } from 'features/glare/types.public';
 import { TiltProps } from 'features/tilt/types.public';
 
+import { SupportedEvent } from './types';
+
 export type OnMoveParams = {
   tiltAngleX: number;
   tiltAngleY: number;
@@ -8,10 +10,22 @@ export type OnMoveParams = {
   tiltAngleYPercentage: number;
   glareAngle: number;
   glareOpacity: number;
-  eventType: string;
+  event: SupportedEvent;
 };
 
-type OnMove = (onMoveParams: OnMoveParams) => void;
+export type OnMove = (onMoveParams: OnMoveParams) => void;
+
+export type OnEnterParams = {
+  event: MouseEvent | React.MouseEvent | TouchEvent | React.TouchEvent;
+};
+
+export type OnEnter = (onEnterParams: OnEnterParams) => void;
+
+export type OnLeaveParams = {
+  event: MouseEvent | React.MouseEvent | TouchEvent | React.TouchEvent;
+};
+
+export type OnLeave = (onLeaveParams: OnLeaveParams) => void;
 
 type HtmlDivTilt = Pick<React.HTMLAttributes<HTMLDivElement>, 'className' | 'style'>;
 
@@ -65,9 +79,9 @@ export type ReactParallaxTiltProps = TiltProps &
     /**
      * Gets triggered when user enters the component.
      */
-    onEnter?: (eventType: string) => void;
+    onEnter?: OnEnter;
     /**
      * Gets triggered when user leaves the component.
      */
-    onLeave?: (eventType: string) => void;
+    onLeave?: OnLeave;
   };

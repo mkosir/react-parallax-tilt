@@ -2,12 +2,12 @@ import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
-import { OnMoveParams } from 'index';
+import { OnMove, OnMoveParams } from 'index';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - Manual Angle', () => {
   it('should calculate tilt when manual input is provided', async () => {
-    const onMove = vi.fn();
+    const onMove = vi.fn<OnMove>();
 
     render(
       <TiltTest tiltMaxAngleX={60} tiltMaxAngleY={60} tiltAngleXManual={60} tiltAngleYManual={45} onMove={onMove} />,
@@ -22,12 +22,15 @@ describe('Tilt - Manual Angle', () => {
       tiltAngleYPercentage: 75,
       glareAngle: 0,
       glareOpacity: 0,
-      eventType: 'initial',
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      event: expect.objectContaining({
+        type: 'initial',
+      }),
     });
   });
 
   it('should calculate tilt when only X manual input is provided', async () => {
-    const onMove = vi.fn();
+    const onMove = vi.fn<OnMove>();
 
     render(
       <TiltTest
@@ -50,12 +53,15 @@ describe('Tilt - Manual Angle', () => {
       tiltAngleYPercentage: 0,
       glareAngle: 180,
       glareOpacity: 1,
-      eventType: 'initial',
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      event: expect.objectContaining({
+        type: 'initial',
+      }),
     });
   });
 
   it('should calculate tilt when only Y manual input is provided', async () => {
-    const onMove = vi.fn();
+    const onMove = vi.fn<OnMove>();
 
     render(<TiltTest tiltMaxAngleX={60} tiltMaxAngleY={60} tiltAngleYManual={45} onMove={onMove} />);
 
@@ -68,7 +74,10 @@ describe('Tilt - Manual Angle', () => {
       tiltAngleYPercentage: 75,
       glareAngle: 0,
       glareOpacity: 0,
-      eventType: 'initial',
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      event: expect.objectContaining({
+        type: 'initial',
+      }),
     });
   });
 });

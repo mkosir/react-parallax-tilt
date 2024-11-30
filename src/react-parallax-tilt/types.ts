@@ -1,5 +1,3 @@
-import { MouseEvent, TouchEvent } from 'react';
-
 import { ElementSizePosition, ClientPosition } from 'utils/types';
 
 export type WrapperElement = {
@@ -10,7 +8,7 @@ export type WrapperElement = {
   scale: number;
 };
 
-type DOMSupportedEvent = Event | MouseEvent<HTMLDivElement> | TouchEvent<HTMLDivElement> | DeviceOrientationEvent;
+type DOMSupportedEvent = MouseEvent | React.MouseEvent | TouchEvent | React.TouchEvent | DeviceOrientationEvent;
 export type SupportedEvent = DOMSupportedEvent | CustomEvent<CustomEventType>;
 
 type DOMEventType = 'touchmove' | 'mousemove' | 'deviceorientation';

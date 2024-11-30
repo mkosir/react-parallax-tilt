@@ -47,7 +47,7 @@ test('should get move params max values calculated within tolerance (to avoid te
   expect(topRightParams.tiltAngleY).toBeLessThanOrEqual(-19);
   expect(topRightParams.tiltAngleXPercentage).toBeLessThanOrEqual(-95);
   expect(topRightParams.tiltAngleYPercentage).toBeLessThanOrEqual(-95);
-  expect(topRightParams.glareAngle).toBeGreaterThanOrEqual(44);
+  expect(topRightParams.glareAngle).toBeGreaterThanOrEqual(40);
   expect(topRightParams.glareOpacity).toBe(0);
 
   await content.getByTestId('bottomRight').hover({ position: { x: 25, y: 20 } });

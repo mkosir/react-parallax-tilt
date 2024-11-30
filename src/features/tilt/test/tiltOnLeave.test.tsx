@@ -1,16 +1,18 @@
 import { screen, render, fireEvent } from '@testing-library/react';
 import React from 'react';
 
+import { OnLeave } from 'index';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - onLeave', () => {
   it('should trigger onLeave event when mouse leaves an element', () => {
-    const onLeave = vi.fn();
+    const onLeave = vi.fn<OnLeave>();
 
     render(<TiltTest onLeave={onLeave} />);
 
     fireEvent.mouseLeave(screen.getByText('test'));
 
-    expect(onLeave).toHaveBeenCalledWith('mouseleave');
+    const onLeaveParams = onLeave.mock.calls[0][0];
+    expect(onLeaveParams.event.type).toBe('mouseleave');
   });
 });

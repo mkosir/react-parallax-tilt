@@ -2,12 +2,12 @@ import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
-import { OnMoveParams } from 'index';
+import { OnMove, OnMoveParams } from 'index';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Glare', () => {
   it('should calculate glare with top position when top position prop value is provided', async () => {
-    const onMove = vi.fn();
+    const onMove = vi.fn<OnMove>();
 
     render(
       <TiltTest
@@ -31,12 +31,15 @@ describe('Glare', () => {
       tiltAngleYPercentage: 100,
       glareAngle: 45,
       glareOpacity: 1,
-      eventType: 'initial',
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      event: expect.objectContaining({
+        type: 'initial',
+      }),
     });
   });
 
   it('should calculate glare with right position when right position prop value is provided', async () => {
-    const onMove = vi.fn();
+    const onMove = vi.fn<OnMove>();
 
     render(
       <TiltTest
@@ -60,12 +63,15 @@ describe('Glare', () => {
       tiltAngleYPercentage: 100,
       glareAngle: 0,
       glareOpacity: 1,
-      eventType: 'initial',
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      event: expect.objectContaining({
+        type: 'initial',
+      }),
     });
   });
 
   it('should calculate glare with bottom position when bottom position prop value is provided', async () => {
-    const onMove = vi.fn();
+    const onMove = vi.fn<OnMove>();
 
     render(
       <TiltTest
@@ -89,12 +95,15 @@ describe('Glare', () => {
       tiltAngleYPercentage: 100,
       glareAngle: 135,
       glareOpacity: 0.5,
-      eventType: 'initial',
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      event: expect.objectContaining({
+        type: 'initial',
+      }),
     });
   });
 
   it('should calculate glare with left position when left position prop value is provided', async () => {
-    const onMove = vi.fn();
+    const onMove = vi.fn<OnMove>();
 
     render(
       <TiltTest
@@ -119,12 +128,15 @@ describe('Glare', () => {
       tiltAngleYPercentage: 100,
       glareAngle: -135,
       glareOpacity: 1,
-      eventType: 'initial',
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      event: expect.objectContaining({
+        type: 'initial',
+      }),
     });
   });
 
   it('should calculate glare with all positions when all position prop value is provided', async () => {
-    const onMove = vi.fn();
+    const onMove = vi.fn<OnMove>();
 
     render(
       <TiltTest
@@ -148,12 +160,15 @@ describe('Glare', () => {
       tiltAngleYPercentage: -100,
       glareAngle: -45,
       glareOpacity: 1,
-      eventType: 'initial',
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      event: expect.objectContaining({
+        type: 'initial',
+      }),
     });
   });
 
   it('should calculate glare with default position when glare position prop is not provided', async () => {
-    const onMove = vi.fn();
+    const onMove = vi.fn<OnMove>();
 
     render(
       <TiltTest
@@ -176,12 +191,15 @@ describe('Glare', () => {
       tiltAngleYPercentage: 100,
       glareAngle: 45,
       glareOpacity: 0,
-      eventType: 'initial',
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      event: expect.objectContaining({
+        type: 'initial',
+      }),
     });
   });
 
   it('should calculate flipped glare when flip vertically/horizontally props are enabled', async () => {
-    const onMove = vi.fn();
+    const onMove = vi.fn<OnMove>();
 
     render(
       <TiltTest
@@ -207,7 +225,10 @@ describe('Glare', () => {
       tiltAngleYPercentage: 200,
       glareAngle: 45,
       glareOpacity: 0,
-      eventType: 'initial',
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      event: expect.objectContaining({
+        type: 'initial',
+      }),
     });
   });
 });

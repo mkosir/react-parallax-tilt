@@ -2,12 +2,12 @@ import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
-import { OnMoveParams } from 'index';
+import { OnMove, OnMoveParams } from 'index';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - Track On Window', () => {
   it('should calculate tilt when hover on window', async () => {
-    const onMove = vi.fn();
+    const onMove = vi.fn<OnMove>();
 
     render(<TiltTest trackOnWindow={true} tiltAngleXManual={20} tiltAngleYManual={15} onMove={onMove} />);
 
@@ -20,7 +20,10 @@ describe('Tilt - Track On Window', () => {
       tiltAngleYPercentage: 75,
       glareAngle: 0,
       glareOpacity: 0,
-      eventType: 'initial',
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      event: expect.objectContaining({
+        type: 'initial',
+      }),
     });
   });
 });

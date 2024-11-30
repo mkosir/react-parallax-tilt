@@ -1,4 +1,4 @@
-import React, { PureComponent, MouseEvent, TouchEvent } from 'react';
+import React, { PureComponent } from 'react';
 
 import { Glare } from 'features/glare/Glare';
 import { Tilt } from 'features/tilt/Tilt';
@@ -6,7 +6,7 @@ import { setTransition, constrainToRange } from 'utils/helperFns';
 
 import { defaultProps } from './defaultProps';
 import { SupportedEvent, EventType, CustomEventType, WrapperElement, DeviceOrientationEventiOS } from './types';
-import { ReactParallaxTiltProps } from './types.public';
+import { OnEnterParams, OnLeaveParams, ReactParallaxTiltProps } from './types.public';
 
 // All props are initialized by default with non-null values
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
@@ -155,7 +155,7 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
     this.wrapperEl.updateAnimationId = requestAnimationFrame(this.renderFrame);
   };
 
-  private onEnter = (event: SupportedEvent) => {
+  private onEnter = (event: OnEnterParams['event']) => {
     const { onEnter } = this.props;
 
     // Update wrapped tilt component params in case
@@ -168,7 +168,7 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
     this.setTransitions();
 
     if (onEnter) {
-      onEnter(event.type);
+      onEnter({ event });
     }
   };
 
@@ -196,16 +196,16 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
       tiltAngleYPercentage: this.tilt!.tiltAngleYPercentage,
       glareAngle,
       glareOpacity,
-      eventType: event.type,
+      event,
     });
   }
 
-  private onLeave = (event: SupportedEvent) => {
+  private onLeave = (event: OnLeaveParams['event']) => {
     const { onLeave } = this.props;
     this.setTransitions();
 
     if (onLeave) {
-      onLeave(event.type);
+      onLeave({ event });
     }
 
     if (this.props.reset) {

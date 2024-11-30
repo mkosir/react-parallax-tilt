@@ -2,12 +2,12 @@ import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
-import { OnMoveParams } from 'index';
+import { OnMove, OnMoveParams } from 'index';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - Prop change', () => {
   it('should re-calculate tilt when manual tilt angle y prop changes', async () => {
-    const onMove = vi.fn();
+    const onMove = vi.fn<OnMove>();
 
     const { rerender } = render(
       <TiltTest tiltMaxAngleX={60} tiltMaxAngleY={60} tiltAngleXManual={60} tiltAngleYManual={45} onMove={onMove} />,
@@ -22,7 +22,10 @@ describe('Tilt - Prop change', () => {
       tiltAngleYPercentage: 75,
       glareAngle: 0,
       glareOpacity: 0,
-      eventType: 'initial',
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      event: expect.objectContaining({
+        type: 'initial',
+      }),
     });
 
     const onMoveRerender = vi.fn();
@@ -44,7 +47,10 @@ describe('Tilt - Prop change', () => {
       tiltAngleYPercentage: 50,
       glareAngle: 0,
       glareOpacity: 0,
-      eventType: 'propChange',
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      event: expect.objectContaining({
+        type: 'propChange',
+      }),
     });
   });
 });

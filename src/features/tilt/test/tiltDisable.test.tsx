@@ -1,12 +1,12 @@
 import { screen, render, fireEvent } from '@testing-library/react';
 import React from 'react';
 
-import { OnMoveParams } from 'index';
+import { OnMove, OnMoveParams } from 'index';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - Disable', () => {
   it('should not calculate tilt when disabled', () => {
-    const onMove = vi.fn();
+    const onMove = vi.fn<OnMove>();
 
     render(<TiltTest tiltEnable={false} onMove={onMove} />);
 
@@ -19,7 +19,10 @@ describe('Tilt - Disable', () => {
       tiltAngleYPercentage: 0,
       glareAngle: 0,
       glareOpacity: 0,
-      eventType: 'touchmove',
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      event: expect.objectContaining({
+        type: 'touchmove',
+      }),
     });
   });
 });

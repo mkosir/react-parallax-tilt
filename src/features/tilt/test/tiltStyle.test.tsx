@@ -1,13 +1,14 @@
 import { screen, render, fireEvent } from '@testing-library/react';
 import React from 'react';
 
+import { OnMove } from 'index';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - Style', () => {
   it('should update tilt style when hover on element', () => {
     vi.useFakeTimers();
 
-    const onMove = vi.fn();
+    const onMove = vi.fn<OnMove>();
 
     const { container } = render(<TiltTest onMove={onMove} />);
 

@@ -1,20 +1,21 @@
 import { screen, render, fireEvent } from '@testing-library/react';
 import React from 'react';
 
-import { OnMoveParams } from 'index';
+import { OnEnter, OnLeave, OnMove, OnMoveParams } from 'index';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - Reset', () => {
   it('should not reset tilt when mouse leave an element', () => {
-    const onEnter = vi.fn();
-    const onMove = vi.fn();
-    const onLeave = vi.fn();
+    const onEnter = vi.fn<OnEnter>();
+    const onMove = vi.fn<OnMove>();
+    const onLeave = vi.fn<OnLeave>();
 
     render(<TiltTest onEnter={onEnter} onMove={onMove} onLeave={onLeave} reset={false} />);
 
     fireEvent.mouseEnter(screen.getByText('test'));
+    const onEnterParams = onEnter.mock.calls[0][0];
+    expect(onEnterParams.event.type).toBe('mouseenter');
 
-    expect(onEnter).toHaveBeenCalledWith('mouseenter');
     expect(onMove).toHaveBeenCalledWith<[OnMoveParams]>({
       tiltAngleX: 0,
       tiltAngleY: -0,
@@ -22,10 +23,14 @@ describe('Tilt - Reset', () => {
       tiltAngleYPercentage: -0,
       glareAngle: 0,
       glareOpacity: 0,
-      eventType: 'initial',
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      event: expect.objectContaining({
+        type: 'initial',
+      }),
     });
 
     fireEvent.mouseLeave(screen.getByText('test'));
-    expect(onLeave).toHaveBeenCalledWith('mouseleave');
+    const onLeaveParams = onLeave.mock.calls[0][0];
+    expect(onLeaveParams.event.type).toBe('mouseleave');
   });
 });

@@ -1,12 +1,12 @@
 import { screen, render, fireEvent } from '@testing-library/react';
 import React from 'react';
 
-import { OnMoveParams } from 'index';
+import { OnMove, OnMoveParams } from 'index';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - onTouchMove', () => {
   it('should call onMove prop when onTouchMove event is triggered', () => {
-    const onMove = vi.fn();
+    const onMove = vi.fn<OnMove>();
 
     render(<TiltTest onMove={onMove} />);
 
@@ -19,7 +19,10 @@ describe('Tilt - onTouchMove', () => {
       tiltAngleYPercentage: -100,
       glareAngle: 0,
       glareOpacity: 0,
-      eventType: 'touchmove',
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      event: expect.objectContaining({
+        type: 'touchmove',
+      }),
     });
   });
 });

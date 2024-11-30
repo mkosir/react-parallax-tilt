@@ -5,7 +5,7 @@ import Demo from './EventParams.demozap';
 
 const code = `import React, { useState, ChangeEvent } from 'react';
 
-import Tilt, { OnMoveParams } from 'index';
+import Tilt, { OnEnterParams, OnLeaveParams, OnMoveParams } from 'index';
 
 import './EventParams.demozap.css';
 
@@ -16,7 +16,7 @@ type SelectedEvents = {
 };
 
 const EventParams = () => {
-  const [eventParams, setEventParams] = useState<Omit<OnMoveParams, 'eventType'>>({
+  const [eventParams, setEventParams] = useState<Omit<OnMoveParams, 'event'>>({
     tiltAngleX: 0,
     tiltAngleY: 0,
     tiltAngleXPercentage: 0,
@@ -32,27 +32,27 @@ const EventParams = () => {
     trackOnLeave: true,
   });
 
-  const onMove = ({ eventType, ...restEventParams }: OnMoveParams) => {
+  const onMove = ({ event, ...restEventParams }: OnMoveParams) => {
     if (JSON.stringify(restEventParams) === JSON.stringify(eventParams)) {
       return;
     }
 
     if (selectedEvents.trackOnMove) {
-      setEvenDescription(\`Event 'onMove' triggered by '\${eventType}' event type.\`);
+      setEvenDescription(\`Event 'onMove' triggered by '\${event.type}' event type.\`);
     }
 
     setEventParams(restEventParams);
   };
 
-  const onEnter = (eventType: string) => {
+  const onEnter = ({ event }: OnEnterParams) => {
     if (selectedEvents.trackOnEnter) {
-      setEvenDescription(\`Event 'onEnter' triggered by '\${eventType}' event type.\`);
+      setEvenDescription(\`Event 'onEnter' triggered by '\${event.type}' event type.\`);
     }
   };
 
-  const onLeave = (eventType: string) => {
+  const onLeave = ({ event }: OnLeaveParams) => {
     if (selectedEvents.trackOnLeave) {
-      setEvenDescription(\`Event 'onLeave' triggered by '\${eventType}' event type.\`);
+      setEvenDescription(\`Event 'onLeave' triggered by '\${event.type}' event type.\`);
     }
   };
 
