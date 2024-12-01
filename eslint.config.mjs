@@ -69,6 +69,7 @@ export default tseslint.config(
       'no-nested-ternary': 'error',
       'no-unneeded-ternary': 'error',
       'spaced-comment': 'error',
+      'no-console': 'error',
 
       '@typescript-eslint/ban-ts-comment': ['error', { 'ts-expect-error': 'allow-with-description' }],
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
