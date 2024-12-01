@@ -1,6 +1,8 @@
-import React, { useState, ChangeEvent } from 'react';
+import type { ChangeEvent } from 'react';
+import React, { useState } from 'react';
 
-import Tilt, { OnEnterParams, OnLeaveParams, OnMoveParams } from 'index';
+import type { OnEnterParams, OnLeaveParams, OnMoveParams } from 'index';
+import Tilt from 'index';
 
 import './EventParams.demozap.css';
 

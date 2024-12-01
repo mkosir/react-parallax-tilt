@@ -1,7 +1,7 @@
 import { screen, render, fireEvent } from '@testing-library/react';
 import React from 'react';
 
-import { OnLeave } from 'index';
+import type { OnLeave } from 'index';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - onLeave', () => {

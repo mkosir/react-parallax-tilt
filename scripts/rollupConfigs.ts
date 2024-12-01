@@ -1,7 +1,7 @@
 import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
-import { GlobalsOption, RollupOptions } from 'rollup';
+import type { GlobalsOption, RollupOptions } from 'rollup';
 import { dts } from 'rollup-plugin-dts';
 
 import packageJson from '../package.json' with { type: 'json' };

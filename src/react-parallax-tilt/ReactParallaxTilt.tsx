@@ -5,8 +5,8 @@ import { Tilt } from 'features/tilt/Tilt';
 import { setTransition, constrainToRange } from 'utils/helperFns';
 
 import { defaultProps } from './defaultProps';
-import { SupportedEvent, EventType, CustomEventType, WrapperElement, DeviceOrientationEventiOS } from './types';
-import { OnEnterParams, OnLeaveParams, ReactParallaxTiltProps } from './types.public';
+import type { SupportedEvent, EventType, CustomEventType, WrapperElement, DeviceOrientationEventiOS } from './types';
+import type { OnEnterParams, OnLeaveParams, ReactParallaxTiltProps } from './types.public';
 
 // All props are initialized by default with non-null values
 /* eslint-disable @typescript-eslint/no-non-null-assertion */

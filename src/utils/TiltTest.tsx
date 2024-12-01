@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Tilt, { ReactParallaxTiltProps } from 'index';
+import type { ReactParallaxTiltProps } from 'index';
+import Tilt from 'index';
 
 export const TiltTest = (reactParallaxTiltProps: ReactParallaxTiltProps) => (
   <Tilt {...reactParallaxTiltProps}>

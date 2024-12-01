@@ -1,4 +1,4 @@
-import { ElementSizePosition, ClientPosition } from 'utils/types';
+import type { ElementSizePosition, ClientPosition } from 'utils/types';
 
 export type WrapperElement = {
   node: HTMLDivElement | null;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Joystick } from 'react-joystick-component';
-import { IJoystickUpdateEvent } from 'react-joystick-component/build/lib/Joystick';
+import type { IJoystickUpdateEvent } from 'react-joystick-component/build/lib/Joystick';
 
 import Tilt from 'index';
 import './TiltManualInput.demozap.css';

@@ -1,7 +1,7 @@
 import { screen, render, fireEvent } from '@testing-library/react';
 import React from 'react';
 
-import { OnMove } from 'index';
+import type { OnMove } from 'index';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Glare - Style', () => {

@@ -1,7 +1,7 @@
 import { screen, render, fireEvent } from '@testing-library/react';
 import React from 'react';
 
-import { OnMove, OnMoveParams } from 'index';
+import type { OnMove, OnMoveParams } from 'index';
 import { TiltTest } from 'utils/TiltTest';
 
 describe('Tilt - onTouchMove', () => {

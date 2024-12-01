@@ -1,4 +1,4 @@
-import { FrameLocator, Page } from '@playwright/test';
+import type { FrameLocator, Page } from '@playwright/test';
 
 const IFRAME_SELECTOR = 'iframe[title="storybook-preview-iframe"]';
 
