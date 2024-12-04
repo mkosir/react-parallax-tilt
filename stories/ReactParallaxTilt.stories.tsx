@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import React from 'react';
 
 import { _Default } from './Default/_Default';
 import { _EventParams } from './EventParams/_EventParams';

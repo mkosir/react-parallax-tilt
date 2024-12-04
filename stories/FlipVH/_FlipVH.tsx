@@ -1,9 +1,8 @@
-import React from 'react';
 import { DemoTab } from 'react-demo-tab';
 
 import Demo from './FlipVH.demozap';
 
-const code = `import React, { useState } from 'react';
+const code = `import { useState } from 'react';
 
 import Tilt from 'index';
 import './FlipVH.demozap.css';

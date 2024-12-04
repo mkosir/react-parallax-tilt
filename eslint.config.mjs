@@ -65,6 +65,8 @@ export default tseslint.config(
       // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       ...eslintPluginReactHooks.configs.recommended.rules,
 
+      'react/react-in-jsx-scope': 'off',
+
       'prefer-template': 'error',
       'no-nested-ternary': 'error',
       'no-unneeded-ternary': 'error',

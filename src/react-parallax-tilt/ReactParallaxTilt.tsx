@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import { PureComponent } from 'react';
 
 import { Glare } from 'features/glare/Glare';
 import { Tilt } from 'features/tilt/Tilt';

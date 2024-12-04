@@ -1,11 +1,8 @@
-import React from 'react';
 import { DemoTab } from 'react-demo-tab';
 
 import Demo from './ParallaxEffect.demozap';
 
-const code = `import React from 'react';
-
-import Tilt from 'index';
+const code = `import Tilt from 'index';
 import './ParallaxEffect.demozap.css';
 
 const ParallaxEffect = () => (

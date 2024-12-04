@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Tilt from 'index';
 
 import './ParallaxEffectImg.demozap.css';

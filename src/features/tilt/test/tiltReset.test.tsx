@@ -1,5 +1,4 @@
 import { screen, render, fireEvent } from '@testing-library/react';
-import React from 'react';
 
 import type { OnEnter, OnLeave, OnMove, OnMoveParams } from 'index';
 import { TiltTest } from 'utils/TiltTest';

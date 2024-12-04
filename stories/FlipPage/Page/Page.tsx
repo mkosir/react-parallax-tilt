@@ -1,5 +1,3 @@
-import React from 'react';
-
 import './Page.css';
 import sampleImg from './lorem-picsum.png';
 

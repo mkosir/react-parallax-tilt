@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import { PureComponent } from 'react';
 
 import type { OnMoveParams } from 'index';
 import Tilt from 'index';

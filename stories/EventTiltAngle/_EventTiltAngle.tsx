@@ -1,11 +1,11 @@
-import React from 'react';
 import { DemoTab } from 'react-demo-tab';
 
 import Demo from './EventTiltAngle.demozap';
 
-const code = `import React, { PureComponent } from 'react';
+const code = `import { PureComponent } from 'react';
 
-import Tilt, { OnMoveParams } from 'index';
+import type { OnMoveParams } from 'index';
+import Tilt from 'index';
 
 import { DefaultComponent } from '../_DefaultComponent/DefaultComponent';
 import './EventTiltAngle.demozap.css';

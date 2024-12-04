@@ -8,7 +8,16 @@ const storybookConfig: StorybookConfig = {
     name: '@storybook/react-webpack5',
     options: {},
   },
-
+  // JSX transform no longer requires importing React explicitly in every file.
+  swc: () => ({
+    jsc: {
+      transform: {
+        react: {
+          runtime: 'automatic',
+        },
+      },
+    },
+  }),
   webpackFinal: (config) => {
     // Resolve absolute imports
     config.resolve?.modules?.push(path.resolve(process.cwd(), 'src'));

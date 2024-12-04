@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import Tilt from 'index';
 import './TiltScale.demozap.css';

@@ -1,11 +1,10 @@
-import React from 'react';
 import { DemoTab } from 'react-demo-tab';
 
 import Demo from './TiltManualInput.demozap';
 
-const code = `import React, { useState } from 'react';
+const code = `import { useState } from 'react';
 import { Joystick } from 'react-joystick-component';
-import { IJoystickUpdateEvent } from 'react-joystick-component/build/lib/Joystick';
+import type { IJoystickUpdateEvent } from 'react-joystick-component/build/lib/Joystick';
 
 import Tilt from 'index';
 import './TiltManualInput.demozap.css';

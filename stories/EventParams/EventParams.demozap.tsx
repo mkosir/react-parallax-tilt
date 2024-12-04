@@ -1,5 +1,5 @@
 import type { ChangeEvent } from 'react';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import type { OnEnterParams, OnLeaveParams, OnMoveParams } from 'index';
 import Tilt from 'index';

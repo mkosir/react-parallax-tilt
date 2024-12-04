@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Joystick } from 'react-joystick-component';
 import type { IJoystickUpdateEvent } from 'react-joystick-component/build/lib/Joystick';
 

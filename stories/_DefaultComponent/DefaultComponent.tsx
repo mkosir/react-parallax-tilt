@@ -1,5 +1,3 @@
-import React from 'react';
-
 import './DefaultComponent.css';
 
 export const DefaultComponent = () => (

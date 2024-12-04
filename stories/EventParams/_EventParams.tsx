@@ -1,11 +1,12 @@
-import React from 'react';
 import { DemoTab } from 'react-demo-tab';
 
 import Demo from './EventParams.demozap';
 
-const code = `import React, { useState, ChangeEvent } from 'react';
+const code = `import type { ChangeEvent } from 'react';
+import { useState } from 'react';
 
-import Tilt, { OnEnterParams, OnLeaveParams, OnMoveParams } from 'index';
+import type { OnEnterParams, OnLeaveParams, OnMoveParams } from 'index';
+import Tilt from 'index';
 
 import './EventParams.demozap.css';
 
