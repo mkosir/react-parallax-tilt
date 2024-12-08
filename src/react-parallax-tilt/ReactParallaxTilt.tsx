@@ -364,7 +364,9 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
     const { children, className, style } = this.props;
     return (
       <div
-        ref={(el) => (this.wrapperEl.node = el)}
+        ref={(el) => {
+          this.wrapperEl.node = el;
+        }}
         onMouseEnter={this.onEnter}
         onMouseMove={this.onMove}
         onMouseLeave={this.onLeave}

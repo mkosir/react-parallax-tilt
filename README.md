@@ -49,7 +49,6 @@ npm install react-parallax-tilt
 ## Example
 
 ```jsx
-import ReactDOM from 'react-dom';
 import Tilt from 'react-parallax-tilt';
 
 const App = () => {
@@ -61,8 +60,6 @@ const App = () => {
     </Tilt>
   );
 };
-
-ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
 ## Props
