@@ -42,6 +42,7 @@
     "storybook-build": "storybook build -o build-storybook-static",
     "release": "semantic-release --branches main",
     "demozap": "demozap generate --prefix=_ && npm run format-fix && npm run lint-fix",
+    "knip": "knip",
     "clean": "rm -rf node_modules test-unit-report test-e2e-report test-e2e-results dist compiled build-storybook-static"
   },
   "devDependencies": {
