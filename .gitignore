@@ -1,8 +1,7 @@
 node_modules
-test-unit-report
 dist
-build-storybook-static
 compiled
+build-storybook-static
 
 bundle-analysis.html
 
@@ -15,6 +14,7 @@ npm-debug.log*
 *.log
 .vscode
 .idea
+test-unit-report
 /test-e2e-results/
 /test-e2e-report/
 /blob-report/
