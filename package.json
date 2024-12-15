@@ -46,11 +46,11 @@
     "clean": "rm -rf node_modules test-unit-report test-e2e-report test-e2e-results dist compiled build-storybook-static"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.6.0",
+    "@commitlint/cli": "19.6.1",
     "@commitlint/config-conventional": "19.6.0",
     "@eslint/js": "9.17.0",
     "@playwright/test": "1.49.1",
-    "@rollup/plugin-commonjs": "28.0.1",
+    "@rollup/plugin-commonjs": "28.0.2",
     "@rollup/plugin-terser": "0.4.4",
     "@rollup/plugin-typescript": "11.1.6",
     "@storybook/addon-webpack5-compiler-swc": "1.0.5",
