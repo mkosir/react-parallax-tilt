@@ -24,7 +24,7 @@
   "scripts": {
     "start": "npm run storybook",
     "prepare": "husky",
-    "build": "rm -rf dist && rollup --config scripts/rollup.config.ts --configPlugin typescript",
+    "build": "rm -rf dist && rollup --config scripts/rollup.config.ts --configPlugin typescript --configImportAttributesKey with",
     "lint": "eslint --report-unused-disable-directives --max-warnings 0 .",
     "lint-fix": "eslint --fix .",
     "lint-staged-husky": "lint-staged",

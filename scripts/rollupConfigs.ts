@@ -50,7 +50,7 @@ export const LEGACY_CONFIG = [
       }),
     ],
     // Ensure dependencies are not bundled with the library
-    external: [...Object.keys(packageJson.peerDependencies)],
+    external: [...Object.keys(packageJson.peerDependencies), 'react/jsx-runtime'],
   },
   {
     input: PATH_INPUT_FILE,
@@ -98,7 +98,7 @@ export const MODERN_CONFIG = [
       }),
     ],
     // Ensure dependencies are not bundled with the library
-    external: [...Object.keys(packageJson.peerDependencies)],
+    external: [...Object.keys(packageJson.peerDependencies), 'react/jsx-runtime'],
   },
   {
     input: PATH_INPUT_FILE,
