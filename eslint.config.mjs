@@ -1,14 +1,14 @@
 import eslint from '@eslint/js';
-import eslintPluginImport from 'eslint-plugin-import';
+import eslintPluginVitest from '@vitest/eslint-plugin';
 import eslintConfigPrettier from 'eslint-config-prettier';
+import eslintPluginImport from 'eslint-plugin-import';
+import eslintPluginJestDom from 'eslint-plugin-jest-dom';
+import eslintPluginJsxA11y from 'eslint-plugin-jsx-a11y';
+import eslintPluginPlaywright from 'eslint-plugin-playwright';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import eslintPluginReact from 'eslint-plugin-react';
 import eslintPluginReactHooks from 'eslint-plugin-react-hooks';
-import eslintPluginPlaywright from 'eslint-plugin-playwright';
 import eslintPluginTestingLibrary from 'eslint-plugin-testing-library';
-import eslintPluginJestDom from 'eslint-plugin-jest-dom';
-import eslintPluginJsxA11y from 'eslint-plugin-jsx-a11y';
-import eslintPluginVitest from '@vitest/eslint-plugin';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
