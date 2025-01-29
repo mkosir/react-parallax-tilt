@@ -10,6 +10,7 @@ const TrackOnWindow = () => (
     glarePosition="all"
     scale={1.02}
     trackOnWindow={true}
+    glareBorderRadius="20px"
   >
     <div className="inner-element">
       <div>React</div>
