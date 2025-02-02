@@ -46,8 +46,8 @@
     "clean": "rm -rf node_modules test-unit-report test-e2e-report test-e2e-results dist compiled build-storybook-static"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.6.1",
-    "@commitlint/config-conventional": "19.6.0",
+    "@commitlint/cli": "19.7.1",
+    "@commitlint/config-conventional": "19.7.1",
     "@eslint/js": "9.19.0",
     "@playwright/test": "1.50.1",
     "@rollup/plugin-commonjs": "28.0.2",
