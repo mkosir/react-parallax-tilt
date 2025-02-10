@@ -37,51 +37,51 @@ export type ReactParallaxTiltProps = TiltProps &
      */
     children?: React.ReactNode;
     /**
-     * Scale of the component (1.5 = 150%, 2 = 200%, etc.).
+     * Scale of the component (`1.5 = 150%, 2 = 200%`).
      */
     scale?: number;
     /**
-     * The perspective property defines how far the object (wrapped/child component) is away from the user. The lower the more extreme the tilt gets.
+     * Defines how far the tilt component appears from the user. Lower values create more extreme tilt effects.
      */
     perspective?: number;
     /**
-     * Boolean to enable/disable vertical flip of component.
+     * Enables/disables vertical flipping of the component.
      */
     flipVertically?: boolean;
     /**
-     * Boolean to enable/disable horizontal flip of component.
+     * Enables/disables horizontal flipping of the component.
      */
     flipHorizontally?: boolean;
     /**
-     * If the effects has to be reset on "onLeave" event.
+     * Determines if effects should reset on `onLeave` event.
      */
     reset?: boolean;
     /**
-     * Easing of the transition when manipulating the component.
+     * Easing function for the transition.
      */
     transitionEasing?: string;
     /**
-     * Speed of the transition when manipulating the component.
+     * Speed of the transition.
      */
     transitionSpeed?: number;
     /**
-     * Track mouse and touch events on the whole window.
+     * Tracks mouse and touch events across the entire window.
      */
     trackOnWindow?: boolean;
     /**
-     * Boolean to enable/disable device orientation detection.
+     * Enables/disables device orientation detection.
      */
     gyroscope?: boolean;
     /**
-     * Gets triggered when user moves on the component.
+     * Callback triggered when user moves on the component.
      */
     onMove?: OnMove;
     /**
-     * Gets triggered when user enters the component.
+     * Callback triggered when user enters the component.
      */
     onEnter?: OnEnter;
     /**
-     * Gets triggered when user leaves the component.
+     * Callback triggered when user leaves the component.
      */
     onLeave?: OnLeave;
   };

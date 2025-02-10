@@ -1,38 +1,38 @@
 export type TiltProps = {
   /**
-   * Boolean to enable/disable tilt effect.
+   * Enables/disables the tilt effect.
    */
   tiltEnable?: boolean;
   /**
-   * Reverse the tilt direction.
+   * Reverses the tilt direction.
    */
   tiltReverse?: boolean;
   /**
-   * Initial tilt value (degrees) on x axis.
+   * Initial tilt angle (in degrees) on the x-axis.
    */
   tiltAngleXInitial?: number;
   /**
-   * Initial tilt value (degrees) on y axis.
+   * Initial tilt angle (in degrees) on the y-axis.
    */
   tiltAngleYInitial?: number;
   /**
-   * Max tilt rotation (degrees) on x axis. Range: 0 - 90
+   * Maximum tilt rotation (in degrees) on the x-axis (range: `0°-90°`).
    */
   tiltMaxAngleX?: number;
   /**
-   * Max tilt rotation (degrees) on y axis. Range: 0 - 90
+   * Maximum tilt rotation (in degrees) on the y-axis (range: `0°-90°`).
    */
   tiltMaxAngleY?: number;
   /**
-   * Which axis should be enabled.
+   * Enables tilt on a single axis only.
    */
   tiltAxis?: Axis;
   /**
-   * Manual tilt rotation (degrees) on x axis.
+   * Manual tilt rotation (in degrees) on the x-axis.
    */
   tiltAngleXManual?: number | null;
   /**
-   * Manual tilt rotation (degrees) on y axis.
+   * Manual tilt rotation (in degrees) on the y-axis.
    */
   tiltAngleYManual?: number | null;
 };
