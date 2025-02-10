@@ -17,11 +17,11 @@
 [![CI][deploy-storybook-badge]][deploy-storybook-url]
 [![CI][npm-release-badge]][npm-release-url]
 
-_👀 Easily apply tilt hover effect on React components_
+_👀 Easily apply tilt hover effects to React components_
 
 [![](misc/demo.gif)](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--glare-effect)
 
-## [Demo 💥](https://mkosir.github.io/react-parallax-tilt)
+## [Live Demo 💥](https://mkosir.github.io/react-parallax-tilt)
 
 ## Install
 
@@ -36,15 +36,15 @@ npm install react-parallax-tilt
 - Works with React v15 onwards
 - Supports **mouse** and **touch** events
 - Support for device tilting (**gyroscope**)
-- **Glare** effect 🌟 with custom props (color, position,...) [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--parallax-effect-glare-scale)
-- **Event tracking** for component values 📐 (tilt, glare, mousemove,...) [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--event-params)
-- Many effects that can be easily applied:
+- **Glare** effect 🌟 with custom props (color, position, etc.) [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--parallax-effect-glare-scale)
+- **Event tracking** for component values 📐 (tilt, glare, mousemove, etc.) [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--event-params)
+- Multiple built-in effects:
   - **Scale** on hover [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--scale)
   - **Disable** x/y axis [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--tilt-disable-axis)
   - **Flip** component vertically/horizontally [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--flip-vh)
   - **Window** tilt hover effect [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--track-on-window)
-  - **Manual tilt** control 🕹 (joystick, slider etc.) [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--tilt-manual-input)
-  - **Parallax** effect on overlaid images [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--parallax-effect-img)
+  - **Manual tilt** control 🕹 (via joystick, slider, etc.) [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--tilt-manual-input)
+  - **Parallax** effect for overlaid images [🔗demo](https://mkosir.github.io/react-parallax-tilt/?path=/story/react-parallax-tilt--parallax-effect-img)
 
 ## Example
 
@@ -64,108 +64,108 @@ const App = () => {
 
 ## Props
 
-All of the props are optional.  
-Below is the complete list of possible props and their options:
+All props are optional.  
+Here's the complete list of available props and their default values:
 
-> ▶︎ indicates the default value if there's one
+> ▶︎ indicates the default value
 
 **tiltEnable**: _boolean_ ▶︎ `true`  
-Boolean to enable/disable tilt effect.
+Enables/disables the tilt effect.
 
 **tiltReverse**: _boolean_ ▶︎ `false`  
-Reverse the tilt direction.
+Reverses the tilt direction.
 
 **tiltAngleXInitial**: _number_ ▶︎ `0`  
-Initial tilt value (degrees) on x axis.
+Initial tilt angle (in degrees) on the x-axis.
 
 **tiltAngleYInitial**: _number_ ▶︎ `0`  
-Initial tilt value (degrees) on y axis.
+Initial tilt angle (in degrees) on the y-axis.
 
 **tiltMaxAngleX**: _number_ ▶︎ `20`  
-Max tilt rotation (degrees) on x axis (range: `0°-90°`).
+Maximum tilt rotation (in degrees) on the x-axis. Range: `0°-90°`.
 
 **tiltMaxAngleY**: _number_ ▶︎ `20`  
-Max tilt rotation (degrees) on y axis (range: `0°-90°`).
+Maximum tilt rotation (in degrees) on the y-axis. Range: `0°-90°`.
 
 **tiltAxis**: _'x' | 'y'_ ▶︎ `undefined`  
-Enable tilt on single axis.
+Enables tilt on a single axis only.
 
 **tiltAngleXManual**: _number_ | null ▶︎ `null`  
-Manual tilt rotation (degrees) on x axis.
+Manual tilt rotation (in degrees) on the x-axis.
 
 **tiltAngleYManual**: _number_ | null ▶︎ `null`  
-Manual tilt rotation (degrees) on y axis.
+Manual tilt rotation (in degrees) on the y-axis.
 
 **glareEnable**: _boolean_ ▶︎ `false`  
-Boolean to enable/disable glare effect.
+Enables/disables the glare effect.
 
 **glareMaxOpacity**: _number_ ▶︎ `0.7`  
-The maximum glare opacity (range: `0-1`).
+Maximum glare opacity (`0.5 = 50%, 1 = 100%`). Range: `0-1`
 
 **glareColor**: _string_ ▶︎ `#ffffff`  
-Set color of glare effect.
-
-**glareBorderRadius**: _string_ ▶︎ `0`  
-Accepts any standard CSS border radius. Useful if the glare color is different to the page color.
+Sets the color of the glare effect.
 
 **glarePosition**: _'top' | 'right' | 'bottom' | 'left' | 'all'_ ▶︎ `bottom`  
-Set position of glare effect.
+Sets the position of the glare effect.
 
 **glareReverse**: _boolean_ ▶︎ `false`  
-Reverse the glare direction.
+Reverses the glare direction.
+
+**glareBorderRadius**: _string_ ▶︎ `0`  
+Sets the border radius of the glare. Accepts any standard CSS border radius value.
 
 **scale**: _number_ ▶︎ `1`  
-Scale of the component (1.5 = 150%, 2 = 200%, etc.).
+Scale of the component (`1.5 = 150%, 2 = 200%`).
 
 **perspective**: _number_ ▶︎ `1000`  
-The perspective property defines how far the object (wrapped/child component) is away from the user. The lower the more extreme the tilt gets.
+Defines how far the tilt component appears from the user. Lower values create more extreme tilt effects.
 
 **flipVertically**: _boolean_ ▶︎ `false`  
-Boolean to enable/disable vertical flip of component.
+Enables/disables vertical flipping of the component.
 
 **flipHorizontally**: _boolean_ ▶︎ `false`  
-Boolean to enable/disable horizontal flip of component.
+Enables/disables horizontal flipping of the component.
 
 **reset**: _boolean_ ▶︎ `true`  
-If the effects has to be reset on `onLeave` event.
+Determines if effects should reset on `onLeave` event.
 
 **transitionEasing**: _string_ ▶︎ `cubic-bezier(.03,.98,.52,.99)`  
-Easing of the transition when manipulating the component.
+Easing function for the transition.
 
 **transitionSpeed**: _number_ ▶︎ `400`  
-Speed of the transition when manipulating the component.
+Speed of the transition.
 
 **trackOnWindow**: _boolean_ ▶︎ `false`  
-Track mouse and touch events on the whole window.
+Tracks mouse and touch events across the entire window.
 
 **gyroscope**: _boolean_ ▶︎ `false`  
-Boolean to enable/disable device orientation detection.
+Enables/disables device orientation detection.
 
 **onMove**: ({ **tiltAngleX**: _number_, **tiltAngleY**: _number_, **tiltAngleXPercentage**: _number_, **tiltAngleYPercentage**: _number_, **glareAngle**: _number_, **glareOpacity**: _number_, **event**: _Event_ }) => _void_  
-Gets triggered when user moves on the component.
+Callback triggered when user moves on the component.
 
 **onEnter**: (**event**: _Event_) => _void_  
-Gets triggered when user enters the component.
+Callback triggered when user enters the component.
 
 **onLeave**: (**event**: _Event_) => _void_  
-Gets triggered when user leaves the component.
+Callback triggered when user leaves the component.
 
 ## Gyroscope - Device Orientation
 
-Please keep in mind that detecting device orientation is currently [experimental technology](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental).  
+Please note that device orientation detection is currently [experimental technology](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental).  
 Check the [browser compatibility](https://caniuse.com/#search=DeviceOrientation) before using it in production.  
-A few takeaways when using device orientation event:
+Important considerations when using device orientation:
 
-- always use secure origins (such as `https`)
-- it doesn't work in all browsers when using it in cross-origin `<iframe>` element
+- Always use secure origins (such as `https`)
+- It may not work in all browsers when used within a cross-origin `<iframe>` element
 
 <details>
-<summary>Using device orientation on iOS 13+</summary>
+<summary>Device Orientation on iOS 13+</summary>
 
-Apple decided turning device motion and orientation off by default since iOS 12.2.  
-With iOS 13+ permission API can be used to gain access to device orientation event.
+Apple disabled device motion and orientation by default starting with iOS 12.2.  
+iOS 13+ provides a permission API to access device orientation events.
 
-When using gyroscope feature:
+When using the gyroscope feature:
 
 ```jsx
 <Tilt gyroscope={true}>
@@ -173,10 +173,10 @@ When using gyroscope feature:
 </Tilt>
 ```
 
-it will present a permission dialog prompting the user to allow motion and orientation access at domain level:  
+A permission dialog will prompt the user to allow motion and orientation access at the domain level:  
 ![](misc/device_orientation.jpg)
 
-Note that user needs to take some action (like tapping a button) to be able to display the dialog (invoking dialog on page load is not possible).
+Note: User interaction (like tapping a button) is required to display the permission dialog - it cannot be triggered automatically on page load.
 
 </details>
 
@@ -193,29 +193,31 @@ Build project and start storybook on [localhost](http://localhost:9009):
 **Start coding!** 🎉
 
 <details>
-<summary>Or setup with npm link</summary>
-Clone this repo on your machine, navigate to its location in the terminal and run:
+<summary>Alternative setup using npm link</summary>
 
-```bash
-npm install
-npm link # link your local repo to your global packages
-npm run build:watch # build the files and watch for changes
-```
+1. Clone this repository and navigate to its location
+2. Run the following commands:
 
-Clone project repo that you wish to test with react-parallax-tilt library and run:
+   ```bash
+   npm install
+   npm link # link your local repo to your global packages
+   npm run build:watch # build the files and watch for changes
+   ```
 
-```bash
-npm install
-npm link react-parallax-tilt # link your local copy into this project's node_modules
-npm start
-```
+3. Clone the project you want to test with react-parallax-tilt and run:
+
+   ```bash
+   npm install
+   npm link react-parallax-tilt # link your local copy into this project's node_modules
+   npm start
+   ```
 
 </details>
 
 ## Contributing
 
 All contributions are welcome!  
-Please take a moment to review guidelines [PR](.github/pull_request_template.md) | [Issues](https://github.com/mkosir/react-parallax-tilt/issues/new/choose)
+Please review contribution guidelines: [Pull Requests](.github/pull_request_template.md) | [Issues](https://github.com/mkosir/react-parallax-tilt/issues/new/choose)
 
 [npm-url]: https://www.npmjs.com/package/react-parallax-tilt
 [npm-badge]: https://img.shields.io/npm/v/react-parallax-tilt.svg
