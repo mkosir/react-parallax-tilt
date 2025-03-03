@@ -17,8 +17,6 @@ export default tseslint.config(
   eslintPluginImport.flatConfigs.recommended,
   ...tseslint.configs.strictTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
-  // Uncomment once released - https://github.com/facebook/react/pull/30774
-  // eslintPluginReactHooks.configs.recommended,
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
   eslintPluginJsxA11y.flatConfigs.recommended,
   eslintPluginReact.configs.flat.recommended,
@@ -54,15 +52,10 @@ export default tseslint.config(
     files: ['**/*.{js,ts,tsx}'],
 
     plugins: {
-      // Remove once released - https://github.com/facebook/react/pull/30774
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       'react-hooks': eslintPluginReactHooks,
     },
 
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     rules: {
-      // Remove once released - https://github.com/facebook/react/pull/30774
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       ...eslintPluginReactHooks.configs.recommended.rules,
 
       'react/react-in-jsx-scope': 'off',
