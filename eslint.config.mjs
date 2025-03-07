@@ -25,7 +25,6 @@ export default tseslint.config(
   eslintPluginJestDom.configs['flat/recommended'],
   eslintPluginPlaywright.configs['flat/recommended'],
   eslintPluginPrettierRecommended,
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   eslintConfigPrettier,
   // https://eslint.org/docs/latest/use/configure/configuration-files#excluding-files-with-ignores
   // When in their own config block without files, it tells ESLint to ignore those files.
