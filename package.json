@@ -73,7 +73,7 @@
     "demozap": "1.3.82",
     "eslint": "9.22.0",
     "eslint-config-prettier": "10.1.1",
-    "eslint-import-resolver-typescript": "3.8.6",
+    "eslint-import-resolver-typescript": "3.8.7",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-jest-dom": "5.5.0",
     "eslint-plugin-jsx-a11y": "6.10.2",
