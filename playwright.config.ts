@@ -4,7 +4,7 @@ const IS_CI = process.env.CI === 'true';
 const BASE_URL = 'http://localhost:9009';
 const TIMEOUT_SECONDS = IS_CI ? 15 : 5;
 
-// eslint-disable-next-line import/no-default-export
+// eslint-disable-next-line import-x/no-default-export
 export default defineConfig({
   testDir: './e2e',
   fullyParallel: true,
