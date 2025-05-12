@@ -14,7 +14,6 @@ import * as tseslint from 'typescript-eslint';
 
 export default tseslint.config(
   eslint.configs.recommended,
-
   eslintPluginImportX.flatConfigs.recommended,
   eslintPluginImportX.flatConfigs.typescript,
   ...tseslint.configs.strictTypeChecked,
