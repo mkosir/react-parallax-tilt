@@ -85,7 +85,7 @@
     "eslint-plugin-testing-library": "7.2.1",
     "husky": "9.1.7",
     "jsdom": "26.1.0",
-    "knip": "5.57.0",
+    "knip": "5.57.1",
     "lint-staged": "16.0.0",
     "prettier": "3.5.3",
     "react": "19.1.0",
