@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
 
-    <title>@storybook/core - Storybook</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>storybook - Storybook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
@@ -67,7 +67,15 @@
           window['FEATURES'] = {
   "argTypeTargetsV7": true,
   "legacyDecoratorFileOrder": false,
-  "disallowImplicitActionsInRenderV8": true
+  "disallowImplicitActionsInRenderV8": true,
+  "viewport": true,
+  "highlight": true,
+  "controls": true,
+  "interactions": true,
+  "actions": true,
+  "backgrounds": true,
+  "outline": true,
+  "measure": true
 };
         
       
@@ -123,11 +131,11 @@
 
     <script type="module">
       import './sb-manager/globals-runtime.js';
-      
+
       
         import './sb-addons/common-manager-bundle.js';
       
-      
+
       import './sb-manager/runtime.js';
     </script>
   </body>
