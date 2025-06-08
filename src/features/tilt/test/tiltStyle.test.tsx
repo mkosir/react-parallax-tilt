@@ -20,7 +20,7 @@ describe('Tilt - Style', () => {
 
     vi.runAllTimers();
 
-    // eslint-disable-next-line
+    // eslint-disable-next-line testing-library/no-node-access
     const tiltElement = container.firstElementChild;
     expect(tiltElement).toHaveStyle({
       'will-change': 'transform',
