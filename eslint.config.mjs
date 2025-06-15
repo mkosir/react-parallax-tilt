@@ -8,8 +8,8 @@ import eslintPluginJsxA11y from 'eslint-plugin-jsx-a11y';
 import eslintPluginPlaywright from 'eslint-plugin-playwright';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import eslintPluginReact from 'eslint-plugin-react';
-import * as eslintPluginReactHooks from 'eslint-plugin-react-hooks';
 import eslintPluginTestingLibrary from 'eslint-plugin-testing-library';
+import * as eslintPluginReactHooks from 'eslint-plugin-react-hooks';
 import * as tseslint from 'typescript-eslint';
 
 export default tseslint.config(
