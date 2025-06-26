@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Joystick } from 'react-joystick-component';
 import type { IJoystickUpdateEvent } from 'react-joystick-component/build/lib/Joystick';
 
-import Tilt from 'index';
+import Tilt from '@/index';
 import './TiltManualInput.demozap.css';
 
 const TiltManualInput = () => {

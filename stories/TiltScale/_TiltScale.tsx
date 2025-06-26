@@ -4,7 +4,7 @@ import Demo from './TiltScale.demozap';
 
 const code = `import { useState } from 'react';
 
-import Tilt from 'index';
+import Tilt from '@/index';
 import './TiltScale.demozap.css';
 
 const TiltScale = () => {

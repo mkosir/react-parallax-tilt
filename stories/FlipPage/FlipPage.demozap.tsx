@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import Tilt from 'index';
+import Tilt from '@/index';
 
 import './FlipPage.demozap.css';
 import { Page } from './Page/Page';

@@ -2,7 +2,7 @@ import { DemoTab } from 'react-demo-tab';
 
 import Demo from './TrackOnWindow.demozap';
 
-const code = `import Tilt from 'index';
+const code = `import Tilt from '@/index';
 import './TrackOnWindow.demozap.css';
 
 const TrackOnWindow = () => (

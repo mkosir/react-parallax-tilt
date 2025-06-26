@@ -4,7 +4,7 @@ import Demo from './ScaleNoTilt.demozap';
 
 const code = `import { useState } from 'react';
 
-import Tilt from 'index';
+import Tilt from '@/index';
 import './ScaleNoTilt.demozap.css';
 
 const ScaleNoTilt = () => {

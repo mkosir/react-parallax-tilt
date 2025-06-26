@@ -1,4 +1,4 @@
-import Tilt from 'index';
+import Tilt from '@/index';
 
 import './ParallaxEffectImg.demozap.css';
 import imgTree from './img/tree.png';

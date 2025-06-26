@@ -2,7 +2,7 @@ import { DemoTab } from 'react-demo-tab';
 
 import Demo from './ParallaxEffectImg.demozap';
 
-const code = `import Tilt from 'index';
+const code = `import Tilt from '@/index';
 
 import './ParallaxEffectImg.demozap.css';
 import imgTree from './img/tree.png';

@@ -4,8 +4,8 @@ import Demo from './EventTiltAngle.demozap';
 
 const code = `import { PureComponent } from 'react';
 
-import type { OnMoveParams } from 'index';
-import Tilt from 'index';
+import type { OnMoveParams } from '@/index';
+import Tilt from '@/index';
 
 import { DefaultComponent } from '../_DefaultComponent/DefaultComponent';
 import './EventTiltAngle.demozap.css';

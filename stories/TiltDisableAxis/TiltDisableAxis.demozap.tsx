@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import type { Axis } from 'index';
-import Tilt from 'index';
+import type { Axis } from '@/index';
+import Tilt from '@/index';
 
 import './TiltDisableAxis.demozap.css';
 

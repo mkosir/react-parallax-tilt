@@ -2,7 +2,7 @@ import { DemoTab } from 'react-demo-tab';
 
 import Demo from './MultipleTilt.demozap';
 
-const code = `import Tilt from 'index';
+const code = `import Tilt from '@/index';
 
 import './MultipleTilt.demozap.css';
 import { DefaultComponent } from '../_DefaultComponent/DefaultComponent';

@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-import type { OnMoveParams } from 'index';
+import type { OnMoveParams } from '@/index';
 
 import { getIframeContent } from './consts';
 

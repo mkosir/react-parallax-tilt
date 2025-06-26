@@ -1,7 +1,7 @@
 import { screen, render, fireEvent } from '@testing-library/react';
 
-import type { OnLeave } from 'index';
-import { TiltTest } from 'utils/TiltTest';
+import type { OnLeave } from '@/index';
+import { TiltTest } from '@/utils/TiltTest';
 
 describe('Tilt - onLeave', () => {
   it('should trigger onLeave event when mouse leaves an element', () => {

@@ -1,7 +1,7 @@
 import { screen, render, fireEvent } from '@testing-library/react';
 
-import type { OnMove } from 'index';
-import { TiltTest } from 'utils/TiltTest';
+import type { OnMove } from '@/index';
+import { TiltTest } from '@/utils/TiltTest';
 
 describe('Glare - Style', () => {
   it('should update glare style when hover on element', () => {

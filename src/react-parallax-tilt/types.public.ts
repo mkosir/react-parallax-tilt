@@ -1,5 +1,5 @@
-import type { GlareProps } from 'features/glare/types.public';
-import type { TiltProps } from 'features/tilt/types.public';
+import type { GlareProps } from '@/features/glare/types.public';
+import type { TiltProps } from '@/features/tilt/types.public';
 
 import type { SupportedEvent } from './types';
 

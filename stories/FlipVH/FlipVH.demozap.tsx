@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import Tilt from 'index';
+import Tilt from '@/index';
 import './FlipVH.demozap.css';
 
 const FlipVH = () => {

@@ -1,8 +1,8 @@
 import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import type { OnMove, OnMoveParams } from 'index';
-import { TiltTest } from 'utils/TiltTest';
+import type { OnMove, OnMoveParams } from '@/index';
+import { TiltTest } from '@/utils/TiltTest';
 
 describe('Tilt - Manual Angle', () => {
   it('should calculate tilt when manual input is provided', async () => {

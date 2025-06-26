@@ -1,4 +1,4 @@
-import Tilt from 'index';
+import Tilt from '@/index';
 import './ParallaxEffect.demozap.css';
 
 const ParallaxEffect = () => (

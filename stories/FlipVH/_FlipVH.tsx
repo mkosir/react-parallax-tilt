@@ -4,7 +4,7 @@ import Demo from './FlipVH.demozap';
 
 const code = `import { useState } from 'react';
 
-import Tilt from 'index';
+import Tilt from '@/index';
 import './FlipVH.demozap.css';
 
 const FlipVH = () => {

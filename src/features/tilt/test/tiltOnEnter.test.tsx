@@ -1,7 +1,7 @@
 import { screen, render, fireEvent } from '@testing-library/react';
 
-import type { OnEnter } from 'index';
-import { TiltTest } from 'utils/TiltTest';
+import type { OnEnter } from '@/index';
+import { TiltTest } from '@/utils/TiltTest';
 
 describe('Tilt - onEnter', () => {
   it('should trigger onEnter event when mouse enters an element', () => {

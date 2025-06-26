@@ -1,8 +1,8 @@
 import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import type { OnMove, OnMoveParams } from 'index';
-import { TiltTest } from 'utils/TiltTest';
+import type { OnMove, OnMoveParams } from '@/index';
+import { TiltTest } from '@/utils/TiltTest';
 
 describe('Glare', () => {
   it('should calculate glare with top position when top position prop value is provided', async () => {

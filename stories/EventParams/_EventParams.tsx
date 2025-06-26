@@ -5,8 +5,8 @@ import Demo from './EventParams.demozap';
 const code = `import type { ChangeEvent } from 'react';
 import { useState } from 'react';
 
-import type { OnEnterParams, OnLeaveParams, OnMoveParams } from 'index';
-import Tilt from 'index';
+import type { OnEnterParams, OnLeaveParams, OnMoveParams } from '@/index';
+import Tilt from '@/index';
 
 import './EventParams.demozap.css';
 

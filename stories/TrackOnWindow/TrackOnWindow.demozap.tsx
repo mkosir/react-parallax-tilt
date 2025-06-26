@@ -1,4 +1,4 @@
-import Tilt from 'index';
+import Tilt from '@/index';
 import './TrackOnWindow.demozap.css';
 
 const TrackOnWindow = () => (

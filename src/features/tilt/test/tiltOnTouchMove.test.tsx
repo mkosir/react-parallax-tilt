@@ -1,7 +1,7 @@
 import { screen, render, fireEvent } from '@testing-library/react';
 
-import type { OnMove, OnMoveParams } from 'index';
-import { TiltTest } from 'utils/TiltTest';
+import type { OnMove, OnMoveParams } from '@/index';
+import { TiltTest } from '@/utils/TiltTest';
 
 describe('Tilt - onTouchMove', () => {
   it('should call onMove prop when onTouchMove event is triggered', () => {

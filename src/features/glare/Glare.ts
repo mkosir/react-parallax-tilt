@@ -1,7 +1,7 @@
 import type { CSSProperties } from 'react';
 
-import { constrainToRange } from 'utils/helperFns';
-import type { ElementSizePosition, ClientPosition } from 'utils/types';
+import { constrainToRange } from '@/utils/helperFns';
+import type { ElementSizePosition, ClientPosition } from '@/utils/types';
 
 import type { GlareProps } from './types.public';
 

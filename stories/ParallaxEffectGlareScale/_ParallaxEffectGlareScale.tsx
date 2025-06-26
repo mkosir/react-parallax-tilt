@@ -2,7 +2,7 @@ import { DemoTab } from 'react-demo-tab';
 
 import Demo from './ParallaxEffectGlareScale.demozap';
 
-const code = `import Tilt from 'index';
+const code = `import Tilt from '@/index';
 import './ParallaxEffectGlareScale.demozap.css';
 
 const ParallaxEffectGlareScale = () => (

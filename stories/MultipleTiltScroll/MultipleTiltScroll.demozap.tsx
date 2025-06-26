@@ -1,4 +1,4 @@
-import Tilt from 'index';
+import Tilt from '@/index';
 
 import './MultipleTiltScroll.demozap.css';
 import { DefaultComponent } from '../_DefaultComponent/DefaultComponent';

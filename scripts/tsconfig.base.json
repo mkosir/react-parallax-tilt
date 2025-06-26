@@ -2,9 +2,8 @@
   "compilerOptions": {
     "noEmit": true,
     "outDir": "../compiled",
-    "baseUrl": "../src",
     "paths": {
-      ".": ["."]
+      "@/*": ["../src/*"]
     },
     "importHelpers": true,
     "jsx": "react-jsx",

@@ -1,8 +1,8 @@
 import { PureComponent } from 'react';
 
-import { Glare } from 'features/glare/Glare';
-import { Tilt } from 'features/tilt/Tilt';
-import { setTransition, constrainToRange } from 'utils/helperFns';
+import { Glare } from '@/features/glare/Glare';
+import { Tilt } from '@/features/tilt/Tilt';
+import { setTransition, constrainToRange } from '@/utils/helperFns';
 
 import { defaultProps } from './defaultProps';
 import type { SupportedEvent, EventType, CustomEventType, WrapperElement, DeviceOrientationEventiOS } from './types';
@@ -10,7 +10,6 @@ import type { OnEnterParams, OnLeaveParams, ReactParallaxTiltProps } from './typ
 
 // All props are initialized by default with non-null values
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-
 export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
   public static defaultProps = defaultProps;
   private wrapperEl: WrapperElement = {

@@ -1,4 +1,4 @@
-import Tilt from 'index';
+import Tilt from '@/index';
 
 import './TiltImg.demozap.css';
 import imgNyc from './img/nyc.jpg';
