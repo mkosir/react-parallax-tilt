@@ -1,21 +1,21 @@
-name: 'setup_node-cache_dep-install_dep'
-description: 'Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧'
+name: 'setup_node_npm'
+description: 'Setup Node/npm ⚙️'
 runs:
   using: 'composite'
   steps:
-    - name: Setup Node.js ⚙️
+    - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '24.x'
 
-    - name: Cache dependencies ⚡
+    - name: Cache dependencies
       id: cache_dependencies
       uses: actions/cache@v4
       with:
         path: node_modules
         key: node-modules-${{ hashFiles('package-lock.json') }}
 
-    - name: Install dependencies 🔧
+    - name: Install dependencies
       shell: bash
       if: steps.cache_dependencies.outputs.cache-hit != 'true'
       run: npm ci
