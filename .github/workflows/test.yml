@@ -17,7 +17,7 @@ jobs:
         uses: ./.github/workflows/actions/setup_node_npm
 
       - name: Test 🧪
-        run: npm run test-report
+        run: npm run test:report
 
       - name: Upload report 📈
         uses: nwtgck/actions-netlify@v3
