@@ -29,7 +29,7 @@
     "lint:fix": "eslint --fix .",
     "lint-staged-husky": "lint-staged",
     "tsc": "tsc -p scripts/tsconfig.dev.json",
-    "format-fix": "prettier --config .prettierrc --write --ignore-unknown -l .",
+    "format:fix": "prettier --config .prettierrc --write --ignore-unknown -l .",
     "commit": "git-cz",
     "test": "vitest watch",
     "test-ui": "vitest --ui",
@@ -40,7 +40,7 @@
     "storybook": "TS_NODE_PROJECT=scripts/tsconfig.dev.json storybook dev -p 9009 --quiet",
     "storybook-build": "storybook build -o build-storybook-static",
     "release": "semantic-release --branches main",
-    "demozap": "demozap generate --prefix=_ && npm run format-fix && npm run lint:fix",
+    "demozap": "demozap generate --prefix=_ && npm run format:fix && npm run lint:fix",
     "knip": "knip",
     "clean": "rm -rf node_modules test-unit-report test-e2e-report test-e2e-results dist compiled build-storybook-static"
   },
