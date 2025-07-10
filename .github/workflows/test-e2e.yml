@@ -21,7 +21,7 @@ jobs:
 
       - name: Test E2E 🧪
         run: npx playwright test
-        # run: npm run test-e2e
+        # run: npm run test:e2e
 
       - name: Upload report 📈
         uses: nwtgck/actions-netlify@v3
