@@ -27,7 +27,7 @@
     "build": "rm -rf dist && rollup --config scripts/rollup.config.ts --configPlugin typescript --configImportAttributesKey with",
     "lint": "eslint --report-unused-disable-directives --max-warnings 0 .",
     "lint:fix": "eslint --fix .",
-    "lint-staged-husky": "lint-staged",
+    "lint:staged": "lint-staged",
     "tsc": "tsc -p scripts/tsconfig.dev.json",
     "format:fix": "prettier --config .prettierrc --write --ignore-unknown -l .",
     "commit": "git-cz",
