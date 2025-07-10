@@ -38,7 +38,7 @@
     "test-e2e-ui": "playwright test --ui",
     "test-e2e-report": "playwright show-report test-e2e-report",
     "storybook": "TS_NODE_PROJECT=scripts/tsconfig.dev.json storybook dev -p 9009 --quiet",
-    "storybook-build": "storybook build -o build-storybook-static",
+    "storybook:build": "storybook build -o build-storybook-static",
     "release": "semantic-release --branches main",
     "demozap": "demozap generate --prefix=_ && npm run format:fix && npm run lint:fix",
     "knip": "knip",

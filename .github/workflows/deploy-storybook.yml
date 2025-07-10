@@ -26,7 +26,7 @@ jobs:
         uses: ./.github/workflows/actions/setup_node_npm
 
       - name: Build 🏗️
-        run: npm run storybook-build
+        run: npm run storybook:build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
