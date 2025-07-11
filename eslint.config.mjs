@@ -130,6 +130,7 @@ export default tseslint.config(
       // Turn off (ideally all the rules) from eslint-plugin-testing-library plugin, since it's not applicable for Playwright tests.
       // 'testing-library/*': 'off',
       'testing-library/prefer-screen-queries': 'off',
+      'testing-library/no-node-access': 'off',
     },
   },
   {
