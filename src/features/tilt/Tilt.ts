@@ -9,9 +9,6 @@ const TILT_ANGLE_CONSTRAINT = 90;
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 
 export class Tilt {
-  public glareAngle = 0;
-  public glareOpacity = 0;
-
   public tiltAngleX = 0;
   public tiltAngleY = 0;
   public tiltAngleXPercentage = 0;
