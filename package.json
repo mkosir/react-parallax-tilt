@@ -58,7 +58,7 @@
     "@testing-library/react": "16.3.0",
     "@testing-library/user-event": "14.6.1",
     "@types/eslint": "9.6.1",
-    "@types/node": "24.3.3",
+    "@types/node": "24.4.0",
     "@types/react": "19.1.13",
     "@types/react-dom": "19.1.9",
     "@vitest/coverage-v8": "3.2.4",
