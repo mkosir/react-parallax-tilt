@@ -14,7 +14,7 @@ describe('Tilt - Prop change', () => {
 
     await userEvent.hover(screen.getByText('test'));
 
-    expect(onMove).toHaveBeenCalledWith<[OnMoveParams]>({
+    expect(onMove).toBeCalledWith<[OnMoveParams]>({
       tiltAngleX: 60,
       tiltAngleY: 45,
       tiltAngleXPercentage: 100,
@@ -39,7 +39,7 @@ describe('Tilt - Prop change', () => {
       />,
     );
 
-    expect(onMoveRerender).toHaveBeenCalledWith<[OnMoveParams]>({
+    expect(onMoveRerender).toHaveBeenCalledExactlyOnceWith<[OnMoveParams]>({
       tiltAngleX: 60,
       tiltAngleY: 30,
       tiltAngleXPercentage: 100,

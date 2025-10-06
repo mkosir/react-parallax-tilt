@@ -14,7 +14,7 @@ describe('Tilt - Manual Angle', () => {
 
     await userEvent.hover(screen.getByText('test'));
 
-    expect(onMove).toHaveBeenCalledWith<[OnMoveParams]>({
+    expect(onMove).toBeCalledWith<[OnMoveParams]>({
       tiltAngleX: 60,
       tiltAngleY: 45,
       tiltAngleXPercentage: 100,
@@ -45,7 +45,7 @@ describe('Tilt - Manual Angle', () => {
 
     await userEvent.hover(screen.getByText('test'));
 
-    expect(onMove).toHaveBeenCalledWith<[OnMoveParams]>({
+    expect(onMove).toBeCalledWith<[OnMoveParams]>({
       tiltAngleX: 60,
       tiltAngleY: 0,
       tiltAngleXPercentage: 100,
@@ -66,7 +66,7 @@ describe('Tilt - Manual Angle', () => {
 
     await userEvent.hover(screen.getByText('test'));
 
-    expect(onMove).toHaveBeenCalledWith<[OnMoveParams]>({
+    expect(onMove).toBeCalledWith<[OnMoveParams]>({
       tiltAngleX: 0,
       tiltAngleY: 45,
       tiltAngleXPercentage: 0,

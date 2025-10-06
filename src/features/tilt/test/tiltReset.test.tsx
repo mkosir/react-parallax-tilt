@@ -15,7 +15,7 @@ describe('Tilt - Reset', () => {
     const onEnterParams = onEnter.mock.calls[0][0];
     expect(onEnterParams.event.type).toBe('mouseenter');
 
-    expect(onMove).toHaveBeenCalledWith<[OnMoveParams]>({
+    expect(onMove).toHaveBeenCalledExactlyOnceWith<[OnMoveParams]>({
       tiltAngleX: 0,
       tiltAngleY: -0,
       tiltAngleXPercentage: 0,

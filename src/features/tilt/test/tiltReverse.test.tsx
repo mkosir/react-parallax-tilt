@@ -21,7 +21,7 @@ describe('Tilt - Reverse', () => {
 
     await userEvent.hover(screen.getByText('test'));
 
-    expect(onMove).toHaveBeenCalledWith<[OnMoveParams]>({
+    expect(onMove).toBeCalledWith<[OnMoveParams]>({
       tiltAngleX: -60,
       tiltAngleY: -45,
       tiltAngleXPercentage: -100,
