@@ -9,7 +9,7 @@ import eslintPluginPlaywright from 'eslint-plugin-playwright';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import eslintPluginReact from 'eslint-plugin-react';
 import eslintPluginTestingLibrary from 'eslint-plugin-testing-library';
-import * as eslintPluginReactHooks from 'eslint-plugin-react-hooks';
+import eslintPluginReactHooks from 'eslint-plugin-react-hooks';
 import * as tseslint from 'typescript-eslint';
 import { defineConfig } from 'eslint/config';
 
@@ -22,6 +22,7 @@ export default defineConfig(
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
   eslintPluginJsxA11y.flatConfigs.recommended,
   eslintPluginReact.configs.flat.recommended,
+  eslintPluginReactHooks.configs.flat.recommended,
   eslintPluginTestingLibrary.configs['flat/react'],
   eslintPluginVitest.configs.recommended,
   eslintPluginJestDom.configs['flat/recommended'],
@@ -49,13 +50,7 @@ export default defineConfig(
   {
     files: ['**/*.{js,ts,tsx}'],
 
-    plugins: {
-      'react-hooks': eslintPluginReactHooks,
-    },
-
     rules: {
-      ...eslintPluginReactHooks.configs.recommended.rules,
-
       'react/react-in-jsx-scope': 'off',
 
       'prefer-template': 'error',
