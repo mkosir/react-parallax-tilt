@@ -6,7 +6,7 @@ import { getIframeContent } from './consts';
 
 test.beforeEach(async ({ page }) => {
   await page.goto('/');
-  await page.getByRole('link', { name: 'Event - Params' }).click();
+  await page.getByRole('button', { name: 'Event - Params' }).click();
 });
 
 test('should get move params max values calculated and rendered, when mouse is positioned at top left corner of tilt element', async ({
