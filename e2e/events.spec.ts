@@ -4,7 +4,7 @@ import { getIframeContent } from './consts';
 
 test.beforeEach(async ({ page }) => {
   await page.goto('/');
-  await page.getByRole('link', { name: 'Event - Params' }).click();
+  await page.getByRole('button', { name: 'Event - Params' }).click();
 });
 
 test("should trigger 'onMove' event with 'mousemove' event type when mouse hovers tilt element", async ({ page }) => {
