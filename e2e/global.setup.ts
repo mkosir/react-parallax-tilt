@@ -4,7 +4,7 @@ setup("remove Storybook 'what's new' popup", async ({ page }) => {
   await page.goto('/');
 
   // Wait for sidebar to load.
-  await page.getByRole('link', { name: 'Keep floating' }).waitFor({
+  await page.getByRole('button', { name: 'Keep floating' }).waitFor({
     state: 'visible',
     timeout: 5000,
   });
