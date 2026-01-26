@@ -25,7 +25,7 @@ describe('Tilt - Style', () => {
     expect(tiltElement).toHaveStyle({
       'will-change': 'transform',
       transition: 'all 400ms cubic-bezier(.03,.98,.52,.99)',
-      transform: 'perspective(1000px) rotateX(20deg) rotateY(-20deg) scale3d(1,1,1)',
+      transform: 'perspective(1000px)rotateX(20deg) rotateY(-20deg)scale3d(1,1,1)',
     });
   });
 });

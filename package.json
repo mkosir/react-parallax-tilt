@@ -79,7 +79,7 @@
     "eslint-plugin-react-hooks": "7.0.1",
     "eslint-plugin-testing-library": "7.15.4",
     "husky": "9.1.7",
-    "jsdom": "26.1.0",
+    "jsdom": "27.4.0",
     "knip": "5.82.1",
     "lint-staged": "16.2.7",
     "prettier": "3.8.1",
