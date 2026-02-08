@@ -1906,7 +1906,14 @@ var ToolbarMenuItemContainer = styled("div")({
   id,
   name,
   description,
-  toolbar: { icon: _icon, items, title: _title, preventDynamicIcon, dynamicTitle, shortcuts }
+  toolbar: {
+    icon: _icon,
+    items,
+    title: _title,
+    preventDynamicIcon,
+    dynamicTitle = !0,
+    shortcuts
+  }
 }) => {
   let api = useStorybookApi(), [globals, updateGlobals, storyGlobals] = useGlobals(), currentValue = globals[id], isOverridden = id in storyGlobals, icon = _icon, title2 = _title;
   preventDynamicIcon || (icon = getSelectedItem({ currentValue, items })?.icon || icon), dynamicTitle && (title2 = getSelectedItem({ currentValue, items })?.title || title2), !title2 && !icon && console.warn(`Toolbar '${name}' has no title or icon`);
@@ -1964,7 +1971,8 @@ var ToolbarMenuItemContainer = styled("div")({
       resetLabel,
       onReset: resetItem ? () => updateGlobals({ [id]: resetItem?.value }) : void 0,
       onSelect: (selected) => updateGlobals({ [id]: selected }),
-      icon: icon && react_default.createElement(Icons, { icon, __suppressDeprecationWarning: !0 })
+      icon: icon && react_default.createElement(Icons, { icon, __suppressDeprecationWarning: !0 }),
+      showSelectedOptionTitle: dynamicTitle
     },
     title2
   );
@@ -5475,7 +5483,7 @@ var ViewportWrapper = styled.div(({ active, isDefault, theme }) => ({
         style: {
           height: `${1 / scale * 100}%`,
           width: `${1 / scale * 100}%`,
-          transform: `scale(${scale})`,
+          transform: scale !== 1 ? `scale(${scale})` : "none",
           transformOrigin: "top left"
         }
       },
@@ -5769,7 +5777,7 @@ var Wrapper2 = styled.span(({ theme }) => ({
 })), Shortcut = ({ keys }) => react_default.createElement(Wrapper2, null, keys.map((key) => react_default.createElement(Key, { key }, shortcutToHumanString([key]))));
 
 // src/manager/components/preview/tools/zoom.tsx
-var ZOOM_LEVELS = [0.25, 0.5, 0.75, 0.9, 1, 1.1, 1.25, 1.5, 2, 3, 4, 8], INITIAL_ZOOM_LEVEL = 1, ZoomButton = styled(Button)({
+var ZOOM_LEVELS = [0.25, 0.5, 0.75, 0.9, 1, 1.1, 1.25, 1.5, 2, 3, 4, 8], INITIAL_ZOOM_LEVEL = 1, ZoomButton = styled(ToggleButton)({
   minWidth: 48
 }), Context = createContext({ value: INITIAL_ZOOM_LEVEL, set: (v2) => {
 } }), ZoomInput = styled(NumericInput)({
@@ -5849,7 +5857,7 @@ var ZOOM_LEVELS = [0.25, 0.5, 0.75, 0.9, 1, 1.1, 1.25, 1.5, 2, 3, 4, 8], INITIAL
         padding: "small",
         variant: "ghost",
         ariaLabel: "Change zoom level",
-        active: value !== INITIAL_ZOOM_LEVEL
+        pressed: value !== INITIAL_ZOOM_LEVEL
       },
       Math.round(value * 100),
       "%"
