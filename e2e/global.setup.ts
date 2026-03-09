@@ -1,3 +1,5 @@
+/* eslint-disable playwright/expect-expect, playwright/valid-title, playwright/no-conditional-in-test, playwright/prefer-locator */
+
 import { test as setup } from '@playwright/test';
 
 setup("remove Storybook 'what's new' popup", async ({ page }) => {
