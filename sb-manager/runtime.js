@@ -3056,7 +3056,7 @@ Component Stack:${errorInfo.componentStack}`)
     return { hasError: !0, error };
   }
   componentDidCatch(error, errorInfo) {
-    console.error("Storybook Manager UI Error:", error), console.error("Component Stack:", errorInfo.componentStack), this.setState({ errorInfo });
+    console.error("Storybook Manager UI Error:", error), console.error("Component Stack:", errorInfo.componentStack), this.setState({ errorInfo }), typeof globalThis.sendTelemetryError == "function" && globalThis.sendTelemetryError(error);
   }
   render() {
     let { hasError, error, errorInfo } = this.state, { children } = this.props;
