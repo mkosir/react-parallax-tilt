@@ -71,13 +71,14 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
       window.addEventListener('touchend', this.onLeave);
     }
 
-    /* v8 ignore next 3 */
+    /* v8 ignore start */
     if (gyroscope) {
       void this.addDeviceOrientationEventListener();
     }
+    /* v8 ignore stop */
   }
 
-  /* v8 ignore next 19 */
+  /* v8 ignore start */
   private addDeviceOrientationEventListener = async () => {
     // Browser doesn't support Device Orientation.
     // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
@@ -97,6 +98,7 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
 
     window.addEventListener('deviceorientation', this.onMove);
   };
+  /* v8 ignore stop */
 
   private removeEventListeners() {
     const { trackOnWindow, gyroscope } = this.props;
@@ -113,11 +115,12 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
     }
 
     // Instance of DeviceOrientationEvent not possible.
-    /* v8 ignore next 4 */
+    /* v8 ignore start */
     // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     if (gyroscope && window.DeviceOrientationEvent) {
       window.removeEventListener('deviceorientation', this.onMove);
     }
+    /* v8 ignore stop */
   }
 
   public setSize = () => {
@@ -229,11 +232,12 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
         this.wrapperEl.scale = scale!;
         break;
       // Instance of DeviceOrientationEvent not possible.
-      /* v8 ignore next 4 */
+      /* v8 ignore start */
       case 'deviceorientation':
         this.processInputDeviceOrientation(event as DeviceOrientationEvent);
         this.wrapperEl.scale = scale!;
         break;
+      /* v8 ignore stop */
       case 'autoreset': {
         const { tiltAngleXInitial, tiltAngleYInitial, tiltMaxAngleX, tiltMaxAngleY } = this.props;
         const xPercentage = (tiltAngleXInitial! / tiltMaxAngleX!) * 100;
@@ -246,7 +250,7 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
     }
   };
 
-  /* v8 ignore next 16 */
+  /* v8 ignore start */
   private processInputDeviceOrientation = (event: DeviceOrientationEvent): void => {
     if (!event.gamma || !event.beta || !this.props.gyroscope) {
       return;
@@ -263,6 +267,7 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
     this.wrapperEl.clientPosition.xPercentage = constrainToRange(this.wrapperEl.clientPosition.xPercentage, -100, 100);
     this.wrapperEl.clientPosition.yPercentage = constrainToRange(this.wrapperEl.clientPosition.yPercentage, -100, 100);
   };
+  /* v8 ignore stop */
 
   private update = (eventType: string): void => {
     const { tiltEnable, flipVertically, flipHorizontally } = this.props;
