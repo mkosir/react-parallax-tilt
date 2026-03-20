@@ -57982,8 +57982,8 @@ var init5 = ({ store: store2, fullAPI, provider }) => {
   ), provider.channel?.on(
     SET_GLOBALS,
     function({ globals, globalTypes }) {
-      let { ref } = getEventMetadata(this, fullAPI), currentGlobals = store2.getState()?.globals;
-      ref ? Object.keys(globals).length > 0 && logger.warn("received globals from a non-local ref. This is not currently supported.") : store2.setState({ globals, userGlobals: globals, globalTypes }), currentGlobals && Object.keys(currentGlobals).length !== 0 && !dequal(globals, currentGlobals) && api.updateGlobals(currentGlobals);
+      let { ref } = getEventMetadata(this, fullAPI), currentUserGlobals = store2.getState()?.userGlobals;
+      ref ? Object.keys(globals).length > 0 && logger.warn("received globals from a non-local ref. This is not currently supported.") : store2.setState({ globals, userGlobals: globals, globalTypes }), currentUserGlobals && Object.keys(currentUserGlobals).length !== 0 && !dequal(globals, currentUserGlobals) && api.updateGlobals(currentUserGlobals);
     }
   ), {
     api,
@@ -60532,7 +60532,7 @@ init_dist();
 var import_memoizerific9 = __toESM(require_memoizerific(), 1), import_semver = __toESM(require_semver2(), 1);
 
 // src/manager-api/version.ts
-var version = "10.3.0";
+var version = "10.3.1";
 
 // src/manager-api/modules/versions.ts
 var { VERSIONCHECK } = scope, getVersionCheckData = (0, import_memoizerific9.default)(1)(() => {
