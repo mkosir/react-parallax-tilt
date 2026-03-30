@@ -91,7 +91,7 @@
     "rollup-plugin-dts": "6.4.1",
     "semantic-release": "25.0.3",
     "storybook": "10.3.3",
-    "typescript": "5.9.3",
+    "typescript": "6.0.2",
     "typescript-eslint": "8.57.2",
     "vite": "8.0.3",
     "vite-tsconfig-paths": "6.1.1",

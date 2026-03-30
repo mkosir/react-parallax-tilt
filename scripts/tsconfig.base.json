@@ -23,6 +23,7 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "types": ["vitest/globals"],
-    "allowJs": true
+    "allowJs": true,
+    "noUncheckedSideEffectImports": false
   }
 }
