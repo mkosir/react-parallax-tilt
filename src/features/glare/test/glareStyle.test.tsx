@@ -24,7 +24,7 @@ describe('Glare - Style', () => {
     const tiltElement = container.firstElementChild as Element;
 
     // eslint-disable-next-line
-    const glareWrapperElement = tiltElement.lastElementChild as Element;
+    const glareWrapperElement = tiltElement.lastElementChild as HTMLElement;
     expect(glareWrapperElement).toHaveStyle({
       position: 'absolute',
       top: '0px',
@@ -32,9 +32,10 @@ describe('Glare - Style', () => {
       width: '100%',
       height: '100%',
       overflow: 'hidden',
-      'border-radius': 0,
       'pointer-events': 'none',
     });
+    // eslint-disable-next-line jest-dom/prefer-to-have-style -- jsdom v29 getComputedStyle doesn't return border-radius shorthand
+    expect(glareWrapperElement.style.borderRadius).toBe('0px');
     expect(glareWrapperElement).toHaveClass('glare-wrapper');
 
     // eslint-disable-next-line
