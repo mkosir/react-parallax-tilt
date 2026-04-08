@@ -13,7 +13,6 @@ type SelectedEvents = {
 };
 
 const EventParams = () => {
-  // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-arguments
   const [eventParams, setEventParams] = useState<Omit<OnMoveParams, 'event'>>({
     tiltAngleX: 0,
     tiltAngleY: 0,
