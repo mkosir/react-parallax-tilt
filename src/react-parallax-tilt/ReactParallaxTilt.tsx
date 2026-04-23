@@ -38,9 +38,9 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
     this.setSize();
     this.addEventListeners();
     if (typeof CustomEvent === 'undefined') return;
-    const autoreset = new CustomEvent<CustomEventType>('autoreset' as CustomEventType);
+    const autoreset = new CustomEvent<CustomEventType>('autoreset');
     this.mainLoop(autoreset);
-    const initialEvent = new CustomEvent<CustomEventType>('initial' as CustomEventType);
+    const initialEvent = new CustomEvent<CustomEventType>('initial');
     this.emitOnMove(initialEvent);
   }
 
@@ -52,7 +52,7 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
   }
 
   public componentDidUpdate() {
-    const eventType = new CustomEvent<CustomEventType>('propChange' as CustomEventType);
+    const eventType = new CustomEvent<CustomEventType>('propChange');
     this.mainLoop(eventType);
     this.emitOnMove(eventType);
   }
@@ -212,7 +212,7 @@ export class ReactParallaxTilt extends PureComponent<ReactParallaxTiltProps> {
     }
 
     if (this.props.reset) {
-      const autoResetEvent = new CustomEvent<CustomEventType>('autoreset' as CustomEventType);
+      const autoResetEvent = new CustomEvent<CustomEventType>('autoreset');
       this.onMove(autoResetEvent);
     }
   };
