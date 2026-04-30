@@ -1,7 +1,10 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "rootDir": ".."
+    "noEmit": true,
+    "rootDir": "..",
+    "types": ["node", "vitest/globals"],
+    "allowJs": true
   },
   // Type check and lint all files and folders.
   // Explicitly include those starting with a dot (.) as they are ignored by default in glob patterns.

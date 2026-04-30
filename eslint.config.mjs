@@ -33,7 +33,16 @@ export default defineConfig(
   // When in their own config block without files, it tells ESLint to ignore those files.
   // When in a config block with files, it stops that specific config block from affecting those ignored files.
   {
-    ignores: ['!.*', '**/*.css', 'dist', 'node_modules', 'test-e2e-report', 'test-e2e-results', 'test-unit-report'],
+    ignores: [
+      '!.*',
+      '**/*.css',
+      'dist',
+      'build-storybook-static',
+      'node_modules',
+      'test-e2e-report',
+      'test-e2e-results',
+      'test-unit-report',
+    ],
   },
   {
     languageOptions: {
