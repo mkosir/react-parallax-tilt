@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Setup Node/npm ⚙️
         uses: ./.github/workflows/actions/setup_node_npm
@@ -20,7 +20,7 @@ jobs:
         run: npm run test:report
 
       - name: Upload report 📈
-        uses: nwtgck/actions-netlify@v3
+        uses: nwtgck/actions-netlify@v4
         with:
           publish-dir: ${{ env.FOLDER_PATH_TEST_UNIT_REPORT }}
           production-deploy: true
@@ -29,7 +29,7 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_TEST_UNIT_REPORT }}
 
       - name: Upload coverage to Codecov 📶
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v7
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           fail_ci_if_error: true
