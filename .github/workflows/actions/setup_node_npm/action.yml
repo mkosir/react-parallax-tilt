@@ -4,13 +4,13 @@ runs:
   using: 'composite'
   steps:
     - name: Setup Node.js
-      uses: actions/setup-node@v6
+      uses: actions/setup-node@v7
       with:
         node-version: '26.x'
 
     - name: Cache dependencies
       id: cache_dependencies
-      uses: actions/cache@v4
+      uses: actions/cache@v6
       with:
         path: node_modules
         key: node-modules-${{ hashFiles('package-lock.json') }}
