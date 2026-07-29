@@ -1,4 +1,3 @@
-import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 import type { GlobalsOption, RollupOptions } from 'rollup';
@@ -36,7 +35,6 @@ export const LEGACY_CONFIG = [
       },
     ],
     plugins: [
-      commonjs(),
       typescript({
         tsconfig: PATH_TSCONFIG_BUILD,
         sourceMap: !IS_PRODUCTION,
@@ -84,7 +82,6 @@ export const MODERN_CONFIG = [
       },
     ],
     plugins: [
-      commonjs(),
       typescript({
         tsconfig: PATH_TSCONFIG_BUILD,
         sourceMap: !IS_PRODUCTION,
