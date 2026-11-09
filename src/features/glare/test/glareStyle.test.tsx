@@ -48,7 +48,7 @@ describe('Glare - Style', () => {
       'pointer-events': 'none',
       width: '0px',
       height: '0px',
-      transition: 'opacity 400ms cubic-bezier(.03,.98,.52,.99)',
+      transition: 'opacity 0.4s cubic-bezier(.03,.98,.52,.99)',
       transform: 'rotate(135deg) translate(-50%, -50%)',
       opacity: 0.7,
     });
