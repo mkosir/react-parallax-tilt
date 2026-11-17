@@ -90,7 +90,7 @@
     "semantic-release": "26.0.1",
     "storybook": "10.6.7",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.72.2",
+    "typescript-eslint": "8.73.0",
     "vite": "8.3.8",
     "vitest": "5.1.0"
   },
