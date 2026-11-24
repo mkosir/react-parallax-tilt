@@ -5,6 +5,7 @@ import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescrip
 import * as eslintPluginImportX from 'eslint-plugin-import-x';
 import eslintPluginJestDom from 'eslint-plugin-jest-dom';
 import eslintPluginJsxA11y from 'eslint-plugin-jsx-a11y';
+import eslintPluginNoArrayReduce from 'eslint-plugin-no-array-reduce';
 import eslintPluginPlaywright from 'eslint-plugin-playwright';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import eslintPluginReact from 'eslint-plugin-react';
@@ -59,8 +60,15 @@ export default defineConfig(
   {
     files: ['**/*.{js,ts,tsx}'],
 
+    // Legacy (eslintrc) plugin without types, so registered manually
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    plugins: { 'no-array-reduce': eslintPluginNoArrayReduce },
+
     rules: {
       'react/react-in-jsx-scope': 'off',
+
+      'no-array-reduce/no-reduce': 'error',
+      'no-array-reduce/no-reduce-right': 'error',
 
       'prefer-template': 'error',
       'no-nested-ternary': 'error',
