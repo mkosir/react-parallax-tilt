@@ -5,8 +5,6 @@ import { dts } from 'rollup-plugin-dts';
 
 import packageJson from '../package.json' with { type: 'json' };
 
-import tsConfig from './tsconfig.base.json' with { type: 'json' };
-
 const IS_PRODUCTION = process.env.NODE_ENV === 'production';
 
 const PATH_INPUT_FILE = 'src/index.ts';
@@ -40,7 +38,7 @@ export const LEGACY_CONFIG = [
         sourceMap: !IS_PRODUCTION,
       }),
       terser({
-        output: { comments: false },
+        format: { comments: false },
         compress: {
           pure_getters: true,
         },
@@ -53,14 +51,7 @@ export const LEGACY_CONFIG = [
   {
     input: PATH_INPUT_FILE,
     output: { file: packageJson.types, format: 'esm' },
-    plugins: [
-      dts({
-        compilerOptions: {
-          baseUrl: './src',
-          paths: tsConfig.compilerOptions.paths,
-        },
-      }),
-    ],
+    plugins: [dts({ tsconfig: PATH_TSCONFIG_BUILD })],
   },
 ] as const satisfies ReadonlyArray<RollupOptions>;
 
@@ -87,7 +78,7 @@ export const MODERN_CONFIG = [
         sourceMap: !IS_PRODUCTION,
       }),
       terser({
-        output: { comments: false },
+        format: { comments: false },
         compress: {
           pure_getters: true,
         },
@@ -103,13 +94,6 @@ export const MODERN_CONFIG = [
       { file: packageJson.exports.import.types, format: 'esm' },
       { file: packageJson.exports.require.types, format: 'cjs' },
     ],
-    plugins: [
-      dts({
-        compilerOptions: {
-          baseUrl: './src',
-          paths: tsConfig.compilerOptions.paths,
-        },
-      }),
-    ],
+    plugins: [dts({ tsconfig: PATH_TSCONFIG_BUILD })],
   },
 ] as const satisfies ReadonlyArray<RollupOptions>;
