@@ -9,16 +9,13 @@
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "target": "ES2022",
-    "allowSyntheticDefaultImports": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "resolveJsonModule": true,
     "pretty": true,
-    "sourceMap": false,
     "strict": true,
     "stripInternal": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true
+    "skipLibCheck": true
   }
 }
