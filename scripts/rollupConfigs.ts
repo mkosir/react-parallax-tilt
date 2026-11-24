@@ -1,6 +1,6 @@
 import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
-import type { GlobalsOption, RollupOptions } from 'rollup';
+import type { RollupOptions } from 'rollup';
 import { dts } from 'rollup-plugin-dts';
 
 import packageJson from '../package.json' with { type: 'json' };
@@ -10,11 +10,6 @@ const IS_PRODUCTION = process.env.NODE_ENV === 'production';
 const PATH_INPUT_FILE = 'src/index.ts';
 const PATH_TSCONFIG_BUILD = 'scripts/tsconfig.build.json';
 
-const GLOBALS = {
-  react: 'React',
-  'react-dom': 'ReactDOM',
-} as const satisfies GlobalsOption;
-
 export const LEGACY_CONFIG = [
   {
     input: PATH_INPUT_FILE,
@@ -23,13 +18,11 @@ export const LEGACY_CONFIG = [
         file: packageJson.module,
         format: 'esm',
         sourcemap: !IS_PRODUCTION,
-        globals: GLOBALS,
       },
       {
         file: packageJson.main,
         format: 'cjs',
         sourcemap: !IS_PRODUCTION,
-        globals: GLOBALS,
       },
     ],
     plugins: [
@@ -63,13 +56,11 @@ export const MODERN_CONFIG = [
         file: packageJson.exports.import.default,
         format: 'esm',
         sourcemap: !IS_PRODUCTION,
-        globals: GLOBALS,
       },
       {
         file: packageJson.exports.require.default,
         format: 'cjs',
         sourcemap: !IS_PRODUCTION,
-        globals: GLOBALS,
       },
     ],
     plugins: [
